@@ -1,0 +1,3 @@
+site_name: 'Thomas Hazledine'
+permalink: /:title
+exclude: [sass/]

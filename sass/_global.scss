@@ -1,0 +1,41 @@
+// Basic Body Styles
+body{
+  padding:1em;
+  font-family:sans-serif;
+}
+h1{
+  font-size:2em;
+  border-bottom:.1em solid $black;
+  margin-bottom:.5em;
+  text-align:center;
+}
+a{
+  border-bottom:.2em solid $black;
+  text-decoration:none;
+  color:$black;
+  @include transition-property(border, color);
+  @include transition-duration(.3s);
+  &:hover{
+    color:$one;
+    border-bottom:.2em solid $one;
+  }
+}
+p{
+  padding-bottom:.5em;
+}
+strong{
+  font-style:bold;
+}
+em{
+  font-style:italic;
+}
+.main-content{
+  width:80%;
+  margin:0 auto;
+}
+footer{
+  font-size:.8em;
+  border-top:1px solid $black;
+  padding-top:.5em;
+  text-align:center;
+}
