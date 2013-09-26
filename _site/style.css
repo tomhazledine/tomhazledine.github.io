@@ -1,0 +1,320 @@
+/* line 17, sass/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 27, sass/_utilities.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, sass/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, sass/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, sass/_utilities.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, sass/_utilities.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, sass/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 51, sass/_utilities.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 55, sass/_utilities.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 59, sass/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 66, sass/_utilities.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 73, sass/_utilities.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/* line 80, sass/_utilities.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 85, sass/_utilities.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 98, sass/_utilities.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 107, sass/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 112, sass/_utilities.scss */
+html, button, input, select, textarea {
+  color: #222;
+}
+
+/* line 115, sass/_utilities.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* line 122, sass/_utilities.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 126, sass/_utilities.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 131, sass/_utilities.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 140, sass/_utilities.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 144, sass/_utilities.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 150, sass/_utilities.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 154, sass/_utilities.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* line 2, sass/_global.scss */
+body {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+/* line 6, sass/_global.scss */
+h1 {
+  font-size: 2em;
+  border-bottom: 0.1em solid black;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+/* line 12, sass/_global.scss */
+a {
+  border-bottom: 0.2em solid black;
+  text-decoration: none;
+  color: black;
+  -webkit-transition-property: border, color;
+  -moz-transition-property: border, color;
+  -o-transition-property: border, color;
+  transition-property: border, color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 18, sass/_global.scss */
+a:hover {
+  color: #4d87e2;
+  border-bottom: 0.2em solid #4d87e2;
+}
+
+/* line 23, sass/_global.scss */
+p {
+  padding-bottom: .5em;
+}
+
+/* line 26, sass/_global.scss */
+strong {
+  font-style: bold;
+}
+
+/* line 29, sass/_global.scss */
+em {
+  font-style: italic;
+}
+
+/* line 32, sass/_global.scss */
+.main-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 36, sass/_global.scss */
+footer {
+  font-size: .8em;
+  border-top: 1px solid black;
+  padding-top: .5em;
+  text-align: center;
+}
+
+/*******************************************
+********************************************
+Print Styles
+********************************************
+*******************************************/
+@media print {
+  /* line 7, sass/_print.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 13, sass/_print.scss */
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 16, sass/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 19, sass/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 23, sass/_print.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 26, sass/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 30, sass/_print.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 33, sass/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 36, sass/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 42, sass/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 46, sass/_print.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
