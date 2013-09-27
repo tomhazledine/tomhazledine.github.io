@@ -7,7 +7,11 @@
 	<meta name="description" content="A web development test page">
 	<meta name="viewport" content="width=device-width">
 	
-	<link rel="stylesheet" href="style.css">
+	<!-- Typekit JS -->
+  <script type="text/javascript" src="//use.typekit.net/puc4nqb.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+	<link rel="stylesheet" href="/style.css">
 	
 	<!-- Scripts -->
 	<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -20,18 +24,59 @@
 </head>
 
 <body>
-	
-	<header>
-	  <h1>Thomas Hazledine</h1>
-  </header>
   
-  <section class="jekyll-content">
-    <div class="posts">
+  <header>
+	  <h1><a href="/">Thomas Hazledine</a></h1>
+  </header>
+
+  <section class="main-content">
+    <?php /*?><link rel="stylesheet" href="/style.css">
+<!-- Typekit JS -->
+<script type="text/javascript" src="//use.typekit.net/puc4nqb.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<? */?>
+<h1>A Heading</h1>
+<h1><a href="/">A Heading That's Also A Link</a></h1>
+<h2>A Sub Heading</h2>
+	       
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+<h2>Header Level 2</h2>
+	       
+<ol>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+<h3>Header Level 3</h3>
+
+<ul>
+   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+   <li>Aliquam tincidunt mauris eu risus.</li>
+</ul>
+
+<pre><code>
+#header h1 a { 
+	display: block; 
+	width: 300px; 
+	height: 80px; 
+}
+</code></pre>
+
+<div class="posts">
+  
+    <h2><a href="/simple-is-hard">Simple Is Hard</a></h2>
+    <div class="post-content">
+      <h1 id='simple_is_really_really_tough_to_get_right'>Simple is really really tough to get right.</h1>
+
+<p>It sounds easy, but the reality is very different.</p>
+    </div><!-- .post-content -->
   
     <h2><a href="/post-test-one">Post Test One</a></h2>
     <div class="post-content">
-      <hr />
-<p>If you want me to take control of your web presence, then get in touch and we can discuss your project. I love working with startups and small businesses (and yes, your band is a business) and take great pride in making standards-compliant, fully-responsive websites.</p>
+      <p>If you want me to take control of your web presence, then get in touch and we can discuss your project. I love working with startups and small businesses (and yes, your band is a business) and take great pride in making standards-compliant, fully-responsive websites.</p>
     </div><!-- .post-content -->
   
     <h2><a href="/i-hate-driving">I Hate Driving</a></h2>
@@ -47,11 +92,6 @@
     
   </ul>
 </div><!-- .sidebar -->
-  </section><!-- .jekyll-content -->
-
-  <section class="main-content">
-  	<p>This is my home page.</p>
-  	<p>This will be where my personal blog lives, and where I link to all my projects. My <em>hub</em>, if you will.</p>
 	</section><!-- .main-content -->
 	
 	<footer>

@@ -185,7 +185,6 @@ textarea {
 /* line 2, sass/_global.scss */
 body {
   padding: 1em;
-  font-family: sans-serif;
 }
 
 /* line 6, sass/_global.scss */
@@ -243,6 +242,29 @@ footer {
   border-top: 1px solid black;
   padding-top: .5em;
   text-align: center;
+}
+
+/* line 44, sass/_global.scss */
+body {
+  font-family: "jubilat";
+}
+
+/* line 47, sass/_global.scss */
+h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 55, sass/_global.scss */
+body {
+  background: #efefe7;
+  color: #888888;
+}
+
+/* line 59, sass/_global.scss */
+h1 {
+  font-size: 6em;
+  text-shadow: white -2px -1px 1px, #888888 1px 1px 1px;
 }
 
 /*******************************************

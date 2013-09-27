@@ -12,39 +12,25 @@ Version: 1.0
 // CONTENTS //
 //////////////
 
-01.	Utilities
-      Compass Imports
-      CSS Reset
-      Clearfix
-      Assistive Text
-      H5BP Styles
-02. Global Styles
-      Variables
-        Colours
-      Global
-        Basic Body Styles
-03.
-04. 
-??.	Print Styles
-??.	Credits
+Utilities
+  Compass Imports
+  CSS Reset
+  Clearfix
+  Assistive Text
+  H5BP Styles
+Global Styles
+  Colours
+  Typography
+  Basic Body Styles
+Header
+Print Styles
+Credits
 */
 
-// 01. Utilities (CSS Reset, Clearfix, H5BP Styles)
 @import "utilities";
 @import "compass/css3";
-
-// 02. Global Styles
-@import "vars";
 @import "global";
-
-// 03. 
-
-// 04. 
-
-// ??.
-
-// ??. Print Styles
+@import "header";
+@import "footer";
 @import"print.scss";
-
-// ??. Credits
 @import"credits.scss";

@@ -1,10 +1,123 @@
-// Basic Body Styles
+// Colours //
+$black: #404040;
+$white:#ffffff;
+$red: #ff0000;
+$blue: #0000ff;
+$green: #00ff00;
+$grey: #dddddd;
+$one:#4d87e2;
+$two:#ffbc46;
+$three:#ffda46;
+$cream:#efefe7;
+
+// Sizes //
+html{
+  font-size:14px;
+}
+
+$huge:4em;//64px;
+$big:2.625em;//42px;
+$med:2em;//32px;
+$reg:1.5em;//24px;
+$small:1em;//16px
+$tiny:.8075em;//14px;
+
+// Typefaces, weights, & styles //
+$heading: "jubilat", serif;
+$body: "ff-meta-serif-web-pro", sans-serif;
+@mixin body{
+  font-family:$body;
+  font-size:$reg;
+}
+@mixin intro{
+  font-size: 24px;
+  line-height:1.1em;
+  font-weight:600;
+  font-style:italic;
+}
+@mixin heading{
+  font-family:$heading;
+  font-weight:700;
+}
+@mixin smallprint{
+  font-size:$tiny;
+  font-family:$body;
+  font-weight:500;
+}
+
+
+
+
+h1{
+  font-size:$huge;
+  @include heading;
+  font-style:italic;
+  line-height:1em;
+  padding-bottom:.8em;
+}
+h2{
+  font-size:$big;
+  @include heading;
+  padding-bottom:.8em;
+}
+h3{
+  font-size:$med;
+  @include body;
+  font-style: italic;
+  font-weight:bold;
+  padding-bottom:.8em;
+}
 body{
-  padding:1em;
-  font-family:sans-serif;
+  @include body;
+  background:$cream;
+  color:$black;
+}
+h1 a{
+  text-decoration:none;
+}
+a{
+  color:$one;
+  @include transition-property(color);
+  @include transition-duration(.3s);
+  &:hover{
+    color:$two;
+  }
+}
+p{
+  padding-bottom:.8em;
+}
+blockquote{
+  padding:5% 10%;
+  font-style:italic;
+}
+footer{
+  @include smallprint;
+}
+
+// Basic Layout //
+body{
+  margin:1em;
+}
+
+// Misc Styles
+pre{
+  margin:1em;
+  padding: 0 .5em;
+  background:$black;
+}
+code{
+  background:$black;
+  color:$white;
+  font-family:monospace;
+}
+
+/*
+body{
+  //padding:1em;
+  //@include body;
 }
 h1{
-  font-size:2em;
+  //font-size:2em;
   border-bottom:.1em solid $black;
   margin-bottom:.5em;
   text-align:center;
@@ -12,7 +125,7 @@ h1{
 a{
   border-bottom:.2em solid $black;
   text-decoration:none;
-  color:$black;
+  //color:$black;
   @include transition-property(border, color);
   @include transition-duration(.3s);
   &:hover{
@@ -21,7 +134,10 @@ a{
   }
 }
 p{
-  padding-bottom:.5em;
+  //padding-bottom:1em;
+  &:nth-of-type(1):first-line{
+    @include intro;
+  }
 }
 strong{
   font-style:bold;
@@ -38,4 +154,4 @@ footer{
   border-top:1px solid $black;
   padding-top:.5em;
   text-align:center;
-}
+}*/
