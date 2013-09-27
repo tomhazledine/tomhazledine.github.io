@@ -10,12 +10,28 @@ $two:#ffbc46;
 $three:#ffda46;
 $cream:#efefe7;
 
+// Media Query Mixins //
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1280px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 650px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 350px)  { @content; }
+  }
+}
+
 // Sizes //
 html{
   font-size:14px;
+  //@include breakpoint(papa-bear) { font-size: 24px; }
+  @include breakpoint(mama-bear) { font-size: 12px; }
+  @include breakpoint(baby-bear) { font-size: 10px; }
 }
-
 $huge:4em;//64px;
+$xl:3em;
 $big:2.625em;//42px;
 $med:2em;//32px;
 $reg:1.5em;//24px;
@@ -45,9 +61,6 @@ $body: "ff-meta-serif-web-pro", sans-serif;
   font-weight:500;
 }
 
-
-
-
 h1{
   font-size:$huge;
   @include heading;
@@ -67,6 +80,8 @@ h3{
   font-weight:bold;
   padding-bottom:.8em;
 }
+
+// Basic Body Styles //
 body{
   @include body;
   background:$cream;
@@ -84,7 +99,8 @@ a{
   }
 }
 p{
-  padding-bottom:.8em;
+  padding-bottom:1.5em;
+  line-height:1.8em;
 }
 blockquote{
   padding:5% 10%;
@@ -93,13 +109,6 @@ blockquote{
 footer{
   @include smallprint;
 }
-
-// Basic Layout //
-body{
-  margin:1em;
-}
-
-// Misc Styles
 pre{
   margin:1em;
   padding: 0 .5em;
@@ -110,48 +119,9 @@ code{
   color:$white;
   font-family:monospace;
 }
-
-/*
-body{
-  //padding:1em;
-  //@include body;
-}
-h1{
-  //font-size:2em;
-  border-bottom:.1em solid $black;
-  margin-bottom:.5em;
-  text-align:center;
-}
-a{
-  border-bottom:.2em solid $black;
-  text-decoration:none;
-  //color:$black;
-  @include transition-property(border, color);
-  @include transition-duration(.3s);
-  &:hover{
-    color:$one;
-    border-bottom:.2em solid $one;
-  }
-}
-p{
-  //padding-bottom:1em;
-  &:nth-of-type(1):first-line{
-    @include intro;
-  }
-}
 strong{
   font-style:bold;
 }
 em{
   font-style:italic;
 }
-.main-content{
-  width:80%;
-  margin:0 auto;
-}
-footer{
-  font-size:.8em;
-  border-top:1px solid $black;
-  padding-top:.5em;
-  text-align:center;
-}*/

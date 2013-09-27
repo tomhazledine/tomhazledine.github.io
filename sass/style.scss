@@ -20,17 +20,25 @@ Utilities
   H5BP Styles
 Global Styles
   Colours
+  Media Query Mixins
   Typography
   Basic Body Styles
+Layout
 Header
+Body
+Archive Widget
+Footer
 Print Styles
 Credits
 */
 
-@import "utilities";
-@import "compass/css3";
-@import "global";
-@import "header";
-@import "footer";
+@import"utilities";
+@import"compass/css3";
+@import"global";
+@import"layout";
+@import"header";
+@import"body";
+@import"archive";
+@import"footer";
 @import"print.scss";
 @import"credits.scss";

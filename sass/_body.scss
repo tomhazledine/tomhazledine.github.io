@@ -1,0 +1,25 @@
+.main-content{
+  width:80%;
+  max-width:650px;
+  margin:0 auto;
+  h1{
+    @include text-shadow($one -3px 3px 0px);
+    @include transition-property(text-shadow);
+    @include transition-duration(.3s);
+    a{
+      color:$black;
+      &:hover{
+        @include text-shadow($two -3px 3px 0px);
+      }
+    }
+  }
+  h2{
+    line-height:1.1em;
+  }
+  h3{
+    @include breakpoint(baby-bear) {font-size:$reg - .1em; line-height:1.1em;}
+    @include breakpoint(mama-bear) {font-size:$reg - .3em; line-height:1.1em;}
+  }
+  @include breakpoint(mama-bear) {width:90%; h1{font-size:$big + .2em;} h2{font-size:$reg + .2em;}}
+  @include breakpoint(baby-bear) {width:100%; h1{font-size:$xl;}}
+}

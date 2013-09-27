@@ -1,20 +1,12 @@
 ---
 layout: default
 ---
-<div class="posts">
-  {% for post in site.posts limit: 3 %}
-    <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+
+{% for post in site.posts limit: 1 %}
+  <article class="main-content">
+    <h1><a href="{{post.url}}">{{post.title}}</a></h1>
     <div class="post-content">
       {{post.content}}
     </div><!-- .post-content -->
-  {% endfor %}
-</div><!-- .posts -->
-
-<div class="sidebar">
-  <h4>Recent Articles</h4>
-  <ul>
-    {% for post in site.posts offset: 3 limit: 10 %}
-      <li><a href="{{post.url}}">{{post.title}}</a></li>
-    {% endfor %}
-  </ul>
-</div><!-- .sidebar -->
+  </article>
+{% endfor %}

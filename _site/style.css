@@ -182,89 +182,269 @@ textarea {
   padding: 0.2em 0;
 }
 
-/* line 2, sass/_global.scss */
-body {
-  padding: 1em;
+/* line 27, sass/_global.scss */
+html {
+  font-size: 14px;
+}
+@media (max-width: 650px) {
+  /* line 27, sass/_global.scss */
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 350px) {
+  /* line 27, sass/_global.scss */
+  html {
+    font-size: 10px;
+  }
 }
 
-/* line 6, sass/_global.scss */
+/* line 64, sass/_global.scss */
 h1 {
-  font-size: 2em;
-  border-bottom: 0.1em solid black;
-  margin-bottom: .5em;
-  text-align: center;
+  font-size: 4em;
+  font-family: "jubilat", serif;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1em;
+  padding-bottom: .8em;
 }
 
-/* line 12, sass/_global.scss */
-a {
-  border-bottom: 0.2em solid black;
+/* line 71, sass/_global.scss */
+h2 {
+  font-size: 2.625em;
+  font-family: "jubilat", serif;
+  font-weight: 700;
+  padding-bottom: .8em;
+}
+
+/* line 76, sass/_global.scss */
+h3 {
+  font-size: 2em;
+  font-family: "ff-meta-serif-web-pro", sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: .8em;
+}
+
+/* line 85, sass/_global.scss */
+body {
+  font-family: "ff-meta-serif-web-pro", sans-serif;
+  font-size: 1.5em;
+  background: #efefe7;
+  color: #404040;
+}
+
+/* line 90, sass/_global.scss */
+h1 a {
   text-decoration: none;
-  color: black;
-  -webkit-transition-property: border, color;
-  -moz-transition-property: border, color;
-  -o-transition-property: border, color;
-  transition-property: border, color;
+}
+
+/* line 93, sass/_global.scss */
+a {
+  color: #4d87e2;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 18, sass/_global.scss */
+/* line 97, sass/_global.scss */
 a:hover {
-  color: #4d87e2;
-  border-bottom: 0.2em solid #4d87e2;
+  color: #ffbc46;
 }
 
-/* line 23, sass/_global.scss */
+/* line 101, sass/_global.scss */
 p {
-  padding-bottom: .5em;
+  padding-bottom: 1.5em;
+  line-height: 1.8em;
 }
 
-/* line 26, sass/_global.scss */
+/* line 105, sass/_global.scss */
+blockquote {
+  padding: 5% 10%;
+  font-style: italic;
+}
+
+/* line 109, sass/_global.scss */
+footer {
+  font-size: 0.8075em;
+  font-family: "ff-meta-serif-web-pro", sans-serif;
+  font-weight: 500;
+}
+
+/* line 112, sass/_global.scss */
+pre {
+  margin: 1em;
+  padding: 0 .5em;
+  background: #404040;
+}
+
+/* line 117, sass/_global.scss */
+code {
+  background: #404040;
+  color: white;
+  font-family: monospace;
+}
+
+/* line 122, sass/_global.scss */
 strong {
   font-style: bold;
 }
 
-/* line 29, sass/_global.scss */
+/* line 125, sass/_global.scss */
 em {
   font-style: italic;
 }
 
-/* line 32, sass/_global.scss */
+/* line 5, sass/_layout.scss */
+body {
+  margin: 16px 1em 1em;
+}
+
+/* line 3, sass/_header.scss */
+.header {
+  padding-bottom: 0;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #404040;
+}
+/* line 7, sass/_header.scss */
+.header h2 {
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 0;
+  line-height: 1.2em;
+  overflow: hidden;
+}
+@media (max-width: 650px) {
+  /* line 7, sass/_header.scss */
+  .header h2 {
+    font-size: 2.225em;
+  }
+}
+@media (max-width: 350px) {
+  /* line 7, sass/_header.scss */
+  .header h2 {
+    line-height: 1.5em;
+    font-size: 32px;
+  }
+}
+/* line 19, sass/_header.scss */
+.header a {
+  text-decoration: none;
+  color: #404040;
+}
+/* line 22, sass/_header.scss */
+.header a:hover {
+  color: #ffbc46;
+}
+/* line 26, sass/_header.scss */
+.header ul {
+  text-align: center;
+  font-size: 1em;
+}
+@media (min-width: 1280px) {
+  /* line 26, sass/_header.scss */
+  .header ul {
+    font-size: 24px;
+  }
+}
+/* line 31, sass/_header.scss */
+.header li {
+  display: inline-block;
+  border-right: 1px solid #404040;
+  margin: .8em 0 .5em;
+  padding: 0 1em;
+}
+/* line 37, sass/_header.scss */
+.header li:last-of-type {
+  border-right: none;
+}
+
+/* line 1, sass/_body.scss */
 .main-content {
   width: 80%;
+  max-width: 650px;
   margin: 0 auto;
 }
+/* line 5, sass/_body.scss */
+.main-content h1 {
+  text-shadow: #4d87e2 -3px 3px 0px;
+  -webkit-transition-property: text-shadow;
+  -moz-transition-property: text-shadow;
+  -o-transition-property: text-shadow;
+  transition-property: text-shadow;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 9, sass/_body.scss */
+.main-content h1 a {
+  color: #404040;
+}
+/* line 11, sass/_body.scss */
+.main-content h1 a:hover {
+  text-shadow: #ffbc46 -3px 3px 0px;
+}
+/* line 16, sass/_body.scss */
+.main-content h2 {
+  line-height: 1.1em;
+}
+@media (max-width: 350px) {
+  /* line 19, sass/_body.scss */
+  .main-content h3 {
+    font-size: 1.4em;
+    line-height: 1.1em;
+  }
+}
+@media (max-width: 650px) {
+  /* line 19, sass/_body.scss */
+  .main-content h3 {
+    font-size: 1.2em;
+    line-height: 1.1em;
+  }
+}
+@media (max-width: 650px) {
+  /* line 1, sass/_body.scss */
+  .main-content {
+    width: 90%;
+  }
+  /* line 23, sass/_body.scss */
+  .main-content h1 {
+    font-size: 2.825em;
+  }
+  /* line 23, sass/_body.scss */
+  .main-content h2 {
+    font-size: 1.7em;
+  }
+}
+@media (max-width: 350px) {
+  /* line 1, sass/_body.scss */
+  .main-content {
+    width: 100%;
+  }
+  /* line 24, sass/_body.scss */
+  .main-content h1 {
+    font-size: 3em;
+  }
+}
 
-/* line 36, sass/_global.scss */
+/* line 2, sass/_archive.scss */
+.archive {
+  border-top: 1px solid #404040;
+  padding: 1em 0;
+}
+
+/* line 2, sass/_footer.scss */
 footer {
-  font-size: .8em;
-  border-top: 1px solid black;
-  padding-top: .5em;
+  border-top: 1px solid #404040;
+  padding: 3em;
+  margin-top: 1em;
   text-align: center;
-}
-
-/* line 44, sass/_global.scss */
-body {
-  font-family: "jubilat";
-}
-
-/* line 47, sass/_global.scss */
-h1 {
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* line 55, sass/_global.scss */
-body {
-  background: #efefe7;
-  color: #888888;
-}
-
-/* line 59, sass/_global.scss */
-h1 {
-  font-size: 6em;
-  text-shadow: white -2px -1px 1px, #888888 1px 1px 1px;
 }
 
 /*******************************************

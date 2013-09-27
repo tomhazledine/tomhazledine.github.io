@@ -1,3 +1,6 @@
 site_name: 'Thomas Hazledine'
 permalink: /:title
+markdown: kramdown
 exclude: [sass/]
+kramdown:
+  auto_ids: false
