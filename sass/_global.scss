@@ -81,7 +81,14 @@ h3{
   padding-bottom:.8em;
 }
 
+// Misc Vars
+$shadow:.04em;
+$r-shad:-$shadow;
+
 // Basic Body Styles //
+*{
+  @include box-sizing(border-box);
+}
 body{
   @include body;
   background:$cream;
@@ -92,6 +99,7 @@ h1 a{
 }
 a{
   color:$one;
+  font-weight:bold;
   @include transition-property(color);
   @include transition-duration(.3s);
   &:hover{

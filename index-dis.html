@@ -1,0 +1,33 @@
+---
+layout: default
+location: home
+---
+
+{% for post in paginator.posts %}
+  <article class="main-content">
+    <h1><a href="{{post.url}}">{{post.title}}</a></h1>
+    <div class="post-content">
+      {{post.content}}
+    </div><!-- .post-content -->
+  </article>
+{% endfor %}
+
+{% if paginator.previous_page %}
+  <div class="nav-button newer">
+    {% if paginator.previous_page == 1 %}
+      <a href="/" class="previous">Newer</a>
+    {% else %}
+      <a href="/page{{paginator.previous_page}}" class="previous">Newer</a>
+    {% endif %}
+  </div><!-- .nav-button -->
+{% endif %}
+
+{% if paginator.next_page %}
+  <div class="nav-button older">
+    <a href="/page{{paginator.next_page}}" class="next">Older</a>
+  </div><!-- .nav-button -->  
+{% endif %}
+
+<span class="page-number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+
+{% include archive.html %}

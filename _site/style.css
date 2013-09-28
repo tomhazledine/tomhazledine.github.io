@@ -228,6 +228,13 @@ h3 {
 }
 
 /* line 85, sass/_global.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 88, sass/_global.scss */
 body {
   font-family: "ff-meta-serif-web-pro", sans-serif;
   font-size: 1.5em;
@@ -235,14 +242,15 @@ body {
   color: #404040;
 }
 
-/* line 90, sass/_global.scss */
+/* line 93, sass/_global.scss */
 h1 a {
   text-decoration: none;
 }
 
-/* line 93, sass/_global.scss */
+/* line 96, sass/_global.scss */
 a {
   color: #4d87e2;
+  font-weight: bold;
   -webkit-transition-property: color;
   -moz-transition-property: color;
   -o-transition-property: color;
@@ -252,50 +260,50 @@ a {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 97, sass/_global.scss */
+/* line 101, sass/_global.scss */
 a:hover {
   color: #ffbc46;
 }
 
-/* line 101, sass/_global.scss */
+/* line 105, sass/_global.scss */
 p {
   padding-bottom: 1.5em;
   line-height: 1.8em;
 }
 
-/* line 105, sass/_global.scss */
+/* line 109, sass/_global.scss */
 blockquote {
   padding: 5% 10%;
   font-style: italic;
 }
 
-/* line 109, sass/_global.scss */
+/* line 113, sass/_global.scss */
 footer {
   font-size: 0.8075em;
   font-family: "ff-meta-serif-web-pro", sans-serif;
   font-weight: 500;
 }
 
-/* line 112, sass/_global.scss */
+/* line 116, sass/_global.scss */
 pre {
   margin: 1em;
   padding: 0 .5em;
   background: #404040;
 }
 
-/* line 117, sass/_global.scss */
+/* line 121, sass/_global.scss */
 code {
   background: #404040;
   color: white;
   font-family: monospace;
 }
 
-/* line 122, sass/_global.scss */
+/* line 126, sass/_global.scss */
 strong {
   font-style: bold;
 }
 
-/* line 125, sass/_global.scss */
+/* line 129, sass/_global.scss */
 em {
   font-style: italic;
 }
@@ -364,78 +372,129 @@ body {
   border-right: none;
 }
 
-/* line 1, sass/_body.scss */
+/* line 2, sass/_body.scss */
 .main-content {
   width: 80%;
   max-width: 650px;
   margin: 0 auto;
 }
-/* line 5, sass/_body.scss */
+/* line 6, sass/_body.scss */
 .main-content h1 {
-  text-shadow: #4d87e2 -3px 3px 0px;
-  -webkit-transition-property: text-shadow;
-  -moz-transition-property: text-shadow;
-  -o-transition-property: text-shadow;
-  transition-property: text-shadow;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  text-shadow: #4d87e2 -0.04em 0.04em 0px;
+  -webkit-transition-property: textshadow;
+  -moz-transition-property: textshadow;
+  -o-transition-property: textshadow;
+  transition-property: textshadow;
+  -webkit-transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  -o-transition-duration: 3s;
+  transition-duration: 3s;
 }
-/* line 9, sass/_body.scss */
+/* line 12, sass/_body.scss */
 .main-content h1 a {
   color: #404040;
 }
-/* line 11, sass/_body.scss */
+/* line 14, sass/_body.scss */
 .main-content h1 a:hover {
-  text-shadow: #ffbc46 -3px 3px 0px;
+  text-shadow: #ffbc46 -0.04em 0.04em 0px;
 }
-/* line 16, sass/_body.scss */
+/* line 19, sass/_body.scss */
 .main-content h2 {
   line-height: 1.1em;
 }
 @media (max-width: 350px) {
-  /* line 19, sass/_body.scss */
+  /* line 22, sass/_body.scss */
   .main-content h3 {
     font-size: 1.4em;
     line-height: 1.1em;
   }
 }
 @media (max-width: 650px) {
-  /* line 19, sass/_body.scss */
+  /* line 22, sass/_body.scss */
   .main-content h3 {
     font-size: 1.2em;
     line-height: 1.1em;
   }
 }
 @media (max-width: 650px) {
-  /* line 1, sass/_body.scss */
+  /* line 2, sass/_body.scss */
   .main-content {
     width: 90%;
   }
-  /* line 23, sass/_body.scss */
+  /* line 26, sass/_body.scss */
   .main-content h1 {
     font-size: 2.825em;
   }
-  /* line 23, sass/_body.scss */
+  /* line 26, sass/_body.scss */
   .main-content h2 {
     font-size: 1.7em;
   }
 }
 @media (max-width: 350px) {
-  /* line 1, sass/_body.scss */
+  /* line 2, sass/_body.scss */
   .main-content {
     width: 100%;
   }
-  /* line 24, sass/_body.scss */
+  /* line 27, sass/_body.scss */
   .main-content h1 {
     font-size: 3em;
   }
 }
 
+/* line 31, sass/_body.scss */
+.nav-button {
+  position: fixed;
+  top: 50%;
+  background: #dddddd;
+  width: 100px;
+  height: 100px;
+  padding: 1em;
+}
+
+/* line 39, sass/_body.scss */
+.older {
+  right: 0;
+  border-radius: 50% 0 0 50%;
+}
+
+/* line 43, sass/_body.scss */
+.newer {
+  left: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+/* line 47, sass/_body.scss */
+.page-number {
+  display: none;
+}
+
 /* line 2, sass/_archive.scss */
 .archive {
   border-top: 1px solid #404040;
+  padding: 1em 0;
+}
+
+/* line 6, sass/_archive.scss */
+.archive ul {
+  width: 80%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+@media (max-width: 650px) {
+  /* line 6, sass/_archive.scss */
+  .archive ul {
+    width: 90%;
+  }
+}
+@media (max-width: 350px) {
+  /* line 6, sass/_archive.scss */
+  .archive ul {
+    width: 100%;
+  }
+}
+
+/* line 13, sass/_archive.scss */
+.archive li {
   padding: 1em 0;
 }
 

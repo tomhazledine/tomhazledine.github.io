@@ -20,7 +20,8 @@
     text-decoration:none;
     color:$black;
     &:hover{
-      color:$two;
+      color:$black;
+      @include text-shadow($two $r-shad $shadow 0px);
     }
   }
   ul{

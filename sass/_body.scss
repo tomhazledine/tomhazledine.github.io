@@ -1,15 +1,16 @@
+// Main Content //
 .main-content{
   width:80%;
   max-width:650px;
   margin:0 auto;
   h1{
-    @include text-shadow($one -3px 3px 0px);
-    @include transition-property(text-shadow);
-    @include transition-duration(.3s);
+    @include text-shadow($one $r-shad $shadow 0px);
+    @include transition-property(textshadow);
+    @include transition-duration(3s);
     a{
       color:$black;
       &:hover{
-        @include text-shadow($two -3px 3px 0px);
+        @include text-shadow($two $r-shad $shadow 0px);
       }
     }
   }
@@ -22,4 +23,25 @@
   }
   @include breakpoint(mama-bear) {width:90%; h1{font-size:$big + .2em;} h2{font-size:$reg + .2em;}}
   @include breakpoint(baby-bear) {width:100%; h1{font-size:$xl;}}
+}
+
+// Nav Buttons //
+.nav-button{
+  position:fixed;
+  top:50%;
+  background:$grey;
+  width:100px;
+  height:100px;
+  padding:1em;
+}
+.older{
+  right:0;
+  border-radius:50% 0 0 50%;
+}
+.newer{
+  left:0;
+  border-radius:0 50% 50% 0;
+}
+.page-number{
+  display:none;
 }

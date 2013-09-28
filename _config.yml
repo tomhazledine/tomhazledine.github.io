@@ -4,3 +4,4 @@ markdown: kramdown
 exclude: [sass/]
 kramdown:
   auto_ids: false
+paginate: 1
