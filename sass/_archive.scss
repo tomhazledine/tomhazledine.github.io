@@ -1,14 +1,16 @@
 // Archive Widget //
 .archive{
-  border-top:1px solid $black;
   padding:1em 0;
 }
+article .archive{
+  border-top:1px solid $black;
+}
 .archive ul{
-  width:80%;
-  max-width:650px;
-  margin:0 auto;
-  @include breakpoint(mama-bear) {width:90%;}
-  @include breakpoint(baby-bear) {width:100%;}
+  //width:80%;
+  //max-width:650px;
+  //margin:0 auto;
+  //@include breakpoint(mama-bear) {width:90%;}
+  //@include breakpoint(baby-bear) {width:100%;}
 }
 .archive li{
   padding:1em 0;

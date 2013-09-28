@@ -1,114 +1,40 @@
-<!DOCTYPE html>
-<head>
-	<meta charset="utf-8">
-	<title>
-	  Thomas Hazledine
-	</title>
-	<meta name="description" content="A web development test page">
-	<meta name="viewport" content="width=device-width">
-	
-	<!-- Typekit JS -->
-  <script type="text/javascript" src="//use.typekit.net/puc4nqb.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  
-	<link rel="stylesheet" href="/style.css">
-	
-	<!-- Scripts -->
-	<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
-	
-	<!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
-	<!--[if lt IE 9]>
-		<script src="/js/respond.min.js" type="text/javascript"></script>
-		<script src="/js/html5.js" type="text/javascript"></script>
-	<![endif]-->
-</head>
+---
+layout: default
+location: home
+---
 
-<body>
-  
-  <header class="header clearfix">
-    <h2><a href="/" title="Home">Tom Hazledine</a></h2>
-    <ul>
-      <li><a href="/" title="">Articles</a></li>
-      <li><a href="/about" title="">About</a></li>
-      <li><a href="/projects" title="">Projects</a></li>
-    </ul>
-  </header><!-- .header -->
 
-    
-  <article class="main-content">
-    <h1><a href="/simple-is-hard">Simple Is Hard</a></h1>
+<article class="main-content">
+  {% for post in paginator.posts %}
+    <h1><a href="{{post.url}}">{{post.title}}</a></h1>
+    <h2>{{post.excerpt}}</h2>
     <div class="post-content">
-      <h2>How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.</h2>
-
-<h3>“Simplify, simplfy!” we’re often told. Your service isn’t appealing to your customers? The answer’s simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker. We need to make the distinction between ‘simple’ and ‘simplistic’.</h3>
-
-<p>Ironically, it often seems that the outlets with the most simplistic messages to get across are the ones most overrun by crowded, cluttered, un-navigable interfaces. If what you’re saying has value, you don’t need the kitchen sink to help you say it. But what do you need? And how much can you afford to throw out?</p>
-
-<h2>Only keep what you need.</h2>
-
-<p>It’s tempting to think of simplifying a design as merely stripping away layers of visual ornamentation, but true simplicity comes more from the <em>user experience</em> than the look of the thing. Hiding an unsightly menu behind a <a href="http://example.com/">hamburger icon</a> is an easy way to de-clutter an app’s interface, to be sure, but does that count as simplification? All that’s really achieved is to force the user to make an extra click when they want to navigate somewhere.</p>
-
-<p>Clearing away useless clutter is generally a good tactic, but there’s a distinct difference between <em>simplifying</em> a product and merely making it’s function more obtuse. Is one button with five functions really better than five buttons that each do one task? Is an aesthetically-pure minimalist interface really ideal if you then need to teach every new user how it works?</p>
-
-<p>As with any task worth doing, there are many levels of nuance to simplification. It takes judgement; an assessment of what functions are important to your product, your app, your idea. Strip away anything extraneous and put anything the user needs front-and-centre, but don’t confuse the two or you’ll live to regret it.</p>
-
-<h2>This website is all about words.</h2>
-
-<p>The page you’re reading now went through many iterations before settling on the look you see today. Early drafts were swamped with full-page background images and clever CSS3 animation effects, but no matter how fancy I got with the coding these early designs never felt quite right. Then I stumbled upon <a href="/">this is a web page</a> and It reminded me that what was important for this site was the words themselves. In fact it goes deeper than that, even: what’s important to this site is the <em>content</em>. It could be read aloud by a screen-reader, translated into sign-language, even transmitted telepathically for all I care. As long as the content can be absorbed, this page will have done it’s job.</p>
-
-<p>What I was doing with my early designs was trying to build a ‘great website’, when what I should really have been focusing on was building a great content delivery system. It seems video is the <em>de rigueur</em> medium for getting messages across quickly, and for a while I did toy with the idea of making this page into a vlog, but ultimately words are purer. Video is harder to create than written content, and would skew the message with all the baggage brought along by seeing my face (beautiful) or hearing my accent (perfectly inflected Queen’s English). With the written word I have more chance of capturing the ‘white heat of inspiration’ and of being able to communicate my thoughts clearly.</p>
-
-<h2>Why use any styling at all?</h2>
-
-<p>So why not go all-out and strip out all the styling from this page completely? Properly written semantic HTML is nothing <em>but</em> content, so surely stripping away everything else would be the most efficient way to get the message across? Firstly, because raw HTML looks scary; my first instinct upon seeing any is to assume the website’s broken. Even though it’s nothing but content, to untrained eyes it looks techy, involved, <em>intimidating</em>.</p>
-
-<p>It’s often said that <a href="/">we read best what we read most</a>, and my target demographic reads books. Books are fantastically efficient, and the best ones are things of beauty that wrap their content in a nourishing blanket of aesthetic proportions and finely-wrought typefaces. Given how many books I own solely on the topic of type design and typography, I can’t stand idly by and leave my content at the mercy of the ‘web-safe’ default fonts. I have to believe that good typography and good design makes the reading experience better.</p>
-
-<h2>Simple doesn’t have to be ugly.</h2>
-
-<p>It seems obvious, but websites <em>still</em> have a lot to learn from books. Just because we <em>can</em> swamp everything in technical wizardry doesn’t mean we <em>should</em>, but it equally doesn’t mean we should abandon design altogether. ‘Simple’ doesn’t (and <em>shouldn’t</em>) mean ‘ugly’, and the simple act of thinking about line-lengths and visual hierarchies can turn an indigestible splurge of HTML into something readable, and in the right hands even something beautiful.</p>
-
-<p>Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is really tough, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.</p>
-
+      {{post.content}}
     </div><!-- .post-content -->
-  </article>
+  {% endfor %}
 
-
-  <div class="nav-button newer">
-    <span class="previous">Newer</span>
-  </div><!-- .nav-button -->
-
-  <span class="page-number">Page: 1 of 3</span>
-
-  <div class="nav-button older">
-    <a href="/page2" class="next">Older</a>
-  </div><!-- .nav-button -->
-
+  <nav class="nav-outer clearfix">
+    {% if paginator.previous_page %}
+      <div class="nav-button newer">
+        <span class="nav-inner previous">
+          {% if paginator.previous_page == 1 %}
+            <a href="/">Newer Article</a>
+          {% else %}
+            <a href="/page{{paginator.previous_page}}">Newer Article</a>
+          {% endif %}
+        </span>
+      </div><!-- .nav-button -->
+    {% endif %}
     
-<section class="archive">
-  <ul>
+    {% if paginator.next_page %}
+      <div class="nav-button older">
+        <span class="nav-inner next"><a href="/page{{paginator.next_page}}">Older Article</a></span>
+      </div><!-- .nav-button -->  
+    {% endif %}
     
-      <li><a href="/post-test-one">Post Test One</a> A snippet from the post content.</li>
-    
-      <li><a href="/i-hate-driving">I Hate Driving</a> <p>Driving lessons suck. They&#8217;re expensive and I hate them.</p>
-
-</li>
-    
-  </ul>
-</section><!-- .archive -->
-	
-	<footer>
-	  <p>I do <a href="/">many things</a>.</p>
-	</footer>
-	
-	<div class="scripts">
-	  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-    <!-- Modernizr -->
-    <script src="/js/modernizr.custom.js"></script>
-
-    <script src="/js/main.js"></script>
-	</div><!-- .scripts -->
-	
-</body>
-</html>
+    <span class="page-number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+  </nav>
+  
+  {% include archive.html %}
+  
+</article>

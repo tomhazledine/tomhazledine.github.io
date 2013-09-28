@@ -3,16 +3,10 @@ layout: default
 title: "About"
 ---
 
-<section class="archive">
+<section class="archive main-content">
   <ul>
-    {% if location.home %}
-      {% for post in site.posts offset: 1 %}
-        <li><a href="{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
-      {% endfor %}
-    {% else %}
-      {% for post in site.posts %}
-        <li><a href="{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
-      {% endfor %}
-    {% endif %}
+    {% for post in site.posts %}
+      <li><a href="{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
+    {% endfor %}
   </ul>
 </section><!-- .archive -->

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Simple Is Hard"
+excerpt: How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.
 ---
-
-## How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.
 
 ### “Simplify, simplfy!” we're often told. Your service isn't appealing to your customers? The answer's simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker. We need to make the distinction between ‘simple’ and ‘simplistic’.
 

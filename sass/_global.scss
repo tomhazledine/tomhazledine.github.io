@@ -9,6 +9,10 @@ $one:#4d87e2;
 $two:#ffbc46;
 $three:#ffda46;
 $cream:#efefe7;
+// Opacities
+$grey-op:rgba(221,221,221,.5);
+$one-op:rgba(77,135,226,.5);
+
 
 // Media Query Mixins //
 @mixin breakpoint($point) {
