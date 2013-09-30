@@ -1,5 +1,5 @@
 site_name: 'Thomas Hazledine'
-permalink: /:title
+permalink: /staging/:title
 markdown: kramdown
 exclude: [sass/]
 kramdown:
