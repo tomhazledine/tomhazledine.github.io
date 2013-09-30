@@ -26,6 +26,22 @@
 }
 
 // Nav Buttons //
+.nav-outer{
+  a{
+    text-decoration:none;
+    color:$one-op;
+    &:hover{
+      color:$one;
+    }
+    @include breakpoint(mama-bear) {
+      text-decoration:underline;
+      color:$one;
+      &:hover{
+          color:$two;
+      }
+    }
+  }
+}
 .nav-button{
   position:fixed;
   top:50%;
@@ -39,17 +55,7 @@
   font-size:16px;
   line-height:16px;
   &:hover{
-      background:$two;
-      a{
-        color:$one;
-      }
-  }
-  a{
-    text-decoration:none;
-    color:$one-op;
-    &:hover{
-      color:$one;
-    }
+    background:$two;
   }
   @include breakpoint(mama-bear) {
     position:static;
@@ -57,13 +63,6 @@
     width:35%;
     height:auto;
     padding:0;
-    a{
-      text-decoration:underline;
-      color:$one;
-      &:hover{
-        color:$two;
-      }
-    }
     &:hover{
       background:none;
       color:inherit;

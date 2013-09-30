@@ -10,19 +10,23 @@ location: home
     <h2>{{first_post.excerpt}}</h2>
     {{first_post.content}}
     
+    <span class="permalink"><a href="{{first_post.url}}" title="permalink">Article Permalink.</a></span>
+    
     <nav class="nav-outer clearfix">
       {% if first_post.previous.url %}
-        <div class="nav-button older">
-          <span class="nav-inner next">
-              <a href="{{first_post.previous.url}}">Older Article</a>
-          </span>
-        </div><!-- .nav-button -->
+        <a href="{{first_post.previous.url}}">
+          <div class="nav-button older">
+            <span class="nav-inner next">Older Article</span>
+          </div><!-- .nav-button -->
+        </a>
       {% endif %}
 
       {% if first_post.next.url %}
-        <div class="nav-button newer">
-          <span class="nav-inner next"><a href="{{first_post.next.url}}">Newer Article</a></span>
-        </div><!-- .nav-button -->  
+        <a href="{{first_post.next.url}}">
+          <div class="nav-button newer">
+            <span class="nav-inner next">Newer Article</span>
+          </div><!-- .nav-button -->  
+        </a>
       {% endif %}
     </nav>
     

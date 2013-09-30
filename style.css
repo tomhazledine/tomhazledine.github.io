@@ -442,7 +442,28 @@ body {
   }
 }
 
-/* line 29, sass/_body.scss */
+/* line 30, sass/_body.scss */
+.nav-outer a {
+  text-decoration: none;
+  color: rgba(77, 135, 226, 0.5);
+}
+/* line 33, sass/_body.scss */
+.nav-outer a:hover {
+  color: #4d87e2;
+}
+@media (max-width: 650px) {
+  /* line 30, sass/_body.scss */
+  .nav-outer a {
+    text-decoration: underline;
+    color: #4d87e2;
+  }
+  /* line 39, sass/_body.scss */
+  .nav-outer a:hover {
+    color: #ffbc46;
+  }
+}
+
+/* line 45, sass/_body.scss */
 .nav-button {
   position: fixed;
   top: 50%;
@@ -456,25 +477,12 @@ body {
   font-size: 16px;
   line-height: 16px;
 }
-/* line 41, sass/_body.scss */
+/* line 57, sass/_body.scss */
 .nav-button:hover {
   background: #ffbc46;
 }
-/* line 43, sass/_body.scss */
-.nav-button:hover a {
-  color: #4d87e2;
-}
-/* line 47, sass/_body.scss */
-.nav-button a {
-  text-decoration: none;
-  color: rgba(77, 135, 226, 0.5);
-}
-/* line 50, sass/_body.scss */
-.nav-button a:hover {
-  color: #4d87e2;
-}
 @media (max-width: 650px) {
-  /* line 29, sass/_body.scss */
+  /* line 45, sass/_body.scss */
   .nav-button {
     position: static;
     background: none;
@@ -482,23 +490,14 @@ body {
     height: auto;
     padding: 0;
   }
-  /* line 60, sass/_body.scss */
-  .nav-button a {
-    text-decoration: underline;
-    color: #4d87e2;
-  }
-  /* line 63, sass/_body.scss */
-  .nav-button a:hover {
-    color: #ffbc46;
-  }
-  /* line 67, sass/_body.scss */
+  /* line 66, sass/_body.scss */
   .nav-button:hover {
     background: none;
     color: inherit;
   }
 }
 
-/* line 73, sass/_body.scss */
+/* line 72, sass/_body.scss */
 .nav-inner {
   display: block;
   height: 100%;
@@ -506,13 +505,13 @@ body {
   padding: 18px 0;
 }
 
-/* line 79, sass/_body.scss */
+/* line 78, sass/_body.scss */
 .newer {
   right: 0;
   border-radius: 50% 0 0 50%;
 }
 @media (max-width: 650px) {
-  /* line 79, sass/_body.scss */
+  /* line 78, sass/_body.scss */
   .newer {
     border-radius: 0;
     text-align: left;
@@ -520,13 +519,13 @@ body {
   }
 }
 
-/* line 88, sass/_body.scss */
+/* line 87, sass/_body.scss */
 .older {
   left: 0;
   border-radius: 0 50% 50% 0;
 }
 @media (max-width: 650px) {
-  /* line 88, sass/_body.scss */
+  /* line 87, sass/_body.scss */
   .older {
     border-radius: 0;
     text-align: right;
@@ -534,7 +533,7 @@ body {
   }
 }
 
-/* line 97, sass/_body.scss */
+/* line 96, sass/_body.scss */
 .page-number {
   display: none;
 }
