@@ -587,6 +587,12 @@ article .archive {
   margin: 0 0 1em 0;
 }
 
+/* line 40, sass/_widgets.scss */
+.comments {
+  padding: 1em 0 0 0;
+  border-top: 1px solid #cccccc;
+}
+
 /* line 2, sass/_footer.scss */
 footer {
   border-top: 1px solid #cccccc;

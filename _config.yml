@@ -1,7 +1,10 @@
-site_name: 'Thomas Hazledine'
+site_name: 'Tom Hazledine'
 permalink: /:title
 markdown: kramdown
 exclude: [sass/]
 kramdown:
   auto_ids: false
 paginate: 1
+name: Tom Hazledine
+description: The personal web-hub for Tom Hazledine
+feed_url: http://thomashazledine.com
