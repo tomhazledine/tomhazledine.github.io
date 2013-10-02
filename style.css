@@ -239,7 +239,7 @@ body {
   font-family: "ff-meta-serif-web-pro", sans-serif;
   font-size: 1.5em;
   background: #efefe7;
-  color: #404040;
+  color: #505050;
 }
 
 /* line 101, sass/_global.scss */
@@ -288,12 +288,12 @@ footer {
 pre {
   margin: 1em;
   padding: 0 .5em;
-  background: #404040;
+  background: #505050;
 }
 
 /* line 129, sass/_global.scss */
 code {
-  background: #404040;
+  background: #505050;
   color: white;
   font-family: monospace;
 }
@@ -317,7 +317,7 @@ body {
 .header {
   padding-bottom: 0;
   margin-bottom: 2em;
-  border-bottom: 1px solid #404040;
+  border-bottom: 1px solid #cccccc;
 }
 /* line 7, sass/_header.scss */
 .header h2 {
@@ -326,6 +326,7 @@ body {
   padding-bottom: 0;
   line-height: 1.2em;
   overflow: hidden;
+  text-shadow: #4d87e2 -0.04em 0.04em 0px;
 }
 @media (max-width: 650px) {
   /* line 7, sass/_header.scss */
@@ -341,34 +342,43 @@ body {
   }
 }
 /* line 19, sass/_header.scss */
-.header a {
+.header h2 a {
   text-decoration: none;
-  color: #404040;
+  color: #505050;
 }
 /* line 22, sass/_header.scss */
-.header a:hover {
-  color: #404040;
+.header h2 a:hover {
+  color: #505050;
   text-shadow: #ffbc46 -0.04em 0.04em 0px;
 }
-/* line 27, sass/_header.scss */
+/* line 28, sass/_header.scss */
+.header a {
+  text-decoration: none;
+  color: #505050;
+}
+/* line 31, sass/_header.scss */
+.header a:hover {
+  color: #ffbc46;
+}
+/* line 35, sass/_header.scss */
 .header ul {
   text-align: center;
   font-size: 1em;
 }
 @media (min-width: 1280px) {
-  /* line 27, sass/_header.scss */
+  /* line 35, sass/_header.scss */
   .header ul {
     font-size: 24px;
   }
 }
-/* line 32, sass/_header.scss */
+/* line 40, sass/_header.scss */
 .header li {
   display: inline-block;
-  border-right: 1px solid #404040;
+  border-right: 1px solid #cccccc;
   margin: .8em 0 .5em;
   padding: 0 1em;
 }
-/* line 38, sass/_header.scss */
+/* line 46, sass/_header.scss */
 .header li:last-of-type {
   border-right: none;
 }
@@ -393,7 +403,7 @@ body {
 }
 /* line 10, sass/_body.scss */
 .main-content h1 a {
-  color: #404040;
+  color: #505050;
 }
 /* line 12, sass/_body.scss */
 .main-content h1 a:hover {
@@ -467,7 +477,7 @@ body {
 .nav-button {
   position: fixed;
   top: 50%;
-  background: #dddddd;
+  background: #cccccc;
   background: rgba(221, 221, 221, 0.5);
   width: 100px;
   height: 100px;
@@ -538,24 +548,48 @@ body {
   display: none;
 }
 
-/* line 2, sass/_archive.scss */
+/* line 2, sass/_widgets.scss */
 .archive {
   padding: 1em 0;
 }
-
-/* line 5, sass/_archive.scss */
-article .archive {
-  border-top: 1px solid #404040;
+/* line 4, sass/_widgets.scss */
+.archive h3 {
+  padding: 0;
+  margin: 0;
 }
 
-/* line 15, sass/_archive.scss */
+/* line 9, sass/_widgets.scss */
+article .archive {
+  border-top: 1px solid #cccccc;
+}
+
+/* line 19, sass/_widgets.scss */
 .archive li {
   padding: 1em 0;
 }
 
+/* line 24, sass/_widgets.scss */
+.quick-links {
+  border-bottom: 1px solid #cccccc;
+  padding: 0 0 1em 0;
+  margin: 0 0 1em 0;
+}
+/* line 28, sass/_widgets.scss */
+.quick-links h3 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 33, sass/_widgets.scss */
+.project {
+  border-bottom: 1px solid #cccccc;
+  padding: 0 0 0 0;
+  margin: 0 0 1em 0;
+}
+
 /* line 2, sass/_footer.scss */
 footer {
-  border-top: 1px solid #404040;
+  border-top: 1px solid #cccccc;
   padding: 3em;
   margin-top: 1em;
   text-align: center;

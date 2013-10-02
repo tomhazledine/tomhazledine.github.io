@@ -6,17 +6,15 @@ location: home
 {% assign first_post = site.posts.first %}
 
 <article class="main-content">
-    <h1>{{first_post.title}}</h1>
+    <h1><a href="{{first_post.url}}">{{first_post.title}}</a></h1>
     <h2>{{first_post.excerpt}}</h2>
     {{first_post.content}}
-    
-    <span class="permalink"><a href="{{first_post.url}}" title="permalink">Article Permalink.</a></span>
     
     <nav class="nav-outer clearfix">
       {% if first_post.previous.url %}
         <a href="{{first_post.previous.url}}">
           <div class="nav-button older">
-            <span class="nav-inner next">Older Article</span>
+            <span class="nav-inner next">Previous Article</span>
           </div><!-- .nav-button -->
         </a>
       {% endif %}
@@ -24,7 +22,7 @@ location: home
       {% if first_post.next.url %}
         <a href="{{first_post.next.url}}">
           <div class="nav-button newer">
-            <span class="nav-inner next">Newer Article</span>
+            <span class="nav-inner next">Next Article</span>
           </div><!-- .nav-button -->  
         </a>
       {% endif %}

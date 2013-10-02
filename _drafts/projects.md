@@ -1,0 +1,11 @@
+# Projects
+
+## [Tom Builds Websites](http://tombuildswebsites.com)
+When I'm not sipping fine scotch and basking in the glory of my vinyl collection, I make websites. It's less fun than making music, but more fun than anything else people are prepared to pay me for. I specialize in building bespoke, tasteful sites for SMEs and any artistic endeavour that wants to take itself seriously and look cool in the process. I guess my main strength is my CSS wizadry (all pre-processed SASS/Compass, naturally), but I'm also happy working with PHP, Javascript/JQuery, Ruby, Liquid, YAML, and I spend far more time than is good for me mucking about in the command line (and occasionally *not* making catastrophic mistakes, too!). I do almost all my writing in Markdown now – because it's awesome – and my whole workflow is GIT-versioned-controlled up to my eyeballs.
+
+## [Eaten by Monsters: The Music Blog](http://eatenbymonsters.com)
+Founded in 2008 with nothing but a free wordpress.com account and keg-load of hustle, Eaten by Monsters has grown into an award-winning, taste-making, discourse-shaping powerhouse (albeit in a very specific niche). Writing EbM has opened the door to a host of opportunities; writing for Tom Robinson's [Fresh On The Net](http://freshonthenet.co.uk/how-to-reach-music-blogs/) blog, learning all about web publishing the hard way, and (most importantly) getting me on the press-lists for all my favourite record labels.
+
+## [Eaten by Monsters: The Band](http://eatenbymonste.rs)
+Working on the principle that good names are hard to come by, my band was also called Eaten by Monsters. I say *was* because it's been a long time since we released anything. *Scaring the Pets* was our only ‘proper’ record, and was met with positive attention from critics and podcasters (getting featured on BBC 6 Music and The Waiting Room, among others, and earning a raft of good reviews from my music-blogging peers) but never took off the way I'd hoped it would (I have yet to play a sold-out, five-night residency at Wembley Arena, for instance). It did give me the excuse to work with a vast array of talented musicians in an impressive selection of top-spec'ed recording studios, and led to some very fun performances at most of London's best small venues (the Camden Barfly and sadly-now-defunct Luminaire gigs being particular highlights).
+

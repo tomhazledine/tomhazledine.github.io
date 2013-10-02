@@ -29,7 +29,9 @@ Header
 Body
   Main Content
   Nav Buttons
-Archive Widget
+Widgets
+  Archive
+  Projects Quick-Links
 Footer
 Print Styles
 Credits
@@ -41,7 +43,7 @@ Credits
 @import"layout";
 @import"header";
 @import"body";
-@import"archive";
+@import"widgets";
 @import"footer";
 @import"print.scss";
 @import"credits.scss";

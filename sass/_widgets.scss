@@ -1,0 +1,37 @@
+// Archive Widget //
+.archive{
+  padding:1em 0;
+  h3{
+    padding:0;
+    margin:0;
+  }
+}
+article .archive{
+  border-top:1px solid $grey;
+}
+.archive ul{
+  //width:80%;
+  //max-width:650px;
+  //margin:0 auto;
+  //@include breakpoint(mama-bear) {width:90%;}
+  //@include breakpoint(baby-bear) {width:100%;}
+}
+.archive li{
+  padding:1em 0;
+}
+
+// Projects Quicklinks //
+.quick-links{
+  border-bottom:1px solid $grey;
+  padding:0 0 1em 0;
+  margin:0 0 1em 0;
+  h3{
+    padding:0;
+    margin:0;
+  }
+}
+.project{
+  border-bottom:1px solid $grey;
+  padding:0 0 0 0;
+  margin:0 0 1em 0;
+}
