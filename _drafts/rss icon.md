@@ -1,0 +1,1 @@
+# The RSS icon looks ugly, and there's no perfect solution.
