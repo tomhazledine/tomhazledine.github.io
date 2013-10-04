@@ -4,8 +4,9 @@
 	<title>
 	  {% if page.title %} {{ page.title }} | {% endif %}Tom Hazledine
 	</title>
-	<meta name="description" content="A web development test page">
+	<meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{ site.description }}{% endif %}">
 	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="{{site.url}}/favicon.ico">
 	
 	<!-- Typekit JS -->
   <script type="text/javascript" src="//use.typekit.net/puc4nqb.js"></script>

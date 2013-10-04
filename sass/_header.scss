@@ -12,7 +12,7 @@
     //margin-bottom:0;
     line-height:1.2em;
     overflow:hidden;
-    @include text-shadow($one $r-shad $shadow 0px);
+    @include text-shadow($one $h-shad $head-shad 0px);//$r-shad $shadow 0px);
     // @include breakpoint(papa-bear) { line-height: 1em; }
     @include breakpoint(mama-bear) {font-size:$big - .4em;}
     @include breakpoint(baby-bear) { line-height: 1.5em; font-size: 32px; }
@@ -21,7 +21,7 @@
       color:$black;
       &:hover{
         color:$black;
-        @include text-shadow($two $r-shad $shadow 0px);
+        @include text-shadow($two $h-shad $head-shad 0px);//$r-shad $shadow 0px);
       }
     }
   }
