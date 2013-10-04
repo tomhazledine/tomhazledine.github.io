@@ -35,9 +35,60 @@ article .archive{
   padding:0 0 0 0;
   margin:0 0 1em 0;
 }
+.top-link{
+  display:block;
+  padding:0 0 1em 0;
+  a{
+    color:$grey;
+    font-size:$small;
+    &:hover{
+      color:$two;
+    }
+  }
+}
 
 // Comments //
 .comments{
   padding:1em 0 0 0;
   border-top:1px solid $grey;
+}
+
+// Social Icons //
+.social{
+  width:80%;
+  max-width:650px;
+  margin:0 auto;
+  padding:0 0 1em 0;
+  a{
+    text-decoration:none;
+  }
+}
+.social-box{
+  width:30%;
+  margin-right:5%;
+  float:left;
+  &:last-of-type{
+    margin:0;
+  }
+  &:hover .icon-meta p{
+    opacity:1;
+  }
+}
+.icon{
+  display:block;
+  width:100%;
+  text-align:center;
+  font-family:$icons;
+  font-size:2em;
+}
+.icon-meta{
+  height:1em;
+  width:100%;
+  p{
+    line-height:1em;
+    padding:0;
+    opacity:.0;
+    @include transition-property(opacity);
+    @include transition-duration(.3s);
+  }
 }

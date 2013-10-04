@@ -43,6 +43,19 @@ $small:1em;//16px
 $tiny:.8075em;//14px;
 
 // Typefaces, weights, & styles //
+// Icon Font
+@font-face {
+	font-family: 'icons';
+	src:url('fonts/icons.eot');
+	src:url('fonts/icons.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icons.woff') format('woff'),
+		url('fonts/icons.ttf') format('truetype'),
+		url('fonts/icons.svg#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+// Fonts
+$icons:"icons";
 $heading: "jubilat", serif;
 $body: "ff-meta-serif-web-pro", sans-serif;
 @mixin body{
@@ -88,6 +101,8 @@ h3{
 // Misc Vars
 $shadow:.04em;
 $r-shad:-$shadow;
+$head-shad:.06em;
+$h-shad:-$head-shad;
 
 // Basic Body Styles //
 *{
