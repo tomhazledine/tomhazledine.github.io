@@ -3,7 +3,16 @@ layout: default
 ---
 
 <article class="main-content">
-    <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+  
+    {% if page.featured_img %}
+        <header class="post-header">
+          <img class="featured-img" src="{{ site.url }}{{ page.featured_img }}"/>
+          <h1><a href="{{page.url}}" class="responsive_headline">{{page.title}}</a></h1>
+        </header>
+    {% else %}
+        <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+    {% endif %}
+    
     <h2>{{page.excerpt}}</h2>
     {{content}}
     

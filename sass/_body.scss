@@ -1,4 +1,30 @@
 // Main Content //
+.main-content .post-header{
+  position:relative;
+  overflow:hidden;
+  h1{
+    display:block;
+    width:100%;
+    position:relative;
+    padding:1.5em .2em;
+    z-index:100;
+  }
+  h1 a{
+    display:block;
+    width:100%;
+    color:$cream;
+  }
+  img{
+    //width:auto;
+    //min-width:100%;
+    //height:100%;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    z-index:90;
+  }
+}
 .main-content{
   width:80%;
   max-width:650px;
@@ -23,6 +49,10 @@
   }
   @include breakpoint(mama-bear) {width:90%; h1{font-size:$big + .2em;} h2{font-size:$reg + .2em;}}
   @include breakpoint(baby-bear) {width:100%; h1{font-size:$xl;}}
+  img{
+    width:100%;
+    overflow:hidden;
+  }
 }
 
 // Nav Buttons //
