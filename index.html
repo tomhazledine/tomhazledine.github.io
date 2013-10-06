@@ -14,7 +14,8 @@ location: home
       {% if first_post.previous.url %}
         <a href="{{first_post.previous.url}}">
           <div class="nav-button older">
-            <span class="nav-inner next">Previous Article</span>
+            <span class="nav-inner button">Older Article</span>
+            <span class="nav-inner label label-old">“{{ first_post.previous.title }}”</span>
           </div><!-- .nav-button -->
         </a>
       {% endif %}
@@ -22,8 +23,30 @@ location: home
       {% if first_post.next.url %}
         <a href="{{first_post.next.url}}">
           <div class="nav-button newer">
-            <span class="nav-inner next">Next Article</span>
-          </div><!-- .nav-button -->  
+            <span class="nav-inner label label-new">“{{ first_post.next.title }}”</span>
+            <span class="nav-inner button">Newer Article</span>
+          </div><!-- .nav-button -->
+        </a>
+      {% endif %}
+      
+      
+      
+      
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}">
+          <div class="nav-button older">
+            <span class="nav-inner button">Older Article</span>
+            <span class="nav-inner label label-old">“{{ page.previous.title }}”</span>
+          </div><!-- .nav-button -->
+        </a>
+      {% endif %}
+
+      {% if page.next.url %}
+        <a href="{{page.next.url}}">
+          <div class="nav-button newer">
+            <span class="nav-inner label label-new">“{{ page.next.title }}”</span>
+            <span class="nav-inner button">Newer Article</span>
+          </div><!-- .nav-button -->
         </a>
       {% endif %}
     </nav>
