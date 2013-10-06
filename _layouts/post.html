@@ -20,7 +20,8 @@ layout: default
       {% if page.previous.url %}
         <a href="{{page.previous.url}}">
           <div class="nav-button older">
-            <span class="nav-inner next">Older Article</span>
+            <span class="nav-inner button">Older Article</span>
+            <span class="nav-inner label label-old">“{{ page.previous.title }}”</span>
           </div><!-- .nav-button -->
         </a>
       {% endif %}
@@ -28,7 +29,8 @@ layout: default
       {% if page.next.url %}
         <a href="{{page.next.url}}">
           <div class="nav-button newer">
-            <span class="nav-inner next">Newer Article</span>
+            <span class="nav-inner label label-new">“{{ page.next.title }}”</span>
+            <span class="nav-inner button">Newer Article</span>
           </div><!-- .nav-button -->
         </a>
       {% endif %}

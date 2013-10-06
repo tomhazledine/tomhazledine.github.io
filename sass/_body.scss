@@ -77,13 +77,16 @@
   top:50%;
   background:$grey;
   background:$grey-op;
-  width:100px;
+  width:300px;
   height:100px;
   padding:16px;
   text-align:center;
   font-style:italic;
   font-size:16px;
   line-height:16px;
+  z-index:1000;
+  @include transition-property(background);
+  @include transition-duration(.4s);
   &:hover{
     background:$two;
   }
@@ -92,22 +95,53 @@
     background:none;
     width:35%;
     height:auto;
-    padding:0;
+    padding:0 0 1em 0;
     &:hover{
       background:none;
       color:inherit;
+    }
+    .nav-inner{
+      padding:0;
+    }
+    .label{
+      font-size:16px;
+    }
+    .button{
+      padding:.4em 0 0 0;
+      width:auto;
+    }
+    .label-old{
+      float:left;
+    }
+    .label-new{
+      float:right;
     }
   }
 }
 .nav-inner{
   display:block;
   height:100%;
-  width:100%;
+  //width:100%;
   padding:18px 0;
+  float:right;
+}
+.label{
+  width:200px;
+  font-size:2em;
+  line-height:1em;
+  padding-top:9px;
+}
+.button{
+  width:68px;
 }
 .newer{
-  right:0;
-  border-radius:50% 0 0 50%;
+  right:-216px;
+  @include transition-property(right);
+  @include transition-duration(.4s);
+  &:hover{
+    right:0;
+  }
+  border-radius:50px 0 0 50px;
   @include breakpoint(mama-bear) {
     border-radius:0;
     text-align:right;
@@ -115,8 +149,13 @@
   }
 }
 .older{
-  left:0;
-  border-radius:0 50% 50% 0;
+  left:-216px;
+  @include transition-property(left);
+  @include transition-duration(.4s);
+  &:hover{
+    left:0;
+  }
+  border-radius:0 50px 50px 0;
   @include breakpoint(mama-bear) {
     border-radius:0;
     text-align:left;

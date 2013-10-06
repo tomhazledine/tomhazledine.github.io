@@ -8,3 +8,4 @@ paginate: 1
 name: Tom Hazledine
 description: The personal web-hub for Tom Hazledine
 feed_url: http://thomashazledine.com
+exclude: [/img/favicon_sizes/, /img/social_icons/, /sass/, config.rb, README.md]
