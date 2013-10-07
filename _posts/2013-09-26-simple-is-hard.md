@@ -5,7 +5,7 @@ excerpt: How I learnt to focus on substance over style, and began to rethink my 
 comments: true
 ---
 
-### “Simplify, simplfy!” we're often told. Your service isn't appealing to your customers? The answer's simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker. We need to make the distinction between ‘simple’ and ‘simplistic’.
+“Simplify, simplfy!” we're often told. Your service isn't appealing to your customers? The answer's simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker. We need to make the distinction between ‘simple’ and ‘simplistic’.
 
 Ironically, it often seems that the outlets with the most simplistic messages to get across are the ones most overrun by crowded, cluttered, un-navigable interfaces. If what you’re saying has value, you don’t need the kitchen sink to help you say it. But what do you need? And how much can you afford to throw out?
 
