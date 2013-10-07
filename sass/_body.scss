@@ -89,6 +89,7 @@
   @include transition-duration(.4s);
   &:hover{
     background:$two;
+    background:$two-op;
   }
   @include breakpoint(mama-bear) {
     position:static;
@@ -104,14 +105,21 @@
       padding:0;
     }
     .label{
+      padding:.4em 0 0 0;
       font-size:16px;
     }
     .button{
-      padding:.4em 0 0 0;
       width:auto;
+    }
+    .button-old{
+      float:left;
+    }
+    .button-new{
+      float:right;
     }
     .label-old{
       float:left;
+      //text-align:left;
     }
     .label-new{
       float:right;
@@ -133,6 +141,12 @@
 }
 .button{
   width:68px;
+}
+.button-new{
+  float:left;
+}
+.button-old{
+  float:right;
 }
 .newer{
   right:-216px;
