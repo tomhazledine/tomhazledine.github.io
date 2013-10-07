@@ -8,6 +8,7 @@
     position:relative;
     padding:1.5em .2em;
     z-index:100;
+    //line-height:.9em;
   }
   h1 a{
     display:block;
@@ -41,14 +42,15 @@
     }
   }
   h2{
-    line-height:1.1em;
+    line-height:.9em;
   }
   h3{
-    @include breakpoint(baby-bear) {font-size:$reg - .1em; line-height:1.1em;}
-    @include breakpoint(mama-bear) {font-size:$reg - .3em; line-height:1.1em;}
+    line-height:1.1em;
+    //@include breakpoint(baby-bear) {font-size:$reg - .1em; line-height:1.1em;}
+    //@include breakpoint(mama-bear) {font-size:$reg - .3em; line-height:1.1em;}
   }
   @include breakpoint(mama-bear) {width:90%; h1{font-size:$big + .2em;} h2{font-size:$reg + .2em;}}
-  @include breakpoint(baby-bear) {width:100%; h1{font-size:$xl;}}
+  @include breakpoint(baby-bear) {width:100%; h1{font-size:$xl - .5em;}}
   img{
     width:100%;
     overflow:hidden;
@@ -137,7 +139,7 @@
   width:200px;
   font-size:2em;
   line-height:1em;
-  padding-top:9px;
+  padding-top:0;
 }
 .button{
   width:68px;

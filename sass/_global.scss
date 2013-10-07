@@ -83,13 +83,14 @@ h1{
   font-size:$huge;
   @include heading;
   font-style:italic;
-  line-height:1em;
-  padding-bottom:.8em;
+  line-height:.8em;
+  padding-bottom:.4em;
 }
 h2{
   font-size:$big;
   @include heading;
   padding-bottom:.8em;
+  line-height:.8em;
 }
 h3{
   font-size:$med;
