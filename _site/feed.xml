@@ -8,13 +8,13 @@
 
 <item>
 <title>Simple Is Hard</title>
-<description>&lt;p&gt;“Simplify, simplfy!” we’re often told. Your service isn’t appealing to your customers? The answer’s simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker. We need to make the distinction between ‘simple’ and ‘simplistic’.&lt;/p&gt;
+<description>&lt;p&gt;“Simplify, simplfy!” we’re often told. Your service isn’t appealing to your customers? The answer’s simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker.&lt;/p&gt;
 
-&lt;p&gt;Ironically, it often seems that the outlets with the most simplistic messages to get across are the ones most overrun by crowded, cluttered, un-navigable interfaces. If what you’re saying has value, you don’t need the kitchen sink to help you say it. But what do you need? And how much can you afford to throw out?&lt;/p&gt;
+&lt;p&gt;What we need to do is distinguish between ‘simple’ and ‘simplistic’. It’s fairly obvious that content suffers when overrun by crowded, cluttered, un-navigable interfaces. If what you’re saying has value, you don’t need the kitchen sink to help you say it. But what do you need? And how much can you afford to throw out?&lt;/p&gt;
 
 &lt;h2&gt;Only keep what you need.&lt;/h2&gt;
 
-&lt;p&gt;It’s tempting to think of simplifying a design as merely stripping away layers of visual ornamentation, but true simplicity comes more from the &lt;em&gt;user experience&lt;/em&gt; than the look of the thing. Hiding an unsightly menu behind a &lt;a href=&quot;http://mobile.smashingmagazine.com/2012/10/08/the-semantic-responsive-design-navicon/&quot;&gt;hamburger icon&lt;/a&gt; is an easy way to de-clutter an app’s interface, to be sure, but does that count as simplification? All that’s really achieved is to force the user to make an extra click when they want to navigate somewhere.&lt;/p&gt;
+&lt;p&gt;Deleting everything that you &lt;em&gt;don’t&lt;/em&gt; need only works when you know for sure what you &lt;em&gt;do&lt;/em&gt; need. It’s tempting to think of simplifying a design as merely stripping away layers of visual ornamentation, but true simplicity comes more from the &lt;em&gt;user experience&lt;/em&gt; than the look of the thing. Hiding an unsightly menu behind a &lt;a href=&quot;http://mobile.smashingmagazine.com/2012/10/08/the-semantic-responsive-design-navicon/&quot;&gt;hamburger icon&lt;/a&gt; is an easy way to de-clutter an app’s interface, for example, but does that count as simplification? All that achieves is forcing the user to make an extra click when they want to navigate somewhere.&lt;/p&gt;
 
 &lt;p&gt;Clearing away useless clutter is generally a good tactic, but there’s a distinct difference between &lt;em&gt;simplifying&lt;/em&gt; a product and merely making it’s function more obtuse. Is one button with five functions really better than five buttons that each do one task? Is an aesthetically-pure minimalist interface really ideal if you then need to teach every new user how it works?&lt;/p&gt;
 
@@ -28,15 +28,15 @@
 
 &lt;h2&gt;Why use any styling at all?&lt;/h2&gt;
 
-&lt;p&gt;So why not go all-out and strip out all the styling from this page completely? Properly written semantic HTML is nothing &lt;em&gt;but&lt;/em&gt; content, so surely stripping away everything else would be the most efficient way to get the message across? Firstly, because raw HTML looks scary; my first instinct upon seeing any is to assume the website’s broken. Even though it’s nothing but content, to untrained eyes it looks techy, involved, &lt;em&gt;intimidating&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So why not go all-out and strip out all the styling from this page completely? Properly written semantic HTML is nothing &lt;em&gt;but&lt;/em&gt; content, so surely stripping away everything else would be the most efficient way to get the message across? Well, quite frankly, the default styling applied by web browsers is &lt;em&gt;ugly&lt;/em&gt;, and that’s not as shallow a complaint as you might think. Concepts like line-height, line-length, leading &amp;amp; kerning each have a huge impact on the readability of text. To trust all those to the random whims of a browser is madness.&lt;/p&gt;
 
-&lt;p&gt;It’s often said that &lt;a href=&quot;http://alistapart.com/article/on-web-typography#section3&quot;&gt;we read best what we read most&lt;/a&gt;, and my target demographic reads books. Books are fantastically efficient, and the best ones are things of beauty that wrap their content in a nourishing blanket of aesthetic proportions and finely-wrought typefaces. Given how many books I own solely on the topic of type design and typography, I can’t stand idly by and leave my content at the mercy of the ‘web-safe’ default fonts. I have to believe that good typography and good design makes the reading experience better.&lt;/p&gt;
+&lt;p&gt;It’s often said that &lt;a href=&quot;http://alistapart.com/article/on-web-typography#section3&quot;&gt;we read best what we read most&lt;/a&gt;, and my friends and I read &lt;em&gt;books&lt;/em&gt;. Books are fantastically efficient, and the best ones are things of beauty that wrap their content in a nourishing blanket of aesthetic proportions and finely-wrought typefaces. Given how many books I own solely on the topic of type design and typography, I can’t stand idly by and leave my content at the mercy of the ‘web-safe’ default fonts. I have to believe that good typography and good design makes the reading experience better.&lt;/p&gt;
 
 &lt;h2&gt;Simple doesn’t have to be ugly.&lt;/h2&gt;
 
 &lt;p&gt;It seems obvious, but websites &lt;em&gt;still&lt;/em&gt; have a lot to learn from books. Just because we &lt;em&gt;can&lt;/em&gt; swamp everything in technical wizardry doesn’t mean we &lt;em&gt;should&lt;/em&gt;, but it equally doesn’t mean we should abandon design altogether. ‘Simple’ doesn’t (and &lt;em&gt;shouldn’t&lt;/em&gt;) mean ‘ugly’, and the simple act of thinking about line-lengths and visual hierarchies can turn an indigestible splurge of HTML into something readable, and in the right hands even something beautiful.&lt;/p&gt;
 
-&lt;p&gt;Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is really tough, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.&lt;/p&gt;
+&lt;p&gt;Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is a real challenge, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.&lt;/p&gt;
 </description>
 <pubDate>Thu, 26 Sep 2013 00:00:00 +0100</pubDate>
 <link>/simple-is-hard</link>
