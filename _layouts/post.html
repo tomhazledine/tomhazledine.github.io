@@ -15,7 +15,7 @@ layout: default
     
     <h2>{{page.excerpt}}</h2>
     {{content}}
-    <span class="top-link"><a href=".header">Back to top</a></span>
+    <span class="top-link"><a href="#top">Back to top</a></span>
     
     <nav class="nav-outer clearfix">
       {% if page.previous.url %}
@@ -41,7 +41,7 @@ layout: default
     
     
     {% include archive.html %}
-    <section class="comments">
+    <section id="comment-box" class="comments">
       <div id="disqus_thread"></div>
       <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

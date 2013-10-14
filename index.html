@@ -9,6 +9,8 @@ location: home
     <h1><a href="{{first_post.url}}">{{first_post.title}}</a></h1>
     <h2>{{first_post.excerpt}}</h2>
     {{first_post.content}}
+    <span class="top-link"><a href="#top">Back to top</a></span>
+    <span class="comment link"><a href="{{first_post.url}}/#commment-box">Leave a comment</a></span>
     
     <nav class="nav-outer clearfix">
       {% if first_post.previous.url %}
