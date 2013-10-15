@@ -1,6 +1,7 @@
 site_name: 'Tom Hazledine'
 permalink: /:title
 markdown: kramdown
+include: ['.htaccess']
 exclude: [sass/]
 kramdown:
   auto_ids: false
