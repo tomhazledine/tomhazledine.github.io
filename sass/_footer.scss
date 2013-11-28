@@ -1,7 +1,14 @@
 // Footer //
 footer{
   border-top:1px solid $grey;
-  padding:3em;
+  padding:3em 0;
   margin-top:1em;
   text-align:center;
+}
+.footer-inner{
+  max-width:650px;
+  width:80%;
+  @include breakpoint(mama-bear) {width:90%;}
+  @include breakpoint(baby-bear) {width:100%;}
+  margin:0 auto;
 }
