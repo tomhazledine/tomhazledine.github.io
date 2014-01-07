@@ -24,7 +24,7 @@ module.exports=function(grunt){
     uglify:{
       my_target:{
         files:{
-          'js/script.js':['js/plugins/*.js']
+          'js/script.js':['js/raw/*.js']
         }//files
       }//my_target
     },//uglify
@@ -37,16 +37,16 @@ module.exports=function(grunt){
       }//dev
     },//compass
     
-    imagemin:{
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'img/raw/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'img/build/'
-        }]//files
-      }//dynamic
-    },//imagemin
+    //imagemin:{
+    //  dynamic: {
+    //    files: [{
+    //      expand: true,
+    //      cwd: 'img/raw/',
+    //      src: ['**/*.{png,jpg,gif}'],
+    //      dest: 'img/build/'
+    //    }]//files
+    //  }//dynamic
+    //},//imagemin
     
     watch:{
       styles:{
@@ -55,19 +55,19 @@ module.exports=function(grunt){
       },//styles
       options:{ livereload:true},
       scripts:{
-        files:['/js/plugins/*.js'],
+        files:['js/raw/*.js'],
         tasks:['uglify']
       },//scripts
       sass:{
         files:['sass/*.scss'],
         tasks:['compass:dev']
       },//sass
-      html:{
-        files: ['*.html']
-      },//html
-      php:{
-        files:['*.php']
-      }//php
+      //html:{
+      //  files: ['*.html']
+      //},//html
+      //php:{
+      //  files:['*.php']
+      //}//php
     }//watch
       
   })//initConfig
