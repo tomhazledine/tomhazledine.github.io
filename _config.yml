@@ -9,4 +9,4 @@ paginate: 1
 name: Tom Hazledine
 description: The personal web-hub for Tom Hazledine
 feed_url: http://thomashazledine.com/feed.xml
-exclude: [/img/favicon_sizes/, /img/social_icons/, /sass/, config.rb, README.md]
+exclude: [config.rb, gruntfile.js, root.css, sass, favicon_sizes, social_icons, package.json, node_modules]

@@ -62,13 +62,55 @@ module.exports=function(grunt){
         files:['sass/*.scss'],
         tasks:['compass:dev']
       },//sass
+      jsCopy:{
+        files:['js/script.js'],
+        tasks:['copy:js']
+      },//js
+      cssCopy:{
+        files:['style.css'],
+        tasks:['copy:css']
+      },//cssCopy
+      
       //html:{
       //  files: ['*.html']
       //},//html
+      
       //php:{
       //  files:['*.php']
       //}//php
-    }//watch
+      
+      jekyllSources:{
+        files:[
+          // capture all except css/js
+          '*.html','*.yml','_posts/**','_includes/**'
+        ],
+        tasks:'shell:jekyll',
+      }//jekyllSources
+    },//watch
+    
+    copy:{
+      css:{
+        files:{
+          // Copy the scss-generated style file to
+          // the _site/ folder
+          '_site/style.css': 'style.css'
+        }//files
+      },//css
+      js:{
+        files:{
+          // Copy the uglified js file to
+          // the _site/ folder
+          '_site/js/script.js':'js/script.js'
+        }//files
+      }//js
+    },//copy
+    
+    shell:{
+      jekyll:{
+        command: 'rm -rf _site/*; jekyll build',
+        stdout: true
+      }//jekyll
+    }//shell
       
   })//initConfig
   grunt.registerTask('default','watch');
