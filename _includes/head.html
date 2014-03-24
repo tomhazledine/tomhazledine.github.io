@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <title>
+    {% if page.title %} {{ page.title }} | {% endif %}Tom Hazledine {% if page.title != false %}Homepage{% endif %}
+  </title>
+  <meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{ site.description }}{% endif %}">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="{{site.url}}/favicon.ico">
+
+  <link rel="stylesheet" href="{{site.url}}/style.css">
+
+  <!-- Modernizr -->
+  <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+
+  <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
+  <!--[if lt IE 9]>
+    <script src="/js/vendor/respond.min.js" type="text/javascript"></script>
+    <script src="/js/vendor/html5.js" type="text/javascript"></script>
+  <![endif]-->
+
+  <!-- TYPEKIT: ‘TH Portfolio’ -->
+	<script type="text/javascript" src="//use.typekit.net/puc4nqb.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>

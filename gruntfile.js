@@ -6,9 +6,22 @@ module.exports=function(grunt){
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-shell');
-  
+  grunt.loadNpmTasks('grunt-fontsmith');
+
   grunt.initConfig({
-    
+
+    font:{//fontsmith task
+      all:{
+        src:['fonts/raw-icons/*.svg'],
+        destCss:'sass/_icons.scss',
+        destFonts:'fonts/built/icons.{svg,woff,eot,ttf}',
+        fontFamily:'icons',
+        cssRouter: function (fontpath) {
+          return '' + fontpath;
+        }//cssRouter
+      }//all
+    },//font
+
     autoprefixer: {
       options: {
         browsers:['last 2 versions', 'ie 8', 'ie 9']
@@ -20,7 +33,7 @@ module.exports=function(grunt){
         }//files
       }//dist
     },//autoprefixer
-    
+
     uglify:{
       my_target:{
         files:{
@@ -28,7 +41,7 @@ module.exports=function(grunt){
         }//files
       }//my_target
     },//uglify
-    
+
     compass:{
       dev:{
         options:{
@@ -36,19 +49,51 @@ module.exports=function(grunt){
         }//options
       }//dev
     },//compass
-    
-    //imagemin:{
-    //  dynamic: {
-    //    files: [{
-    //      expand: true,
-    //      cwd: 'img/raw/',
-    //      src: ['**/*.{png,jpg,gif}'],
-    //      dest: 'img/build/'
-    //    }]//files
-    //  }//dynamic
-    //},//imagemin
-    
+
+    copy:{
+      css:{
+        files:{
+          // Copy the scss-generated style file to
+          // the _site/ folder
+          '_site/style.css': 'style.css'
+        }//files
+      },//css
+      js:{
+        files:{
+          // Copy the uglified js file to
+          // the _site/ folder
+          '_site/js/script.js':'js/script.js'
+        }//files
+      }//js
+    },//copy
+
+    shell:{
+      jekyll:{
+        command: 'rm -rf _site/*; jekyll build',
+        stdout: true
+      }//jekyll
+    },//shell
+
+    imagemin:{
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'img/raw/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'img/build/'
+        }]//files
+      }//dynamic
+    },//imagemin
+
     watch:{
+      iconfont:{
+        files:['fonts/raw-icons/*.svg'],
+        tasks:['font']
+      },//iconfont
+      imgmin:{
+        files:['img/raw/*'],
+        tasks:['imagemin']
+      },//imgmin
       styles:{
         files: ['root.css'],
         tasks: ['autoprefixer']
@@ -70,15 +115,6 @@ module.exports=function(grunt){
         files:['style.css'],
         tasks:['copy:css']
       },//cssCopy
-      
-      //html:{
-      //  files: ['*.html']
-      //},//html
-      
-      //php:{
-      //  files:['*.php']
-      //}//php
-      
       jekyllSources:{
         files:[
           // capture all except css/js
@@ -87,31 +123,7 @@ module.exports=function(grunt){
         tasks:'shell:jekyll',
       }//jekyllSources
     },//watch
-    
-    copy:{
-      css:{
-        files:{
-          // Copy the scss-generated style file to
-          // the _site/ folder
-          '_site/style.css': 'style.css'
-        }//files
-      },//css
-      js:{
-        files:{
-          // Copy the uglified js file to
-          // the _site/ folder
-          '_site/js/script.js':'js/script.js'
-        }//files
-      }//js
-    },//copy
-    
-    shell:{
-      jekyll:{
-        command: 'rm -rf _site/*; jekyll build',
-        stdout: true
-      }//jekyll
-    }//shell
-      
+
   })//initConfig
   grunt.registerTask('default','watch');
 }//exports
