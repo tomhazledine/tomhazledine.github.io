@@ -1,4 +1,12 @@
-// Archive Widget //
+
+// 01. Archive Widget
+// 02. Projects Quicklinks
+// 03. Comments
+// 04. Social Icons
+// 05. Mailchimp Signup Form
+// 06. Dropcap
+
+// 01. Archive Widget
 .archive{
   padding:1em 0;
   h3{
@@ -20,7 +28,7 @@ article .archive{
   padding:1em 0;
 }
 
-// Projects Quicklinks //
+// 02. Projects Quicklinks
 .quick-links{
   border-bottom:1px solid $grey;
   padding:0 0 1em 0;
@@ -47,13 +55,13 @@ article .archive{
   }
 }
 
-// Comments //
+// 03. Comments
 .comments{
   padding:1em 0 0 0;
   border-top:1px solid $grey;
 }
 
-// Social Icons //
+// 04. Social Icons
 .social{
   width:80%;
   max-width:650px;
@@ -93,7 +101,7 @@ article .archive{
   }
 }
 
-// Mailchimp Signup Form
+// 05. Mailchimp Signup Form
 #mc_embed_signup{
   width:60%;
   @include breakpoint(mama-bear) {width:90%;}
@@ -123,4 +131,21 @@ article .archive{
       top: 4px;
     }
   }
+}
+
+// 06. Dropcap
+.big-drop-cap{
+  font-size:2em;
+}
+.dropcap{
+  display:block;
+  height:.8em;
+  width:1em;
+  text-align:center;
+  float:left;
+  font-size:4em;
+  line-height:.7em;
+}
+.dropcap-run-in{
+  margin:0 0 0 -.5em;
 }
