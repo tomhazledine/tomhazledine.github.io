@@ -1,6 +1,8 @@
 // 01. Colours
 // 02. Media Queries
 // 03. Typefaces
+// 04. Widths Etc.
+// 05. Module Mixins
 
 // 01. Colours
 $black:#4d4d4d;
@@ -11,8 +13,17 @@ $primary:#00b7c6;
 
 // 02. Media Queries
 @mixin breakpoint($point){
-  @if $point == bigWidth{
+  @if $point == XLsize{
     @media (min-width:1600px){@content;}
+  }
+  @elseif $point == Lsize{
+    @media (min-width:1200px){@content;}
+  }
+  @elseif $point == Msize{
+    @media (max-width:1000px){@content;}
+  }
+  @elseif $point == Ssize{
+    @media (max-width:800px){@content;}
   }
   @elseif $point == midWidth{
     @media (max-width:960px){@content;}
@@ -25,3 +36,31 @@ $book:400;
 $bold:700;
 @import "icons";
 $icons: "icons";
+
+// 04. Widths Etc.
+//$emSize:22px;
+$contentWidth:28em;
+
+body{
+  @include breakpoint(XLsize){font-size:33px;}
+  @include breakpoint(Lsize){font-size:26px;}
+  font-size:22px;
+  @include breakpoint(Msize){font-size:18px;}
+  @include breakpoint(Ssize){font-size:16px;}
+
+}
+
+// 05. Module Mixins
+@mixin horizontalRule($pos){
+  position:absolute;
+  @if $pos == bottom{
+    bottom:100%;
+  } @else if $pos == top{
+    top:100%;
+  }
+  left:50%;
+  content:"";
+  width:16rem;
+  margin-left:-8rem;
+  border-top:.1rem solid $black;
+}

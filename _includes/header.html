@@ -5,7 +5,7 @@
     <span class="tagline">Building things for the web</span>
     <nav class="topNav" role="navigation">
       <span class="menuTitle">Menu</span>
-      <ul>
+      <ul class="clearfix">
         {% assign url = page.url|remove:'index.html' %}
         {% for link in site.navigation %}
 
@@ -16,4 +16,5 @@
       </ul>
     </nav>
   </header><!-- .header -->
-  <div class="bodyContent">
+  <div class="bodyWrapper">
+    <section class="mainContent">

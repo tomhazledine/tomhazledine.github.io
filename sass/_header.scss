@@ -1,4 +1,5 @@
 .header{
+  position:relative;
   width:100%;
   background:$black;
   color:$cream;
@@ -23,7 +24,7 @@
   padding:.2em;
 }
 .topNav{
-  width:50%;
+  width:15em;
   float:right;
   height:1em;
   .menuTitle{
@@ -31,18 +32,30 @@
     text-transform:uppercase;
     padding:.2em .5em;
     color:$primary;
+    user-select:none;
   }
   li{
     float:right;
-    padding:.2em .5em;
-    text-transform:lowercase;
-    &:hover{
-      background:$cream;
-      a{color:$black;}
+    a{
+      display:block;
+      padding:.2em .5em;
+      text-align:center;
+      text-transform:lowercase;
+      transition-property:background;
+      transition-duration:.3s;
+      color:$cream;
+      &:hover{
+        background:$cream;
+        color:$black;
+      }
     }
-    &.active{
+    &.active a{
       position:relative;
       background:$primary;
+      &:hover{
+        color:$cream;
+        background:$primary;
+      }
       &:before{
         position:absolute;
         top:100%;
@@ -52,6 +65,53 @@
         border-top:.3em solid $primary;
         border-right:.3em solid transparent;
         border-left:.3em solid transparent;
+      }
+    }
+  }
+}
+
+// Small Screen Styles
+@include breakpoint(Ssize){
+  .header{
+    font-size:18px;
+    .menuTitle{cursor:pointer;}
+    .topNav{
+      width:4em;
+    }
+    .topNav ul{
+      display:block;
+      width:8.3em;
+      padding:0 0 0 .3em;
+      position:absolute;
+      top:100%;
+      right:0;
+      height:0;
+      overflow:hidden;
+      transition-property:height;
+      transition-duration:.3s;
+      &.down{height:4.2em;}
+      li{
+        width:100%;
+        //height:4.2em;
+        a{
+          background:$black;
+          &:hover{background:$cream;}
+        }
+        &.active a{
+          background:$primary;
+          &:before{
+            position:absolute;
+            top:50%;
+            left:0;
+            content:"";
+            margin-left:none;
+            margin-top:-.3em;
+            border-left:none;
+            border-right:.3em solid $primary;
+            border-top:.3em solid transparent;
+            border-bottom:.3em solid transparent;
+          }
+        }
       }
     }
   }

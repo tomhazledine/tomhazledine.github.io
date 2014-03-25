@@ -3,16 +3,11 @@
   font-size:.8em;
   position:relative;
   margin:3em auto 0;
-  padding:6em 6em 0 6em;
+  padding:6em 0 0 0;
   text-align:center;
+  width:$contentWidth;
   &:before{
-    position:absolute;
-    bottom:100%;
-    left:50%;
-    content:"";
-    width:40%;
-    margin-left:-20%;
-    border-top:.1rem solid $black;
+    @include horizontalRule(bottom);
   }
   .socialContainer{
     display:block;
@@ -22,7 +17,7 @@
   a{
     display:inline;
     position:relative;
-    margin-left:3em;
+    margin-left:2em;
     line-height:1;
     text-transform:uppercase;
     font-style:italic;
@@ -35,11 +30,14 @@
       width:1em;
       height:1em;
       top:-.25em;
-      left:-1.5em;
+      left:-1.2em;
       content:"&";
       font-size:2em;
       line-height:1em;
       text-align:center;
+      color:$black;
+      transition-property:color;
+      transition-duration:.3s;
     }
     &.twitter:before{content:'\e000';}
     &.github:before{content:'\e001';}

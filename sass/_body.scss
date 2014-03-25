@@ -1,11 +1,12 @@
 // 01. Basic Body Styles
 // 02. Main Wrapper
+// 03. Dropcap Etc.
+// 04. Next/Prev links
 
 // 01. Basic Body Styles
 // Global
 body{
   color:$black;
-  font-size:22px;
   font-family:$text;
   font-weight:$book;
   line-height:1.4;
@@ -19,6 +20,8 @@ a{
   background:$grey;
   color:$black;
   text-decoration:none;
+  transform-property:color;
+  transition-duration:.3s;
   &:hover{
     color:$cream;
     background:$primary;
@@ -37,10 +40,17 @@ a::-moz-selection{@include aSelectionColours;}
 a::selection{@include aSelectionColours;}
 
 // 02. Main Wrapper
-.bodyContent{
+.bodyWrapper{
   background:$cream;
-  margin:5em 3em 3em 3em;
-  padding:6em;
+  width:80%;
+  min-width:$contentWidth + 2;
+  margin:5em auto 3em;
+  padding-top:6em;
+  padding-bottom:6em;
+}
+.mainContent{
+  width:$contentWidth;
+  margin:0 auto;
   h1{
     position:relative;
     font-size:1.8em;
@@ -48,15 +58,7 @@ a::selection{@include aSelectionColours;}
     text-align:center;
     a{color:inherit;background:none;}
     padding:0 0 6rem 0;
-    &:after{
-      position:absolute;
-      top:100%;
-      left:50%;
-      content:"";
-      width:40%;
-      margin-left:-20%;
-      border-top:.1rem solid $black;
-    }
+    &:after{@include horizontalRule(top);}
     margin:0 0 6rem 0;
   }
   .big-drop-cap{
@@ -66,14 +68,89 @@ a::selection{@include aSelectionColours;}
     padding-bottom:1em;
   }
   p{
-    text-indent:20%;
-    .fortyfiveSeventyfive{
-      color:red;
-    }
+    text-indent:24%;
+    //.measure{color:red;}
     &:after{
       content:"¶";
       padding-left:.2em;
       color:$primary;
     }
+    &:first-of-type{
+      clear:both;
+      &::first-letter{
+        font-size:1.5em;
+        color:$primary;
+      }
+    }
   }
+}
+
+// 03. Dropcap Etc.
+.mainContent .big-drop-cap{
+  .runIn{
+    color:$primary;
+    margin-left:-1em;
+    // Kerning Table
+    &.a,&.d,&.g,&.o,&.r{margin-left:-1.5em;}
+    &.e,&.f{margin-left:-.7em;}
+    &.k,&.n,&.t,&.x,&.z{margin-left:-.5em;}
+    &.l,&.q{margin-left:-2em;}
+    &.u,&.w{margin-left:0;}
+    &.v{margin-left:-.3em;}
+    &.y{margin-left:-.2em;}
+  }
+  .dropcap{
+    display:block;
+    float:left;
+    font-size:12em;
+    line-height:.7;
+    font-weight:$bold;
+    color:$primary;
+    text-shadow:.05em .05em 0 $black;
+    padding:0 0 .1em 0;
+    width:.8em;
+    // Kerning Table
+    &.a,&.r{width:.75em;}
+    &.b,&.p,&.s{width:.7em;}
+    &.e,&.f,&.t{width:.65em;}
+    &.g,&.n,&.o{width:.9em;}
+    &.h{width:.87em;}
+    &.i{width:.5em;}
+    &.j{width:.57em;}
+    &.l{width:.55em;}
+    &.m{width:1em;}
+    &.q{width:.95em;}
+    &.v,&.x{width:.85em;}
+    &.w{width:1.15em;}
+  }
+}
+
+// 04. Next/Prev links
+.nav-button{
+  font-style:italic;
+  text-transform:uppercase;
+  font-size:.8em;
+  color:$cream;
+  line-height:1;
+  padding:2em 2em 2em 8em;
+}
+.nav-button.prev{
+  position:fixed;
+  top:50%;
+  left:0;
+  &:before{
+    position:absolute;
+    top:2em;
+    right:-1em;
+    content:"";
+    width:1em;
+    height:1em;
+    border-radius:.5em;
+    color:$primary;
+  }
+}
+.nav-button.next{
+  position:fixed;
+  top:50%;
+  right:0;
 }

@@ -1,19 +1,48 @@
 // Test Alert
 //$(document).ready(function(){alert("Main JS Working");});
 
+// Small-screen Nav Menu
+$(window).resize(function(){
+	if ($('.topNav ul').css("position") == "absolute" ){
+		$('.topNav ul').removeClass('down');
+	}
+});
+$(document).ready(function(){
+  $('.menuTitle').click(function(){
+    $('.topNav ul').toggleClass('down');
+  });
+});
+
+/*
 // Fight the FOUT!
 $('html').addClass('nofout');
 
 $(document).ready(function() {
   $('html').show();
 });
+*/
 
-// Drop Cap
-$(".big-drop-cap").each(function() {
-  var text = $(this).html();
-  // RegEx method: $(this).html(text.replace(/^([A-Za-z0-9])/g,'<span class="caps">$1</span>'));
-  
-  var first = $('<span>'+text.charAt(0)+'</span>').addClass('dropcap');// Span the 1st character
-  var second = $('<span>'+text.charAt(1)+'</span>').addClass('dropcap-run-in');// Span the 2nd character
-  $(this).html(text.substring(2)).prepend(first, second);// replace 1st and 2nd chars with new spaned versions
+$(document).ready(function(){
+
+  var targetElement = $('.big-drop-cap'),
+      startingText = targetElement.text(),
+      closeSpan = '</span>';
+
+      firstLetter = startingText.charAt(0);
+      firstLetterClass = firstLetter.toLowerCase();
+
+      openSpanCap = '<span class=\"dropcap ' + firstLetterClass + '\">',
+      openSpanRunIn = '</span><span class=\"runIn ' + firstLetterClass + '\">',
+
+      spannedFirstLetter = openSpanCap + firstLetter + openSpanRunIn;
+      textShifted = startingText.substr(1,startingText.length);
+      cappedText = spannedFirstLetter + textShifted;
+
+      // Make text into array split by spaces
+      runInText = cappedText.split(' '),
+      // Add end-span as 7th value in array
+      runInText.splice(7,0,closeSpan),
+      // Re-string
+      runInText = runInText.join(' '),
+      targetElement.html(runInText);
 });

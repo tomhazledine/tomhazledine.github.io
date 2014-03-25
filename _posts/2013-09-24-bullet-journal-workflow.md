@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Bullet-Journal workflow"
+title: "A bullet-journal workflow"
 excerpt: To-do lists are usually just a short-term fix, but I've found a system that stays relevant.
 comments: true
 ---
