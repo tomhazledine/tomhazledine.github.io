@@ -1,38 +1,11 @@
 ---
 layout: default
 location: home
+title: "about"
+group: "navigation"
 ---
 
-{% assign first_post = site.posts.first %}
-
 <article class="main-content">
-    <h1><a href="{{first_post.url}}">{{first_post.title}}</a></h1>
-    <h2 class="big-drop-cap">{{first_post.excerpt}}</h2>
-    {{first_post.content}}
-    <span class="top-link"><a href="#top">Back to top</a></span>
-    <span class="comment link"><a href="{{first_post.url}}/#commment-box">Leave a comment</a></span>
-
-    <nav class="nav-outer clearfix">
-      {% if first_post.previous.url %}
-        <a href="{{first_post.previous.url}}">
-          <div class="nav-button older">
-            <span class="nav-inner button button-old">Older Article</span>
-            <span class="nav-inner label label-old">“{{ first_post.previous.title }}”</span>
-          </div><!-- .nav-button -->
-        </a>
-      {% endif %}
-
-      {% if first_post.next.url %}
-        <a href="{{first_post.next.url}}">
-          <div class="nav-button newer">
-            <span class="nav-inner button button-new">Newer Article</span>
-            <span class="nav-inner label label-new">“{{ first_post.next.title }}”</span>
-          </div><!-- .nav-button -->
-        </a>
-      {% endif %}
-    </nav>
-
-
-    {% include archive.html %}
+    <h1>Testing</h1>
 
 </article>

@@ -1,55 +1,14 @@
-/*******************************************
-********************************************
-Name: Simple Development Page (No WP!)
-Author: Tom Hazledine
-Author URI: http://thomashazledine.com/
-Description: Bare framework for development.
-Version: 1.0
-********************************************
-********************************************
+// Root CSS for thomashazledine.com v4.0
 
-//////////////
-// CONTENTS //
-//////////////
+// The next comment is for the final compiled .css file, and can be ignored here: this .scss file IS the correct place to make changes to the styles.
 
-Utilities
-  Compass Imports
-  CSS Reset
-  Clearfix
-  Assistive Text
-  H5BP Styles
-Global Styles
-  Colours
-  Media Query Mixins
-  Typography
-  Misc Vars
-  Basic Body Styles
-Layout
-Header
-Body
-  Main Content
-  Nav Buttons
-Widgets
-  Archive
-  Projects Quick-Links
-  Comments
-  Social Icons
-Footer
-Print Styles
-Credits
-*/
+/*! Compiled SCSS: DO NOT CHANGE. Any CSS changes must be made to .scss files, not directly in this style.css file! */
 
-.easter-egg{
-  color:red;
-}
-
+// Easter Egg
+.touche-de-rouge{color:red;}
+//Contents
 @import"utilities";
-@import"compass/css3";
-@import"global";
-@import"layout";
-@import"header";
+@import"declarations";
 @import"body";
-@import"widgets";
+@import"header";
 @import"footer";
-@import"print.scss";
-@import"credits.scss";

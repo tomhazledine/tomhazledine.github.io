@@ -1,0 +1,27 @@
+// 01. Colours
+// 02. Media Queries
+// 03. Typefaces
+
+// 01. Colours
+$black:#4d4d4d;
+$white:#ffffff;
+$cream:#efeeeb;
+$grey:#dad8d2;
+$primary:#00b7c6;
+
+// 02. Media Queries
+@mixin breakpoint($point){
+  @if $point == bigWidth{
+    @media (min-width:1600px){@content;}
+  }
+  @elseif $point == midWidth{
+    @media (max-width:960px){@content;}
+  }
+}
+
+// 03. Typefaces
+$text: "futura-pt", sans-serif;
+$book:400;
+$bold:700;
+@import "icons";
+$icons: "icons";

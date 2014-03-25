@@ -1,14 +1,62 @@
-// Footer //
-footer{
-  border-top:1px solid $grey;
-  padding:3em 0;
-  margin-top:1em;
+// Social Icons
+.socialLinks{
+  font-size:.8em;
+  position:relative;
+  margin:3em auto 0;
+  padding:6em 6em 0 6em;
   text-align:center;
+  &:before{
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    content:"";
+    width:40%;
+    margin-left:-20%;
+    border-top:.1rem solid $black;
+  }
+  .socialContainer{
+    display:block;
+    float:left;
+    width:50%;
+  }
+  a{
+    display:inline;
+    position:relative;
+    margin-left:3em;
+    line-height:1;
+    text-transform:uppercase;
+    font-style:italic;
+    &:before{
+      font-family:$icons;
+      font-weight: normal;
+      font-style: normal;
+      position:absolute;
+      display:block;
+      width:1em;
+      height:1em;
+      top:-.25em;
+      left:-1.5em;
+      content:"&";
+      font-size:2em;
+      line-height:1em;
+      text-align:center;
+    }
+    &.twitter:before{content:'\e000';}
+    &.github:before{content:'\e001';}
+    &:hover:before{color:$primary;}
+  }
 }
-.footer-inner{
-  max-width:650px;
-  width:80%;
-  @include breakpoint(mama-bear) {width:90%;}
-  @include breakpoint(baby-bear) {width:100%;}
-  margin:0 auto;
+
+// Email Link
+.footer{
+  text-align:center;
+  margin:0 0 3em 0;
+  a{
+    background:none;
+    font-weight:$bold;
+    &:hover{
+      color:$black;
+      background:$primary;
+    }
+  }
 }

@@ -1,53 +1,58 @@
-// Header //
-// Title
 .header{
-  padding-bottom:0;
-  margin-bottom:2em;
-  border-bottom:1px solid $grey;
-  h2{
-    //float:left;
-    font-style:italic;
-    text-align:center;
-    padding-bottom:0;
-    //margin-bottom:0;
-    line-height:1.2em;
-    overflow:hidden;
-    @include text-shadow($primary $h-shad $head-shad 0px);//$r-shad $shadow 0px);
-    // @include breakpoint(papa-bear) { line-height: 1em; }
-    @include breakpoint(mama-bear) {font-size:$big - .4em;}
-    @include breakpoint(baby-bear) { line-height: 1.5em; font-size: 32px; }
-    a{
-      text-decoration:none;
-      color:$black;
-      &:hover{
-        color:$black;
-        @include text-shadow($two $h-shad $head-shad 0px);//$r-shad $shadow 0px);
-      }
-    }
-  }
+  width:100%;
+  background:$black;
+  color:$cream;
+  font-style:italic;
+  line-height:1;
+  padding-left:.4em;
+  a, span, nav, ul, li{display:block;}
   a{
-    text-decoration:none;
-    color:$black;
-    &:hover{
-      color:$two;
-    }
+    background:none;
+    color:$cream;
   }
-  ul{
-    text-align:center;
-    font-size:$small;
-    @include breakpoint(papa-bear) { font-size: 24px; }
+}
+.siteName{
+  display:block;
+  float:left;
+  border-left:.4em solid $primary;
+  padding:.2em .4em;
+}
+.tagline{
+  float:left;
+  text-transform:lowercase;
+  padding:.2em;
+}
+.topNav{
+  width:50%;
+  float:right;
+  height:1em;
+  .menuTitle{
+    float:right;
+    text-transform:uppercase;
+    padding:.2em .5em;
+    color:$primary;
   }
   li{
-    display:inline-block;
-    border-right:1px solid $grey;
-    margin:.8em 0 .5em;
-    padding:0 1em;
-    //float:right;
-    &:last-of-type{
-      border-right:none;
+    float:right;
+    padding:.2em .5em;
+    text-transform:lowercase;
+    &:hover{
+      background:$cream;
+      a{color:$black;}
     }
-    a{
-      
+    &.active{
+      position:relative;
+      background:$primary;
+      &:before{
+        position:absolute;
+        top:100%;
+        left:50%;
+        content:"";
+        margin-left:-.3em;
+        border-top:.3em solid $primary;
+        border-right:.3em solid transparent;
+        border-left:.3em solid transparent;
+      }
     }
   }
 }

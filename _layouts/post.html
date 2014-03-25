@@ -1,22 +1,16 @@
----
-layout: default
----
+{% include head.html %}
+{% include header.html %}
 
 <article class="main-content">
-  
-    {% if page.featured_img %}
-        <header class="post-header">
-          <img class="featured-img" src="{{ site.url }}{{ page.featured_img }}"/>
-          <h1><a href="{{page.url}}" class="responsive_headline">{{page.title}}</a></h1>
-        </header>
-    {% else %}
-        <h1><a href="{{page.url}}">{{page.title}}</a></h1>
-    {% endif %}
-    
-    <h2 class="big-drop-cap">{{page.excerpt}}</h2>
-    {{content}}
-    <span class="top-link"><a href="#top">Back to top</a></span>
-    
+
+  <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+
+  <h3 class="big-drop-cap">{{page.excerpt}}</h3>
+
+  {{content}}
+
+  <span class="top-link"><a href="#top">Back to top</a></span>
+
     <nav class="nav-outer clearfix">
       {% if page.previous.url %}
         <a href="{{page.previous.url}}">
@@ -38,15 +32,15 @@ layout: default
 
       <span class="page-number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
     </nav>
-    
-    
+
+
     {% include archive.html %}
     <section id="comment-box" class="comments">
       <div id="disqus_thread"></div>
       <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
           var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
-      
+
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {
               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -57,5 +51,7 @@ layout: default
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </section>
-    
+
 </article>
+
+{% include footer.html %}

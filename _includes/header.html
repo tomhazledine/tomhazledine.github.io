@@ -1,13 +1,19 @@
 <body>
 
   <header id="top" class="header clearfix">
-    <h2><a href="/" title="Tom Hazledine homepage" rel="home">Tom Hazledine</a></h2>
-    <nav role="navigation">
-      <span class="menu-title">Menu</span>
+    <h2 class="siteName"><a href="/" title="Tom Hazledine homepage" rel="home">Tom Hazledine</a></h2>
+    <span class="tagline">Building things for the web</span>
+    <nav class="topNav" role="navigation">
+      <span class="menuTitle">Menu</span>
       <ul>
-        <li><a href="/projects" title="">Portfolio</a></li>
-        <li><a href="/articles" title="">Blog</a></li>
-        <li><a href="/about" title="">About</a></li>
+        {% assign url = page.url|remove:'index.html' %}
+        {% for link in site.navigation %}
+
+          <li {% if url == link.url or page.layout == link.layout %}class="active"{% endif %}>
+            <a href="{{ link.url }}">{{ link.text }}</a>
+          </li>
+        {% endfor %}
       </ul>
     </nav>
   </header><!-- .header -->
+  <div class="bodyContent">
