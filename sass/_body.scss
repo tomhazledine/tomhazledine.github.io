@@ -2,6 +2,8 @@
 // 02. Main Wrapper
 // 03. Dropcap Etc.
 // 04. Next/Prev links
+// 05. Related/Featured posts
+// 06. Images
 
 // 01. Basic Body Styles
 // Global
@@ -14,6 +16,7 @@ body{
 //Headings
 h1,h2,h3,h4,h5,h6{
   font-weight:$bold;
+  //letter-spacing:.02em;
 }
 // Links
 a{
@@ -27,6 +30,8 @@ a{
     background:$primary;
   }
 }
+em{font-style:italic;}
+strong{font-weight:$bold;}
 // Selection Colours
 @mixin selectionColours{
   color:$cream;
@@ -51,106 +56,199 @@ a::selection{@include aSelectionColours;}
 .mainContent{
   width:$contentWidth;
   margin:0 auto;
-  h1{
-    position:relative;
-    font-size:1.8em;
-    line-height:1.2;
-    text-align:center;
-    a{color:inherit;background:none;}
-    padding:0 0 6rem 0;
-    &:after{@include horizontalRule(top);}
-    margin:0 0 6rem 0;
+}
+.mainContentInner{
+  padding-bottom:3rem;
+}
+h1{
+  position:relative;
+  font-size:1.8em;
+  line-height:1.2;
+  text-align:center;
+  a{color:inherit;background:none;}
+  padding:0 0 6rem 0;
+  &:after{@include horizontalRule(bottom);}
+  margin:0 0 6rem 0;
+}
+h2{
+  font-size:1.5em;
+  padding:1em 0;
+}
+h3{
+  font-size:1.2em;
+  padding:1em 0 0 0;
+}
+p{
+  text-indent:24%;
+  &:after{
+    content:"¶";
+    padding-left:.2em;
+    color:$primary;
   }
-  .big-drop-cap{
-    font-weight:$book;
-    font-style:italic;
-    text-transform:uppercase;
-    padding-bottom:1em;
+  &:first-of-type{
+    clear:both;
+    //@include bigFirstLetter;
   }
-  p{
-    text-indent:24%;
-    //.measure{color:red;}
-    &:after{
-      content:"¶";
-      padding-left:.2em;
-      color:$primary;
-    }
-    &:first-of-type{
-      clear:both;
-      &::first-letter{
-        font-size:1.5em;
-        color:$primary;
-      }
-    }
-  }
+  @include bigFirstLetter;
+}
+p + p::first-letter{
+  font-size:inherit;
+  color:inherit;
+}
+.top-link{
+  display:block;
+  padding:2em 0 0 0;
 }
 
 // 03. Dropcap Etc.
-.mainContent .big-drop-cap{
-  .runIn{
-    color:$primary;
-    margin-left:-1em;
-    // Kerning Table
-    &.a,&.d,&.g,&.o,&.r{margin-left:-1.5em;}
-    &.e,&.f{margin-left:-.7em;}
-    &.k,&.n,&.t,&.x,&.z{margin-left:-.5em;}
-    &.l,&.q{margin-left:-2em;}
-    &.u,&.w{margin-left:0;}
-    &.v{margin-left:-.3em;}
-    &.y{margin-left:-.2em;}
-  }
-  .dropcap{
-    display:block;
-    float:left;
-    font-size:12em;
-    line-height:.7;
-    font-weight:$bold;
-    color:$primary;
-    text-shadow:.05em .05em 0 $black;
-    padding:0 0 .1em 0;
-    width:.8em;
-    // Kerning Table
-    &.a,&.r{width:.75em;}
-    &.b,&.p,&.s{width:.7em;}
-    &.e,&.f,&.t{width:.65em;}
-    &.g,&.n,&.o{width:.9em;}
-    &.h{width:.87em;}
-    &.i{width:.5em;}
-    &.j{width:.57em;}
-    &.l{width:.55em;}
-    &.m{width:1em;}
-    &.q{width:.95em;}
-    &.v,&.x{width:.85em;}
-    &.w{width:1.15em;}
-  }
+.big-drop-cap{
+  font-weight:$book;
+  font-style:italic;
+  text-transform:uppercase;
+  padding-bottom:1em;
+}
+.runIn{
+  color:$primary;
+  margin-left:-1em;
+  // Kerning Table
+  &.a,&.d,&.g,&.o,&.r{margin-left:-1.5em;}
+  &.e,&.f{margin-left:-.7em;}
+  &.k,&.n,&.t,&.x,&.z{margin-left:-.5em;}
+  &.l,&.q{margin-left:-2em;}
+  &.u,&.w{margin-left:0;}
+  &.v{margin-left:-.3em;}
+  &.y{margin-left:-.2em;}
+}
+.dropcap{
+  display:block;
+  float:left;
+  font-size:12em;
+  line-height:.7;
+  font-weight:$bold;
+  color:$primary;
+  text-shadow:.05em .05em 0 $black;
+  padding:0 0 .1em 0;
+  width:.8em;
+  // Kerning Table
+  &.a,&.r{width:.75em;}
+  &.b,&.p,&.s{width:.7em;}
+  &.e,&.f,&.t{width:.65em;}
+  &.g,&.n,&.o{width:.9em;}
+  &.h{width:.87em;}
+  &.i{width:.5em;}
+  &.j{width:.57em;}
+  &.l{width:.55em;}
+  &.m{width:1em;}
+  &.q{width:.95em;}
+  &.v,&.x{width:.85em;}
+  &.w{width:1.15em;}
 }
 
 // 04. Next/Prev links
-.nav-button{
+
+@mixin navButton{
+  display:block;
+  width:30em;
   font-style:italic;
-  text-transform:uppercase;
-  font-size:.8em;
+  //text-transform:uppercase;
+  font-size:1em;
+  font-weight:$bold;
   color:$cream;
   line-height:1;
-  padding:2em 2em 2em 8em;
-}
-.nav-button.prev{
   position:fixed;
+  z-index:2000;
   top:50%;
-  left:0;
-  &:before{
-    position:absolute;
-    top:2em;
-    right:-1em;
-    content:"";
-    width:1em;
-    height:1em;
-    border-radius:.5em;
-    color:$primary;
+  margin-top:-3.5em;
+  padding:3em 2em;
+}
+@mixin navButtonDot($mode){
+  position:absolute;
+  display:block;
+  content:"";
+  width:.5em;
+  height:1em;
+  top:3em;
+  background:$white;
+  @if $mode == prev{
+    border-radius:.5em 0 0 .5em;
+    right:0;
+  } @elseif $mode == next{
+    border-radius:0 .5em .5em 0;
+    left:0;
   }
 }
-.nav-button.next{
-  position:fixed;
-  top:50%;
-  right:0;
+@mixin navButtonLabel($mode){
+  @if $mode == prev{
+    content:"Prev.";
+    padding:0 1em 0 0;
+  } @elseif $mode == next{
+    content:"Next";
+    padding:0 0 0 1em;
+  }
+  font-weight:$book;
+  text-transform:uppercase;
+}
+.nav-button-prev{
+  @include navButton;
+  left:-28.5em;
+  text-align:right;
+  &:after{@include navButtonDot(prev);}
+  &:before{@include navButtonLabel(prev);}
+  &:hover{
+    transform:translateX(20em);
+    &:after{background:$cream;}
+  }
+}
+.nav-button-next{
+  @include navButton;
+  right:-28.5em;
+  &:before{@include navButtonDot(next);}
+  &:after{@include navButtonLabel(next);}
+  &:hover{
+    transform:translateX(-20em);
+    &:before{background:$cream;}
+  }
+}
+.nextTitle{
+  font-weight:$bold;
+  text-transform:capitalize;
+  font-size:1rem;
+  float:left;
+  display:block;
+  height:2em;
+}
+
+// 05. Related/Featured posts
+.featured{
+  position:relative;
+  margin:3em 0 0 0;
+  padding:6em 0 3em 0;
+  text-align:center;
+  @include bigFirstLetter;
+  &:after{
+    @include horizontalRule(top);
+  }
+}
+.relatedPostsTitle{
+  font-weight:$book;
+  font-style:italic;
+  text-transform:uppercase;
+
+}
+.relatedPostLi{
+  font-weight:$bold;
+  margin:1em 0 0 0;
+}
+
+// 06. Images
+img{
+  display:block;
+  position:relative;
+  z-index:1000;
+  width:100%;
+  padding:1em 0 0em 0;
+  margin-bottom:-1.2em;
+}
+p:after img{
+  content:"X";
 }

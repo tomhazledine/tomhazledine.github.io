@@ -2,12 +2,12 @@
 .socialLinks{
   font-size:.8em;
   position:relative;
-  margin:3em auto 0;
-  padding:6em 0 0 0;
+  margin:3rem auto 0;
+  padding:6rem 0 0 0;
   text-align:center;
   width:$contentWidth;
   &:before{
-    @include horizontalRule(bottom);
+    @include horizontalRule(top);
   }
   .socialContainer{
     display:block;
@@ -29,7 +29,7 @@
       display:block;
       width:1em;
       height:1em;
-      top:-.25em;
+      top:-25%;
       left:-1.2em;
       content:"&";
       font-size:2em;

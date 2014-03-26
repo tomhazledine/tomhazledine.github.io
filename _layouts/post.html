@@ -1,7 +1,7 @@
 {% include head.html %}
 {% include header.html %}
 
-<article class="main-content">
+<article class="mainContentInner">
 
   <h1><a href="{{page.url}}">{{page.title}}</a></h1>
 
@@ -15,11 +15,11 @@
 
 <nav class="nav-outer clearfix">
   {% if page.previous.url %}
-    <a href="{{page.previous.url}}" class="nav-button prev">Prev.</a>
+    <a href="{{page.previous.url}}" class="nav-button-prev">{{page.previous.title}}</a>
   {% endif %}
 
   {% if page.next.url %}
-    <a href="{{page.next.url}}" class="nav-button next">Next</a>
+    <a href="{{page.next.url}}" class="nav-button-next">{{page.next.title}}</a>
   {% endif %}
 </nav>
 

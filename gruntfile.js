@@ -122,9 +122,11 @@ module.exports=function(grunt){
           '*.yml',
           '_posts/**',
           '_includes/**',
+          '_layouts/**',
           'portfolio/**',
           'blog/**',
-          'about/**'
+          'about/**',
+          '_plugins/**'
         ],
         tasks:'shell:jekyll',
       }//jekyllSources

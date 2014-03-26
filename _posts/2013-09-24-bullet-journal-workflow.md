@@ -13,8 +13,6 @@ The quest for elegant ‘productivity hacks’ is both fantastically useful and 
 ## The Bullet Journal Concept
 Devised by inspired Brooklynite [Ryder Carrol](http://www.rydercarroll.com/), the [Bullet Journal](http://www.bulletjournal.com/) is little more than a seemingly-simple method of writing out a ‘to-do’ list using a pen and a notebook. I've experimented with similar list-hierarchies in the past, with mixed results, and while this new one is elegant, it's not exactly revolutionary. But there's one aspect of the Bullet Journal system that I've found to be a real revelation: the way the list rolls-over from day-to-day and month-to-month.
 
-![My Bullet Journal hanging in its place]({{ site.url }}/img/journal01.jpg)
-
 ## What first drew me to the Bullet Journal was the systematized nature of its bullet-point organization, but what's *kept* me using it is the way it stays relevant.
 
 ### Simplicity.
@@ -31,8 +29,7 @@ The Bullet Journal system is loose enough that it never gets in the way of my da
 
 ### It's really easy.
 Keeping the journal up to date sounds like rather an onerous task, what with all the indexing, page-numbering, and three-tiered bullet system. In reality, keeping on top of all my lists is no hassle at all. Updating the list takes about 10 minutes every morning, and up to half-an-hour on the first day of every month (as I update my calendar, and re-set my long-term goals).
-
-![My Bullet Journal]({{ site.url }}/img/journal02.jpg)
+{% img /img/build/photos/journal02.jpg 'My Bullet Journal' %}
 
 ## The journal isn't *solely* responsible for my productivity upswing, but it's definitely helped.
 By way of a disclaimer, making the switch to a Bullet Journal workflow wasn't the only change I've made recently. A few months ago I quit my day-job and struck out on my own; an intrepid freelancer *cum* entrepreneur bound for riches and glory! So now that any-and-all money that I make is directly proportional to how much work I do, it'll come as no surprise that I'm working harder and longer than ever before (and would be with or without the Bullet Journal).

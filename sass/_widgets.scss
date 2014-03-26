@@ -1,0 +1,49 @@
+// Code
+code{
+  font-family:$code;
+  //display:inline-block;
+  padding:.2em .5em;
+  font-size:.8em;
+  //line-height:1.2;
+  color:$cream;
+  background:$black;
+}
+pre{
+  margin:1em 0;
+  border-top:$grey solid 1rem;
+  border-radius:.5rem .5rem 0 0;
+  position:relative;
+  &:before{
+    content:"";
+    width:.5rem;
+    height:.5rem;
+    border-radius:.25rem;
+    background:$primary;
+    position:absolute;
+    top:-.75rem;
+    left:.5rem;
+  }
+  &:after{
+    content:"";
+    width:.5rem;
+    height:.5rem;
+    border-radius:.25rem;
+    background:$black;
+    position:absolute;
+    top:-.75rem;
+    left:1.25rem;
+  }
+}
+pre code{
+  display:block;
+  &:after{
+    content:"";
+    width:.5rem;
+    height:.5rem;
+    border-radius:.25rem;
+    background:$cream;
+    position:absolute;
+    top:-.75rem;
+    left:2rem;
+  }
+}

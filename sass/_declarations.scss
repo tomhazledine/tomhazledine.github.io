@@ -36,12 +36,13 @@ $book:400;
 $bold:700;
 @import "icons";
 $icons: "icons";
+$code:"droid-sans-mono";
 
 // 04. Widths Etc.
 //$emSize:22px;
 $contentWidth:28em;
 
-body{
+html{
   @include breakpoint(XLsize){font-size:33px;}
   @include breakpoint(Lsize){font-size:26px;}
   font-size:22px;
@@ -53,9 +54,9 @@ body{
 // 05. Module Mixins
 @mixin horizontalRule($pos){
   position:absolute;
-  @if $pos == bottom{
+  @if $pos == top{
     bottom:100%;
-  } @else if $pos == top{
+  } @else if $pos == bottom{
     top:100%;
   }
   left:50%;
@@ -63,4 +64,10 @@ body{
   width:16rem;
   margin-left:-8rem;
   border-top:.1rem solid $black;
+}
+@mixin bigFirstLetter{
+  &::first-letter{
+    font-size:1.5em;
+    color:$primary;
+  }
 }

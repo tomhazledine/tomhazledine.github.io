@@ -1,0 +1,10 @@
+<section class="featured">
+  <h3 class="relatedPostsTitle">Related writings:</h3>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.featured and page.url != post.url %}
+        <li class="relatedPostLi"><a class="relatedPostLink" href="{{post.url}}">{{post.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section><!-- .archive -->
