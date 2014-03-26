@@ -22,6 +22,7 @@ $(document).ready(function() {
 });
 */
 
+// Dropcap and Run-in
 $(document).ready(function(){
 
   var targetElement = $('.big-drop-cap'),
@@ -41,8 +42,29 @@ $(document).ready(function(){
       // Make text into array split by spaces
       runInText = cappedText.split(' '),
       // Add end-span as 7th value in array
-      runInText.splice(7,0,closeSpan),
+      runInText.splice(9,0,closeSpan),
       // Re-string
       runInText = runInText.join(' '),
       targetElement.html(runInText);
 });
+
+// Blockquote Run-in
+//*
+$(document).ready(function(){
+	var targetElement = $('blockquote'),
+			startingText = targetElement.text(),
+			openSpan = '<p><span class="runIn">'
+			closeSpan = '</span>';
+
+	// Make text into array split by spaces
+	runInText = startingText.split(' '),
+	// Add end-span as 7th value in array
+	runInText.splice(0,0,openSpan),
+	runInText.splice(9,0,closeSpan),
+	// Re-string
+	runInText = runInText.join(' '),
+	targetElement.html(runInText);
+
+	//targetElement.addClass('test');
+});
+//*/

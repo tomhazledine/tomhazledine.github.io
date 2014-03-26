@@ -3,14 +3,13 @@
 // 03. Next/Prev links
 // 04. Dropcap Etc.
 // 05. Blog Archive
+// 06. Blockquotes
 
 // 01. Code
 code{
   font-family:$code;
-  //display:inline-block;
   padding:.2em .5em;
   font-size:.8em;
-  //line-height:1.2;
   color:$cream;
   background:$black;
 }
@@ -42,6 +41,8 @@ pre{
 }
 pre code{
   display:block;
+  width:100%;
+  overflow:auto;
   &:after{
     content:"";
     width:.5rem;
@@ -55,6 +56,9 @@ pre code{
 }
 
 // 02. Related/Featured posts
+.archive{
+  clear:both;
+}
 .featured{
   position:relative;
   margin:3em 0 0 0;
@@ -81,7 +85,6 @@ pre code{
   display:block;
   width:30em;
   font-style:italic;
-  //text-transform:uppercase;
   font-size:1em;
   font-weight:$bold;
   color:$cream;
@@ -203,4 +206,15 @@ pre code{
 }
 .archiveItemExcerpt{
   display:block;
+}
+
+// 06. Blockquotes
+blockquote{
+  position:relative;
+  font-style:italic;
+  padding:3em 0;
+  margin:3em 2em;
+  &:before{@include horizontalRule(top);}
+  &:after{@include horizontalRule(bottom);}
+  .runIn{text-transform:uppercase;}
 }

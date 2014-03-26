@@ -1,49 +1,19 @@
 ---
 layout: default
 title: "Portfolio"
+excerpt: These are some of the websites I've built lately. Click through to see them in action, and remember to check back over the next week or so as I flesh this page out properly.
 group: "navigation"
 ---
 
-  <h1>Portfolio</h1>
-  <p>I like to keep busy. These are some of the thing I've worked on that I'm particularly proud of.</p>
-  <nav class="quick-links">
-    <h3>Quick Links:</h3>
-    <ul>
-      <li><a href="#tom-builds-websites">I Build Websites</a></li>
-      <li><a href="#eaten-by-monsters-blog">Eaten by Monsters: The Music Blog</a></li>
-      <li><a href="#eaten-by-monsters-band">Eaten by Monsters: The Band</a></li>
-    </ul>
-  </nav>
+<h1>{{ page.title }}</h2>
+
+<h3 class="big-drop-cap">{{ page.excerpt }}</h3>
+
+<h2><a href="http://atlanticbrewery.com/newsite">Atlantic Brewery</a></h2>
+
+<h2><a href="http://eatenbymonsters.com">Eaten by Monsters music blog</a></h2>
+
+<h2><a href="http://littlenetty.com">Little Netty crafts</a></h2>
 
 
-
-  <section id="tom-builds-websites" class="project">
-    <h2><!--<a href="http://tombuildswebsites.com">-->I Build Websites</h2>
-
-    <p>When I&#8217;m not sipping fine scotch and basking <span class="measure">in the glory of my vinyl colle</span>ction, I make websites. It&#8217;s less fun than making music, but more fun than anything else people are prepared to pay me for.</p>
-    <p>I specialize in building bespoke, tasteful sites for SMEs and any artistic endeavour that wants to take itself seriously and look cool in the process. I guess my main strength is my CSS wizadry (all pre-processed SASS/Compass, naturally), but I&#8217;m also happy working with <code>PHP</code>, <code>Javascript/JQuery</code>, <code>Ruby</code>, <code>Liquid</code>, <code>YAML</code>, and I spend far more time than is good for me mucking about in the command line (and occasionally <em>not</em> making catastrophic mistakes, too!). I do almost all my writing in Markdown now – because it&#8217;s awesome – and my whole workflow is GIT-versioned-controlled up to my eyeballs.</p>
-
-    <pre><code>
-      // The Loop  $args = array(    'posts_per_page' => '1',    'category_name' => 'upcoming',    'meta_key' => 'fair-date',    'orderby' => 'meta_value_num',    'order' => 'ASC'  );  $newsQuery = new WP_Query( $args );
-    </code></pre>
-    <span class="top-link"><a href="#top">Back to top</a></span>
-  </section>
-
-  <section id="eaten-by-monsters-blog" class="project">
-    <h2><a href="http://eatenbymonsters.com">Eaten by Monsters: The Music Blog</a></h2>
-
-    <p>Founded in 2008 with nothing but a free wordp<span class="measure">ress.com account and keg-load </span>of hustle, Eaten by Monsters has grown into an award-winning, taste-making, discourse-shaping powerhouse (albeit in a very specific niche).</p>
-    <p>Writing EbM has opened the door to a host of opportunities; writing for Tom Robinson&#8217;s <a href="http://freshonthenet.co.uk/how-to-reach-music-blogs/">Fresh On The Net</a> blog, learning all about web publishing the hard way, and (most importantly) getting me on the press-lists for all my favourite record labels. Free music FTW!</p>
-    <span class="top-link"><a href="#top">Back to top</a></span>
-  </section>
-
-  <section id="eaten-by-monsters-band" class="project">
-    <h2><a href="http://eatenbymonste.rs">Eaten by Monsters: The Band</a></h2>
-
-    <p>Working on the principle that good names are <span class="measure">hard to come by, my band was a</span>lso called Eaten by Monsters. I say <em>was</em> because it&#8217;s been a long time since we released anything.</p>
-    <p><em>Scaring the Pets</em> was our only ‘proper’ record, and was met with positive attention from critics and podcasters (getting featured on BBC 6 Music and The Waiting Room, among others, and earning a raft of good reviews from my music-blogging peers) but never took off the way I&#8217;d hoped it would (I have yet to play a sold-out five-night residency at Wembley Arena, for instance).</p>
-    <p>It did give me the excuse to work with a vast array of talented musicians in an impressive selection of top-spec&#8217;ed recording studios, and led to some very fun performances at most of London&#8217;s best small venues (the Camden Barfly and sadly-now-defunct Luminaire gigs being particular highlights).</p>
-    <span class="top-link"><a href="#top">Back to top</a></span>
-  </section>
-
-  {% include archive.html %}
+{% include archive.html %}
