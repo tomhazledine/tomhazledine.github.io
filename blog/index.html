@@ -4,10 +4,12 @@ title: "Blog"
 group: "navigation"
 ---
 
+<h1>Writings</h1>
 <section class="archive main-content">
-  <ul>
-    {% for post in site.posts %}
-      <li><a href="{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
+  {% for post in site.posts %}
+    <div class="archiveItem clearfix">
+      <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+      <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+    </div>
     {% endfor %}
-  </ul>
-</section><!-- .archive -->
+</section>
