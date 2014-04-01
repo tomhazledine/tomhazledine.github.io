@@ -170,6 +170,7 @@ pre code{
   &.u,&.w{margin-left:0;}
   &.v{margin-left:-.3em;}
   &.y{margin-left:-.2em;}
+  @include breakpoint(XSsize){margin-left:0 !important;}// Janky use of !important, but saves writing MQeries for all kerning table
 }
 .dropcap{
   display:block;
@@ -194,6 +195,7 @@ pre code{
   &.q{width:.95em;}
   &.v,&.x{width:.85em;}
   &.w{width:1.15em;}
+  @include breakpoint(XSsize){font-size:5em;}
 }
 
 // 05. Blog Archive

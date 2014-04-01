@@ -29,7 +29,8 @@ module.exports=function(grunt){
       },//options
       dist:{
         files:{
-          'style.css': 'root.css'
+          'style.css': 'root.css',
+          'cassette.css':'unprefixed-cassette.css'
         }//files
       }//dist
     },//autoprefixer
@@ -55,7 +56,8 @@ module.exports=function(grunt){
         files:{
           // Copy the scss-generated style file to
           // the _site/ folder
-          '_site/style.css': 'style.css'
+          '_site/style.css': 'style.css',
+          '_site/cassette.css':'cassette.css'
         }//files
       },//css
       js:{
@@ -95,7 +97,7 @@ module.exports=function(grunt){
         tasks:['imagemin']
       },//imgmin
       styles:{
-        files: ['root.css'],
+        files: ['root.css','unprefixed-cassette.css'],
         tasks: ['autoprefixer']
       },//styles
       options:{ livereload:true},
@@ -112,7 +114,7 @@ module.exports=function(grunt){
         tasks:['copy:js']
       },//js
       cssCopy:{
-        files:['style.css'],
+        files:['style.css','cassette.css'],
         tasks:['copy:css']
       },//cssCopy
       jekyllSources:{
@@ -125,6 +127,7 @@ module.exports=function(grunt){
           '_layouts/**',
           'portfolio/**',
           'blog/**',
+          'cassette-script/**',
           'about/**',
           '_plugins/**'
         ],

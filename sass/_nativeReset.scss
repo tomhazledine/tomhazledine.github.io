@@ -1,0 +1,67 @@
+// Add header and footer styles from native theme for pages with custom CSS
+@import"utilities";
+@import"declarations";
+@import"global";
+@import"widgets";
+@import"header";
+//@import"footer";
+
+//body{font-family:$text;}
+
+// Social Icons
+.socialLinks{
+  font-size:.8em;
+  position:relative;
+  text-align:center;
+  max-width:30em;
+  margin:0 auto;
+  padding:1em;
+  .socialContainer{
+    display:block;
+    float:left;
+    width:50%;
+  }
+  a{
+    display:inline;
+    position:relative;
+    margin-left:2em;
+    line-height:1;
+    text-transform:uppercase;
+    font-style:italic;
+    &:before{
+      font-family:$icons;
+      font-weight: normal;
+      font-style: normal;
+      position:absolute;
+      display:block;
+      width:1em;
+      height:1em;
+      top:-25%;
+      left:-1.2em;
+      content:"&";
+      font-size:2em;
+      line-height:1em;
+      text-align:center;
+      color:$black;
+      transition-property:color;
+      transition-duration:.3s;
+    }
+    &.twitter:before{content:'\e000';}
+    &.github:before{content:'\e001';}
+    &:hover:before{color:$primary;}
+  }
+}
+
+// Email Link
+.footer{
+  text-align:center;
+  padding:0 0 3em 0;
+  a{
+    background:none;
+    font-weight:$bold;
+    &:hover{
+      color:$black;
+      background:$primary;
+    }
+  }
+}

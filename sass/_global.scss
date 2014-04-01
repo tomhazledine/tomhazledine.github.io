@@ -1,0 +1,52 @@
+// 01. Basic Body Styles
+// 02. Images
+
+// 01. Basic Body Styles
+body{
+  color:$black;
+  font-family:$text;
+  font-weight:$book;
+  line-height:1.4;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight:$bold;
+  //letter-spacing:.02em;
+}
+a{
+  background:$grey;
+  color:$black;
+  text-decoration:none;
+  transform-property:color;
+  transition-duration:.3s;
+  &:hover{
+    color:$cream;
+    background:$primary;
+  }
+}
+em{font-style:italic;}
+strong{font-weight:$bold;}
+
+// Selection Colours
+@mixin selectionColours{
+  color:$cream;
+  background:$primary;}
+@mixin aSelectionColours{
+    color:$primary;
+    background:$black;}
+::-moz-selection{@include selectionColours;}
+::selection{@include selectionColours;}
+a::-moz-selection{@include aSelectionColours;}
+a::selection{@include aSelectionColours;}
+
+// 02. Images
+img{
+  display:block;
+  position:relative;
+  z-index:1000;
+  width:100%;
+  padding:1em 0 0em 0;
+  margin-bottom:-1.2em;
+}
+p:after img{
+  content:"X";
+}

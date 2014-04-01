@@ -1,12 +1,12 @@
 .header{
   position:relative;
-  width:100%;
+  //width:100%;
   background:$black;
   color:$cream;
   font-style:italic;
   line-height:1;
   padding-left:.4em;
-  a, span, nav, ul, li{display:block;}
+  a, nav, ul, li{display:block;}
   a{
     background:none;
     color:$cream;
@@ -23,6 +23,7 @@
   float:left;
   text-transform:lowercase;
   padding:.2em;
+  @include breakpoint(XSsize){display:none;}
 }
 .topNav{
   width:15em;
@@ -74,7 +75,7 @@
 // Small Screen Styles
 @include breakpoint(Ssize){
   .header{
-    font-size:18px;
+    font-size:24px;
     .menuTitle{cursor:pointer;}
     .topNav{
       width:4em;

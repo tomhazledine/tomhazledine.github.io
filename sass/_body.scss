@@ -1,45 +1,4 @@
-// 01. Basic Body Styles
-// 02. Main Wrapper
-// 03. Images
-
-// 01. Basic Body Styles
-body{
-  color:$black;
-  font-family:$text;
-  font-weight:$book;
-  line-height:1.4;
-}
-h1,h2,h3,h4,h5,h6{
-  font-weight:$bold;
-  //letter-spacing:.02em;
-}
-a{
-  background:$grey;
-  color:$black;
-  text-decoration:none;
-  transform-property:color;
-  transition-duration:.3s;
-  &:hover{
-    color:$cream;
-    background:$primary;
-  }
-}
-em{font-style:italic;}
-strong{font-weight:$bold;}
-
-// Selection Colours
-@mixin selectionColours{
-  color:$cream;
-  background:$primary;}
-@mixin aSelectionColours{
-    color:$primary;
-    background:$black;}
-::-moz-selection{@include selectionColours;}
-::selection{@include selectionColours;}
-a::-moz-selection{@include aSelectionColours;}
-a::selection{@include aSelectionColours;}
-
-// 02. Main Wrapper
+// Main Wrapper
 .bodyWrapper{
   background:$cream;
   width:80%;
@@ -47,10 +6,19 @@ a::selection{@include aSelectionColours;}
   margin:5em auto 3em;
   padding-top:6em;
   padding-bottom:6em;
+  @include breakpoint(XSsize){
+    min-width:0em;
+    width:90%;
+    margin:1em auto;
+  }
 }
 .mainContent{
   width:$contentWidth;
   margin:0 auto;
+  @include breakpoint(XSsize){
+    min-width:0em;
+    width:90%;
+  }
 }
 .mainContentInner{
   padding-bottom:3rem;
@@ -75,6 +43,7 @@ h3{
 }
 p{
   text-indent:24%;
+  hyphens:none;
   &:after{
     content:"¶";
     padding-left:.2em;
@@ -93,17 +62,4 @@ p + p::first-letter{
 .top-link{
   display:block;
   padding:2em 0 0 0;
-}
-
-// 03. Images
-img{
-  display:block;
-  position:relative;
-  z-index:1000;
-  width:100%;
-  padding:1em 0 0em 0;
-  margin-bottom:-1.2em;
-}
-p:after img{
-  content:"X";
 }

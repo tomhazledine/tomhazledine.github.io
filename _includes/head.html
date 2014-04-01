@@ -7,13 +7,17 @@
 
   <meta charset="utf-8">
   <title>
-    {% if page.title %} {{ page.title }} :: {% endif %}Tom Hazledine {% if page.title != false %}Homepage{% endif %}
+    {% if page.title %} {{ page.title }} :: {% endif %}Tom Hazledine Web Design
   </title>
   <meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{ site.description }}{% endif %}">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="{{site.url}}/favicon.ico">
 
-  <link rel="stylesheet" href="{{site.url}}/style.css">
+  {% if page.customCss %}
+    <link rel="stylesheet" href="{{site.url}}{{ page.customCss }}">
+  {% else %}
+    <link rel="stylesheet" href="{{site.url}}/style.css">
+  {% endif %}
 
   <!-- Modernizr -->
   <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
