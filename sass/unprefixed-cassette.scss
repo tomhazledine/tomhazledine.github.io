@@ -8,17 +8,19 @@ $c90red:#881615;
 $c90green:#4b9121;
 $c90black:#141311;
 $screwGrey:#5e5f5a;
+$red:#fd6139;
 
 html{
-  //height:100%;
+  height:100%;
 }
 body{
-  //min-height:100%;
-  background:white;
+  min-height:100%;
+  background:$white;
   box-shadow:inset $grey 0 0 5em 2em;
+  //overflow:hidden;
 }
 
-.cassetteWrapper{padding:6em;}
+.cassetteWrapper{padding:0 6em;}
 
 $cassetteShadow1:-.9em;
 $cassetteShadow2:2em;
@@ -68,13 +70,14 @@ $cassetteShadow4:.5em;
   display:block;
   width:0;
   height:0;
-  border:$screwGrey solid .4em;
+  border-left:$screwGrey solid .4em;
+  border-bottom:$screwGrey solid .3em;
   border-top:lighten($screwGrey,40%) solid .4em;
   border-right:lighten($screwGrey,40%) solid .4em;
   border-radius:50%;
   box-shadow:
-    darken($c90grey,25%) 0 -.1em 0 1px,
-    darken($c90grey,25%) 0 0 0 1px;
+    darken($c90grey,25%) 0 -.2em 0 0;//,
+    //darken($c90grey,25%) 0 0 0 1px;
   &:before{
     position:absolute;
     top:-.25em;
@@ -84,13 +87,12 @@ $cassetteShadow4:.5em;
     width:.3em;
     height:.2em;
     border-radius:50%;
-    background:white;
+    background:$white;
     transform:rotate(45deg);
   }
-  //background:$screwGrey;
-  &.screw1{top:.4em;left:.3em;
+  &.screw1{top:.5em;left:.3em;
     .screwInner{transform:rotate(20deg);}}
-  &.screw2{top:.4em;right:.3em;
+  &.screw2{top:.5em;right:.3em;
     .screwInner{transform:rotate(30deg);}}
   &.screw3{bottom:.3em;left:.3em;
     .screwInner{transform:rotate(10deg);}}
@@ -154,7 +156,28 @@ $cassetteShadow4:.5em;
   .cursive{
     display:block;
     padding: .5em .5em .5em 3em;
-    background:linear-gradient(top, $cream 1em, $black 1em, $black 1.1em, $cream 1.1em);
+  }
+  .stripe{
+    display:block;
+    position:absolute;
+    top:40%;
+    width:100%;
+    border-top:$red solid .3em;
+    border-bottom:$black solid .3em;
+  }
+  .c90{
+    position:absolute;
+    bottom:-.1em;
+    left:3.5em;
+    color:$c90green;
+    font-weight:$bold;
+  }
+  .logo{
+    position:absolute;
+    bottom:-.1em;
+    right:3.5em;
+    font-weight:$bold;
+    font-style:italic;
   }
 }
 .middle{
@@ -179,9 +202,7 @@ $cassetteShadow4:.5em;
   border-radius:50%;
   background:$white;
   border-top:darken($c90grey,10%) solid .1em;
-  //border-right:darken($c90grey,10%) solid .1em;
   border-bottom:lighten($c90grey,15%) solid .1em;
-  //border-left:lighten($c90grey,15%) solid .1em;
   box-shadow:
     inset $c90grey 0 0 0 .2em,
     inset darken($c90grey,15%) 0 .1em 0 .2em,
@@ -218,6 +239,19 @@ $cassetteShadow4:.5em;
     height:9em;
     background:$brown;
     border-radius:50%;
+    &:after{
+      position:absolute;
+      top:50%;
+      left:50%;
+      content:'';
+      width:4em;
+      height:4em;
+      margin:-2em 0 0 -2em;
+      border-radius:50%;
+      background:$cream;
+      border:$cream solid .2em;
+      box-shadow:inset $grey 0 0 0 .2em;
+    }
   }
   .reelTwo{
     position:absolute;
@@ -230,5 +264,154 @@ $cassetteShadow4:.5em;
     height:6em;
     background:$brown;
     border-radius:50%;
+    &:after{
+      position:absolute;
+      top:50%;
+      left:50%;
+      content:'';
+      width:4em;
+      height:4em;
+      margin:-2em 0 0 -2em;
+      border-radius:50%;
+      background:$cream;
+      border:$cream solid .2em;
+      box-shadow:inset $grey 0 0 0 .2em;
+    }
+  }
+}
+.cassetteBottom{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  height:2.2em;
+  width:10em;
+  margin-left:-5em;
+  background:lighten($c90grey,5%);
+  border-top:lighten($c90grey,15%) solid .1em;
+  .screw5{
+    bottom:1em;
+    left:50%;
+    margin-left:-.5em;
+  }
+  &:before{
+    content:'';
+    position:absolute;
+    right:100%;
+    border-right:lighten($c90grey,5%) solid .5em;
+    border-top:transparent solid 2.2em;
+  }
+  &:after{
+    content:'';
+    position:absolute;
+    left:100%;
+    border-left:lighten($c90grey,5%) solid .5em;
+    border-top:transparent solid 2.2em;
+  }
+}
+.bottomShadow{
+  position:absolute;
+  z-index:100;
+  left:50%;
+  margin-left:-5.5em;
+  bottom:-.7em;
+  width:11em;
+  height:.7em;
+  background:darken($c90grey,15%);
+  &:before{
+    content:'';
+    display:block;
+    position:absolute;
+    z-index:100;
+    bottom:100%;
+    left:50%;
+    margin-left:-5.5em;
+    width:11em;
+    border-bottom:darken($c90grey,15%) solid .1em;
+    border-right:transparent solid .3em;
+    border-left:transparent solid .3em;
+  }
+  &:after{
+    content:'';
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:100%;
+    left:50%;
+    margin-left:-5.5em;
+    width:11em;
+    border-top:darken($c90grey,15%) solid .1em;
+    border-right:transparent solid .3em;
+    border-left:transparent solid .3em;
+    box-shadow:$grey $cassetteShadow1 ($cassetteShadow2 - .6em) 0 $cassetteShadow4;
+  }
+}
+.holes{
+  display:block;
+  position:absolute;
+  bottom:.8em;
+  width:.8em;
+  height:.6em;
+  border-radius:.2em;
+  background:darken($c90grey,35%);
+  box-shadow:inset darken($c90grey,15%) 0 .1em 0 0;
+  &:after{
+    position:absolute;
+    top:.5em;
+    content:'';
+    width:.6em;
+    height:.6em;
+    border-radius:50%;
+    background:darken($c90grey,35%);
+    box-shadow:inset darken($c90grey,15%) 0 .1em 0 0;
+  }
+  &.one{left:20%;
+    &:after{right:200%;}}
+  &.two{right:20%;
+    &:after{left:200%;}}
+}
+.bottomHoles{
+  position:absolute;
+  top:.05em;
+  width:2em;
+  height:.6em;
+  background:darken($c90grey,35%);
+  box-shadow:
+    inset $brown 0 .3em 0 0,
+    inset darken($c90grey,25%) 0 -.1em 0 0;
+  &.one{
+    left:.5em;
+  }
+  &.two{
+    left:50%;
+    margin-left:-1em;
+    &:before{
+      content:'';
+      display:block;
+      position:absolute;
+      top:.1em;
+      right:140%;
+      width:.4em;
+      height:.4em;
+      background:darken($c90grey,35%);
+      box-shadow:
+        inset $brown 0 .2em 0 0,
+        inset darken($c90grey,25%) 0 -.05em 0 0;
+    }
+    &:after{
+      content:'';
+      display:block;
+      position:absolute;
+      top:.1em;
+      left:140%;
+      width:.4em;
+      height:.4em;
+      background:darken($c90grey,35%);
+      box-shadow:
+        inset $brown 0 .2em 0 0,
+        inset darken($c90grey,25%) 0 -.05em 0 0;
+    }
+  }
+  &.three{
+    right:.5em;
   }
 }
