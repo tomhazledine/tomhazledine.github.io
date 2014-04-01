@@ -34,6 +34,7 @@ h1{
   margin:0 0 6rem 0;
 }
 h2{
+  clear:both;
   font-size:1.5em;
   padding:1em 0;
 }
@@ -62,4 +63,9 @@ p + p::first-letter{
 .top-link{
   display:block;
   padding:2em 0 0 0;
+}
+
+// Portfolio-specific styles
+.portfolioH2{
+  padding:3em 0 0 0;
 }

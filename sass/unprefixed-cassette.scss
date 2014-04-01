@@ -170,7 +170,8 @@ $cassetteShadow4:.5em;
   .cursive{
     font-family:'cassette';
     display:block;
-    padding: .5em .5em .5em 3em;
+    padding: .5em .5em .5em 5em;
+    transform:rotate(-3deg);
   }
   .stripe{
     display:block;
@@ -429,4 +430,28 @@ $cassetteShadow4:.5em;
   &.three{
     right:.5em;
   }
+}
+.cassetteIntro{
+  width:60%;
+  background:$cream;
+  margin:0 auto 3em;
+  padding:3em;
+  h1{
+    font-size:2em;
+    text-align:center;
+    padding-bottom:1em;
+  }
+  .demo{
+    font-family:'cassette';
+  }
+  p{padding-bottom:2em;}
+}
+.glyph_chart div{
+  float:left;
+  width:20%;
+  text-align:center;
+  padding:.5em;
+  font-size:2em;
+  font-family:'cassette';
+  p{font-size:.5em;font-family:$text;}
 }
