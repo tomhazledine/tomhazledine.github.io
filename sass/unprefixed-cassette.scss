@@ -10,6 +10,20 @@ $c90black:#141311;
 $screwGrey:#5e5f5a;
 $red:#fd6139;
 
+// Typography
+@font-face {
+    font-family: 'cassette';
+    src: url('../fonts/cassette/cassette00-webfont.eot');
+    src: url('../fonts/cassette/cassette00-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cassette/cassette00-webfont.woff') format('woff'),
+         url('../fonts/cassette/cassette00-webfont.ttf') format('truetype'),
+         url('../fonts/cassette/cassette00-webfont.svg#cassettecassette') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//$cassette:'cassettecassette';
+
 html{
   height:100%;
 }
@@ -154,6 +168,7 @@ $cassetteShadow4:.5em;
     text-align:center;
   }
   .cursive{
+    font-family:'cassette';
     display:block;
     padding: .5em .5em .5em 3em;
   }
