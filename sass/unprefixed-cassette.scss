@@ -612,6 +612,10 @@ body{
 
 // Notebook
 .notebookWrapper{
+  @include breakpoint(Ssize){
+    width:100%;
+    overflow:hidden;
+  }
   //position:absolute;
   //top:5em;
   //right:0;
@@ -624,6 +628,9 @@ body{
 
   position:relative;
   margin:3em auto 6em;
+  @include breakpoint(Ssize){
+    margin-right:-20em;
+  }
   width:40em;
   height:20em;
   font-family:'cassette';
@@ -741,6 +748,10 @@ body{
   background:$cream;
   margin:3em auto 3em;
   padding:3em;
+  @include breakpoint(Ssize){
+    width:100%;
+    //padding:2em .5em;
+  }
   h1{
     font-size:2em;
     text-align:center;

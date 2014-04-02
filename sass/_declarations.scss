@@ -26,7 +26,7 @@ $primary:#00b7c6;
     @media (max-width:800px){@content;}
   }
   @elseif $point == XSsize{
-    @media (max-width:550px){@content;}
+    @media (max-width:570px){@content;}
   }
 }
 
