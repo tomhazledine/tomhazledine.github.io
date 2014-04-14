@@ -19,7 +19,7 @@ $paper:#f8f1e1;//#d1cfb6;
     src: url('../fonts/cassette/cassette00-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/cassette/cassette00-webfont.woff') format('woff'),
          url('../fonts/cassette/cassette00-webfont.ttf') format('truetype'),
-         url('../fonts/cassette/cassette00-webfont.svg#cassettecassette') format('svg');
+         url('../fonts/cassette/cassette00-webfont.svg#cassette') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -44,6 +44,8 @@ body{
   padding-top:1em;
   font-size:2em;
   text-align:center;
+  font-family:'cassette';
+  color:$blue;
 }
 .linkToBottom{
   display:block;
@@ -629,7 +631,7 @@ body{
   position:relative;
   margin:3em auto 6em;
   @include breakpoint(Ssize){
-    margin-right:-20em;
+    margin-right:-21em;
   }
   width:40em;
   height:20em;
@@ -691,9 +693,9 @@ body{
   &:before{
     content:"";
     position:absolute;
-    top:100%;
+    top:1em;//100%;
     left:50%;
-    height:.6em;
+    height:19.6em;
     width:.1em;
     margin-left:.95em;
     background:darken($paper, 30%);
@@ -716,7 +718,7 @@ body{
     height:20em;
     width:2.1em;
     margin-left:-.05em;
-    background:darken($paper, 30%);
+    //background:darken($paper, 30%);
     border:transparent solid 1em;
     border-top:$white solid 1em;
     border-bottom:none;
@@ -774,5 +776,38 @@ body{
     font-size:.5em;
     font-family:$text;
     border-bottom:$black solid .1em;
+  }
+}
+
+// Download box
+.cassetteIntro{
+  .downloadFile{
+    position:relative;
+    margin-left:2.5em;
+    &:before{
+      font-family:$icons;
+      font-weight: normal;
+      font-style: normal;
+      content:"\e002";
+      position:absolute;
+      display:block;
+      width:1em;
+      height:1em;
+      top:-25%;
+      left:-1.2em;
+      font-size:2em;
+      line-height:1em;
+      text-align:center;
+      color:$black;
+      transition-property:color, transform;
+      transition-duration:.3s;
+    }
+    &:hover:before{
+      color:$primary;
+      transform:rotate(-15deg);
+    }
+  }
+  code{
+    font-size:.8em;
   }
 }

@@ -1,6 +1,9 @@
 $icon-github-font-family: "icons";
 $icon-github-value: "\e001";
 $icon-github: "icons" "\e001";
+$icon-floppyDisk-font-family: "icons";
+$icon-floppyDisk-value: "\e002";
+$icon-floppyDisk: "icons" "\e002";
 $icon-twitterCircle-font-family: "icons";
 $icon-twitterCircle-value: "\e000";
 $icon-twitterCircle: "icons" "\e000";
@@ -34,11 +37,11 @@ $icon-twitterCircle: "icons" "\e000";
 
 @font-face {
   font-family: "icons";
-  src:url("fonts/built/icons.eot");
-  src:url("fonts/built/icons.eot?#iefix") format("embedded-opentype"),
-    url("fonts/built/icons.woff") format("woff"),
-    url("fonts/built/icons.ttf") format("truetype"),
-    url("fonts/built/icons.svg#icomoon") format("svg");
+  src:url("/fonts/built/icons.eot");
+  src:url("/fonts/built/icons.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/built/icons.woff") format("woff"),
+    url("/fonts/built/icons.ttf") format("truetype"),
+    url("/fonts/built/icons.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }

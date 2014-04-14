@@ -1,0 +1,10 @@
+@font-face{
+  font-family:'cassetteWebBeta';
+  src:url('cassetteWebBeta.eot');
+  src:url('cassetteWebBeta.eot?#iefix') format('embedded-opentype'),
+      url('cassetteWebBeta.woff') format('woff'),
+      url('cassetteWebBeta.ttf') format('truetype'),
+      url('cassetteWebBeta.svg#cassetteWebBeta') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -46,7 +46,7 @@ customCss: "/cassette.css"
 
   </div>
 
-  <!--a class="linkToBottom" href="#downloadLink">Download it now.</a-->
+  <a class="linkToBottom" href="#downloadLink">Download the beta now.</a>
 
   <div class="linerNotes">
     <div class="linerNotesTop clearfix">
@@ -159,32 +159,6 @@ customCss: "/cassette.css"
       <div><p>&amp;#94;</p>&#94;</div>
       <div><p>&amp;#95;</p>&#95;</div>
       <div><p>&amp;#96;</p>&#96;</div>
-      <div><p>&amp;#97;</p>&#97;</div>
-      <div><p>&amp;#98;</p>&#98;</div>
-      <div><p>&amp;#99;</p>&#99;</div>
-      <div><p>&amp;#100;</p>&#100;</div>
-      <div><p>&amp;#101;</p>&#101;</div>
-      <div><p>&amp;#102;</p>&#102;</div>
-      <div><p>&amp;#103;</p>&#103;</div>
-      <div><p>&amp;#104;</p>&#104;</div>
-      <div><p>&amp;#105;</p>&#105;</div>
-      <div><p>&amp;#106;</p>&#106;</div>
-      <div><p>&amp;#107;</p>&#107;</div>
-      <div><p>&amp;#108;</p>&#108;</div>
-      <div><p>&amp;#109;</p>&#109;</div>
-      <div><p>&amp;#110;</p>&#110;</div>
-      <div><p>&amp;#111;</p>&#111;</div>
-      <div><p>&amp;#112;</p>&#112;</div>
-      <div><p>&amp;#113;</p>&#113;</div>
-      <div><p>&amp;#114;</p>&#114;</div>
-      <div><p>&amp;#115;</p>&#115;</div>
-      <div><p>&amp;#116;</p>&#116;</div>
-      <div><p>&amp;#117;</p>&#117;</div>
-      <div><p>&amp;#118;</p>&#118;</div>
-      <div><p>&amp;#119;</p>&#119;</div>
-      <div><p>&amp;#120;</p>&#120;</div>
-      <div><p>&amp;#121;</p>&#121;</div>
-      <div><p>&amp;#122;</p>&#122;</div>
       <div><p>&amp;#123;</p>&#123;</div>
       <div><p>&amp;#124;</p>&#124;</div>
       <div><p>&amp;#125;</p>&#125;</div>
@@ -309,10 +283,50 @@ customCss: "/cassette.css"
     </div>
   </div>
 
-  <!--div class="cassetteIntro" id="downloadLink">
-    <h2>Download Cassette Script Here</h2>
-    <p></p>
-    <a href="#top">Back to top.</a>
-  </div-->
+  <div class="cassetteIntro" id="downloadLink">
+    <h2>Download the beta version of Cassette Script Here</h2>
+    <p>While Cassette Script is still under development you can download it for free.</p>
 
+    <h2><a class="downloadFile" href="/downloads/cassetteBeta.ttf">Cassette Script Beta desktop version</a></h2>
+    <p></p>
+
+    <h2><a class="downloadFile" href="/downloads/cassetteWebBeta.zip">Cassette Script Beta webfonts</a></h2>
+    <p></p>
+    <p>Use the links above to download the beta versions of Cassette Script. The desktop version is in True Type format (.ttf), and the webfont version contains <code>.ttf</code> <code>.eot</code> <code>.svg</code> and <code>.woff</code> file types along with a copy of the associated css rules (see code box below): everything you need to use Cassette Script in your own web pages.</p>
+
+    <pre><code>
+    @font-face {
+      font-family: 'cassette';
+      src: url('../cassetteWebfont/cassette00.eot');
+      src: url('../cassetteWebfont/cassette00.eot?#iefix') format('embedded-opentype'),
+           url('../cassetteWebfont/cassette00.woff') format('woff'),
+           url('../cassetteWebfont/cassette00.ttf') format('truetype'),
+           url('../cassetteWebfont/cassette00.svg#cassette') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    </code></pre>
+    <a href="#top">Back to top.</a>
+  </div>
+
+</section>
+
+<section id="comment-box" class="comments cassetteIntro">
+  <h2>I'd like to know what you think of Cassette Script</h2>
+  <p>I'm giving Cassette Script away for free because I need people to test it. While using it you may encounter bugs or quirky behaviour, or maybe (touch wood) it will work perfectly. Either way, I'd love to hear what you thought of it.</p>
+
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+    </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>

@@ -31,11 +31,24 @@ $primary:#00b7c6;
 }
 
 // 03. Typefaces
+
+// Icon Font
+@font-face {
+  font-family: "realIcons";
+  src:url("/fonts/built/icons.eot");
+  src:url("/fonts/built/icons.eot?#iefix") format("embedded-opentype"),
+      url("/fonts/built/icons.woff") format("woff"),
+      url("/fonts/built/icons.ttf") format("truetype"),
+      url("/fonts/built/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $text: "futura-pt", sans-serif;
 $book:400;
 $bold:700;
 @import "icons";
-$icons: "icons";
+$icons: "realIcons";
 $code:"droid-sans-mono";
 
 // 04. Widths Etc.

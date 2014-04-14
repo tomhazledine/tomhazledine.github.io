@@ -17,7 +17,7 @@ module.exports=function(grunt){
         destFonts:'fonts/built/icons.{svg,woff,eot,ttf}',
         fontFamily:'icons',
         cssRouter: function (fontpath) {
-          return '' + fontpath;
+          return '/' + fontpath;
         }//cssRouter
       }//all
     },//font
@@ -66,7 +66,17 @@ module.exports=function(grunt){
           // the _site/ folder
           '_site/js/script.js':'js/script.js'
         }//files
-      }//js
+      },//js
+      fonts:{
+        files:{
+          // Copy the font files to
+          // the _site/ folder
+          '_site/fonts/built/icons.eot':'fonts/built/icons.eot',
+          '_site/fonts/built/icons.svg':'fonts/built/icons.svg',
+          '_site/fonts/built/icons.ttf':'fonts/built/icons.ttf',
+          '_site/fonts/built/icons.woff':'fonts/built/icons.woff'
+        }//files
+      }//fonts
     },//copy
 
     shell:{
@@ -129,7 +139,8 @@ module.exports=function(grunt){
           'blog/**',
           'cassette-script/**',
           'about/**',
-          '_plugins/**'
+          '_plugins/**',
+          'fonts/**'
         ],
         tasks:'shell:jekyll',
       }//jekyllSources
