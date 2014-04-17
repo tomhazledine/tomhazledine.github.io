@@ -1,6 +1,7 @@
 // 01. Code
 // 02. Related/Featured posts
 // 03. Next/Prev links
+// 03.1 Small/Touch Next/Prev links
 // 04. Dropcap Etc.
 // 05. Blog Archive
 // 06. Blockquotes
@@ -150,6 +151,40 @@ pre code{
   float:left;
   display:block;
   height:2em;
+}
+
+// 03.1 Small/Touch Next/Prev links
+@mixin navButtonRWD{
+  position:static;
+  width:45%;
+  padding:1em 0;
+  margin:0;
+  color:$black;
+  text-align:center;
+  &:hover{transform:none;}
+
+}
+@include breakpoint(XSsize){
+  .nav-button-prev{
+    @include navButtonRWD;
+    float:left;
+    &:after{display:none;}
+  }
+  .nav-button-next{
+    @include navButtonRWD;
+    float:right;
+    &:before{display:none;}
+  }
+}
+.touch{
+  .nav-button-prev{
+    @include navButtonRWD;
+    float:left;
+    &:after{display:none;}}
+  .nav-button-next{
+    @include navButtonRWD;
+    float:right;
+    &:before{display:none;}}
 }
 
 // 04. Dropcap Etc.

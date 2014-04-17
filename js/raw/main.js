@@ -1,7 +1,14 @@
-// Test Alert
+// 01. Test Alert
+// 02. Small-screen Nav Menu
+// 03. Fight the FOUT!
+// 04. Dropcap and Run-in
+// 05. Blockquote Run-in
+// 06. Hide nav on scroll
+
+// 01. Test Alert
 //$(document).ready(function(){alert("Main JS Working");});
 
-// Small-screen Nav Menu
+// 02. Small-screen Nav Menu
 $(window).resize(function(){
 	if ($('.topNav ul').css("position") == "absolute" ){
 		$('.topNav ul').removeClass('down');
@@ -13,16 +20,16 @@ $(document).ready(function(){
   });
 });
 
-/*
-// Fight the FOUT!
+
+/*/ 03. Fight the FOUT!
 $('html').addClass('nofout');
 
 $(document).ready(function() {
   $('html').show();
 });
-*/
+//*/
 
-// Dropcap and Run-in
+// 04. Dropcap and Run-in
 $(document).ready(function(){
 
   var targetElement = $('.big-drop-cap'),
@@ -48,7 +55,7 @@ $(document).ready(function(){
       targetElement.html(runInText);
 });
 
-// Blockquote Run-in
+// 05. Blockquote Run-in
 //*
 $(document).ready(function(){
 	var targetElement = $('blockquote'),
@@ -67,4 +74,46 @@ $(document).ready(function(){
 
 	//targetElement.addClass('test');
 });
+//*/
+
+// 06. Hide nav on scroll
+//*
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+
+    lastScrollTop = st;
+}
 //*/

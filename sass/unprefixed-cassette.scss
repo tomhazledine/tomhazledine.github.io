@@ -53,7 +53,7 @@ body{
   text-align:center;
   margin:6em auto 0;
 }
-.cassetteWrapper{}
+
 
 // Cassette Illustation
 .cassetteOuter{
@@ -781,6 +781,31 @@ body{
 
 // Download box
 .cassetteIntro{
+  & > p{
+    text-indent:24%;
+    hyphens:none;
+    &:after{
+      content:"¶";
+      padding-left:.2em;
+      color:$primary;
+    }
+    &:first-of-type{
+      clear:both;
+      //@include bigFirstLetter;
+    }
+    @include bigFirstLetter;
+  }
+  p + p::first-letter{
+    font-size:inherit;
+    color:inherit;
+  }
+
+  .top-link{
+    display:block;
+    padding:2em 0 0 0;
+  }
+  h2{margin:0 0 1em 0;}
+
   .downloadFile{
     position:relative;
     margin-left:2.5em;
@@ -808,6 +833,6 @@ body{
     }
   }
   code{
-    font-size:.8em;
+    font-size:.7em;
   }
 }
