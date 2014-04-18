@@ -16,12 +16,10 @@
   transition{}
   // Nav Hide On Sroll
   &.nav-down{
-    //top:0;
     transform:translateY(0);
     transition-duration:.3s;
   }
   &.nav-up{
-    //top:-2em;
     transform:translateY(-2em);
     transition-duration:.3s;
   }

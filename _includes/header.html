@@ -8,7 +8,6 @@
       <ul class="clearfix">
         {% assign url = page.url|remove:'index.html' %}
         {% for link in site.navigation %}
-
           <li {% if url == link.url or page.layout == link.layout %}class="active"{% endif %}>
             <a href="{{ link.url }}">{{ link.text }}</a>
           </li>
@@ -16,5 +15,6 @@
       </ul>
     </nav>
   </header><!-- .header -->
+  
   <div class="bodyWrapper clearfix">
     <section class="mainContent clearfix">
