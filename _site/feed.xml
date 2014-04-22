@@ -44,6 +44,21 @@
 </item>
 
 <item>
+<title>Test Post</title>
+<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2&gt;Productivity Hacking&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2&gt;The Bullet Journal Concept&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</description>
+<pubDate>Wed, 25 Sep 2013 00:00:00 +0100</pubDate>
+<link>/test-post</link>
+<guid isPermaLink="true">/test-post</guid>
+</item>
+
+<item>
 <title>A bullet-journal workflow</title>
 <description>&lt;p&gt;Making task lists can be fantastically useful, but it’s all too easy to loose them. My paper lists get buried under reams of doodles and random notes, or lost in the depths of a full notebook that simply has &lt;em&gt;too much in it&lt;/em&gt;. Even digital lists get lost, and I find I lack the discipline to open a mammoth text file every morning. Paper is much better for immediate reference, even if it is easy to miss-place.&lt;/p&gt;
 

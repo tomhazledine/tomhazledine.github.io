@@ -6,7 +6,7 @@ group: "navigation"
 
 <h1>Writings</h1>
 <section class="archive main-content">
-  {% for post in site.posts %}
+  {% for post in site.categories["article"] %}
     <div class="archiveItem clearfix">
       <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
       <span class="archiveItemExcerpt">{{post.excerpt}}</span>
