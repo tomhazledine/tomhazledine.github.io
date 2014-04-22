@@ -7,7 +7,16 @@ group: "navigation"
 
 <h1>{{ page.title }}</h2>
 
-<section class="portfolioEntry">
+{% for post in site.categories["showcase"] %}
+
+  <section class="portfolioEntry">
+    <h2 class="portfolioH2"><a href="{{post.url}}">{{post.title}}</a></h2>
+      <p class="portfolioP">{{post.excerpt}}</p>
+  </section>
+
+{% endfor %}
+
+<!--section class="portfolioEntry">
   <h2 class="portfolioH2"><a href="http://atlanticbrewery.com">Atlantic Brewery</a></h2>
   <p class="portfolioP">A responisive e-commerce site for one Cornwall's best craft-beer brewers. <a href="http://atlanticbrewery.com/">Atlantic Brewery</a>’s home is an 18th century farmhouse situated just a few miles from the beautiful North Cornish coast near Newquay and the spectacular Atlantic ocean.</p>
 </section>
@@ -25,6 +34,6 @@ group: "navigation"
 <section class="portfolioEntry">
   <h2 class="portfolioH2"><a href="http://eatenbymonsters.com">Eaten by Monsters music blog</a></h2>
   <p class="portfolioP">Founded in 2008, <em><a href="http://eatenbymonsters.com/">Eaten by Monsters</a></em> has grown into an award-winning, taste-making, discourse-shaping powerhouse (albeit in a very specific niche). Writing EbM has opened the door to a host of opportunities; writing for Tom Robinson's <a href="http://freshonthenet.co.uk/how-to-reach-music-blogs/">Fresh On The Net</a> blog, learning all about web publishing the hard way, and (most importantly) getting me on the press-lists for all my favourite record labels.</p>
-</section>
+</section-->
 
 {% include archive.html %}

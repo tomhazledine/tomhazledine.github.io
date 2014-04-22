@@ -7,6 +7,391 @@
 <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 
 <item>
+<title>Atlantic Brewery</title>
+<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2&gt;Productivity Hacking&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2&gt;The Bullet Journal Concept&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</description>
+<pubDate>Tue, 01 Apr 2014 00:00:00 +0100</pubDate>
+<link>/atlantic-brewery</link>
+<guid isPermaLink="true">/atlantic-brewery</guid>
+</item>
+
+<item>
+<title>Cassette Script Font</title>
+<description>&lt;section class=&quot;cassetteWrapper clearfix&quot;&gt;
+
+  &lt;h1 class=&quot;cassetteHeading&quot;&gt;Cassette Script&lt;/h1&gt;
+
+  &lt;div class=&quot;cassetteOuter&quot;&gt;
+
+    &lt;span class=&quot;screw screw1&quot;&gt;&lt;span class=&quot;screwInner&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;screw screw2&quot;&gt;&lt;span class=&quot;screwInner&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;screw screw3&quot;&gt;&lt;span class=&quot;screwInner&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;screw screw4&quot;&gt;&lt;span class=&quot;screwInner&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+
+    &lt;div class=&quot;stickerOuter&quot;&gt;
+      &lt;div class=&quot;sticker&quot;&gt;
+        &lt;span class=&quot;a-side&quot;&gt;A&lt;/span&gt;
+        &lt;p class=&quot;cursive&quot;&gt;My Best Mixtape!&lt;/p&gt;
+        &lt;span class=&quot;stripe&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;c90&quot;&gt;D-C90&lt;/span&gt;
+        &lt;span class=&quot;logo&quot;&gt;T.F.H.®&lt;/span&gt;
+        &lt;div class=&quot;middle clearfix&quot;&gt;
+          &lt;span class=&quot;circle one&quot;&gt;&lt;/span&gt;
+          &lt;div class=&quot;window&quot;&gt;
+            &lt;span class=&quot;reelOne&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;reelTwo&quot;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;span class=&quot;circle two&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;cassetteBottom&quot;&gt;
+      &lt;span class=&quot;screw screw5&quot;&gt;&lt;span class=&quot;screwInner&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;bottomShadow&quot;&gt;
+        &lt;span class=&quot;bottomHoles one&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;bottomHoles two&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;bottomHoles three&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+      &lt;span class=&quot;holes one&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;holes two&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+
+  &lt;a class=&quot;linkToBottom&quot; href=&quot;#downloadLink&quot;&gt;Download the beta now.&lt;/a&gt;
+
+  &lt;div class=&quot;linerNotes&quot;&gt;
+    &lt;div class=&quot;linerNotesTop clearfix&quot;&gt;
+      &lt;span class=&quot;boxDesc&quot;&gt;TFH D-C90 90min. @ 1-7/8 ips(2 × 45min.)&lt;/span&gt;
+      &lt;div class=&quot;infoBoxes clearfix&quot;&gt;
+        &lt;span class=&quot;box1&quot;&gt;Tape Selector&lt;/span&gt;
+        &lt;span class=&quot;box2&quot;&gt;Normal&lt;/span&gt;
+        &lt;span class=&quot;box3&quot;&gt;Bias-Normal&lt;/br&gt;EQ-120µS&lt;/span&gt;
+        &lt;span class=&quot;boxCopyright&quot;&gt;©1972-1977 TFH Electronics Co.,Ltd.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;linerNotesSpine&quot;&gt;&lt;span class=&quot;spineTitle&quot;&gt;D-&lt;span class=&quot;green&quot;&gt;C90&lt;/span&gt; TFH&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;linerNotesMainContent clearfix&quot;&gt;
+      &lt;span class=&quot;side&quot;&gt;A&lt;/span&gt;
+      &lt;span class=&quot;side&quot;&gt;B&lt;/span&gt;
+      &lt;div class=&quot;linerNotesMainContentInner&quot;&gt;
+        &lt;h1&gt;Cassette Script&lt;/h1&gt;
+        &lt;p&gt;A typeface specifically moddelled on handwritten liner-notes from old mix-tapes.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;linerNotesBottom&quot;&gt;
+      &lt;p class=&quot;black&quot;&gt;Dynamic Cassette&lt;/p&gt;
+      &lt;p class=&quot;white&quot;&gt;Precision Cassette Mechanism&lt;/p&gt;
+      &lt;p class=&quot;title&quot;&gt;D-&lt;span class=&quot;green&quot;&gt;C90&lt;/span&gt; TFH®&lt;/p&gt;
+      &lt;p class=&quot;black&quot;&gt;Low Noise  High Output&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;notebookWrapper&quot;&gt;
+    &lt;div class=&quot;notebook&quot;&gt;
+      &lt;div class=&quot;leftPage&quot;&gt;
+        &lt;span class=&quot;ribbon&quot;&gt;&lt;/span&gt;
+        &lt;h2&gt;Language Support&lt;/h2&gt;
+        &lt;p&gt;Albanian, Basque, Breton, Chamorro, Danish, Dutch, English, Faroese, Finnish, French, Frisian, Galician, German, Icelandic, Italian, Malagasy, Norwegian, Portuguese, Spanish, Swedish&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;span class=&quot;divider&quot;&gt;&lt;/span&gt;
+      &lt;div class=&quot;rightPage&quot;&gt;
+        &lt;h2&gt;Remember the old C90 tapes?&lt;/h2&gt;
+        &lt;p&gt;Here's my visual homage to the ubiquitous music format of my youth. This is &quot;Cassette Script&quot;; a handwriting typeface with over 200 characters.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;cassetteIntro&quot; id=&quot;downloadLink&quot;&gt;
+    &lt;h2&gt;Download the beta version of Cassette Script Here&lt;/h2&gt;
+    &lt;p&gt;While Cassette Script is still under development you can download it for free.&lt;/p&gt;
+
+    &lt;h2&gt;&lt;a class=&quot;downloadFile&quot; href=&quot;/downloads/cassetteBeta.ttf&quot;&gt;Cassette Script Beta desktop version&lt;/a&gt;&lt;/h2&gt;
+
+    &lt;h2&gt;&lt;a class=&quot;downloadFile&quot; href=&quot;/downloads/cassetteWebBeta.zip&quot;&gt;Cassette Script Beta webfonts&lt;/a&gt;&lt;/h2&gt;
+
+    &lt;p&gt;Use the links above to download the beta versions of Cassette Script. The desktop version is in True Type format (.ttf), and the webfont version contains &lt;code&gt;.ttf&lt;/code&gt; &lt;code&gt;.eot&lt;/code&gt; &lt;code&gt;.svg&lt;/code&gt; and &lt;code&gt;.woff&lt;/code&gt; file types along with a copy of the associated css rules (see code box below): everything you need to use Cassette Script in your own web pages.&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;
+    @font-face {
+      font-family: 'cassette';
+      src: url('../cassetteWebfont/cassette00.eot');
+      src: url('../cassetteWebfont/cassette00.eot?#iefix') format('embedded-opentype'),
+           url('../cassetteWebfont/cassette00.woff') format('woff'),
+           url('../cassetteWebfont/cassette00.ttf') format('truetype'),
+           url('../cassetteWebfont/cassette00.svg#cassette') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    &lt;/code&gt;&lt;/pre&gt;
+    &lt;a href=&quot;#top&quot;&gt;Back to top.&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;comment-box&quot; class=&quot;comments cassetteIntro&quot;&gt;
+    &lt;h2&gt;I'd like to know what you think of Cassette Script&lt;/h2&gt;
+    &lt;p&gt;I'm giving Cassette Script away for free because I need people to test it. While using it you may encounter bugs or quirky behaviour, or maybe (touch wood) it will work perfectly. Either way, I'd love to hear what you thought of it.&lt;/p&gt;
+
+      &lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+      &lt;script type=&quot;text/javascript&quot;&gt;
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+      &lt;/script&gt;
+      &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+      &lt;a href=&quot;http://disqus.com&quot; class=&quot;dsq-brlink&quot;&gt;comments powered by &lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+      &lt;a href=&quot;#top&quot;&gt;Back to top.&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;cassetteIntro&quot; id=&quot;glyphs&quot;&gt;
+    &lt;h2&gt;Glyph Chart&lt;/h2&gt;
+    &lt;p&gt;Cassette Script includes all the glyphs listed below. Unicode entities are included above each glyph to help you insert individual characters into your layout.&lt;/p&gt;
+
+    &lt;div class=&quot;glyph_chart clearfix&quot;&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#33;&lt;/p&gt;&amp;#33;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#34;&lt;/p&gt;&amp;#34;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#35;&lt;/p&gt;&amp;#35;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#36;&lt;/p&gt;&amp;#36;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#37;&lt;/p&gt;&amp;#37;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#38;&lt;/p&gt;&amp;#38;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#39;&lt;/p&gt;&amp;#39;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#40;&lt;/p&gt;&amp;#40;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#41;&lt;/p&gt;&amp;#41;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#42;&lt;/p&gt;&amp;#42;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#43;&lt;/p&gt;&amp;#43;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#44;&lt;/p&gt;&amp;#44;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#45;&lt;/p&gt;&amp;#45;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#46;&lt;/p&gt;&amp;#46;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#47;&lt;/p&gt;&amp;#47;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#48;&lt;/p&gt;&amp;#48;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#49;&lt;/p&gt;&amp;#49;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#50;&lt;/p&gt;&amp;#50;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#51;&lt;/p&gt;&amp;#51;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#52;&lt;/p&gt;&amp;#52;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#53;&lt;/p&gt;&amp;#53;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#54;&lt;/p&gt;&amp;#54;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#55;&lt;/p&gt;&amp;#55;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#56;&lt;/p&gt;&amp;#56;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#57;&lt;/p&gt;&amp;#57;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#58;&lt;/p&gt;&amp;#58;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#59;&lt;/p&gt;&amp;#59;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#60;&lt;/p&gt;&amp;#60;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#61;&lt;/p&gt;&amp;#61;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#62;&lt;/p&gt;&amp;#62;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#63;&lt;/p&gt;&amp;#63;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#64;&lt;/p&gt;&amp;#64;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#65;&lt;/p&gt;&amp;#65;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#66;&lt;/p&gt;&amp;#66;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#67;&lt;/p&gt;&amp;#67;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#68;&lt;/p&gt;&amp;#68;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#69;&lt;/p&gt;&amp;#69;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#70;&lt;/p&gt;&amp;#70;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#71;&lt;/p&gt;&amp;#71;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#72;&lt;/p&gt;&amp;#72;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#73;&lt;/p&gt;&amp;#73;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#74;&lt;/p&gt;&amp;#74;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#75;&lt;/p&gt;&amp;#75;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#76;&lt;/p&gt;&amp;#76;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#77;&lt;/p&gt;&amp;#77;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#78;&lt;/p&gt;&amp;#78;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#79;&lt;/p&gt;&amp;#79;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#80;&lt;/p&gt;&amp;#80;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#81;&lt;/p&gt;&amp;#81;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#82;&lt;/p&gt;&amp;#82;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#83;&lt;/p&gt;&amp;#83;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#84;&lt;/p&gt;&amp;#84;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#85;&lt;/p&gt;&amp;#85;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#86;&lt;/p&gt;&amp;#86;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#87;&lt;/p&gt;&amp;#87;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#88;&lt;/p&gt;&amp;#88;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#89;&lt;/p&gt;&amp;#89;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#90;&lt;/p&gt;&amp;#90;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#91;&lt;/p&gt;&amp;#91;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#92;&lt;/p&gt;&amp;#92;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#93;&lt;/p&gt;&amp;#93;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#94;&lt;/p&gt;&amp;#94;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#95;&lt;/p&gt;&amp;#95;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#96;&lt;/p&gt;&amp;#96;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#123;&lt;/p&gt;&amp;#123;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#124;&lt;/p&gt;&amp;#124;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#125;&lt;/p&gt;&amp;#125;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#126;&lt;/p&gt;&amp;#126;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#161;&lt;/p&gt;&amp;#161;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#162;&lt;/p&gt;&amp;#162;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#163;&lt;/p&gt;&amp;#163;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#164;&lt;/p&gt;&amp;#164;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#165;&lt;/p&gt;&amp;#165;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#166;&lt;/p&gt;&amp;#166;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#167;&lt;/p&gt;&amp;#167;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#168;&lt;/p&gt;&amp;#168;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#169;&lt;/p&gt;&amp;#169;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#170;&lt;/p&gt;&amp;#170;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#171;&lt;/p&gt;&amp;#171;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#172;&lt;/p&gt;&amp;#172;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#174;&lt;/p&gt;&amp;#174;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#176;&lt;/p&gt;&amp;#176;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#177;&lt;/p&gt;&amp;#177;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#178;&lt;/p&gt;&amp;#178;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#179;&lt;/p&gt;&amp;#179;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#180;&lt;/p&gt;&amp;#180;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#181;&lt;/p&gt;&amp;#181;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#182;&lt;/p&gt;&amp;#182;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#183;&lt;/p&gt;&amp;#183;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#184;&lt;/p&gt;&amp;#184;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#185;&lt;/p&gt;&amp;#185;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#186;&lt;/p&gt;&amp;#186;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#187;&lt;/p&gt;&amp;#187;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#188;&lt;/p&gt;&amp;#188;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#189;&lt;/p&gt;&amp;#189;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#190;&lt;/p&gt;&amp;#190;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#191;&lt;/p&gt;&amp;#191;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#192;&lt;/p&gt;&amp;#192;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#193;&lt;/p&gt;&amp;#193;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#194;&lt;/p&gt;&amp;#194;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#195;&lt;/p&gt;&amp;#195;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#196;&lt;/p&gt;&amp;#196;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#197;&lt;/p&gt;&amp;#197;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#198;&lt;/p&gt;&amp;#198;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#199;&lt;/p&gt;&amp;#199;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#200;&lt;/p&gt;&amp;#200;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#201;&lt;/p&gt;&amp;#201;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#202;&lt;/p&gt;&amp;#202;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#203;&lt;/p&gt;&amp;#203;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#204;&lt;/p&gt;&amp;#204;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#205;&lt;/p&gt;&amp;#205;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#206;&lt;/p&gt;&amp;#206;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#207;&lt;/p&gt;&amp;#207;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#208;&lt;/p&gt;&amp;#208;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#209;&lt;/p&gt;&amp;#209;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#210;&lt;/p&gt;&amp;#210;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#211;&lt;/p&gt;&amp;#211;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#212;&lt;/p&gt;&amp;#212;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#213;&lt;/p&gt;&amp;#213;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#214;&lt;/p&gt;&amp;#214;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#215;&lt;/p&gt;&amp;#215;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#216;&lt;/p&gt;&amp;#216;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#217;&lt;/p&gt;&amp;#217;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#218;&lt;/p&gt;&amp;#218;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#219;&lt;/p&gt;&amp;#219;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#220;&lt;/p&gt;&amp;#220;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#221;&lt;/p&gt;&amp;#221;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#222;&lt;/p&gt;&amp;#222;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#223;&lt;/p&gt;&amp;#223;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#224;&lt;/p&gt;&amp;#224;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#225;&lt;/p&gt;&amp;#225;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#226;&lt;/p&gt;&amp;#226;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#227;&lt;/p&gt;&amp;#227;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#228;&lt;/p&gt;&amp;#228;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#229;&lt;/p&gt;&amp;#229;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#230;&lt;/p&gt;&amp;#230;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#231;&lt;/p&gt;&amp;#231;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#232;&lt;/p&gt;&amp;#232;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#233;&lt;/p&gt;&amp;#233;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#234;&lt;/p&gt;&amp;#234;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#235;&lt;/p&gt;&amp;#235;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#236;&lt;/p&gt;&amp;#236;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#237;&lt;/p&gt;&amp;#237;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#238;&lt;/p&gt;&amp;#238;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#239;&lt;/p&gt;&amp;#239;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#240;&lt;/p&gt;&amp;#240;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#241;&lt;/p&gt;&amp;#241;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#242;&lt;/p&gt;&amp;#242;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#243;&lt;/p&gt;&amp;#243;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#244;&lt;/p&gt;&amp;#244;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#245;&lt;/p&gt;&amp;#245;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#246;&lt;/p&gt;&amp;#246;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#247;&lt;/p&gt;&amp;#247;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#248;&lt;/p&gt;&amp;#248;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#249;&lt;/p&gt;&amp;#249;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#250;&lt;/p&gt;&amp;#250;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#251;&lt;/p&gt;&amp;#251;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#252;&lt;/p&gt;&amp;#252;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#253;&lt;/p&gt;&amp;#253;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#254;&lt;/p&gt;&amp;#254;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#255;&lt;/p&gt;&amp;#255;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#338;&lt;/p&gt;&amp;#338;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#339;&lt;/p&gt;&amp;#339;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#376;&lt;/p&gt;&amp;#376;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#710;&lt;/p&gt;&amp;#710;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#732;&lt;/p&gt;&amp;#732;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8208;&lt;/p&gt;&amp;#8208;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8209;&lt;/p&gt;&amp;#8209;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8210;&lt;/p&gt;&amp;#8210;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8211;&lt;/p&gt;&amp;#8211;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8212;&lt;/p&gt;&amp;#8212;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8216;&lt;/p&gt;&amp;#8216;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8217;&lt;/p&gt;&amp;#8217;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8218;&lt;/p&gt;&amp;#8218;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8220;&lt;/p&gt;&amp;#8220;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8221;&lt;/p&gt;&amp;#8221;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8222;&lt;/p&gt;&amp;#8222;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8226;&lt;/p&gt;&amp;#8226;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8230;&lt;/p&gt;&amp;#8230;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8249;&lt;/p&gt;&amp;#8249;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8250;&lt;/p&gt;&amp;#8250;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8364;&lt;/p&gt;&amp;#8364;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#8482;&lt;/p&gt;&amp;#8482;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#64257;&lt;/p&gt;&amp;#64257;&lt;/div&gt;
+      &lt;div&gt;&lt;p&gt;&amp;amp;#64258;&lt;/p&gt;&amp;#64258;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href=&quot;#top&quot;&gt;Back to top.&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;nav class=&quot;nav-outer clearfix&quot;&gt;
+    
+      &lt;a href=&quot;/fairgrieve-and-horner&quot; class=&quot;nav-button-prev&quot;&gt;Fairgrieve &amp; Horner records&lt;/a&gt;
+    
+
+    
+      &lt;a href=&quot;/atlantic-brewery&quot; class=&quot;nav-button-next&quot;&gt;Atlantic Brewery&lt;/a&gt;
+    
+  &lt;/nav&gt;
+
+&lt;/section&gt;
+</description>
+<pubDate>Fri, 14 Mar 2014 00:00:00 +0000</pubDate>
+<link>/cassette-script</link>
+<guid isPermaLink="true">/cassette-script</guid>
+</item>
+
+<item>
+<title>Fairgrieve & Horner records</title>
+<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2&gt;Productivity Hacking&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;h2&gt;The Bullet Journal Concept&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</description>
+<pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
+<link>/fairgrieve-and-horner</link>
+<guid isPermaLink="true">/fairgrieve-and-horner</guid>
+</item>
+
+<item>
+<title>Eaten by Monsters music blog</title>
+<description>
+</description>
+<pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
+<link>/eaten-by-monsters</link>
+<guid isPermaLink="true">/eaten-by-monsters</guid>
+</item>
+
+<item>
 <title>Simple is hard</title>
 <description>&lt;p&gt;“Simplify, simplfy!” we’re often told. Your service isn’t appealing to your customers? The answer’s simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker.&lt;/p&gt;
 

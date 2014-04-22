@@ -836,3 +836,13 @@ body{
     font-size:.7em;
   }
 }
+
+// Next/Prev override
+.nav-button-prev{
+  background:$primary;
+  &:after{display:none;}
+}
+.nav-button-next{
+  background:$primary;
+  &:before{display:none;}
+}
