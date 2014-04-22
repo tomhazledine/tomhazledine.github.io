@@ -6,6 +6,9 @@
   padding:6rem 0 0 0;
   text-align:center;
   width:$contentWidth;
+  @include breakpoint(XSsize){
+    width:100%;
+  }
   &:before{
     @include horizontalRule(top);
   }
@@ -13,6 +16,10 @@
     display:block;
     float:left;
     width:50%;
+    @include breakpoint(XSsize){
+      width:100%;
+      padding:2em;
+    }
   }
   a{
     display:inline;
