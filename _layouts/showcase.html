@@ -18,9 +18,9 @@
   {% if page.desktopimg or page.tabletimg or page.phoneimg %}
     {% if page.desktopimg %}
       <div class="showcaseSlider desktop">
-    {% else if page.tabletimg %}
+    {% elsif page.tabletimg %}
       <div class="showcaseSlider tablet">
-    {% else if page.phoneimg %}
+    {% elsif page.phoneimg %}
       <div class="showcaseSlider phone">
     {% endif %}
       <span class="showcaseAddons">{{page.title}}</span>
@@ -45,12 +45,12 @@
         {% if page.phoneimg %}
           <button class="showcaseControl phone">Phone</button>
         {% endif %}
-      {% else if page.tabletimg %}
+      {% elsif page.tabletimg %}
         <button class="showcaseControl tablet selected">Tablet</button>
         {% if page.phoneimg %}
           <button class="showcaseControl phone">Phone</button>
         {% endif %}
-      {% else if page.phoneimg %}
+      {% else %}
         <button class="showcaseControl phone selected">Phone</button>
       {% endif %}
     </div>
