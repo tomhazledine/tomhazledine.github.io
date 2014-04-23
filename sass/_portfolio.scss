@@ -1,0 +1,235 @@
+// 01. Portfolio Styles
+// 02. Showcase Styles
+// 03. Showcase Slider
+// 04. Showcase Slider Buttons
+
+// 01. Portfolio Styles
+.portfolioEntry{
+  padding-bottom:3em;
+}
+.portfolioH2{padding:0;}
+
+// 02. Showcase Styles
+.showcaseH1{
+  padding:0;
+  margin:0;
+  &:after{display:none;}
+}
+.showcaseLink{
+  display:block;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+}
+.showcaseHeader{
+  position:relative;
+  padding:0 0 5rem 0;
+  margin:0 0 6rem 0;
+  &:after{@include horizontalRule(bottom);}
+}
+.showcaseExcerpt{
+  display:block;
+  width:60%;
+  margin:0 auto;
+  text-align:center;
+}
+
+// 03. Showcase Slider
+.showcaseSlider{
+  background:$black;
+  height:20rem;
+  margin:1em auto;
+  transition-property:width, border, border-radius;
+  transition-duration:1s;
+  position:relative;
+  //overflow:hidden;
+  &.desktop{
+    .desktopImg{opacity:1;z-index:1;}
+    .tabletImg{opacity:0;z-index:0;}
+    .phoneImg{opacity:0;z-index:0;}
+    width:100%;
+    border-top:$grey solid 1rem;
+    border-bottom:$grey solid 0;
+    border-radius:.5rem .5rem 0 0;
+    &:before{
+      content:"";
+      width:.5rem;
+      height:.5rem;
+      border-radius:.25rem;
+      background:$primary;
+      position:absolute;
+      top:-.75rem;
+      left:.5rem;
+    }
+    &:after{
+      content:"";
+      width:.5rem;
+      height:.5rem;
+      border-radius:.25rem;
+      background:$black;
+      position:absolute;
+      top:-.75rem;
+      left:1.25rem;
+    }
+    .showcaseAddons{
+      position:absolute;
+      top:-.9rem;
+      left:0;
+      width:100%;
+      text-align:center;
+      //z-index:10000;
+      font-size:.6rem;
+      font-family:$code;
+      &:before{
+        content:"";
+        width:.5rem;
+        height:.5rem;
+        border-radius:.25rem;
+        background:$cream;
+        position:absolute;
+        top:.15rem;
+        left:2rem;
+      }
+    }
+  }
+  &.tablet{
+    .desktopImg{opacity:0;z-index:0;}
+    .tabletImg{opacity:1;z-index:1;}
+    .phoneImg{opacity:0;z-index:0;}
+    width:65%;
+    border-top:$grey solid 1.3rem;
+    border-bottom:$grey solid 1.3rem;
+    border-radius:.8rem;
+    &:before{
+      content:"";
+      width:.5rem;
+      height:.5rem;
+      border-radius:.25rem;
+      border:$black solid .2rem;
+      background:$white;
+      position:absolute;
+      top:-.75rem;
+      left:50%;
+      margin-left:-.25rem;
+    }
+    &:after{
+      content:"";
+      width:1rem;
+      height:1rem;
+      position:absolute;
+      bottom:-1.1rem;
+      left:50%;
+      margin-left:-.5rem;
+      background:$black;
+      border-radius:50%;
+    }
+    .showcaseAddons{display:none;}
+  }
+  &.phone{
+    .desktopImg{opacity:0;z-index:0;}
+    .tabletImg{opacity:0;z-index:0;}
+    .phoneImg{opacity:1;z-index:1;}
+    width:45%;
+    border-top:$grey solid 1.6rem;
+    border-bottom:$grey solid 1.6rem;
+    border-radius:1rem;
+    &:before{
+      content:"";
+      width:.7rem;
+      height:.7rem;
+      border-radius:50%;
+      border:$black solid .3rem;
+      background:$white;
+      position:absolute;
+      top:-1.15rem;
+      left:3rem;
+    }
+    &:after{
+      content:"";
+      width:1.2rem;
+      height:1.2rem;
+      position:absolute;
+      bottom:-1.4rem;
+      left:50%;
+      margin-left:-.6rem;
+      background:$grey;
+      border:$black solid .2rem;
+      border-radius:50%;
+    }
+    .showcaseAddons{
+      position:absolute;
+      top:-.9rem;
+      left:0;
+      width:100%;
+      font-size:0;
+      &:before{
+        content:"";
+        width:3rem;
+        height:.2rem;
+        border-radius:.25rem;
+        background:$primary;
+        position:absolute;
+        top:.3rem;
+        left:50%;
+        margin-left:-1.5rem;
+      }
+      &:after{
+        content:"";
+        width:2rem;
+        height:.3rem;
+        border-radius:.25rem;
+        background:$black;
+        position:absolute;
+        top:-.2rem;
+        left:50%;
+        margin-left:-1rem;
+      }
+    }
+  }
+}
+.showcaseSlider{
+  .imgCropper{
+    padding:0;
+    margin:0;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    img{
+      position:absolute;
+      top:0;
+      padding:0;
+      margin:0;
+      //height:;
+      width:100%;
+      transition-property:opacity;
+      transition-duration:1s;
+    }
+  }
+}
+// 04. Showcase Slider Buttons
+.showcaseControls{
+  //background:red;
+  text-align:center;
+  margin:0 auto 6rem;
+  .showcaseControl{
+    border:none;
+    background:$grey;
+    color:$black;
+    font-family:$text;
+    font-style:italic;
+    text-transform:uppercase;
+    font-size:1em;
+    padding:0 1em;
+    border-radius:.5em;
+    cursor:pointer;
+    transition-property:background;
+    transition-duration:.3s;
+    &.selected{
+      background:$primary;
+      color:$cream;
+      &:hover{background:$primary;color:$cream;}
+    }
+    &:hover{background:$black;color:$primary;}
+  }
+}

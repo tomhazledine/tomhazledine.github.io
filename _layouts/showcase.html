@@ -3,10 +3,60 @@
 
 <article class="mainContentInner">
 
-  <h3>This is the showcase template</h3>
-  <h1><a href="{{page.url}}">{{page.title}}</a></h1>
+  {% if page.showcaselink %}
+    <header class="showcaseHeader">
+      <h1 class="showcaseH1">{{page.title}}</h1>
+      <span class="showcaseLink">
+        <a href="{{page.showcaselink}}">{{page.showcaselink}}</a>
+      </span>
+      <span class="showcaseExcerpt">{{page.excerpt}}</span>
+    </header>
+  {% else %}
+    <h1>{{page.title}}</h1>
+  {% endif %}
 
-  <h3 class="big-drop-cap">{{page.excerpt}}</h3>
+  {% if page.desktopimg or page.tabletimg or page.phoneimg %}
+    {% if page.desktopimg %}
+      <div class="showcaseSlider desktop">
+    {% else if page.tabletimg %}
+      <div class="showcaseSlider tablet">
+    {% else if page.phoneimg %}
+      <div class="showcaseSlider phone">
+    {% endif %}
+      <span class="showcaseAddons">{{page.title}}</span>
+      <div class="imgCropper">
+        {% if page.desktopimg %}
+          <img class="desktopImg" src="{{page.desktopimg}}" alt="site showcase" />
+        {% endif %}
+        {% if page.tabletimg %}
+          <img class="tabletImg" src="{{page.tabletimg}}" alt="site showcase" />
+        {% endif %}
+        {% if page.phoneimg %}
+          <img class="phoneImg" src="{{page.phoneimg}}" alt="site showcase" />
+        {% endif %}
+      </div>
+    </div>
+    <div class="showcaseControls">
+      {% if page.desktopimg %}
+        <button class="showcaseControl desktop selected">Desktop</button>
+        {% if page.tabletimg %}
+          <button class="showcaseControl tablet">Tablet</button>
+        {% endif %}
+        {% if page.phoneimg %}
+          <button class="showcaseControl phone">Phone</button>
+        {% endif %}
+      {% else if page.tabletimg %}
+        <button class="showcaseControl tablet selected">Tablet</button>
+        {% if page.phoneimg %}
+          <button class="showcaseControl phone">Phone</button>
+        {% endif %}
+      {% else if page.phoneimg %}
+        <button class="showcaseControl phone selected">Phone</button>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <h3 class="big-drop-cap">{{page.excerptlong}}</h3>
 
   {{content}}
 
@@ -22,24 +72,7 @@
   {% endif %}
 </nav>
 
-{% if page.comments %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-{% endif %}
-
-{% include archive.html %}
+{% include showcase-archive.html %}
 
 <span class="top-link"><a href="#top">Back to top</a></span>
 

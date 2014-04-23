@@ -1,0 +1,16 @@
+<section class="archive">
+  <h3>More examples of my work:</h3>
+  <ul>
+    {% if location.home %}
+      {% for post in site.categories["showcase"] offset: 1 %}
+        <li><a href="{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
+      {% endfor %}
+    {% else %}
+      {% for post in site.categories["showcase"] %}
+        {% if page.url != post.url %}
+          <li><a href="{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </ul>
+</section><!-- .archive -->

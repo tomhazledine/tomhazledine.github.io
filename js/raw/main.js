@@ -107,6 +107,7 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('header').removeClass('nav-down').addClass('nav-up');
+				$('.topNav ul').removeClass('down');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
@@ -118,3 +119,41 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 //*/
+
+// 07. Showcase Slider
+var showcaseSlider = $('.showcaseSlider'),
+		showcaseButtons = $('.showcaseControl'),
+		desktopButton = $('.showcaseControl.desktop'),
+		tabletButton = $('.showcaseControl.tablet'),
+		phoneButton = $('.showcaseControl.phone');
+
+function desktopView(){
+	showcaseSlider.removeClass('tablet phone').addClass('desktop');
+	console.log("desktopView");
+}
+function tabletView(){
+	showcaseSlider.removeClass('desktop phone').addClass('tablet');
+	console.log("tabletView");
+}
+function phoneView(){
+	showcaseSlider.removeClass('desktop tablet').addClass('phone');
+	console.log("phoneView");
+}
+
+$(document).ready(function(){
+	desktopButton.click(function(){
+		desktopView();
+		showcaseButtons.removeClass('selected');
+		desktopButton.addClass('selected');
+	});
+	tabletButton.click(function(){
+		tabletView();
+		showcaseButtons.removeClass('selected');
+		tabletButton.addClass('selected');
+	});
+	phoneButton.click(function(){
+		phoneView();
+		showcaseButtons.removeClass('selected');
+		phoneButton.addClass('selected');
+	});
+});
