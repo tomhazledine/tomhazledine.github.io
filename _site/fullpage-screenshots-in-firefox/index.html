@@ -7,9 +7,9 @@
 
   <meta charset="utf-8">
   <title>
-     About :: Tom Hazledine Web Design
+     Fullpage screenshots in Firefox. :: Tom Hazledine Web Design
   </title>
-  <meta name="description" content="The personal web-hub for Tom Hazledine">
+  <meta name="description" content="I crawled through rafts of Firefox and Chrome extensions trying to take a screenshot of an entire webpage. It turns out Firefox can do it natively.">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="/img/build/favicon.ico">
 
@@ -50,7 +50,7 @@
             <a href="/portfolio/">Portfolio</a>
           </li>
         
-          <li >
+          <li class="active">
             <a href="/blog/">Blog</a>
           </li>
         
@@ -62,58 +62,86 @@
     <section class="mainContent clearfix">
 
 
-    <section class="main-content">
-  <h1>About Me</h1>
+<article class="mainContentInner">
 
-  <!--
-  <h2>I build websites for money and write about music for free.</h2>
-  -->
+  <h1><a href="/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a></h1>
 
-  <p>I work as a web-designer/developer, and I'm definitely a front-end specialist. But while I wouldn’t risk insulting my hard-core-programmer friends by calling myself a “full stack” developer, I <em>do</em> know enough to shepherd a website all the way from inception to deployment. I’m not just a do-it-in-Photoshop-and-hand-it-off-to-a-developer ‘designer,’ if you get my meaning. (In fact, I hardly ever use Photoshop. Throw down a mood-board in Illustrator then design in the browser, that’s my preferred workflow.)</p>
+  <h3 class="big-drop-cap">I crawled through rafts of Firefox and Chrome extensions trying to take a screenshot of an entire webpage. It turns out Firefox can do it natively.</h3>
 
-  <h2>Frameworks, Boilerplates, and Rolling Your Own</h2>
+  <p>Every now and then I need to take a screenshot of an entire webpage, gnerally to use in my <a href="/portfolio">portfolio</a>. Manually positioning the cursor for a <code>cmd shift 4</code> screenshot (on a Mac) feels a little imprecise for my tastes, and I want to capture the <em>whole</em> of a site, not just the area visible in the viewport.</p>
 
-  <p>90% of the sites I build use Wordpress (because why bother re-inventing the wheel?) but while WP development is undeniably one of my specialties, it’s not appropriate for every project. My portfolio site, for instance, is nothing but good ol’fashioned hand-coded markup, and this blog you’re reading is built using Jekyll, because I prefer writing content in plain-text Markdown than in a CMS’s GUI.</p>
+<p>All the browser extensions I tried turned out a little buggy. Areas of the page would be repeated, like a visual interpretation of a CD skipping, or fonts would render strangely, as if they’d been run through an IE8 simulator or something.</p>
 
-  <h2>Side Projects</h2>
+<p>Finally I stumbled upon this neat little trick. Sadly it doesn’t help me get girls or lose weight like all the “one weird trick” pop-up ads keep promising me, but it does mean I can take a screenshot of an entire webpage using one line of code.</p>
 
-  <p>When I’m not building websites I like to keep myself busy with a plethora of side-projects, of which the mother of all is my <a href="http://eatenbymonsters.com">music blog</a>. From its humble beginnings back in ’08, the blog has seen me grow from web-N00b to power-user, and has been the unwitting testing ground for a lot of my early experimentation&hellip;</p>
+<h2>The answer!</h2>
 
-  <blockquote>
-    <p>I’m so web2.0 I don’t even have any tables in my <em>house</em>; we eat dinner off our divs.</p>
-  </blockquote>
-  <span class="credit">Me, circa 2009.</span>
+<p>Navigate to the page you want to shoot and open up Firefox’s Developer Tools command line using <code>shift f2</code> (Mac users might need to remember to press <code>fn</code> as well, if their keyboard rebinds <code>f2</code> to increase the monitor’s brightness). Then all you need to do is type the following line:</p>
 
-  <section class="featured">
-  <h3 class="relatedPostsTitle">Related writings:</h3>
+<pre><code>screenshot --fullpage YourFileNameHere
+</code></pre>
+
+<p>And voilà! A screenshot has been taken of the current page in its entirety – not just the visible area! If you’re super lazy, you can even leave off the file name; Firefox will just use the current date and time to save the image under.</p>
+
+<p>I found I needed to crop off a sliver of transparency on the right hand side when I opened the shots up in Photoshop, but that’s a small price to pay for the time saved not having to stitch together various peepshow-views of a page.</p>
+
+<h2>See it in action</h2>
+
+<p>You can see some of the screenshots I took using this method over on my portfolio page. The ‘phone’ view of the <a href="/atlantic-brewery">Atlantic Brewery</a> page is particularly long and thin – an image I’d have struggled to create using any other method.</p>
+
+
+</article>
+
+<nav class="nav-outer clearfix">
+  
+    <a href="/futura-for-the-win" class="nav-button-prev">Futura for the win.</a>
+  
+
+  
+</nav>
+
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<section class="archive">
+  <h3>More articles:</h3>
   <ul>
     
       
-    
+        
       
-    
+        
+          <li><a href="/futura-for-the-win">Futura for the win.</a> Picking the right typeface for this site took a long time, and my final choice wasn’t one I was expecting. Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.</li>
+        
       
-    
+        
+          <li><a href="/simple-is-hard">Simple is hard</a> How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.</li>
+        
       
-    
-      
-    
-      
-    
-      
-        <li class="relatedPostLi"><a class="relatedPostLink" href="/simple-is-hard">Simple is hard</a></li>
-      
-    
-      
-    
+        
+          <li><a href="/bullet-journal-workflow">A bullet-journal workflow</a> To-do lists are usually just a short-term fix, but I've found a system that stays relevant.</li>
+        
       
     
   </ul>
 </section><!-- .archive -->
 
 
-</section>
-
+<span class="top-link"><a href="#top">Back to top</a></span>
 
 <section class="socialLinks clearfix">
 	<span class="socialContainer"><a href="https://twitter.com/thomashazledine" class="twitter">Follow me on Twitter</a></span>

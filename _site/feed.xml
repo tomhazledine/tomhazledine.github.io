@@ -371,6 +371,73 @@
 </item>
 
 <item>
+<title>Fullpage screenshots in Firefox.</title>
+<description>&lt;p&gt;Every now and then I need to take a screenshot of an entire webpage, gnerally to use in my &lt;a href=&quot;/portfolio&quot;&gt;portfolio&lt;/a&gt;. Manually positioning the cursor for a &lt;code&gt;cmd shift 4&lt;/code&gt; screenshot (on a Mac) feels a little imprecise for my tastes, and I want to capture the &lt;em&gt;whole&lt;/em&gt; of a site, not just the area visible in the viewport.&lt;/p&gt;
+
+&lt;p&gt;All the browser extensions I tried turned out a little buggy. Areas of the page would be repeated, like a visual interpretation of a CD skipping, or fonts would render strangely, as if they’d been run through an IE8 simulator or something.&lt;/p&gt;
+
+&lt;p&gt;Finally I stumbled upon this neat little trick. Sadly it doesn’t help me get girls or lose weight like all the “one weird trick” pop-up ads keep promising me, but it does mean I can take a screenshot of an entire webpage using one line of code.&lt;/p&gt;
+
+&lt;h2&gt;The answer!&lt;/h2&gt;
+
+&lt;p&gt;Navigate to the page you want to shoot and open up Firefox’s Developer Tools command line using &lt;code&gt;shift f2&lt;/code&gt; (Mac users might need to remember to press &lt;code&gt;fn&lt;/code&gt; as well, if their keyboard rebinds &lt;code&gt;f2&lt;/code&gt; to increase the monitor’s brightness). Then all you need to do is type the following line:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;screenshot --fullpage YourFileNameHere
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And voilà! A screenshot has been taken of the current page in its entirety – not just the visible area! If you’re super lazy, you can even leave off the file name; Firefox will just use the current date and time to save the image under.&lt;/p&gt;
+
+&lt;p&gt;I found I needed to crop off a sliver of transparency on the right hand side when I opened the shots up in Photoshop, but that’s a small price to pay for the time saved not having to stitch together various peepshow-views of a page.&lt;/p&gt;
+
+&lt;h2&gt;See it in action&lt;/h2&gt;
+
+&lt;p&gt;You can see some of the screenshots I took using this method over on my portfolio page. The ‘phone’ view of the &lt;a href=&quot;/atlantic-brewery&quot;&gt;Atlantic Brewery&lt;/a&gt; page is particularly long and thin – an image I’d have struggled to create using any other method.&lt;/p&gt;
+</description>
+<pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
+<link>/fullpage-screenshots-in-firefox</link>
+<guid isPermaLink="true">/fullpage-screenshots-in-firefox</guid>
+</item>
+
+<item>
+<title>Futura for the win.</title>
+<description>&lt;p&gt;My initial ‘Contemporary Drop Cap’ concept was much more florid and overtly ornamental than what you see today (as of April 2014). I burnt through many drafts experimenting with ornate serif fonts before I finally remembered that what I was trying to build was a &lt;strong&gt;portfolio&lt;/strong&gt;; a neutral backdrop for my designs, not something that would distract from the work on show. In short, I needed a sans.&lt;/p&gt;
+
+&lt;h2&gt;Neutral doesn’t mean flavourless.&lt;/h2&gt;
+
+&lt;p&gt;Even the most generic-seeming typefaces have their own distinct flavour, as my Helvetica-fuelled “Hey look! I just discovered Swiss Design” phase will attest (now commonly known as my “God-awful Superdry Period”).&lt;/p&gt;
+
+&lt;p&gt;I’ve developed a deep and abiding love for a perfectly circular “o”, so when choosing a sans I normally start with the geometrics. I’m particularly fond of the classically-British ‘modern’ fonts of &lt;a href=&quot;http://en.wikipedia.org/wiki/Edward_Johnston&quot;&gt;Edward Johnston&lt;/a&gt; and the saucy &lt;a href=&quot;http://en.wikipedia.org/wiki/Eric_Gill&quot;&gt;Eric Gill&lt;/a&gt;, but I’ve used them far too often already. If I used them in my portfolio site as well, I’d start to look like a one-trick pony.&lt;/p&gt;
+
+&lt;p&gt;H&amp;amp;FJ’s Gotham looked lovely, but I can’t help but feel it’s on fashion’s downward slope now. Far too many people using it without thinking, and of course it carries a certain politicised air with it now, too (thanks, Obama!). So keeping with the geometric “o” theme, the next obvious choice was Futura.&lt;/p&gt;
+
+&lt;h2&gt;Retro futurism&lt;/h2&gt;
+
+&lt;p&gt;I’d like to say there is some elaborate over-arching theoretical underpinning to my choice of Futura, but the reality is more prosaic. Sure I could waffle on about the retro-futurist stylings of the “W”s and “M”s, and how they fit into the praxis of 20th Century design dialectics, but in truth it was simply next on the list of “things to try”.&lt;/p&gt;
+
+&lt;p&gt;Once I saw my generously-margined headings set in Futura Bold I was smitten. Couple that with the not-too-shouty elegance of the all-caps italic, and I’d found the lynchpin for my design.&lt;/p&gt;
+
+&lt;h2&gt;Flawed Futura&lt;/h2&gt;
+
+&lt;p&gt;Unlike many others, I actually quite like Futura’s much-maligned question mark, for all it’s eccentric meanderings. There are, though, some very visible problems with the ParaType cut of the font (the one I use via &lt;a href=&quot;https://typekit.com/fonts/futura-pt&quot;&gt;Typekit&lt;/a&gt;), and quite possibly with the typface as a whole, too.&lt;/p&gt;
+
+&lt;p&gt;The lowercase “J” looks stylish and bizare in equal measure, the semicolon is oddly top-heavy, and the letter spacing after an apostrophe is massive. Not an issue in a programme that lets you kern, but an ugly cross to bear on the web.&lt;/p&gt;
+
+&lt;p&gt;In fact, all the apostrophes and quotation marks look the same. It’s all well and good training yourself to press &lt;code&gt;alt shift ]&lt;/code&gt; every time you want an apostrophe, but Futura renders such efforts irrelevant. How many different characters can you count in the following sentence?         ‘‘’“”””         Tough, eh?! It’s a little easier at larger sizes:&lt;/p&gt;
+
+&lt;h3&gt;‘‘’“”””&lt;/h3&gt;
+
+&lt;p&gt;There’s actually &lt;strong&gt;seven&lt;/strong&gt; discrete glyphs there. There &lt;em&gt;are&lt;/em&gt; differences, which at large sizes are delightfully subtle and nuanced, but at anything less than 72pt they all blur into one…&lt;/p&gt;
+
+&lt;h2&gt;A designer’s website is like a builder’s house; always the last to be finished.&lt;/h2&gt;
+
+&lt;p&gt;This blog-cum-portfolio site of mine has been through a seemingly infinite number of variations. What you see today (as of April 2014) is only the third full ‘theme’ to make it all the way into code and deployment, but if you count Illustrator mockups then the number of iterations trebles. Count paper sketches – even limiting yourself to just to fully drawn out and wire-framed designs – and the total skyrockets.&lt;/p&gt;
+</description>
+<pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
+<link>/futura-for-the-win</link>
+<guid isPermaLink="true">/futura-for-the-win</guid>
+</item>
+
+<item>
 <title>Eaten by Monsters music blog</title>
 <description>
 </description>
