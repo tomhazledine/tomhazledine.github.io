@@ -10,7 +10,7 @@ category: showcase
 comments: false
 
 showcaselink: "http://atlanticbrewery.com"
-desktopimg: "/img/build/photos/atlanticDesktop.png"
-tabletimg: "/img/build/photos/atlanticTablet.png"
-phoneimg: "/img/build/photos/atlanticPhone.png"
+desktopimg: "/img/build/photos/atlanticDesktop.jpg"
+tabletimg: "/img/build/photos/atlanticTablet.jpg"
+phoneimg: "/img/build/photos/atlanticPhone.jpg"
 ---

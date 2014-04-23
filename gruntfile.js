@@ -103,7 +103,7 @@ module.exports=function(grunt){
         tasks:['font']
       },//iconfont
       imgmin:{
-        files:['img/raw/*'],
+        files:['img/raw/**/*'],
         tasks:['imagemin']
       },//imgmin
       styles:{

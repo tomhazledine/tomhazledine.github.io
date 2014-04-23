@@ -9,6 +9,7 @@ body{
   line-height:1.4;
   padding-top:1em;// account for fixed nav
   @include breakpoint(XSsize){padding-top:2.5em;}
+  min-width:300px;
 }
 h1,h2,h3,h4,h5,h6{
   font-weight:$bold;

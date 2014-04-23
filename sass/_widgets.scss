@@ -198,10 +198,10 @@ pre code{
   color:$primary;
   margin-left:-1em;
   // Kerning Table
-  &.a,&.d,&.g,&.o,&.r{margin-left:-1.5em;}
+  &.d,&.g,&.o,&.r{margin-left:-1.5em;}
   &.e,&.f{margin-left:-.7em;}
   &.k,&.n,&.t,&.x,&.z{margin-left:-.5em;}
-  &.l,&.q{margin-left:-2em;}
+  &.a,.l,&.q{margin-left:-2em;}
   &.u,&.w{margin-left:0;}
   &.v{margin-left:-.3em;}
   &.y{margin-left:-.2em;}
