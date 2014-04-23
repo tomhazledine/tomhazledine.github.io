@@ -47,8 +47,8 @@
               darken($grey, 20%) -.4em .8em 0 -.2em;
   &.desktop{
     .desktopImg{opacity:1;z-index:1;}
-    .tabletImg{opacity:0;z-index:0;}
-    .phoneImg{opacity:0;z-index:0;}
+    .tabletImg{opacity:0;z-index:0;height:100%;}
+    .phoneImg{opacity:0;z-index:0;height:100%;}
     width:100%;
     @include breakpoint(XSsize){height:10em;}
     //min-width:22em;
@@ -97,9 +97,9 @@
     }
   }
   &.tablet{
-    .desktopImg{opacity:0;z-index:0;}
+    .desktopImg{opacity:0;z-index:0;height:100%;}
     .tabletImg{opacity:1;z-index:1;}
-    .phoneImg{opacity:0;z-index:0;}
+    .phoneImg{opacity:0;z-index:0;height:100%;}
     width:16em;
     max-width:100%;
     border-top:$grey solid 1.3em;
@@ -132,8 +132,8 @@
     .showcaseAddons{display:none;}
   }
   &.phone{
-    .desktopImg{opacity:0;z-index:0;}
-    .tabletImg{opacity:0;z-index:0;}
+    .desktopImg{opacity:0;z-index:0;height:100%;}
+    .tabletImg{opacity:0;z-index:0;height:100%;}
     .phoneImg{opacity:1;z-index:1;}
     width:12em;
     //font-size:.8em;
@@ -204,16 +204,18 @@
     height:100%;
     width:100%;
     overflow:hidden;
+    overflow-y:scroll;
     position:relative;
     img{
       position:absolute;
       top:0;
       padding:0;
       margin:0;
-      //height:;
       width:100%;
       transition-property:opacity;
       transition-duration:1s;
+      //height:100%;
+      //overflow-y:scroll;
     }
   }
 }
