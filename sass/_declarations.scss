@@ -56,11 +56,11 @@ $code:"droid-sans-mono";
 $contentWidth:28em;
 
 html{
-  @include breakpoint(XLsize){font-size:33px;}
-  @include breakpoint(Lsize){font-size:26px;}
-  font-size:22px;
-  @include breakpoint(Msize){font-size:18px;}
-  @include breakpoint(Ssize){font-size:16px;}
+  font-size:16px;
+  @include breakpoint(XLsize){font-size:22px;}
+  //@include breakpoint(Lsize){font-size:26px;}
+  //@include breakpoint(Msize){font-size:18px;}
+  //@include breakpoint(Ssize){font-size:16px;}
 
 }
 

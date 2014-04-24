@@ -1,4 +1,5 @@
 .header{
+  font-size:1.4em;
   position:fixed;
   top:0;
   z-index:5000;
@@ -88,7 +89,7 @@
 // Small Screen Styles
 @include breakpoint(Ssize){
   .header{
-    font-size:24px;
+    //font-size:24px;
     .menuTitle{cursor:pointer;}
     .topNav{
       width:4em;
