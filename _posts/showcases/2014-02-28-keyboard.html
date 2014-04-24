@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: bare
 title: "CSS and Javascript Keyboard"
 excerpt: "A working piano keyboard built using the Web Audio API and styled with CSS."
 category: showcase
 customCss: "/keyboard.css"
 ---
-<section class="keyboard clearfix">
+<article class="keyboard clearfix">
 
   <h1>CSS & Javascript Keyboard</h1>
 
@@ -43,6 +43,12 @@ customCss: "/keyboard.css"
     </div>
   </div>
 
+  <section class="mainContentInner">
+    <p>This is my first experiment with the Web Audio API. I'm currently using it to generate a single oscilator which is triggered by clicking on the keys. The key that's clicked then sets the pitch of the oscilator. This means that for now this keyboard is strictly monophonic. To get polyphony, I'll need to create an instance of the oscilator for each and every key. Not impossible, but I've not found the time to finish that part of it yet.</p>
+    <p>One particular challenge that this iteration <bold>has</bold> solved is the behaviour of the keys themselves. Getting a realistic (ish) glissando effect took some delicate javascript coding. Both the sound itself and the visual change in the keys are triggered (as one would expect) using the same event; the ocsilator function is called along with a toggling of the keys' “pressed” class. But getting that event to start and end as expected was rather tricky. It needs be aware of both the mouse up/down click state <em>and</em> the roll-on/roll-off positioning of the cursor, too.</p>
+    <p>For the time being this is just a quirky experiement, but if I can sort out keybindings, add polyphony, and provide an adjustable envelope filter, then it would be a bona-fide synth and could possibly be of some use...</p>
+  </section>
+
   <nav class="nav-outer clearfix">
     {% if page.next_in_category.url %}
       <a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
@@ -53,4 +59,4 @@ customCss: "/keyboard.css"
     {% endif %}
   </nav>
 
-</section>
+</article>

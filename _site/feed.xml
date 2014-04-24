@@ -34,7 +34,7 @@
 
 <item>
 <title>CSS and Javascript Keyboard</title>
-<description>&lt;section class=&quot;keyboard clearfix&quot;&gt;
+<description>&lt;article class=&quot;keyboard clearfix&quot;&gt;
 
   &lt;h1&gt;CSS &amp; Javascript Keyboard&lt;/h1&gt;
 
@@ -72,6 +72,12 @@
     &lt;/div&gt;
   &lt;/div&gt;
 
+  &lt;section class=&quot;mainContentInner&quot;&gt;
+    &lt;p&gt;This is my first experiment with the Web Audio API. I'm currently using it to generate a single oscilator which is triggered by clicking on the keys. The key that's clicked then sets the pitch of the oscilator. This means that for now this keyboard is strictly monophonic. To get polyphony, I'll need to create an instance of the oscilator for each and every key. Not impossible, but I've not found the time to finish that part of it yet.&lt;/p&gt;
+    &lt;p&gt;One particular challenge that this iteration &lt;bold&gt;has&lt;/bold&gt; solved is the behaviour of the keys themselves. Getting a realistic (ish) glissando effect took some delicate javascript coding. Both the sound itself and the visual change in the keys are triggered (as one would expect) using the same event; the ocsilator function is called along with a toggling of the keys' “pressed” class. But getting that event to start and end as expected was rather tricky. It needs be aware of both the mouse up/down click state &lt;em&gt;and&lt;/em&gt; the roll-on/roll-off positioning of the cursor, too.&lt;/p&gt;
+    &lt;p&gt;For the time being this is just a quirky experiement, but if I can sort out keybindings, add polyphony, and provide an adjustable envelope filter, then it would be a bona-fide synth and could possibly be of some use...&lt;/p&gt;
+  &lt;/section&gt;
+
   &lt;nav class=&quot;nav-outer clearfix&quot;&gt;
     
       &lt;a href=&quot;/ecdawson&quot; class=&quot;nav-button-prev&quot;&gt;E.C. Dawson &amp; Company&lt;/a&gt;
@@ -82,7 +88,7 @@
     
   &lt;/nav&gt;
 
-&lt;/section&gt;
+&lt;/article&gt;
 </description>
 <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
 <link>/keyboard</link>
