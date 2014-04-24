@@ -8,7 +8,15 @@
 
 <item>
 <title>Atlantic Brewery</title>
-<description>
+<description>&lt;p&gt;This project was a complete rebuild of the Atlantic Brewery website; the kind of tabula-rasa that designers like me dream of. Setting up the complex information architecture for the  myriad of product options was a real challenge, and the end result is a comprehensive and robust e-commerce site.&lt;/p&gt;
+
+&lt;p&gt;The new Atlantic website is fully resonsive; it delivers the full experience to devices of all sizes and resolutions, and takes into account the subtle differences in interaction that touch-enabled devices bring to the party.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/build/photos/atlanticInfoPage.jpg&quot; title=&quot;Information story page&quot; alt=&quot;An information story page on the Atlantic Brewery website&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/build/photos/atlanticCasksPage.jpg&quot; title=&quot;Casks info page&quot; alt=&quot;The casks info page on the Atlantic Brewery website&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/build/photos/atlanticProductPage.jpg&quot; title=&quot;Product page&quot; alt=&quot;A product page on the Atlantic Brewery website&quot; /&gt;&lt;/p&gt;
 </description>
 <pubDate>Tue, 01 Apr 2014 00:00:00 +0100</pubDate>
 <link>/atlantic-brewery</link>
@@ -22,6 +30,15 @@
 <pubDate>Sat, 01 Mar 2014 00:00:00 +0000</pubDate>
 <link>/fairgrieve-and-horner</link>
 <guid isPermaLink="true">/fairgrieve-and-horner</guid>
+</item>
+
+<item>
+<title>E.C. Dawson & Company</title>
+<description>
+</description>
+<pubDate>Fri, 21 Feb 2014 00:00:00 +0000</pubDate>
+<link>/ecdawson</link>
+<guid isPermaLink="true">/ecdawson</guid>
 </item>
 
 <item>
@@ -359,7 +376,7 @@
     
 
     
-      &lt;a href=&quot;/fairgrieve-and-horner&quot; class=&quot;nav-button-next&quot;&gt;Fairgrieve &amp; Horner records&lt;/a&gt;
+      &lt;a href=&quot;/ecdawson&quot; class=&quot;nav-button-next&quot;&gt;E.C. Dawson &amp; Company&lt;/a&gt;
     
   &lt;/nav&gt;
 

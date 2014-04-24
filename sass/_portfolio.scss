@@ -46,9 +46,20 @@
               lighten($grey, 5%) 0 .4em 0 0,
               darken($grey, 20%) -.4em .8em 0 -.2em;
   &.desktop{
-    .desktopImg{opacity:1;z-index:1;}
-    .tabletImg{opacity:0;z-index:0;height:100%;}
-    .phoneImg{opacity:0;z-index:0;height:100%;}
+    .desktopImg{
+      opacity:1;
+      z-index:1;
+    }
+    .tabletImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .phoneImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
     width:100%;
     @include breakpoint(XSsize){height:10em;}
     //min-width:22em;
@@ -97,9 +108,20 @@
     }
   }
   &.tablet{
-    .desktopImg{opacity:0;z-index:0;height:100%;}
-    .tabletImg{opacity:1;z-index:1;}
-    .phoneImg{opacity:0;z-index:0;height:100%;}
+    .desktopImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .tabletImg{
+      opacity:1;
+      z-index:1;
+    }
+    .phoneImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
     width:16em;
     max-width:100%;
     border-top:$grey solid 1.3em;
@@ -132,9 +154,20 @@
     .showcaseAddons{display:none;}
   }
   &.phone{
-    .desktopImg{opacity:0;z-index:0;height:100%;}
-    .tabletImg{opacity:0;z-index:0;height:100%;}
-    .phoneImg{opacity:1;z-index:1;}
+    .desktopImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .tabletImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .phoneImg{
+      opacity:1;
+      z-index:1;
+    }
     width:12em;
     //font-size:.8em;
     border-top:$grey solid 1.6em;
@@ -144,7 +177,7 @@
       content:"";
       width:.7em;
       height:.7em;
-      border-radius:50%;
+      border-radius:.35em;
       border:$black solid .3em;
       background:$white;
       position:absolute;
@@ -204,7 +237,7 @@
     height:100%;
     width:100%;
     overflow:hidden;
-    overflow-y:scroll;
+    //overflow-y:scroll;
     position:relative;
     img{
       position:absolute;

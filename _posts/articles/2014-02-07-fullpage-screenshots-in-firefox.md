@@ -1,9 +1,14 @@
 ---
 layout: post
 title: "Fullpage screenshots in Firefox."
+
 excerpt: "I crawled through rafts of Firefox and Chrome extensions trying to take a screenshot of an entire webpage. It turns out Firefox can do it natively."
+
+excerptmini: "No need for browser extensions; Firefox can do it natively."
+
 comments: true
 category: article
+feautured: false
 ---
 
 Every now and then I need to take a screenshot of an entire webpage, gnerally to use in my [portfolio](/portfolio). Manually positioning the cursor for a `cmd shift 4` screenshot (on a Mac) feels a little imprecise for my tastes, and I want to capture the *whole* of a site, not just the area visible in the viewport.

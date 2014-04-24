@@ -1,9 +1,14 @@
 ---
 layout: post
 title: "Futura for the win."
+
 excerpt: "Picking the right typeface for this site took a long time, and my final choice wasn’t one I was expecting. Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you."
-comments: false
+
+excerptmini: "Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you."
+
+comments: true
 category: article
+featured: true
 ---
 
 My initial ‘Contemporary Drop Cap’ concept was much more florid and overtly ornamental than what you see today (as of April 2014). I burnt through many drafts experimenting with ornate serif fonts before I finally remembered that what I was trying to build was a **portfolio**; a neutral backdrop for my designs, not something that would distract from the work on show. In short, I needed a sans.

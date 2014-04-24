@@ -60,6 +60,10 @@ pre code{
 // 02. Related/Featured posts
 .archive{
   clear:both;
+  li{
+    padding:0 0 .4em 1em;
+    text-indent:-1em;
+  }
 }
 .featured{
   position:relative;

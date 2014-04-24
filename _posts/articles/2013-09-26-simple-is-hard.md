@@ -1,7 +1,11 @@
 ---
 layout: post
 title: "Simple is hard"
+
 excerpt: How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.
+
+excerptmini: "Focus on substance over style."
+
 comments: true
 category: article
 featured: true
