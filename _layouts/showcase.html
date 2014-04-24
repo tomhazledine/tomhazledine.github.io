@@ -1,6 +1,9 @@
 {% include head.html %}
 {% include header.html %}
 
+<div class="bodyWrapper clearfix">
+  <section class="mainContent clearfix">
+
 <article class="mainContentInner">
 
   {% if page.showcaselink %}
@@ -75,5 +78,10 @@
 {% include showcase-archive.html %}
 
 <span class="top-link"><a href="#top">Back to top</a></span>
+
+{% include sociallinks.html %}
+
+  </div><!-- .mainContent -->
+</div><!-- .bodyWrapper -->
 
 {% include footer.html %}

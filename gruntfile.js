@@ -30,7 +30,8 @@ module.exports=function(grunt){
       dist:{
         files:{
           'style.css': 'root.css',
-          'cassette.css':'unprefixed-cassette.css'
+          'cassette.css':'unprefixed-cassette.css',
+          'keyboard.css':'unprefixed-keyboard.css'
         }//files
       }//dist
     },//autoprefixer
@@ -57,7 +58,8 @@ module.exports=function(grunt){
           // Copy the scss-generated style file to
           // the _site/ folder
           '_site/style.css': 'style.css',
-          '_site/cassette.css':'cassette.css'
+          '_site/cassette.css':'cassette.css',
+          '_site/keyboard.css':'keyboard.css'
         }//files
       },//css
       js:{
@@ -107,7 +109,7 @@ module.exports=function(grunt){
         tasks:['imagemin']
       },//imgmin
       styles:{
-        files: ['root.css','unprefixed-cassette.css'],
+        files: ['root.css','unprefixed-cassette.css','unprefixed-keyboard.css'],
         tasks: ['autoprefixer']
       },//styles
       options:{ livereload:true},
@@ -124,7 +126,7 @@ module.exports=function(grunt){
         tasks:['copy:js']
       },//js
       cssCopy:{
-        files:['style.css','cassette.css'],
+        files:['style.css','cassette.css','keyboard.css'],
         tasks:['copy:css']
       },//cssCopy
       jekyllSources:{
@@ -137,7 +139,6 @@ module.exports=function(grunt){
           '_layouts/**',
           'portfolio/**',
           'blog/**',
-          'cassette-script/**',
           'about/**',
           '_plugins/**',
           'fonts/**'

@@ -33,6 +33,69 @@
 </item>
 
 <item>
+<title>CSS and Javascript Keyboard</title>
+<description>&lt;article class=&quot;keyboard clearfix&quot;&gt;
+
+  &lt;h1&gt;CSS &amp; Javascript Keyboard&lt;/h1&gt;
+
+  &lt;div class=&quot;pianoWrapper&quot;&gt;
+    &lt;div class=&quot;piano&quot;&gt;
+      &lt;div class=&quot;octave-wrapper clearfix&quot;&gt;
+        &lt;ol class=&quot;octave clearfix&quot;&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;261.63&quot; data-note=&quot;C&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;277.18&quot; data-note=&quot;C#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;293.66&quot; data-note=&quot;D&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;311.13&quot; data-note=&quot;D#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;329.63&quot; data-note=&quot;E&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;349.23&quot; data-note=&quot;F&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;369.99&quot; data-note=&quot;F#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;392.00&quot; data-note=&quot;G&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;415.30&quot; data-note=&quot;G#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;440.00&quot; data-note=&quot;A&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;466.16&quot; data-note=&quot;A#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;493.88&quot; data-note=&quot;B&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;523.25&quot; data-note=&quot;C&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;554.37&quot; data-note=&quot;C#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;587.33&quot; data-note=&quot;D&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;622.25&quot; data-note=&quot;D#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;659.26&quot; data-note=&quot;E&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;698.46&quot; data-note=&quot;F&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;739.99&quot; data-note=&quot;F#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;783.99&quot; data-note=&quot;G&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;830.61&quot; data-note=&quot;G#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;880.00&quot; data-note=&quot;A&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;932.33&quot; data-note=&quot;A#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;987.77&quot; data-note=&quot;B&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;section class=&quot;mainContentInner&quot;&gt;
+    &lt;p&gt;This is my first experiment with the Web Audio API. I'm currently using it to generate a single oscilator which is triggered by clicking on the keys. The key that's clicked then sets the pitch of the oscilator. This means that for now this keyboard is strictly monophonic. To get polyphony, I'll need to create an instance of the oscilator for each and every key. Not impossible, but I've not found the time to finish that part of it yet.&lt;/p&gt;
+    &lt;p&gt;One particular challenge that this iteration &lt;bold&gt;has&lt;/bold&gt; solved is the behaviour of the keys themselves. Getting a realistic (ish) glissando effect took some delicate javascript coding. Both the sound itself and the visual change in the keys are triggered (as one would expect) using the same event; the ocsilator function is called along with a toggling of the keys' “pressed” class. But getting that event to start and end as expected was rather tricky. It needs be aware of both the mouse up/down click state &lt;em&gt;and&lt;/em&gt; the roll-on/roll-off positioning of the cursor, too.&lt;/p&gt;
+    &lt;p&gt;For the time being this is just a quirky experiement, but if I can sort out keybindings, add polyphony, and provide an adjustable envelope filter, then it would be a bona-fide synth and could possibly be of some use...&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;nav class=&quot;nav-outer clearfix&quot;&gt;
+    
+      &lt;a href=&quot;/ecdawson&quot; class=&quot;nav-button-prev&quot;&gt;E.C. Dawson &amp; Company&lt;/a&gt;
+    
+
+    
+      &lt;a href=&quot;/fairgrieve-and-horner&quot; class=&quot;nav-button-next&quot;&gt;Fairgrieve &amp; Horner records&lt;/a&gt;
+    
+  &lt;/nav&gt;
+
+&lt;/article&gt;
+</description>
+<pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
+<link>/keyboard</link>
+<guid isPermaLink="true">/keyboard</guid>
+</item>
+
+<item>
 <title>E.C. Dawson & Company</title>
 <description>
 </description>
@@ -515,44 +578,6 @@
 <pubDate>Wed, 25 Sep 2013 00:00:00 +0100</pubDate>
 <link>/test-post</link>
 <guid isPermaLink="true">/test-post</guid>
-</item>
-
-<item>
-<title>A bullet-journal workflow</title>
-<description>&lt;p&gt;Making task lists can be fantastically useful, but it’s all too easy to loose them. My paper lists get buried under reams of doodles and random notes, or lost in the depths of a full notebook that simply has &lt;em&gt;too much in it&lt;/em&gt;. Even digital lists get lost, and I find I lack the discipline to open a mammoth text file every morning. Paper is much better for immediate reference, even if it is easy to miss-place.&lt;/p&gt;
-
-&lt;h2&gt;Productivity Hacking&lt;/h2&gt;
-&lt;p&gt;The quest for elegant ‘productivity hacks’ is both fantastically useful and fantastically counter-productive. You can waste days reading about how not to waste your time. Finally, however, it seems that all the hours I’ve spent reading about productivity-hacks weren’t wasted after all; my current system finds me being &lt;em&gt;more&lt;/em&gt; efficient and productive than I’ve ever been before. And at the hub of my new-found momentum lies my Bullet Journal.&lt;/p&gt;
-
-&lt;h2&gt;The Bullet Journal Concept&lt;/h2&gt;
-&lt;p&gt;Devised by inspired Brooklynite &lt;a href=&quot;http://www.rydercarroll.com/&quot;&gt;Ryder Carrol&lt;/a&gt;, the &lt;a href=&quot;http://www.bulletjournal.com/&quot;&gt;Bullet Journal&lt;/a&gt; is little more than a seemingly-simple method of writing out a ‘to-do’ list using a pen and a notebook. I’ve experimented with similar list-hierarchies in the past, with mixed results, and while this new one is elegant, it’s not exactly revolutionary. But there’s one aspect of the Bullet Journal system that I’ve found to be a real revelation: the way the list rolls-over from day-to-day and month-to-month.&lt;/p&gt;
-
-&lt;h2&gt;What first drew me to the Bullet Journal was the systematized nature of its bullet-point organization, but what’s &lt;em&gt;kept&lt;/em&gt; me using it is the way it stays relevant.&lt;/h2&gt;
-
-&lt;h3&gt;Simplicity.&lt;/h3&gt;
-&lt;p&gt;I love simplicity, and the system itself is fairly straightforward – each list item is marked with either a square, circle or mid-dot. The square boxes denote tasks, circles events, and dots are standard notes (things to remember, but not explicitly actionable). At the start of every month I draw up a list of long-term goals, and then each morning I set out my daily tasks. I number the pages as I go, and keep an index at the front of the notebook. This makes assessing progress on long-term goals a piece of cake.&lt;/p&gt;
-
-&lt;h3&gt;There’s only ever one active list.&lt;/h3&gt;
-&lt;p&gt;At the start of every day I write out a new daily list. Any items unchecked from the day before are either struck-through (which denotes they’ve become irrelevant) or marked with an arrow and copied into the new daily list. This way you never have to refer back to old lists hidden in the depths of the notebook, and it’s painfully obvious when a task is being continually put-off (which forces you to act: either do it or mark it as irrelevant).&lt;/p&gt;
-
-&lt;h3&gt;There’s still long-term structure.&lt;/h3&gt;
-&lt;p&gt;While there’s only the one active list for you to deal with at any one time, the monthly lists are useful for reference, making it harder for day-to-day tasks to swamp your ‘big picture’ aims.&lt;/p&gt;
-
-&lt;h3&gt;It’s flexible.&lt;/h3&gt;
-&lt;p&gt;The Bullet Journal system is loose enough that it never gets in the way of my day-to-day workflow. If i need a date-agnostic list on a specific topic, I just make it and add the page number to the index. Little additions like this make the whole process expandable and fairly all-encompassing, and the day-to-day running of the list is never disturbed by all these additions.&lt;/p&gt;
-
-&lt;h3&gt;It’s really easy.&lt;/h3&gt;
-&lt;p&gt;Keeping the journal up to date sounds like rather an onerous task, what with all the indexing, page-numbering, and three-tiered bullet system. In reality, keeping on top of all my lists is no hassle at all. Updating the list takes about 10 minutes every morning, and up to half-an-hour on the first day of every month (as I update my calendar, and re-set my long-term goals).
-&lt;img src=&quot;/img/build/photos/journal02.jpg&quot; title=&quot;'My Bullet Journal'&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;The journal isn’t &lt;em&gt;solely&lt;/em&gt; responsible for my productivity upswing, but it’s definitely helped.&lt;/h2&gt;
-&lt;p&gt;By way of a disclaimer, making the switch to a Bullet Journal workflow wasn’t the only change I’ve made recently. A few months ago I quit my day-job and struck out on my own; an intrepid freelancer &lt;em&gt;cum&lt;/em&gt; entrepreneur bound for riches and glory! So now that any-and-all money that I make is directly proportional to how much work I do, it’ll come as no surprise that I’m working harder and longer than ever before (and would be with or without the Bullet Journal).&lt;/p&gt;
-
-&lt;p&gt;But using the &lt;a href=&quot;http://www.bulletjournal.com/&quot;&gt;Bullet Journal&lt;/a&gt; &lt;em&gt;has&lt;/em&gt; undeniably helped my workflow. My days now have structure, and (most importantly) I’m now much less likely to overlook an important task.&lt;/p&gt;
-</description>
-<pubDate>Tue, 24 Sep 2013 00:00:00 +0100</pubDate>
-<link>/bullet-journal-workflow</link>
-<guid isPermaLink="true">/bullet-journal-workflow</guid>
 </item>
 
 </channel>
