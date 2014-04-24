@@ -34,7 +34,55 @@
 
 <item>
 <title>CSS and Javascript Keyboard</title>
-<description>
+<description>&lt;section class=&quot;keyboard clearfix&quot;&gt;
+
+  &lt;h1&gt;CSS &amp; Javascript Keyboard&lt;/h1&gt;
+
+  &lt;div class=&quot;pianoWrapper&quot;&gt;
+    &lt;div class=&quot;piano&quot;&gt;
+      &lt;div class=&quot;octave-wrapper clearfix&quot;&gt;
+        &lt;ol class=&quot;octave clearfix&quot;&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;261.63&quot; data-note=&quot;C&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;277.18&quot; data-note=&quot;C#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;293.66&quot; data-note=&quot;D&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;311.13&quot; data-note=&quot;D#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;329.63&quot; data-note=&quot;E&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;349.23&quot; data-note=&quot;F&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;369.99&quot; data-note=&quot;F#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;392.00&quot; data-note=&quot;G&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;415.30&quot; data-note=&quot;G#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;440.00&quot; data-note=&quot;A&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;466.16&quot; data-note=&quot;A#&quot; data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;493.88&quot; data-note=&quot;B&quot;  data-octave=&quot;4&quot; &gt;&lt;/li&gt;
+
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;523.25&quot; data-note=&quot;C&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;554.37&quot; data-note=&quot;C#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;587.33&quot; data-note=&quot;D&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;622.25&quot; data-note=&quot;D#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;659.26&quot; data-note=&quot;E&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;698.46&quot; data-note=&quot;F&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;739.99&quot; data-note=&quot;F#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;783.99&quot; data-note=&quot;G&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;830.61&quot; data-note=&quot;G#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;880.00&quot; data-note=&quot;A&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key accidental&quot; data-pitch=&quot;932.33&quot; data-note=&quot;A#&quot; data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+          &lt;li class=&quot;piano-key natural&quot;    data-pitch=&quot;987.77&quot; data-note=&quot;B&quot;  data-octave=&quot;5&quot; &gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;nav class=&quot;nav-outer clearfix&quot;&gt;
+    
+      &lt;a href=&quot;/ecdawson&quot; class=&quot;nav-button-prev&quot;&gt;E.C. Dawson &amp; Company&lt;/a&gt;
+    
+
+    
+      &lt;a href=&quot;/fairgrieve-and-horner&quot; class=&quot;nav-button-next&quot;&gt;Fairgrieve &amp; Horner records&lt;/a&gt;
+    
+  &lt;/nav&gt;
+
+&lt;/section&gt;
 </description>
 <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
 <link>/keyboard</link>

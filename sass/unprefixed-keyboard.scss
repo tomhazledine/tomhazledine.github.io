@@ -1,2 +1,276 @@
 // native css reset
 @import"nativeReset";
+
+// Colours
+$pbody:darken(#888,10%);
+$pbody-shade:darken($pbody, 10%);
+$pbody-light:lighten($pbody,40%);
+$body-shade:darken($white, 5%);
+$litColour:$white;
+$whiteKey:#f2f2f2;
+$blackKey:#4d4d4d;
+$blackKeyHighlight:#808080;
+$clothCol:$primary;
+
+// Lengths //
+$white-width:2.5em;
+$octave-width:7 * $white-width;
+$black-width:$white-width / 2;
+$black-marg: - ($black-width / 2);
+$cloth-height:$white-width * 0.2;
+$em:1em;// / 2.4;
+$radius:$white-width * 0.2;
+$border:0.2em;
+
+// Global Styles
+html{height:100%;}
+body{
+  min-height:100%;
+  background:$white;
+  box-shadow:inset $grey 0 0 5em 2em;
+}
+.keyboard{
+  padding-top:5em;
+  text-align:center;
+  h1{font-size:2em;}
+}
+
+// Prev/Next Override
+.nav-button-prev{
+  color:darken($cream,20%);
+  &:after{display:none;}}
+.nav-button-next{
+  text-align:left;
+  &:before{display:none;}}
+
+// Position
+.pianoWrapper{
+  font-size:20px;// em point values inline with pixel grid
+
+  //height:100%;
+  width:100%;
+  padding-top:2em;
+  //position:absolute;
+  //top:12em;
+  left:0;
+  z-index:-1000;
+}
+
+.piano{
+  width:43em;
+  height:14em;
+  //margin:0 20% 4em 20%;
+  margin:0 auto 4em;
+  background:$pbody;
+  color:$white;
+  padding:1em;
+  border-radius:1em;
+  box-shadow:
+    $pbody-shade 0 .7em 0 0,
+    $pbody-light 0 1em 0 0,
+    $body-shade .2em 1.5em 0 0
+  ;
+}
+.octave-wrapper{
+  width:2*$octave-width;
+  margin:1.8em 0 0 5.8em;
+}
+.octave{ //ul
+  float:left;
+  width:($octave-width * 2);
+  color:$black;
+  position:relative;
+  z-index:1000;
+  margin:0 auto;
+  padding:0 0 1.6em 0;
+  border-radius:0 0 .5em .5em;
+  background:$pbody;
+  box-shadow:
+    -.4em 0 0 0 $pbody-shade,
+    .2em 0 0 0 lighten($pbody,15%);
+  //overflow:hidden;
+
+  // Top Cloth/Ribbon
+  &:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-.2em;
+    width:($octave-width * 2) + .3em;//100%;
+    height:0;//$cloth-height;//.6em;
+    z-index:150;
+    border-top:   $cloth-height solid $clothCol;
+    border-right: .2em solid transparent;
+    border-left:  .2em solid transparent;
+  }
+}
+
+// Keys
+.piano-key{ //li
+  display:block;
+  position:relative;
+  float:left;
+  height:2.5 * $white-width;
+  text-align:center;
+  padding:0 0 0 0;
+  margin:0;
+  position:relative;
+  cursor:pointer;
+  user-select:none;
+
+  // Text On Keys
+  span{
+    display:none;
+    user-select:none;
+  }
+
+  &.natural{
+    // White Key Layout
+    top:$cloth-height;
+    z-index:100;
+    width:$white-width;
+    height:4 * $white-width;
+
+    // White Key Style
+    background:$whiteKey;
+    border-radius:0 0 $radius $radius;
+    border-right:solid lighten($whiteKey,10%) $border;//.4em;
+    border-bottom:solid lighten($whiteKey,10%) $border;
+    border-left:solid darken($whiteKey,10%) $border;
+    box-shadow:-.2em .8em 0 -.2em $pbody-shade;
+
+    // White Active
+    &.pressed{
+      border-bottom:solid darken($whiteKey,15%) $border;
+      border-right:solid darken($whiteKey,15%) .8em;
+      border-left:solid darken($whiteKey,15%) $border;
+      // Drop Shadow
+      box-shadow:-.2em .6em 0 -.2em $pbody-shade;
+      // Big Shadow
+      &:before{
+        user-select:none;
+        display:block;
+        position:absolute;
+        left:0;
+        top:0;
+        content:"";
+        width:0;
+        height:70%;
+        z-index:225;
+        border-left:solid darken($whiteKey,15%) 2em;
+        border-bottom:solid transparent 1em;
+      }
+    }
+  }
+
+  &.accidental{
+    // Black Key Layout
+    width:$black-width;
+    top:.3em;
+    margin:0 $black-marg;
+    z-index:200;
+    //// Black Key Style
+    background:$blackKeyHighlight;
+    background-image:linear-gradient(
+      $blackKeyHighlight 60%,
+      $blackKey 90%
+    );
+    border-radius:$border;//($border / 2);
+    $bbsize:$border;
+    border:solid $blackKey $bbsize;
+    border-bottom:solid $blackKey .8em;
+    $highlight-size:0-($border / 2);
+    box-shadow:inset 0 $highlight-size $white;
+    // Inner Colour
+    &:before{
+      user-select:none;
+      display:block;
+      position:absolute;
+      left:0;
+      top:0;
+      content:"";
+      width:0;
+      height:50%;
+      z-index:250;
+      border-left:solid $blackKey ($black-width - $bbsize);
+      border-bottom:solid transparent 1em;
+    }
+    //// Shadow
+    $bshad-w:.8em;
+    &:after{
+      user-select:none;
+      pointer-events:none;
+      display:block;
+      position:relative;
+      //right:$black-width;
+      left:0 - (.8em + $border);//0 - ($bshad-w + ($bbsize * 0.8) + 0.05em);
+      top:0;//($cloth-height - (.3 * $em)) - .19em;//$cloth-height - (.3 * $em) - $border;
+      content:"";
+      width:0em;
+      height:(2.5 * $white-width) - .3em;
+      z-index:150;
+      border-right:solid darken($whiteKey,15%) $bshad-w;
+      border-bottom:solid transparent .8em;
+    }
+    // Black Active
+    &.pressed{
+      top:.4em;
+      height:(2.5 * $white-width) - .1em;
+      border-bottom:solid $blackKey .4em;
+      background-image:linear-gradient(
+        $blackKeyHighlight 30%,
+        $blackKey 60%
+      );
+      &:before{height:30%;}
+      &:after{
+    //    user-select:none;
+        top:-.1em;
+        left:0 - (.4em + $border);//-1.05em;
+    //    height:(2.5 * $white-width) - 1.4em;
+        border-right:solid darken($whiteKey,15%) ($bshad-w / 2);
+        border-bottom:solid transparent .5em;
+      }
+    }
+  }
+
+}
+//*/
+
+/*/ Synth Build
+// Keyboard
+$moog-key:red;//$highlight;
+$moog-bg:blue;//$primary;
+$moog-hover:yellow;//$secondary;
+.moog-keys{
+  width:100%;
+  height:10em;
+  margin:1em 0 0 0;
+  cursor:pointer;
+  .moog-key{
+    position:relative;
+    z-index:50;
+    width:7.14%;
+    height:100%;
+    background:$moog-key;
+    float:left;
+    margin:0;
+    border:.2em solid $moog-bg;
+    border-top:0em solid $moog-bg;
+    border-bottom:0em solid $moog-bg;
+    &.accidental{
+      z-index:100;
+      height:5em;
+      width:2.5em;
+      margin:0 -1.25em;
+      border:.4em solid $moog-bg;
+      border-top:0em solid $moog-bg;
+    }
+    &:hover{
+      background:$moog-hover;
+    }
+    &.pressed{
+      background:blue;
+    }
+  }//key
+}//piano-keys
+//*/
