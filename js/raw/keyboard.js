@@ -1,5 +1,5 @@
 //alert("synth-build js working");
-//$(document).ready(function(){alert("synth-build jquery working");});
+//$(document).ready(function(){alert("keyboard jquery working");});
 
 // determine if Web Audio API is available
 var contextClass = (window.AudioContext || window.webkitAudioContext);
@@ -43,6 +43,18 @@ if (contextClass) {
   vco.connect(vca);
   vca.connect(context.destination);
 
+  // Start the note
+  function noteStart($note){
+    //console.log(isDown);// Check for mousedown
+    //console.log(note);// Check pitch
+    vco.frequency.value = $note;// Set note pitch
+    vca.gain.value = 1;// Start note
+  }
+
+  // End the note
+  function noteEnd(){
+    vca.gain.value = 0;// End note
+  }
 
   // Use jQuery to trigger events, as I'm a js noob.
   $(document).ready(function(){
@@ -65,14 +77,8 @@ if (contextClass) {
     key.mouseover(function(){
       var note = $(this).data("pitch");// Find note pitch
       // note start function
-      var noteStart = function(){
-        //console.log(isDown);// Check for mousedown
-        //console.log(note);// Check pitch
-        vco.frequency.value = note;// Set note pitch
-        vca.gain.value = 1;// Start note
-      };
       if(isDown){
-        noteStart();
+        noteStart(note);
         $(this).addClass("pressed");
       }
     });
@@ -84,19 +90,14 @@ if (contextClass) {
       // ### CAN THIS FUNCTION BE CALLED *OUTSIDE* THE "KEY." EVENT AND STILL USE "NOTE" VAR???
       // ### REPETITION FEELS CLUMSY
       // note start function
-      var noteStart = function(){
-        //console.log(isDown);// Check for mousedown
-        //console.log(note);// Check pitch
-        vco.frequency.value = note;// Set note pitch
-        vca.gain.value = 1;// Start note
-      };
-      noteStart();
+
+      noteStart(note);
       $(this).addClass("pressed");
     });
 
     // End note on mouseout or mouseup
     key.on("mouseout mouseup", function(){
-      vca.gain.value = 0;// End note
+      noteEnd();
       $(this).removeClass("pressed");
     });
 
