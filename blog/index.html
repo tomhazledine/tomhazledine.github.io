@@ -13,9 +13,13 @@ group: "navigation"
   <ul>
     {% for post in site.posts %}
       {% if post.featured and page.url != post.url %}
-      <li>
+      <li class="popularPost">
         <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
-        <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+        {% if post.excerptlong %}
+          <span class="archiveItemExcerpt">{{post.excerptlong}}</span>
+        {% else %}
+          <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+        {% endif %}
       </li>
       {% endif %}
     {% endfor %}
@@ -27,7 +31,11 @@ group: "navigation"
     {% if post.featured != true %}
       <div class="archiveItem clearfix">
         <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
-        <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+        {% if post.excerptmini %}
+          <span class="archiveItemExcerpt">{{post.excerptmini}}</span>
+        {% else %}
+          <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+        {% endif %}
       </div>
     {% endif %}
   {% endfor %}
