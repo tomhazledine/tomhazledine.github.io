@@ -4,12 +4,31 @@ title: "Blog"
 group: "navigation"
 ---
 
-<h1>Writings</h1>
+<header class="showcaseHeader">
+  <h1 class="showcaseH1">Articles</h1>
+  <span class="showcaseExcerpt">My thoughts on the world of web design.</span>
+</header>
+
+<section class="popularPosts">
+  <ul>
+    {% for post in site.posts %}
+      {% if post.featured and page.url != post.url %}
+      <li>
+        <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+        <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
 <section class="archive main-content">
   {% for post in site.categories["article"] %}
-    <div class="archiveItem clearfix">
-      <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
-      <span class="archiveItemExcerpt">{{post.excerpt}}</span>
-    </div>
+    {% if post.featured != true %}
+      <div class="archiveItem clearfix">
+        <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+        <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+      </div>
+    {% endif %}
   {% endfor %}
 </section>

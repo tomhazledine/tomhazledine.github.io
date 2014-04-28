@@ -85,6 +85,9 @@ pre code{
   font-weight:$bold;
   margin:1em 0 0 0;
 }
+.popularPosts{
+  margin:3em 0;
+}
 
 // 03. Next/Prev links
 @mixin navButton{

@@ -39,7 +39,8 @@ module.exports=function(grunt){
     uglify:{
       my_target:{
         files:{
-          'js/script.js':['js/raw/*.js']
+          'js/script.js':['js/raw/*.js'],
+          'js/keyboard.js':['js/pageSpecific/keyboard.js']
         }//files
       }//my_target
     },//uglify
@@ -66,7 +67,8 @@ module.exports=function(grunt){
         files:{
           // Copy the uglified js file to
           // the _site/ folder
-          '_site/js/script.js':'js/script.js'
+          '_site/js/script.js':'js/script.js',
+          '_site/js/keyboard.js':'js/keyboard.js'
         }//files
       },//js
       fonts:{
@@ -114,7 +116,7 @@ module.exports=function(grunt){
       },//styles
       options:{ livereload:true},
       scripts:{
-        files:['js/raw/*.js'],
+        files:['js/raw/*.js', 'js/pageSpecific/*.js'],
         tasks:['uglify']
       },//scripts
       sass:{
@@ -122,7 +124,7 @@ module.exports=function(grunt){
         tasks:['compass:dev']
       },//sass
       jsCopy:{
-        files:['js/script.js'],
+        files:['js/script.js','js/keyboard.js'],
         tasks:['copy:js']
       },//js
       cssCopy:{
