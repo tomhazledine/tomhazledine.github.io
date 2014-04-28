@@ -1,10 +1,18 @@
 <section class="featured">
-  <h3 class="relatedPostsTitle">Related writings:</h3>
+  <h3>Popular articles:</h3>
   <ul>
     {% for post in site.posts %}
       {% if post.featured and page.url != post.url %}
-        <li class="relatedPostLi"><a class="relatedPostLink" href="{{post.url}}">{{post.title}}</a></li>
+      <li class="popularPost">
+        <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+        {% if post.excerptlong %}
+          <span class="archiveItemExcerpt">{{post.excerptlong}}</span>
+        {% else %}
+          <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+        {% endif %}
+      </li>
       {% endif %}
     {% endfor %}
   </ul>
+  <a href="/blog">See all articles.</a>
 </section><!-- .archive -->

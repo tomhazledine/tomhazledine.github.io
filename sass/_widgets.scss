@@ -69,7 +69,7 @@ pre code{
   position:relative;
   margin:3em 0 0 0;
   padding:6em 0 3em 0;
-  text-align:center;
+  text-align:left;
   @include bigFirstLetter;
   &:after{
     @include horizontalRule(top);
@@ -84,6 +84,12 @@ pre code{
 .relatedPostLi{
   font-weight:$bold;
   margin:1em 0 0 0;
+}
+.popularPosts{
+  margin:3em 0;
+}
+.popularPost{
+  padding:0 0 2em 0;
 }
 
 // 03. Next/Prev links
@@ -240,14 +246,14 @@ pre code{
 
 // 05. Blog Archive
 .archiveItem{
-  margin:0 0 2em 0;
+  margin:0 0 1.5em 0;
 }
 .archiveItemTitle{
   font-size:1.2em;
   font-weight:$bold;
 }
 .archiveItemExcerpt{
-  display:block;
+  //display:block;
 }
 
 // 06. Blockquotes

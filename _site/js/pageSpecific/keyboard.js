@@ -1,5 +1,5 @@
 //alert("synth-build js working");
-//$(document).ready(function(){alert("synth-build jquery working");});
+//$(document).ready(function(){alert("keyboard jquery working");});
 
 // determine if Web Audio API is available
 var contextClass = (window.AudioContext || window.webkitAudioContext);
@@ -43,6 +43,17 @@ if (contextClass) {
   vco.connect(vca);
   vca.connect(context.destination);
 
+  // Start the note
+  function noteStart($note){
+    //console.log(isDown);// Check for mousedown
+    //console.log(note);// Check pitch
+    vco.frequency.value = $note;// Set note pitch
+    vca.gain.value = 1;// Start note
+  }
+  // End the note
+  function noteEnd(){
+    vca.gain.value = 0;// End note
+  }
 
   // Use jQuery to trigger events, as I'm a js noob.
   $(document).ready(function(){
@@ -64,15 +75,8 @@ if (contextClass) {
     // Trigger noteStart on mouseover AND mousedown (for glissando effect)
     key.mouseover(function(){
       var note = $(this).data("pitch");// Find note pitch
-      // note start function
-      var noteStart = function(){
-        //console.log(isDown);// Check for mousedown
-        //console.log(note);// Check pitch
-        vco.frequency.value = note;// Set note pitch
-        vca.gain.value = 1;// Start note
-      };
       if(isDown){
-        noteStart();
+        noteStart(note);
         $(this).addClass("pressed");
       }
     });
@@ -80,26 +84,96 @@ if (contextClass) {
     // Trigger noteStart on mousedown
     key.mousedown(function(){
       var note = $(this).data("pitch");// Find note pitch
-
-      // ### CAN THIS FUNCTION BE CALLED *OUTSIDE* THE "KEY." EVENT AND STILL USE "NOTE" VAR???
-      // ### REPETITION FEELS CLUMSY
-      // note start function
-      var noteStart = function(){
-        //console.log(isDown);// Check for mousedown
-        //console.log(note);// Check pitch
-        vco.frequency.value = note;// Set note pitch
-        vca.gain.value = 1;// Start note
-      };
-      noteStart();
+      noteStart(note);
       $(this).addClass("pressed");
     });
 
     // End note on mouseout or mouseup
     key.on("mouseout mouseup", function(){
-      vca.gain.value = 0;// End note
+      noteEnd();
       $(this).removeClass("pressed");
     });
 
+  });
+
+  // Key logging
+  function keyLog(){
+    console.log(event.which);
+  }
+
+  $(document).keydown(function(e){
+    switch(e.which){
+
+    //naturals
+    case 65:
+      console.log('a');
+      break;
+    case 83:
+      console.log('s');
+      break;
+    case 68:
+      console.log('d');
+      break;
+    case 70:
+      console.log('f');
+      break;
+    case 71:
+      console.log('g');
+      break;
+    case 72:
+      console.log('h');
+      break;
+    case 74:
+      console.log('j');
+      break;
+    case 75:
+      console.log('k');
+      break;
+    case 76:
+      console.log('l');
+      break;
+    case 59:
+      console.log(';');
+      break;
+    case 222:
+      console.log('\'');
+      break;
+    case 220:
+      console.log('\\');
+      break;
+
+    //accidentals
+    case 87:
+      console.log('w');
+      break;
+    case 69:
+      console.log('e');
+      break;
+    case 82:
+      console.log('r');
+      break;
+    case 84:
+      console.log('t');
+      break;
+    case 89:
+      console.log('y');
+      break;
+    case 85:
+      console.log('u');
+      break;
+    case 79:
+      console.log('o');
+      break;
+    case 80:
+      console.log('p');
+      break;
+    case 219:
+      console.log('\[');
+      break;
+
+    default: return;
+    }
+    e.preventDefault();
   });
 
 

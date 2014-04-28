@@ -2,6 +2,9 @@
   <!-- Javascript, starting with jQuery -->
   <script src='/js/vendor/jquery-1.9.1.min.js'></script>
   <script src="/js/script.js"></script>
+  {% if page.customJs %}
+    <script src="{{site.url}}{{ page.customJs }}"></script>
+  {% endif %}
 
   <!-- Analytics -->
   <script type="text/javascript">

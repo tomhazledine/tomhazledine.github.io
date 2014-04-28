@@ -2,9 +2,11 @@
 layout: post
 title: "Simple is hard"
 
-excerpt: How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.
+excerpt: "How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’."
 
 excerptmini: "Focus on substance over style."
+
+excerptlong: "“Simplify, simplfy!” we're often told. Your service isn't appealing to your customers? The answer's simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify!"
 
 comments: true
 category: article

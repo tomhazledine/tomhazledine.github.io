@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "A bullet-journal workflow"
+
+excerptmini: "An analogue \"to-do list\" system."
 excerpt: To-do lists are usually just a short-term fix, but I've found a system that stays relevant.
+
 category: article
 comments: true
 ---
