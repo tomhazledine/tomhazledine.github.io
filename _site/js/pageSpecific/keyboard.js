@@ -8,32 +8,11 @@ if (contextClass) {
 
   var context = new contextClass();// Set up audio context
 
-  //* // Simple VCO
   // V.C.O. (voltage controlled oscillator)
   var vco = context.createOscillator();
-  vco.frequency.value = 440.00;
-  vco.type = "sine";
+  vco.type = 2;// 0=sine, 1=square, 2=sawtooth, 3=triangle
+  vco.frequency.value = 440.00;//this.frequency;
   vco.start(0);
-  //*/
-
-  /* // Complex VCO module
-  var VCO = (function(context){
-    function VCO(){
-      this.oscillator = context.createOscillator();
-      this.oscillator.type = 'sawtooth';
-      this.setFrequency(440);
-      this.oscillator.start(0);
-
-      this.input = this.oscillator;
-      this.output = this.oscillator;
-
-      var that = this;
-      $(document).bind('frequency',function(_,frequency){
-        that.setFrequency(frequency);
-      });
-    };
-  })(context);
-  //*/
 
   // V.C.A. (voltage controlled amplifier)
   var vca = context.createGain();
@@ -44,15 +23,15 @@ if (contextClass) {
   vca.connect(context.destination);
 
   // Start the note
-  function noteStart($note){
-    //console.log(isDown);// Check for mousedown
-    //console.log(note);// Check pitch
-    vco.frequency.value = $note;// Set note pitch
+  function noteStart(note){
+    vco.frequency.value = note;// Set note pitch
     vca.gain.value = 1;// Start note
   }
   // End the note
-  function noteEnd(){
-    vca.gain.value = 0;// End note
+  function noteEnd(note){
+    if(vco.frequency.value == note){
+      vca.gain.value = 0;// End note
+    }
   }
 
   // Use jQuery to trigger events, as I'm a js noob.
@@ -96,85 +75,67 @@ if (contextClass) {
 
   });
 
-  // Key logging
-  function keyLog(){
-    console.log(event.which);
-  }
+  // Map keys as array [for english and german keyboard layouts]
+  // Find out how to detect keyboard layout, then set as var here.
+  //var keyboardLayout = "en";
 
-  $(document).keydown(function(e){
-    switch(e.which){
+  //if (keyboardLayout == "en") {
+    var keyToKey = {
+       65: '261.63',//'Cl',
+       87: '277.18',//'C#l',
+       83: '293.66',//'Dl',
+       69: '311.13',//'D#l',
+       68: '329.63',//'El',
+       70: '349.23',//'Fl',
+       84: '369.99',//'F#l',
+       71: '392.00',//'Gl',
+       89: '415.30',//'G#l',
+       72: '440.00',//'Al',
+       85: '466.16',//'A#l',
+       74: '493.88',//'Bl',
+       75: '523.25',//'Cu',
+       79: '554.37',//'C#u',
+       76: '587.33',//'Du',
+       80: '622.25',//'D#u',
+       59: '659.26',//'Eu',
+      186: '698.46',//'Eu',
+      222: '739.99',//'Fu',
+      221: '783.99',//'F#u',
+      220: '830.61'//'Gu'
+    };
 
-    //naturals
-    case 65:
-      console.log('a');
-      break;
-    case 83:
-      console.log('s');
-      break;
-    case 68:
-      console.log('d');
-      break;
-    case 70:
-      console.log('f');
-      break;
-    case 71:
-      console.log('g');
-      break;
-    case 72:
-      console.log('h');
-      break;
-    case 74:
-      console.log('j');
-      break;
-    case 75:
-      console.log('k');
-      break;
-    case 76:
-      console.log('l');
-      break;
-    case 59:
-      console.log(';');
-      break;
-    case 222:
-      console.log('\'');
-      break;
-    case 220:
-      console.log('\\');
-      break;
+  var keysDown = [];
 
-    //accidentals
-    case 87:
-      console.log('w');
-      break;
-    case 69:
-      console.log('e');
-      break;
-    case 82:
-      console.log('r');
-      break;
-    case 84:
-      console.log('t');
-      break;
-    case 89:
-      console.log('y');
-      break;
-    case 85:
-      console.log('u');
-      break;
-    case 79:
-      console.log('o');
-      break;
-    case 80:
-      console.log('p');
-      break;
-    case 219:
-      console.log('\[');
-      break;
-
-    default: return;
+  function keyboardDown(){
+    // If the key is already being held down, abort function.
+    if (key.keyCode in keysDown){
+      key.preventDefault();
+      //console.log('this key has been pressed before');
+      return;
     }
-    e.preventDefault();
-  });
+    // Log the key in keysDown
+    keysDown[key.keyCode] = true;
+    // set pitch value as a var
+    if (typeof keyToKey[key.keyCode] !== 'undefined'){
+      key.preventDefault();
+      key_pressed = keyToKey[key.keyCode];
+    }
+    noteStart(key_pressed);
+    $('[data-pitch="'+key_pressed+'"]').addClass('pressed');
+  };
+
+  function keyboardUp(){
+    //console.log('keyboard up');
+    key_released = key.keyCode;
+    delete keysDown[key.keyCode];
+    if(key_released == key_pressed){
+      noteEnd(key_pressed);
+    }
+    $('[data-pitch="'+key_released+'"]').removeClass('pressed');
+  };
+
+  window.onkeydown = keyboardDown;
+  window.onkeyup = keyboardUp;
 
 
 

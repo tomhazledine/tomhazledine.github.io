@@ -8,52 +8,45 @@ if (contextClass) {
 
   var context = new contextClass();// Set up audio context
 
-  //* // Simple VCO
-  // V.C.O. (voltage controlled oscillator)
-  var vco = context.createOscillator();
-  vco.frequency.value = 440.00;
-  vco.type = "sine";
-  vco.start(0);
-  //*/
+  // ------------------------------------------------------------------------ //
+  
+  // V.C.O.1 (voltage controlled oscillator)
+  var vco1 = context.createOscillator();
+  vco1.type = 0;// 0=sine, 1=square, 2=sawtooth, 3=triangle
+  vco1.frequency.value = 440.00;//this.frequency;
+  vco1.start(0);
 
-  /* // Complex VCO module
-  var VCO = (function(context){
-    function VCO(){
-      this.oscillator = context.createOscillator();
-      this.oscillator.type = 'sawtooth';
-      this.setFrequency(440);
-      this.oscillator.start(0);
-
-      this.input = this.oscillator;
-      this.output = this.oscillator;
-
-      var that = this;
-      $(document).bind('frequency',function(_,frequency){
-        that.setFrequency(frequency);
-      });
-    };
-  })(context);
-  //*/
+  // V.C.O.2 (voltage controlled oscillator)
+  var vco2 = context.createOscillator();
+  vco2.type = 1;// 0=sine, 1=square, 2=sawtooth, 3=triangle
+  vco2.frequency.value = 440.00;//this.frequency;
+  vco2.start(0);
 
   // V.C.A. (voltage controlled amplifier)
   var vca = context.createGain();
   vca.gain.value = 0;
 
   // Connectong VCO and VCA
-  vco.connect(vca);
+  vco1.connect(vca);
+  vco2.connect(vca);
   vca.connect(context.destination);
 
+  // ------------------------------------------------------------------------ //
+
   // Start the note
-  function noteStart($note){
-    //console.log(isDown);// Check for mousedown
-    //console.log(note);// Check pitch
-    vco.frequency.value = $note;// Set note pitch
+  function noteStart(note){
+    vco1.frequency.value = note;// Set note pitch
+    vco2.frequency.value = (note / 2);// Set note pitch
     vca.gain.value = 1;// Start note
   }
   // End the note
-  function noteEnd(){
+  function noteEnd(note){
+    //if(vco.frequency.value == note){
     vca.gain.value = 0;// End note
+    //}
   }
+
+  // ------------------------------------------------------------------------ //
 
   // Use jQuery to trigger events, as I'm a js noob.
   $(document).ready(function(){
@@ -71,6 +64,8 @@ if (contextClass) {
     .mouseup(function(){
       isDown = false;
     });
+
+    // ---------------------------------------------------------------------- //
 
     // Trigger noteStart on mouseover AND mousedown (for glissando effect)
     key.mouseover(function(){
@@ -96,85 +91,63 @@ if (contextClass) {
 
   });
 
-  // Key logging
-  function keyLog(){
-    console.log(event.which);
-  }
+  // ------------------------------------------------------------------------ //
 
-  $(document).keydown(function(e){
-    switch(e.which){
+  // Map keys as array
+    var keyToKey = {
+       65: '261.63',//'Cl',
+       87: '277.18',//'C#l',
+       83: '293.66',//'Dl',
+       69: '311.13',//'D#l',
+       68: '329.63',//'El',
+       70: '349.23',//'Fl',
+       84: '369.99',//'F#l',
+       71: '392.00',//'Gl',
+       89: '415.30',//'G#l',
+       72: '440.00',//'Al',
+       85: '466.16',//'A#l',
+       74: '493.88',//'Bl',
+       75: '523.25',//'Cu',
+       79: '554.37',//'C#u',
+       76: '587.33',//'Du',
+       80: '622.25',//'D#u',
+       59: '659.26',//'Eu',
+      186: '698.46',//'Eu',
+      222: '739.99',//'Fu',
+      221: '783.99',//'F#u',
+      220: '830.61'//'Gu'
+    };
 
-    //naturals
-    case 65:
-      console.log('a');
-      break;
-    case 83:
-      console.log('s');
-      break;
-    case 68:
-      console.log('d');
-      break;
-    case 70:
-      console.log('f');
-      break;
-    case 71:
-      console.log('g');
-      break;
-    case 72:
-      console.log('h');
-      break;
-    case 74:
-      console.log('j');
-      break;
-    case 75:
-      console.log('k');
-      break;
-    case 76:
-      console.log('l');
-      break;
-    case 59:
-      console.log(';');
-      break;
-    case 222:
-      console.log('\'');
-      break;
-    case 220:
-      console.log('\\');
-      break;
+  var keysDown = [];
 
-    //accidentals
-    case 87:
-      console.log('w');
-      break;
-    case 69:
-      console.log('e');
-      break;
-    case 82:
-      console.log('r');
-      break;
-    case 84:
-      console.log('t');
-      break;
-    case 89:
-      console.log('y');
-      break;
-    case 85:
-      console.log('u');
-      break;
-    case 79:
-      console.log('o');
-      break;
-    case 80:
-      console.log('p');
-      break;
-    case 219:
-      console.log('\[');
-      break;
-
-    default: return;
+  function keyboardDown(key){
+    // If the key is already being held down, abort function.
+    if (key.keyCode in keysDown){
+      key.preventDefault();
+      //console.log('this key has been pressed before');
+      return;
     }
-    e.preventDefault();
-  });
+    // Log the key in keysDown
+    keysDown[key.keyCode] = true;
+    // set pitch value as a var
+    if (typeof keyToKey[key.keyCode] !== 'undefined'){
+      key.preventDefault();
+      key_pressed = keyToKey[key.keyCode];
+    }
+    //console.log(key_pressed);
+    noteStart(key_pressed);
+    $('[data-pitch="'+key_pressed+'"]').addClass('pressed');
+  };
+
+  function keyboardUp(key){
+    //console.log('keyboard up');
+    delete keysDown[key.keyCode];
+    noteEnd();
+    $('[data-pitch="'+key_pressed+'"]').removeClass('pressed');
+  };
+
+  window.onkeydown = keyboardDown;
+  window.onkeyup = keyboardUp;
 
 
 
