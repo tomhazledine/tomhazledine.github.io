@@ -38,6 +38,33 @@
 
   &lt;h1&gt;CSS &amp; Javascript Keyboard&lt;/h1&gt;
 
+  &lt;div class=&quot;controls&quot;&gt;
+    &lt;div class=&quot;controlStrip&quot;&gt;
+      &lt;span&gt;Master Volume&lt;/span&gt;
+      &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;1&quot; value=&quot;0.5&quot; step=&quot;0.1&quot; onchange=&quot;masterVolume(this.value)&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;controlStrip&quot;&gt;
+      &lt;span&gt;Osc. #1 Volume&lt;/span&gt;
+      &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;1&quot; value=&quot;1&quot; step=&quot;0.1&quot; onchange=&quot;oscOneVolume(this.value)&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;controlStrip&quot;&gt;
+      &lt;span&gt;Osc. #2 Volume&lt;/span&gt;
+      &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;1&quot; value=&quot;1&quot; step=&quot;0.1&quot; onchange=&quot;oscTwoVolume(this.value)&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;controlStrip&quot;&gt;
+      &lt;span&gt;Osc. #1: Wave&lt;/span&gt;
+      &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;3&quot; value=&quot;0&quot; step=&quot;1&quot; onchange=&quot;oscOneWave(this.value)&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;controlStrip&quot;&gt;
+      &lt;span&gt;Osc. #2: Wave&lt;/span&gt;
+      &lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;3&quot; value=&quot;1&quot; step=&quot;1&quot; onchange=&quot;oscTwoWave(this.value)&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;controlStrip&quot;&gt;
+      &lt;span&gt;Oscillator #2: Pitch&lt;/span&gt;
+      &lt;input type=&quot;range&quot; min=&quot;1&quot; max=&quot;5&quot; value=&quot;2&quot; step=&quot;0.1&quot; onchange=&quot;vcoTwoPitch(this.value)&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
   &lt;div class=&quot;pianoWrapper&quot;&gt;
     &lt;div class=&quot;piano&quot;&gt;
       &lt;div class=&quot;octave-wrapper clearfix&quot;&gt;

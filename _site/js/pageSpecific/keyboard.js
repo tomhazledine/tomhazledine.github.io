@@ -8,31 +8,95 @@ if (contextClass) {
 
   var context = new contextClass();// Set up audio context
 
-  // V.C.O. (voltage controlled oscillator)
-  var vco = context.createOscillator();
-  vco.type = 2;// 0=sine, 1=square, 2=sawtooth, 3=triangle
-  vco.frequency.value = 440.00;//this.frequency;
-  vco.start(0);
+  var vco2PM = 2,
+      vco1wav = 0,
+      vco2wav =1;
+
+  // ------------------------------------------------------------------------ //
+
+  // V.C.O.1 (voltage controlled oscillator)
+  var vco1 = context.createOscillator();
+  vco1.type = vco1wav;// 0=sine, 1=square, 2=sawtooth, 3=triangle
+  vco1.frequency.value = 440.00;//this.frequency;
+  vco1.start(0);
+
+  // V.C.O.2
+  var vco2 = context.createOscillator();
+  vco2.type = vco2wav;// 0=sine, 1=square, 2=sawtooth, 3=triangle
+  vco2.frequency.value = 440.00;//this.frequency;
+  vco2.start(0);
 
   // V.C.A. (voltage controlled amplifier)
   var vca = context.createGain();
   vca.gain.value = 0;
 
+  // Osc.1 vol.
+  var vco1vol = context.createGain();
+  vco1vol.gain.value = 1;
+
+  // Osc.2 vol.
+  var vco2vol = context.createGain();
+  vco2vol.gain.value = 1;
+
+  // Master V.C.A.
+  var master = context.createGain();
+  master.gain.value = 0.1;
+
   // Connectong VCO and VCA
-  vco.connect(vca);
-  vca.connect(context.destination);
+  vco1.connect(vco1vol);
+  vco1vol.connect(vca);
+  vco2.connect(vco2vol);
+  vco2vol.connect(vca);
+  vca.connect(master);
+  master.connect(context.destination);
+
+  // ------------------------------------------------------------------------ //
+
+  // Controls
+  // Main Volume
+  function masterVolume(volume){
+    master.gain.value = volume;
+  }
+  // Main Volume
+  function masterVolume(osc1volume){
+    vco1vol.gain.value = osc1volume;
+  }
+  // Main Volume
+  function masterVolume(osc2volume){
+    vco2vol.gain.value = osc2volume;
+  }
+  // VCO2 Pitch
+  function vcoTwoPitch(pitchMultiplier){
+    vco2PM = pitchMultiplier;
+  }
+  // VCO1 Wave
+  function oscOneWave(oscOneWaveType){
+    vco1wav = parseInt(oscOneWaveType);
+    //console.log(oscOneWaveType);
+    vco1.type = vco1wav;
+  }
+  // VCO2 Wave
+  function oscTwoWave(oscTwoWaveType){
+    vco2wav = parseInt(oscTwoWaveType);
+    vco2.type = vco2wav;
+  }
+
+  // ------------------------------------------------------------------------ //
 
   // Start the note
   function noteStart(note){
-    vco.frequency.value = note;// Set note pitch
+    vco1.frequency.value = note;// Set note pitch
+    vco2.frequency.value = (note / vco2PM);// Set note pitch
     vca.gain.value = 1;// Start note
   }
   // End the note
   function noteEnd(note){
-    if(vco.frequency.value == note){
-      vca.gain.value = 0;// End note
-    }
+    //if(vco.frequency.value == note){
+    vca.gain.value = 0;// End note
+    //}
   }
+
+  // ------------------------------------------------------------------------ //
 
   // Use jQuery to trigger events, as I'm a js noob.
   $(document).ready(function(){
@@ -50,6 +114,8 @@ if (contextClass) {
     .mouseup(function(){
       isDown = false;
     });
+
+    // ---------------------------------------------------------------------- //
 
     // Trigger noteStart on mouseover AND mousedown (for glissando effect)
     key.mouseover(function(){
@@ -75,11 +141,9 @@ if (contextClass) {
 
   });
 
-  // Map keys as array [for english and german keyboard layouts]
-  // Find out how to detect keyboard layout, then set as var here.
-  //var keyboardLayout = "en";
+  // ------------------------------------------------------------------------ //
 
-  //if (keyboardLayout == "en") {
+  // Map keys as array
     var keyToKey = {
        65: '261.63',//'Cl',
        87: '277.18',//'C#l',
@@ -104,9 +168,11 @@ if (contextClass) {
       220: '830.61'//'Gu'
     };
 
+  // ------------------------------------------------------------------------ //
+
   var keysDown = [];
 
-  function keyboardDown(){
+  function keyboardDown(key){
     // If the key is already being held down, abort function.
     if (key.keyCode in keysDown){
       key.preventDefault();
@@ -120,22 +186,22 @@ if (contextClass) {
       key.preventDefault();
       key_pressed = keyToKey[key.keyCode];
     }
+    //console.log(key_pressed);
     noteStart(key_pressed);
     $('[data-pitch="'+key_pressed+'"]').addClass('pressed');
   };
 
-  function keyboardUp(){
+  function keyboardUp(key){
     //console.log('keyboard up');
-    key_released = key.keyCode;
     delete keysDown[key.keyCode];
-    if(key_released == key_pressed){
-      noteEnd(key_pressed);
-    }
-    $('[data-pitch="'+key_released+'"]').removeClass('pressed');
+    noteEnd();
+    $('[data-pitch="'+key_pressed+'"]').removeClass('pressed');
   };
 
   window.onkeydown = keyboardDown;
   window.onkeyup = keyboardUp;
+
+  // ------------------------------------------------------------------------ //
 
 
 

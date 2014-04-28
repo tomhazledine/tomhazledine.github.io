@@ -8,17 +8,21 @@ if (contextClass) {
 
   var context = new contextClass();// Set up audio context
 
+  var vco2PM = 2,
+      vco1wav = 0,
+      vco2wav =1;
+
   // ------------------------------------------------------------------------ //
-  
+
   // V.C.O.1 (voltage controlled oscillator)
   var vco1 = context.createOscillator();
-  vco1.type = 0;// 0=sine, 1=square, 2=sawtooth, 3=triangle
+  vco1.type = vco1wav;// 0=sine, 1=square, 2=sawtooth, 3=triangle
   vco1.frequency.value = 440.00;//this.frequency;
   vco1.start(0);
 
-  // V.C.O.2 (voltage controlled oscillator)
+  // V.C.O.2
   var vco2 = context.createOscillator();
-  vco2.type = 1;// 0=sine, 1=square, 2=sawtooth, 3=triangle
+  vco2.type = vco2wav;// 0=sine, 1=square, 2=sawtooth, 3=triangle
   vco2.frequency.value = 440.00;//this.frequency;
   vco2.start(0);
 
@@ -26,17 +30,63 @@ if (contextClass) {
   var vca = context.createGain();
   vca.gain.value = 0;
 
+  // Osc.1 vol.
+  var vco1vol = context.createGain();
+  vco1vol.gain.value = 1;
+
+  // Osc.2 vol.
+  var vco2vol = context.createGain();
+  vco2vol.gain.value = 1;
+
+  // Master V.C.A.
+  var master = context.createGain();
+  master.gain.value = 0.1;
+
   // Connectong VCO and VCA
-  vco1.connect(vca);
-  vco2.connect(vca);
-  vca.connect(context.destination);
+  vco1.connect(vco1vol);
+  vco1vol.connect(vca);
+  vco2.connect(vco2vol);
+  vco2vol.connect(vca);
+  vca.connect(master);
+  master.connect(context.destination);
+
+  // ------------------------------------------------------------------------ //
+
+  // Controls
+  // Main Volume
+  function masterVolume(volume){
+    master.gain.value = volume;
+  }
+  // Main Volume
+  function oscOneVolume(osc1volume){
+    vco1vol.gain.value = osc1volume;
+  }
+  // Main Volume
+  function oscTwoVolume(osc2volume){
+    vco2vol.gain.value = osc2volume;
+  }
+  // VCO2 Pitch
+  function vcoTwoPitch(pitchMultiplier){
+    vco2PM = pitchMultiplier;
+  }
+  // VCO1 Wave
+  function oscOneWave(oscOneWaveType){
+    vco1wav = parseInt(oscOneWaveType);
+    //console.log(oscOneWaveType);
+    vco1.type = vco1wav;
+  }
+  // VCO2 Wave
+  function oscTwoWave(oscTwoWaveType){
+    vco2wav = parseInt(oscTwoWaveType);
+    vco2.type = vco2wav;
+  }
 
   // ------------------------------------------------------------------------ //
 
   // Start the note
   function noteStart(note){
     vco1.frequency.value = note;// Set note pitch
-    vco2.frequency.value = (note / 2);// Set note pitch
+    vco2.frequency.value = (note / vco2PM);// Set note pitch
     vca.gain.value = 1;// Start note
   }
   // End the note
@@ -118,6 +168,8 @@ if (contextClass) {
       220: '830.61'//'Gu'
     };
 
+  // ------------------------------------------------------------------------ //
+
   var keysDown = [];
 
   function keyboardDown(key){
@@ -148,6 +200,8 @@ if (contextClass) {
 
   window.onkeydown = keyboardDown;
   window.onkeyup = keyboardUp;
+
+  // ------------------------------------------------------------------------ //
 
 
 
