@@ -58,11 +58,11 @@ if (contextClass) {
     master.gain.value = volume;
   }
   // Main Volume
-  function masterVolume(osc1volume){
+  function oscOneVolume(osc1volume){
     vco1vol.gain.value = osc1volume;
   }
   // Main Volume
-  function masterVolume(osc2volume){
+  function oscTwoVolume(osc2volume){
     vco2vol.gain.value = osc2volume;
   }
   // VCO2 Pitch
