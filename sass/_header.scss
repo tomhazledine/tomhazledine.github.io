@@ -32,6 +32,7 @@
   float:left;
   border-left:.4em solid $primary;
   padding:.2em .4em;
+  //font-size:1.4em;
 }
 .tagline{
   float:left;
@@ -49,6 +50,16 @@
     padding:.2em .5em;
     color:$primary;
     user-select:none;
+    display:block;
+    border:none;
+    background:$black;
+    font-family:$text;
+    font-style:italic;
+    //height:1.4em;
+    font-size:1em;
+    line-height:1em;
+    //padding:0;
+    margin:0;
   }
   li{
     float:right;
@@ -90,7 +101,13 @@
 @include breakpoint(Ssize){
   .header{
     //font-size:24px;
-    .menuTitle{cursor:pointer;}
+    .menuTitle{
+      cursor:pointer;
+      &:hover{
+        background:$primary;
+        color:$white;
+      }
+    }
     .topNav{
       width:4em;
     }
