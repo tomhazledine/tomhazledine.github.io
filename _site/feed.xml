@@ -28,6 +28,54 @@
 <description>&lt;h2&gt;The top ten ways to get better at your chosen skill:&lt;/h2&gt;
 
 &lt;h2&gt;Practice [repeat, x10]&lt;/h2&gt;
+
+&lt;section class=&quot;featured&quot;&gt;
+  &lt;h3&gt;Popular articles:&lt;/h3&gt;
+  &lt;ul&gt;
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      &lt;li class=&quot;popularPost&quot;&gt;
+        &lt;a class=&quot;archiveItemTitle&quot; href=&quot;/futura-for-the-win&quot;&gt;Futura for the win.&lt;/a&gt;
+        
+          &lt;span class=&quot;archiveItemExcerpt&quot;&gt;Picking the right typeface for this site took a long time, and my final choice wasn’t one I was expecting. Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.&lt;/span&gt;
+        
+      &lt;/li&gt;
+      
+    
+      
+    
+      
+      &lt;li class=&quot;popularPost&quot;&gt;
+        &lt;a class=&quot;archiveItemTitle&quot; href=&quot;/simple-is-hard&quot;&gt;Simple is hard&lt;/a&gt;
+        
+          &lt;span class=&quot;archiveItemExcerpt&quot;&gt;“Simplify, simplfy!” we're often told. Your service isn't appealing to your customers? The answer's simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify!&lt;/span&gt;
+        
+      &lt;/li&gt;
+      
+    
+      
+    
+      
+    
+  &lt;/ul&gt;
+  &lt;a href=&quot;/blog&quot;&gt;See all articles.&lt;/a&gt;
+&lt;/section&gt;
+&lt;!-- .archive --&gt;
+
 </description>
 <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
 <link>/top-ten-ways-to-get-better-at-something</link>

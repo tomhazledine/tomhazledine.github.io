@@ -12,3 +12,5 @@ comments: false
 ## The top ten ways to get better at your chosen skill:
 
 ## Practice [repeat, x10]
+
+{% include featured.html %}
