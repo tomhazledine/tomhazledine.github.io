@@ -63,6 +63,33 @@
 
   <h1>CSS & Javascript Keyboard</h1>
 
+  <div class="controls">
+    <div class="controlStrip">
+      <span>Master Volume</span>
+      <input type="range" min="0" max="1" value="0.5" step="0.1" onchange="masterVolume(this.value)">
+    </div>
+    <div class="controlStrip">
+      <span>Osc. #1 Volume</span>
+      <input type="range" min="0" max="1" value="1" step="0.1" onchange="oscOneVolume(this.value)">
+    </div>
+    <div class="controlStrip">
+      <span>Osc. #2 Volume</span>
+      <input type="range" min="0" max="1" value="1" step="0.1" onchange="oscTwoVolume(this.value)">
+    </div>
+    <div class="controlStrip">
+      <span>Osc. #1: Wave</span>
+      <input type="range" min="0" max="3" value="0" step="1" onchange="oscOneWave(this.value)">
+    </div>
+    <div class="controlStrip">
+      <span>Osc. #2: Wave</span>
+      <input type="range" min="0" max="3" value="1" step="1" onchange="oscTwoWave(this.value)">
+    </div>
+    <div class="controlStrip">
+      <span>Oscillator #2: Pitch</span>
+      <input type="range" min="1" max="5" value="2" step="0.1" onchange="vcoTwoPitch(this.value)">
+    </div>
+  </div>
+
   <div class="pianoWrapper">
     <div class="piano">
       <div class="octave-wrapper clearfix">
