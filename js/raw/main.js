@@ -4,6 +4,7 @@
 // 04. Dropcap and Run-in
 // 05. Blockquote Run-in
 // 06. Hide nav on scroll
+// 07. Showcase Slider
 
 // 01. Test Alert
 //$(document).ready(function(){alert("Main JS Working");});
@@ -118,6 +119,11 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+$(window).resize(function(){
+	$('header').removeClass('nav-up').addClass('nav-down');
+	$('.topNav ul').removeClass('down');
+});
+
 //*/
 
 // 07. Showcase Slider
