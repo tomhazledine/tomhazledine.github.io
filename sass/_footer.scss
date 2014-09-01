@@ -29,6 +29,7 @@
     text-transform:uppercase;
     font-style:italic;
     &:before{
+      transform:translateZ(0);
       font-family:$icons;
       font-weight: normal;
       font-style: normal;
@@ -46,8 +47,8 @@
       transition-property:color;
       transition-duration:.3s;
     }
-    &.twitter:before{content:'\e000';}
-    &.github:before{content:'\e001';}
+    &.twitter:before{content:"\e001";}
+    &.github:before{content:"\e002";}
     &:hover:before{color:$primary;}
   }
 }

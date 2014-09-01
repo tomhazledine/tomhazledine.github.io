@@ -20,6 +20,22 @@
   margin:0 auto;
   padding:0;
   text-align:center;
+  position:relative;
+  a{
+    position:relative;
+    &:before{
+      font-family:$icons;
+      display:block;
+      content:"\e000";
+      color:darken($grey,5%);
+      font-size:1.8em;
+      position:absolute;
+      height:.5em;
+      padding-right:.2em;
+      top:-.3em;
+      right:100%;
+    }
+  }
 }
 .showcaseHeader{
   position:relative;
@@ -42,6 +58,7 @@
   transition-property:width, border, border-radius, height;
   transition-duration:1s;
   position:relative;
+  transform:translateZ(0);
   box-shadow: darken($grey, 5%) 0 .2em 0 0,
               lighten($grey, 5%) 0 .4em 0 0,
               darken($grey, 20%) -.4em .8em 0 -.2em;
@@ -271,6 +288,11 @@
     cursor:pointer;
     transition-property:background;
     transition-duration:.3s;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    outline:none;
+    &:focus{outline:none;}
     &.selected{
       background:$primary;
       color:$cream;

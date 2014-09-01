@@ -1,12 +1,15 @@
-$icon-github-font-family: "icons";
-$icon-github-value: "\e001";
-$icon-github: "icons" "\e001";
-$icon-floppyDisk-font-family: "icons";
-$icon-floppyDisk-value: "\e002";
-$icon-floppyDisk: "icons" "\e002";
-$icon-twitterCircle-font-family: "icons";
-$icon-twitterCircle-value: "\e000";
-$icon-twitterCircle: "icons" "\e000";
+$github-font-family: "icons";
+$github-value: "\e002";
+$github: "icons" "\e002";
+$floppyDisk-font-family: "icons";
+$floppyDisk-value: "\e003";
+$floppyDisk: "icons" "\e003";
+$link-font-family: "icons";
+$link-value: "\e000";
+$link: "icons" "\e000";
+$twitterCircle-font-family: "icons";
+$twitterCircle-value: "\e001";
+$twitterCircle: "icons" "\e001";
 
 @mixin icon-font-family($char) {
   font-family: nth($char, 1);
