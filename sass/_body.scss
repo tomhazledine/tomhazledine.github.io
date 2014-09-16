@@ -56,9 +56,21 @@ p{
   }
   @include bigFirstLetter;
 }
-p + p::first-letter{
-  font-size:inherit;
-  color:inherit;
+p + p{
+  &:first-letter{
+    font-size:inherit;
+    color:inherit;
+  }
+  a:first-letter{
+    font-size:inherit;
+    color:inherit;
+    transition:color;
+    transition-duration:.3s;
+  }
+  a:hover:first-letter{
+    color:$cream;
+    font-size:inherit;
+  }
 }
 .top-link{
   display:block;

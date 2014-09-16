@@ -87,4 +87,14 @@ html{
     font-size:1.5em;
     color:$primary;
   }
+  a:first-letter{
+    font-size:1.5em;
+    color:$primary;
+    transition:color,background;
+    transition-duration:.3s;
+  }
+  a:hover:first-letter{
+    color:$cream;
+    font-size:1.5em;
+  }
 }

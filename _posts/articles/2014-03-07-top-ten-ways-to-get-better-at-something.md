@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The top ten ways to get better at your chosen skill."
+title: "Top ten ways to progress."
 
 excerptmini: "Good advice on personal development."
 excerpt: "Ten tips guaranteed to make you better at doing whatever you choose to do."
