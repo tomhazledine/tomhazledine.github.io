@@ -76,3 +76,15 @@ p + p{
   display:block;
   padding:2em 0 0 0;
 }
+hr{
+  display:block;
+  border:none;
+  position:relative;
+  margin:0 0 3em 0;
+  margin:0 0 3rem 0;
+  padding:0 0 3.5em 0;
+  padding:0 0 3.5rem 0;
+  &:after{
+    @include horizontalRule(bottom);
+  }
+}

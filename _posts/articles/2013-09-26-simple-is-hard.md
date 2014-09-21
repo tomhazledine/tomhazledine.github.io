@@ -10,7 +10,7 @@ excerptlong: "“Simplify, simplfy!” we're often told. Your service isn't appe
 
 comments: true
 category: article
-featured: true
+featured: false
 ---
 
 “Simplify, simplfy!” we're often told. Your service isn't appealing to your customers? The answer's simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker.

@@ -265,4 +265,5 @@ blockquote{
   &:before{@include horizontalRule(top);}
   &:after{@include horizontalRule(bottom);}
   .runIn{text-transform:uppercase;}
+  p:after{display:none;}
 }
