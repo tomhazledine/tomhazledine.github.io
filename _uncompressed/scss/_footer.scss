@@ -28,28 +28,23 @@
     line-height:1;
     text-transform:uppercase;
     font-style:italic;
-    // &:before{
-    //   transform:translateZ(0);
-    //   font-family:$icons;
-    //   font-weight: normal;
-    //   font-style: normal;
-    //   position:absolute;
-    //   display:block;
-    //   width:1em;
-    //   height:1em;
-    //   top:-25%;
-    //   left:-1.2em;
-    //   content:"&";
-    //   font-size:2em;
-    //   line-height:1em;
-    //   text-align:center;
-    //   color:$black;
-    //   transition-property:color;
-    //   transition-duration:.3s;
-    // }
-    // &.twitter:before{content:"\e003";}
-    // &.github:before{content:"\e002";}
-    // &:hover:before{color:$primary;}
+    .icon{
+      font-size:2.5em;
+      position:absolute;
+      display:block;
+      width:1em;
+      height:1em;
+      top:-.25em;
+      left:-1.2em;
+      line-height:1em;
+      text-align:center;
+      fill:$black;
+      transition-property:fill;
+      transition-duration:.3s;
+    }
+    &:hover .icon{
+      fill:$primary;
+    }
   }
 }
 

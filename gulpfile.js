@@ -18,6 +18,7 @@ var iconfontCss  = require('gulp-iconfont-css');
 var size         = require('gulp-size');
 var lr           = require('tiny-lr');
 var gutil        = require('gulp-util');
+var svgSprite    = require('gulp-svg-sprite');
 var plumber      = require('gulp-plumber');
 var server       = lr();
 
@@ -128,6 +129,24 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
     return gulp.src('_uncompressed/fonts/**')
         .pipe(gulp.dest('assets/fonts/'));
+});
+
+// SVG Icon Sprite
+var svgConfig = {
+    shape : {
+        dimension : { // Set maximum dimensions
+            maxWidth : 32,
+            maxHeight : 32
+        }
+    },
+    mode : {
+        symbol : true // Activate the «symbol» mode
+    }
+};
+gulp.task('svg',function(){
+    return gulp.src('_uncompressed/icons/**/*.svg')
+        .pipe(svgSprite(svgConfig))
+        .pipe(gulp.dest('_includes'));
 });
 
 // Livereload

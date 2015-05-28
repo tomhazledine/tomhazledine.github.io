@@ -23,16 +23,17 @@
   position:relative;
   a{
     position:relative;
-    &:before{
-      font-family:$icons;
+    .icon{
+      // font-family:$icons;
       display:block;
-      content:"\e000";
-      color:darken($grey,5%);
-      font-size:1.8em;
+      // content:"\e000";
+      fill:darken($grey,5%);
+      font-size:2.5em;
       position:absolute;
       height:.5em;
+      width:.7em;
       padding-right:.2em;
-      top:-.3em;
+      top:0;
       right:100%;
     }
   }

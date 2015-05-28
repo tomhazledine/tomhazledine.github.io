@@ -21,16 +21,16 @@
   text-decoration: none;
   text-transform: none; }
 
-.icon-01_floppyDisk:before {
+.icon-floppyDisk:before {
   content: "\E001"; }
 
-.icon-02_github:before {
+.icon-github:before {
   content: "\E002"; }
 
-.icon-03_twitterCircle:before {
+.icon-link:before {
   content: "\E003"; }
 
-.icon-04_link:before {
+.icon-twitterCircle:before {
   content: "\E004"; }
 
 html {
@@ -357,6 +357,23 @@ hr {
     line-height: 1;
     text-transform: uppercase;
     font-style: italic; }
+    .socialLinks a .icon {
+      font-size: 2.5em;
+      position: absolute;
+      display: block;
+      width: 1em;
+      height: 1em;
+      top: -0.25em;
+      left: -1.2em;
+      line-height: 1em;
+      text-align: center;
+      fill: #4d4d4d;
+      -webkit-transition-property: fill;
+              transition-property: fill;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s; }
+    .socialLinks a:hover .icon {
+      fill: #00b7c6; }
 
 .footer {
   text-align: center;
@@ -530,16 +547,15 @@ hr {
   position: relative; }
   .showcaseLink a {
     position: relative; }
-    .showcaseLink a:before {
-      font-family: "realIcons";
+    .showcaseLink a .icon {
       display: block;
-      content: "\e000";
-      color: #ceccc4;
-      font-size: 1.8em;
+      fill: #ceccc4;
+      font-size: 2.5em;
       position: absolute;
       height: 0.5em;
+      width: 0.7em;
       padding-right: 0.2em;
-      top: -0.3em;
+      top: 0;
       right: 100%; }
 
 .showcaseHeader {

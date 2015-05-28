@@ -2,77 +2,82 @@
 {% include header.html %}
 
 <div class="bodyWrapper clearfix">
-  <section class="mainContent clearfix">
+    <section class="mainContent clearfix">
 
 <article class="mainContentInner">
 
-  {% if page.showcaselink %}
-    <header class="showcaseHeader">
-      <h1 class="showcaseH1">{{page.title}}</h1>
-      <span class="showcaseLink">
-        <a href="{{page.showcaselink}}">{{page.showcaselink}}</a>
-      </span>
-      <span class="showcaseExcerpt">{{page.excerpt}}</span>
-    </header>
-  {% else %}
-    <h1>{{page.title}}</h1>
-  {% endif %}
-
-  {% if page.desktopimg or page.tabletimg or page.phoneimg %}
-    {% if page.desktopimg %}
-      <div class="showcaseSlider desktop">
-    {% elsif page.tabletimg %}
-      <div class="showcaseSlider tablet">
-    {% elsif page.phoneimg %}
-      <div class="showcaseSlider phone">
+    {% if page.showcaselink %}
+        <header class="showcaseHeader">
+            <h1 class="showcaseH1">{{page.title}}</h1>
+            <span class="showcaseLink">
+                <a href="{{page.showcaselink}}">
+                    <svg class="icon twitter">
+                        <use xlink:href="#link"/>
+                    </svg>
+                    {{page.showcaselink}}
+                </a>
+            </span>
+            <span class="showcaseExcerpt">{{page.excerpt}}</span>
+        </header>
+    {% else %}
+        <h1>{{page.title}}</h1>
     {% endif %}
-      <span class="showcaseAddons">{{page.title}}</span>
-      <div class="imgCropper">
+
+    {% if page.desktopimg or page.tabletimg or page.phoneimg %}
         {% if page.desktopimg %}
-          <img class="desktopImg" src="{{page.desktopimg}}" alt="site showcase" />
+            <div class="showcaseSlider desktop">
+        {% elsif page.tabletimg %}
+            <div class="showcaseSlider tablet">
+        {% elsif page.phoneimg %}
+            <div class="showcaseSlider phone">
         {% endif %}
-        {% if page.tabletimg %}
-          <img class="tabletImg" src="{{page.tabletimg}}" alt="site showcase" />
-        {% endif %}
-        {% if page.phoneimg %}
-          <img class="phoneImg" src="{{page.phoneimg}}" alt="site showcase" />
-        {% endif %}
-      </div>
-    </div>
-    <div class="showcaseControls">
-      {% if page.desktopimg %}
-        <button class="showcaseControl desktop selected">Desktop</button>
-        {% if page.tabletimg %}
-          <button class="showcaseControl tablet">Tablet</button>
-        {% endif %}
-        {% if page.phoneimg %}
-          <button class="showcaseControl phone">Phone</button>
-        {% endif %}
-      {% elsif page.tabletimg %}
-        <button class="showcaseControl tablet selected">Tablet</button>
-        {% if page.phoneimg %}
-          <button class="showcaseControl phone">Phone</button>
-        {% endif %}
-      {% else %}
-        <button class="showcaseControl phone selected">Phone</button>
-      {% endif %}
-    </div>
-  {% endif %}
+            <span class="showcaseAddons">{{page.title}}</span>
+            <div class="imgCropper">
+                {% if page.desktopimg %}
+                    <img class="desktopImg" src="{{page.desktopimg}}" alt="site showcase" />
+                {% endif %}
+                {% if page.tabletimg %}
+                    <img class="tabletImg" src="{{page.tabletimg}}" alt="site showcase" />
+                {% endif %}
+                {% if page.phoneimg %}
+                    <img class="phoneImg" src="{{page.phoneimg}}" alt="site showcase" />
+                {% endif %}
+            </div>
+        </div>
+        <div class="showcaseControls">
+            {% if page.desktopimg %}
+                <button class="showcaseControl desktop selected">Desktop</button>
+                {% if page.tabletimg %}
+                    <button class="showcaseControl tablet">Tablet</button>
+                {% endif %}
+                {% if page.phoneimg %}
+                    <button class="showcaseControl phone">Phone</button>
+                {% endif %}
+            {% elsif page.tabletimg %}
+                <button class="showcaseControl tablet selected">Tablet</button>
+                {% if page.phoneimg %}
+                    <button class="showcaseControl phone">Phone</button>
+                {% endif %}
+            {% else %}
+                <button class="showcaseControl phone selected">Phone</button>
+            {% endif %}
+        </div>
+    {% endif %}
 
-  <h3 class="big-drop-cap">{{page.excerptlong}}</h3>
+    <h3 class="big-drop-cap">{{page.excerptlong}}</h3>
 
-  {{content}}
+    {{content}}
 
 </article>
 
 <nav class="nav-outer clearfix">
-  {% if page.next_in_category.url %}
-    <a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
-  {% endif %}
+    {% if page.next_in_category.url %}
+        <a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
+    {% endif %}
 
-  {% if page.previous_in_category.url %}
-    <a href="{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
-  {% endif %}
+    {% if page.previous_in_category.url %}
+        <a href="{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
+    {% endif %}
 </nav>
 
 {% include showcase-archive.html %}
@@ -81,7 +86,7 @@
 
 {% include sociallinks.html %}
 
-  </div><!-- .mainContent -->
+    </div><!-- .mainContent -->
 </div><!-- .bodyWrapper -->
 
 {% include footer.html %}
