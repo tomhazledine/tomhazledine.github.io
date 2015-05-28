@@ -14,10 +14,13 @@
   <link rel="shortcut icon" href="/favicon/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
 
-  <link rel="stylesheet" href="/assets/css/main.min.css">
-
-  {% if page.customCss %}
-    <link rel="stylesheet" href="/assets/css/{{ page.customCss }}">
+  {% if page.soloCss %}
+    <link rel="stylesheet" href="/assets/css/{{ page.soloCss }}">
+  {% else %}
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+    {% if page.customCss %}
+      <link rel="stylesheet" href="/assets/css/{{ page.customCss }}">
+    {% endif %}
   {% endif %}
 
   <!-- Modernizr -->
