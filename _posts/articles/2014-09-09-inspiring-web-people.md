@@ -13,7 +13,7 @@ category: article
 featured: true
 ---
 
-A recent [episode of the Boagworld podcast](http://boagworld.com/season/10/episode/1007/) saw Marcus and Paul listing the ten ‘web people’ they've found most *inspiring*. This has in turn inspired *me* to publish my own list.
+There's an [episode of the Boagworld podcast](http://boagworld.com/season/10/episode/1007/) where Marcus and Paul list the ten ‘web people’ they've found most *inspiring*. This has in turn inspired *me* to publish my own list.
 
 The web-creators community is packed with generous people willing to share their insights and experiences. Through blog posts and podcasts, conference talks and tutorials, these people have had a direct impact on my outlook and my career choices.
 
