@@ -123,29 +123,17 @@ textarea {
   text-decoration: none;
   text-transform: none; }
 
-.icon-01_facebook:before {
+.icon-01_floppyDisk:before {
   content: "\E001"; }
 
-.icon-01_floppyDisk:before {
+.icon-02_github:before {
   content: "\E002"; }
 
-.icon-02_github:before {
+.icon-03_twitterCircle:before {
   content: "\E003"; }
 
-.icon-02_googlePlus:before {
-  content: "\E004"; }
-
-.icon-03_linkedIn:before {
-  content: "\E005"; }
-
-.icon-03_twitterCircle:before {
-  content: "\E006"; }
-
 .icon-04_link:before {
-  content: "\E007"; }
-
-.icon-04_twitter:before {
-  content: "\E008"; }
+  content: "\E004"; }
 
 html {
   font-size: 16px; }

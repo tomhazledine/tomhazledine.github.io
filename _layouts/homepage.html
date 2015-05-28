@@ -1,0 +1,22 @@
+{% include head.html %}
+{% include header.html %}
+
+<div class="bodyWrapper clearfix">
+  <section class="mainContent clearfix">
+
+    <article class="mainContentInner">
+        <h1>{{ page.headline}}</h1>
+        <h3 class="big-drop-cap">{{ page.intro }}</h3>
+        
+        {{content}}
+
+    </article>
+
+    {% include featured.html %}
+
+    {% include sociallinks.html %}
+
+  </div><!-- .mainContent -->
+</div><!-- .bodyWrapper -->
+
+{% include footer.html %}
