@@ -1,0 +1,59 @@
+
+// 00. OLD
+@import "declarations";
+@import "utilities";
+@import "nativeReset";
+@import "global";
+@import "body";
+@import "footer";
+@import "header";
+@import "portfolio";
+@import "widgets";
+
+
+
+// // 01. SETTINGS
+// @import "settings.colours";
+// @import "settings.fonts";
+// @import "settings.breakpoints";
+
+// // 02. TOOLS
+// @import "tools.placeholders";
+// @import "tools.mixins";
+// @import "tools.general";
+
+// // 03. GENERIC
+// // @import 'generic.normalize';
+// @import "generic.reset";
+// @import "generic.theme";
+
+// // 04. BASE
+// @import "base.generic";
+// @import "base.theme";
+// @import "base.buttons";
+// @import "base.songSlider";
+// //@import "base.forms";
+// @import "base.layout";
+
+// // 05. OBJECTS
+// @import "objects.recordMeta";
+// @import "objects.snippet";
+// @import "objects.dividers";
+// @import "objects.coverImages";
+// @import "objects.pagination";
+// @import "objects.bandsearch";
+
+// // 06. COMPONENTS
+// @import "components.header";
+// @import "components.post";
+// @import "components.footer";
+// @import "components.audioPlayer";
+
+// // 07. TRUMPS
+// @import "trumps.utilities";
+// @import "trumps.theme";
+// //@import "trumps.fout";
+
+// // html{color:red;}
+// // UH OH!
+// @import "shame";

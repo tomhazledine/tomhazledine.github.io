@@ -1,0 +1,50 @@
+.footerMenu{
+	display:block;
+	padding:0 1em;
+	text-align:center;
+	li{
+		font-family:$caps;
+		text-transform:lowercase;
+		letter-spacing:.05em;
+		display:inline-block;
+		margin-right:1.5em;
+		&:last-of-type{margin-right:0;}
+		@include bp(d3){
+			margin-right:0;
+			display:block;
+		}
+		a{
+			font-size:.7em;
+			display:block;
+			line-height:1;
+			padding:.2em 0;
+			&:hover{
+				background:inherit;
+				// color:$primary;
+				box-shadow:$primary 0 .2em 0 0;
+			}
+			@include bp(d3){
+				margin-right:0;
+				display:block;
+				font-size:1em;
+				&:hover{
+					box-shadow:none;
+				}
+			}
+		}
+
+	}
+}
+
+.credits{
+	font-size:.7em;
+	font-family:$caps;
+	text-transform:lowercase;
+	text-align:center;
+	display:block;
+	padding:.5em 0 1em 0;
+	@include bp(d3){
+		font-size:1em;
+		padding-top:1em;
+	}
+}

@@ -1,0 +1,216 @@
+.mainHeader{
+  position:relative;
+}
+
+.logo{
+  text-align:center;
+  position:relative;
+  z-index:5;
+}
+
+.siteTitle{
+  font-family:$display;
+  line-height:1;
+  padding:.5em .5em 0 .5em;
+  display:inline-block;
+  height:1.5em;
+  position:relative;
+  transition:left,width;
+  transition-duration:.2s;
+  width:3.2em;
+  font-size:1em;
+  @extend %cf;
+  &:hover{
+    background:inherit;
+  }
+}
+
+.logoInitial{
+  font-size:1em;
+  display:block;
+  height:1em;
+  line-height:1;
+  // background:$yellow;
+  width:1em;
+  // left:0;
+  float:left;
+  overflow:hidden;
+  text-align:left;
+  transition:width;
+  transition-duration:.2s;
+  letter-spacing:.05em;
+  &.letterE{
+    width:.6em;
+    margin-right:.05em;
+    // background:$yellow;
+  }
+  &.letterB{
+    width:.6em;
+    // background:$blue;
+  }
+  &.letterM{
+    width:.85em;
+    // background:$orange;
+  }
+}
+.siteTitle:hover{
+  // left:.4em;
+  width:10.4em;
+  .logoInitial{
+    &.letterE{
+      width:3.2em;
+    }
+    &.letterB{
+      width:1.4em;
+    }
+    &.letterM{
+      width:4.7em;
+    }
+  }
+}
+
+.navToggle{
+  @extend %buttonReset;
+  padding:6px;
+  border-radius:50%;
+  width:32px;
+  height:32px;
+  // position:relative;
+  margin:0 auto;
+  margin-top:-.5em;
+  transition:background, box-shadow;
+  transition-duration:.2s;
+  position:relative;
+  z-index:4;
+  // box-shadow:rgba($primary,.3) 0 0 0 -1px;
+  &:hover{
+    // animation:buttonPulse 2s infinite;
+    // box-shadow:rgba($primary,.3) 0 0 0 10px;
+  }
+  &:focus{
+    outline:none;
+  }
+  &.open{
+    // background:$primary;
+  }
+}
+
+.mainHeader:hover .navToggle{
+  // animation:buttonPulse 4s;
+}
+.mainHeader .navToggle:hover{
+  // box-shadow:rgba($primary,.3) 0 0 0 10px;
+}
+
+@keyframes buttonPulse{
+  0% {box-shadow:rgba($primary,.3) 0 0 0 -1px;}
+  10% {box-shadow:rgba($primary,.3) 0 0 0 10px;}
+  20% {box-shadow:rgba($primary,.3) 0 0 0 -1px;}
+  30% {box-shadow:rgba($primary,.3) 0 0 0 10px;}
+  40% {box-shadow:rgba($primary,.3) 0 0 0 -1px;}
+  100% {box-shadow:rgba($primary,.3) 0 0 0 -1px;}
+}
+
+.navicon{
+  width:20px;
+  height:3px;
+  background:$black;
+  display:block;
+  margin-top:5px;
+  margin-bottom:6px;
+  position:relative;
+  // top:;
+  // left:10px;
+  border-radius:1px;
+  transition:background;
+  transition-duration:.2s;
+  // pointer-events:none;
+  &:before,&:after{
+    position:absolute;
+    content:"";
+    display:block;
+    width:20px;
+    height:3px;
+    background:$black;
+    left:50%;
+    margin-left:-10px;
+    border-radius:1px;
+    transition:margin,width,transform,top,bottom;
+    transition-duration:.2s;
+  }
+  &:before{
+    transform-origin: 50% 50%;
+    top:-6px;
+  }
+  &:after{
+    bottom:-6px;
+  }
+}
+.navToggle.open .navicon{
+    background:none;
+    &:before,&:after{
+        width:24px;
+        margin-left:-12px;
+    }
+    &:before{
+        transform:rotate(45deg);
+        top:0;
+    }
+    &:after{
+        transform:rotate(-45deg);
+        bottom:0;
+    }
+}
+
+.mainMenu{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding-top:0em;
+  padding-bottom:0em;
+  z-index:3;
+  background:$primary;
+  // max-height:0;
+  // overflow:hidden;
+  transition:max-height,padding,top;
+  transition-duration:.2s;
+  padding-top:5em;
+  padding-bottom:3em;
+  top:-40em;
+  // border-bottom:lighten($primary,10%) .2em solid;
+  box-shadow:rgba($black,.2) 0 1em 0 0;
+
+  &.open{
+    // padding-top:5em;
+    // padding-bottom:1em;
+    bottom:auto;
+    top:0;
+    // max-height:40em;
+  }
+}
+.mainMenu li{
+  display:block;
+  text-align:center;
+  a{
+    display:block;
+    line-height:1;
+    text-transform:lowercase;
+    font-family:$caps;
+    letter-spacing:.1em;
+    color:$cream;
+    padding:0 1em;
+    .menuLinkInner{
+      display:inline-block;
+      padding:.5em 0;
+      color:$cream;
+      box-shadow:inset $primary 0 0em 0 0;
+      transition:box-shadow;
+      transition-duration:.2s;
+      &:hover{
+        // color:$black;
+        box-shadow:inset $black 0 -.2em 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Typography etc.
+
+// Icon Font
+// @font-face {
+//   font-family:'iconFont';
+//   src:url('../fonts/icons/icons.eot');
+//   src:url('../fonts/icons/icons.eot?#iefix') format('embedded-opentype'),
+//   url('../fonts/icons/icons.woff') format('woff'),
+//   url('../fonts/icons/icons.ttf') format('truetype'),
+//   url('../fonts/icons/icons.svg#icons') format('svg');
+//   font-weight:normal;
+//   font-style:normal;
+// }
+
+// Fonts
+$display:'abril-fatface';//"ltc-bodoni-175", "bodoni", "didot", serif;
+$body:"ff-meta-web-pro", "Helvetica Neue", helvetica, arial, sans-serif;
+$caps:"ff-meta-sc-web-pro", $body;
+$utility:"ff-meta-web-pro", "Helvetica Neue", helvetica, arial, sans-serif;
+// $icons:'iconFont';
+$code:monospace;
+
+// Weights
+$book:400;
+$bold:700;

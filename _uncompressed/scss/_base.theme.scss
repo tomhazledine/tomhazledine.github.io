@@ -1,0 +1,128 @@
+// Body Styles
+// Generic Links
+// Misc Typography
+
+// Body Styles
+html{
+  min-width:280px;
+}
+body{
+  font-family:$body;
+//  background:$cream;
+  color:$black;
+  font-size:1.2em;
+  line-height:1.6;
+  text-rendering:optimizeLegibility;
+  font-variant-ligatures:common-ligatures;
+
+//  padding:2.5em;
+//  box-shadow:inset $white 0 0 0 2em;
+//  @include bp(d3){
+//    padding:1em;
+//    box-shadow:inset $white 0 0 0 .5em;
+//    font-size:1em;
+//    line-height:1.6;
+//  }
+  @include bp(d3){
+    font-size:1em;
+  }
+}
+
+// Generic Links
+a{
+  color:inherit;
+  display:inline-block;
+  text-decoration:none;
+  line-height:inherit;
+  transition:color,background;
+  transition-duration:.2s;
+  &:hover{
+    color:$black;
+    background:$primary;
+  }
+  &:active{
+  }
+}
+
+// Misc Typography
+h1{
+  font-size:3em;
+  font-family:$display;
+  line-height:1.1;
+  padding:0 0 1em 0;
+  font-variant-ligatures:normal;
+  @include bp(d2){
+    font-size:2em;
+  }
+//  @include bp(d3){
+//    font-size:2em;
+//  }
+}
+
+h2{
+  font-size:1.4em;
+  font-family:$display;
+  font-style:italic;
+  padding:0;
+  line-height:1.3;
+  padding-top:.2em;
+  font-variant-ligatures:normal;
+}
+
+p{
+  padding-bottom:1em;
+  @include bp(d3){padding-bottom:2em;}
+}
+em{
+  font-style:italic;
+}
+strong{
+  font-family:$caps;
+  text-transform:lowercase;
+}
+
+li{
+  list-style:none;
+}
+
+blockquote{
+  font-size:1.4em;
+  line-height:1.2;
+//  font-style:italic;
+  font-family:$display;
+  margin:1em 0 1.5em 0;
+//  background:$grey;
+//  color:$cream;
+  box-shadow:
+    $cream -.4em 0 0 0,
+    $black -.5em 0 0 0,
+    $cream -.6em 0 0 0,
+    $black -.8em 0 0 0
+  ;//$grey 0 0 0 1em;
+  strong{
+    font-family:$display;
+    text-transform:capitalize;
+  }
+  p{padding:0;}
+  @include bp(d2){
+    box-shadow:none;
+  }
+  @include bp(d3){
+    line-height:1.4;
+    margin:0 0 1em 0;
+  }
+}
+
+.mainWrap{
+  margin:.5em 4em .5em 4em;
+  padding:6em 1em;
+  background:$cream;
+  @include bp(d2){
+    margin:.5em 2em .5em 2em;
+    padding:4em 1em;
+  }
+  @include bp(d3){
+    margin:.5em 1em .5em 1em;
+    padding:2em 1em;
+  }
+}

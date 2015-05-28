@@ -1,0 +1,33 @@
+.paginatorLink{
+    display:block;
+    float:left;
+    padding:.3em 0;
+    line-height:1;
+    background:$primary;
+    margin:0 .2em .2em 0;
+    color:$cream;
+    font-family:$caps;
+    text-transform:lowercase;
+    font-size:.8em;
+    width:2em;
+    text-align:center;
+    &:hover{
+        background:$secondary;
+    }
+    &.home{
+        background:$black;
+        width:4.2em;
+        &:hover{
+            background:$secondary;
+            // color:$cream;
+        }
+    }
+    &.current{
+        background:$black;
+        cursor:default;
+    }
+}
+
+.pagination{
+    .small{margin:0;}
+}

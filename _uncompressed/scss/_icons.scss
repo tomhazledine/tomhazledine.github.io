@@ -1,0 +1,53 @@
+@font-face {
+	font-family: "icons";
+	src: url('_uncompressed/fonts/icons/icons.eot');
+	src: url('_uncompressed/fonts/icons/icons.eot?#iefix') format('eot'),
+		url('_uncompressed/fonts/icons/icons.woff') format('woff'),
+		url('_uncompressed/fonts/icons/icons.ttf') format('truetype'),
+		url('_uncompressed/fonts/icons/icons.svg#icons') format('svg');
+}
+
+.icon:before {
+	font-family: "icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.icon-01_facebook:before {
+	content: "\E001";
+}
+
+.icon-01_floppyDisk:before {
+	content: "\E002";
+}
+
+.icon-02_github:before {
+	content: "\E003";
+}
+
+.icon-02_googlePlus:before {
+	content: "\E004";
+}
+
+.icon-03_linkedIn:before {
+	content: "\E005";
+}
+
+.icon-03_twitterCircle:before {
+	content: "\E006";
+}
+
+.icon-04_link:before {
+	content: "\E007";
+}
+
+.icon-04_twitter:before {
+	content: "\E008";
+}

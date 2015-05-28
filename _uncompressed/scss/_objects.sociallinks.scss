@@ -1,0 +1,20 @@
+.socialLink{
+	float:left;
+	margin-right:1em;
+	height:2em;
+	// background:$yellow;
+	a{
+		display:block;
+		line-height:1;
+		// height:1.2em;
+		cursor:pointer;
+		padding-top:.5em;
+		border-bottom:.2em solid $black;
+		&:hover{border-bottom-color:$highlight;}
+		&:before{font-family:$icons;}
+		&.twitter:before{content:"\e004";}
+		&.facebook:before{content:"\e001";}
+		&.linkedIn:before{content:"\e003";}
+		&.googlePlus:before{content:"\e002";}
+	}
+}

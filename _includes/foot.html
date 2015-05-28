@@ -1,9 +1,8 @@
 <div class="scripts">
-  <!-- Javascript, starting with jQuery -->
-  <script src='/js/vendor/jquery-1.9.1.min.js'></script>
-  <script src="/js/script.js"></script>
+  <!-- Javascript -->
+  <script src="/assets/js/app.min.js"></script>
   {% if page.customJs %}
-    <script src="{{site.url}}{{ page.customJs }}"></script>
+    <script src="/assets/js/static/{{ page.customJs }}"></script>
   {% endif %}
 
   <!-- Analytics -->

@@ -1,16 +1,35 @@
 {
-  "name": "workflowTestArea",
+  "name": "ebm-laravel",
   "version": "0.0.1",
+  "description": "Test EBM App build",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "ls -l"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomhazledine/ebm.git"
+  },
+  "author": "@enshrined @thomashazledine",
+  "license": "GPLv2",
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-compass": "~0.7.0",
-    "grunt-contrib-uglify": "~0.2.7",
-    "matchdep": "~0.1.2",
-    "grunt-contrib-imagemin": "~0.4.0",
-    "grunt-autoprefixer": "~0.6.3",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-shell": "~0.6.1",
-    "grunt-fontsmith": "~0.3.0"
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-cache": "^0.2.0",
+    "gulp-concat": "^2.3.4",
+    "gulp-iconfont": "^0.1.1",
+    "gulp-iconfont-css": "0.0.9",
+    "gulp-imagemin": "^0.6.2",
+    "gulp-jshint": "^1.8.3",
+    "gulp-livereload": "^2.1.0",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-plumber": "^0.6.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-scss-lint": "^0.1.2",
+    "gulp-size": "^1.0.0",
+    "gulp-uglify": "^0.3.1",
+    "gulp-util": "^3.0.0",
+    "tiny-lr": "0.0.9"
   }
 }
