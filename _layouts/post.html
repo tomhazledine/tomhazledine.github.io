@@ -1,53 +1,53 @@
 {% include head.html %}
 {% include header.html %}
 
-<div class="bodyWrapper clearfix">
-  <section class="mainContent clearfix">
+	<div class="bodyWrapper clearfix">
+  		<section class="mainContent clearfix">
 
-<article class="mainContentInner">
+			<article class="mainContentInner">
 
-  <h1>{{page.title}}</h1>
+  				<h1>{{page.title}}</h1>
 
-  <h3 class="big-drop-cap">{{page.excerpt}}</h3>
+  				<h3 class="big-drop-cap">{{page.excerpt}}</h3>
 
-  {{content}}
+  				{{content}}
 
-</article>
+			</article>
 
-<nav class="nav-outer clearfix">
-  {% if page.next_in_category.url %}
-    <a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
-  {% endif %}
+			<nav class="nav-outer clearfix">
+  				{% if page.next_in_category.url %}
+    				<a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
+  				{% endif %}
 
-  {% if page.previous_in_category.url %}
-    <a href="{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
-  {% endif %}
-</nav>
+  				{% if page.previous_in_category.url %}
+    				<a href="{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
+  				{% endif %}
+			</nav>
 
-{% if page.comments %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
+			{% if page.comments %}
+  				<div id="disqus_thread"></div>
+  					<script type="text/javascript">
+        				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        				var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-{% endif %}
+        				/* * * DON'T EDIT BELOW THIS LINE * * */
+        				(function() {
+            				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        				})();
+  					</script>
+  					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  					<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+			{% endif %}
 
-{% include archive.html %}
+			{% include archive.html %}
 
-<span class="top-link"><a href="#top">Back to top</a></span>
+			<span class="top-link"><a href="#top">Back to top</a></span>
 
-{% include sociallinks.html %}
+			{% include sociallinks.html %}
 
-  </div><!-- .mainContent -->
-</div><!-- .bodyWrapper -->
+  		</div><!-- .mainContent -->
+	</div><!-- .bodyWrapper -->
 
 {% include footer.html %}
