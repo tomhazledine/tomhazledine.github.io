@@ -1,63 +1,63 @@
 // Social Icons
 .socialLinks{
-  font-size:.8em;
-  position:relative;
-  margin:3rem auto 0;
-  padding:6rem 0 0 0;
-  text-align:center;
-  width:$contentWidth;
-  @include breakpoint(XSsize){
-    width:100%;
-  }
-  &:before{
-    @include horizontalRule(top);
-  }
-  .socialContainer{
-    display:block;
-    float:left;
-    width:50%;
-    @include breakpoint(XSsize){
-      width:100%;
-      padding:2em;
-    }
-  }
-  a{
-    display:inline;
+    font-size:.8em;
     position:relative;
-    margin-left:2em;
-    line-height:1;
-    text-transform:uppercase;
-    font-style:italic;
-    .icon{
-      font-size:2.5em;
-      position:absolute;
-      display:block;
-      width:1em;
-      height:1em;
-      top:-.25em;
-      left:-1.2em;
-      line-height:1em;
-      text-align:center;
-      fill:$black;
-      transition-property:fill;
-      transition-duration:.3s;
+    margin:3rem auto 0;
+    padding:6rem 0 0 0;
+    text-align:center;
+    width:$contentWidth;
+    @include breakpoint(XSsize){
+        width:100%;
     }
-    &:hover .icon{
-      fill:$primary;
+    &:before{
+        @include horizontalRule(top);
     }
-  }
+    .socialContainer{
+        display:block;
+        float:left;
+        width:50%;
+        @include breakpoint(XSsize){
+            width:100%;
+            padding:2em;
+        }
+    }
+    a{
+        display:inline;
+        position:relative;
+        margin-left:2em;
+        line-height:1;
+        text-transform:uppercase;
+        font-style:italic;
+        .icon{
+            font-size:2.5em;
+            position:absolute;
+            display:block;
+            width:1em;
+            height:1em;
+            top:-.25em;
+            left:-1.2em;
+            line-height:1em;
+            text-align:center;
+            fill:$black;
+            transition-property:fill;
+            transition-duration:.3s;
+        }
+        &:hover .icon{
+            fill:$primary;
+        }
+    }
 }
 
 // Email Link
 .footer{
-  text-align:center;
-  margin:0 0 3em 0;
-  a{
-    background:none;
-    font-weight:$bold;
-    &:hover{
-      color:$black;
-      background:$primary;
+    text-align:center;
+    margin:0 0 3em 0;
+    a{
+        background:none;
+        font-weight:$bold;
+        &:hover{
+            color:$black;
+            background:$primary;
+        }
     }
-  }
 }

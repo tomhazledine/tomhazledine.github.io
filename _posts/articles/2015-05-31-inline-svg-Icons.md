@@ -1,8 +1,16 @@
 ---
 layout: post
 title: "Getting started with inline SVG icons"
-excerpt: As a typography nerd, using a custom font to serve icons felt really good. It turns out inline SVG icons are better in almost every way.
+
+excerptlong: As a typography nerd, using a custom font to serve icons felt really good. It turns out inline SVG icons are better in almost every way.
+
+excerptmini: "We should all be using SVG icon sets"
+
+excerpt: "I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way."
+
 comments: true
+category: article
+featured: true
 ---
 
 why icon fonts are good

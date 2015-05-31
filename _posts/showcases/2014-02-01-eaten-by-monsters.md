@@ -9,6 +9,6 @@ category: showcase
 comments: false
 
 showcaselink: "http://eatenbymonsters.com"
-desktopimg: "/img/build/photos/ebmDesktop.jpg"
-tabletimg: "/img/build/photos/ebmTablet.jpg"
+desktopimg: "/assets/images/photos/ebmDesktop.jpg"
+tabletimg: "/assets/images/photos/ebmTablet.jpg"
 ---
