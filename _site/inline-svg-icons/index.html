@@ -66,13 +66,13 @@
 	<div class="bodyWrapper clearfix">
   		<section class="mainContent clearfix">
 
-			<article class="mainContentInner textContent">
+			<article class="mainContentInner">
 
   				<h1>Getting started with inline SVG icons</h1>
 
   				<h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
 
-  				<h2>Why icon fonts are good</h2>
+  				<p>why icon fonts are good</p>
 
 <ul>
   <li>style with css</li>
@@ -81,7 +81,7 @@
   <li>performant</li>
 </ul>
 
-<h2>Why icon fonts are bad</h2>
+<p>why icon fonts are bad</p>
 
 <ul>
   <li>unpredictable fallbacks</li>
@@ -89,7 +89,7 @@
   <li>unpredictable gulp support</li>
 </ul>
 
-<h2>Why SVG icons are better</h2>
+<p>why SVG icons are better</p>
 
 <ul>
   <li>good support, with better fallbacks</li>
@@ -99,35 +99,21 @@
   <li>gulp automation more reliable</li>
 </ul>
 
-<h2>How SVG icons work</h2>
+<p>how SVG icons work</p>
 
 <ul>
   <li>symbols &amp; use</li>
   <li>gulp-svg-sprite</li>
 </ul>
 
-<h2>“gotchas” with SVG icons</h2>
-
-<h2>php weirdness</h2>
-
-<p>This code </p>
-
-<pre><code>include_once("assets/icons/symbol/svg/sprite.symbol.svg");
-</code></pre>
-
-<p>did not work.</p>
-
-<pre><code>&lt;?php
-$rawSVG = file_get_contents(get_template_directory_uri() . "/assets/icons/symbol/svg/sprite.symbol.svg");
-echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
-?&gt;
-</code></pre>
+<p>“gotchas” with SVG icons</p>
 
 <ul>
+  <li>php weirdness</li>
   <li>fill on paths overrides everything</li>
 </ul>
 
-<h2>SVG icons with Jekyll</h2>
+<p>SVG icons with Jekyll</p>
 
 <ul>
   <li>Jekyll include</li>
