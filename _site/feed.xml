@@ -8,6 +8,60 @@
 
 <item>
 <title>Getting started with inline SVG icons</title>
+<description>&lt;p&gt;why icon fonts are good&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;style with css&lt;/li&gt;
+  &lt;li&gt;automate with Gulp&lt;/li&gt;
+  &lt;li&gt;resolution agnostic&lt;/li&gt;
+  &lt;li&gt;performant&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;why icon fonts are bad&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;unpredictable fallbacks&lt;/li&gt;
+  &lt;li&gt;rendering inconsistencies&lt;/li&gt;
+  &lt;li&gt;unpredictable gulp support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;why SVG icons are better&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;good support, with better fallbacks&lt;/li&gt;
+  &lt;li&gt;in Jekyll even more performant: inline = no requests&lt;/li&gt;
+  &lt;li&gt;consistent rendering&lt;/li&gt;
+  &lt;li&gt;in-icon styling&lt;/li&gt;
+  &lt;li&gt;gulp automation more reliable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;how SVG icons work&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;symbols &amp;amp; use&lt;/li&gt;
+  &lt;li&gt;gulp-svg-sprite&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“gotchas” with SVG icons&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;php weirdness&lt;/li&gt;
+  &lt;li&gt;fill on paths overrides everything&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SVG icons with Jekyll&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jekyll include&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+<pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
+<link>http://thomashazledine.com/inline-svg-Icons</link>
+<guid isPermaLink="true">http://thomashazledine.com/inline-svg-Icons</guid>
+</item>
+
+<item>
+<title>Getting started with inline SVG icons</title>
 <description>&lt;h2&gt;Why icon fonts are good&lt;/h2&gt;
 
 &lt;ul&gt;

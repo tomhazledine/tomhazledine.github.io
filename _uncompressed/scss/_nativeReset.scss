@@ -10,16 +10,33 @@
 
 // Social Icons
 .socialLinks{
-  font-size:.8em;
-  position:relative;
   text-align:center;
   max-width:30em;
   margin:0 auto;
   padding:1em;
+}
+
+.socialLinks{
+  font-size:.8em;
+  position:relative;
+  margin:3rem auto 0;
+  padding:6rem 0 0 0;
+  text-align:center;
+  width:$contentWidth;
+  @include breakpoint(XSsize){
+    width:100%;
+  }
+  &:before{
+    @include horizontalRule(top);
+  }
   .socialContainer{
     display:block;
     float:left;
     width:50%;
+    @include breakpoint(XSsize){
+      width:100%;
+      padding:2em;
+    }
   }
   a{
     display:inline;
@@ -28,35 +45,31 @@
     line-height:1;
     text-transform:uppercase;
     font-style:italic;
-    &:before{
-      font-family:$icons;
-      font-weight: normal;
-      font-style: normal;
+    .icon{
+      font-size:2.5em;
       position:absolute;
       display:block;
       width:1em;
       height:1em;
-      top:-25%;
+      top:-.25em;
       left:-1.2em;
-      content:"&";
-      font-size:2em;
       line-height:1em;
       text-align:center;
-      color:$black;
-      transition-property:color;
+      fill:$black;
+      transition-property:fill;
       transition-duration:.3s;
-      transform:translateZ(0);
     }
-    &.twitter:before{content:"\e001";}
-    &.github:before{content:"\e002";}
-    &:hover:before{color:$primary;}
+    &:hover .icon{
+      fill:$primary;
+    }
   }
 }
 
 // Email Link
 .footer{
   text-align:center;
-  padding:0 0 3em 0;
+  padding:3em 0;
+  margin:0;
   a{
     background:none;
     font-weight:$bold;

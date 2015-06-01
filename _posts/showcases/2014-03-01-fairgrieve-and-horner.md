@@ -9,7 +9,7 @@ category: showcase
 comments: false
 
 showcaselink: "http://fairgrieveandhorner.com"
-desktopimg: "/img/build/photos/fairgrieveDesktop.jpg"
-tabletimg: "/img/build/photos/fairgrieveTablet.jpg"
-phoneimg: "/img/build/photos/fairgrievePhone.jpg"
+desktopimg: "/assets/images/photos/fairgrieveDesktop.jpg"
+tabletimg: "/assets/images/photos/fairgrieveTablet.jpg"
+phoneimg: "/assets/images/photos/fairgrievePhone.jpg"
 ---

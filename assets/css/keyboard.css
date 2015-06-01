@@ -686,16 +686,41 @@ blockquote {
           border-bottom: 0.3em solid transparent; } }
 
 .socialLinks {
-  font-size: 0.8em;
-  position: relative;
   text-align: center;
   max-width: 30em;
   margin: 0 auto;
   padding: 1em; }
+
+.socialLinks {
+  font-size: 0.8em;
+  position: relative;
+  margin: 3rem auto 0;
+  padding: 6rem 0 0 0;
+  text-align: center;
+  width: 28em; }
+  @media (max-width: 570px) {
+    .socialLinks {
+      width: 100%; } }
+  .socialLinks:before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    content: "";
+    width: 16rem;
+    margin-left: -8rem;
+    border-top: 0.1rem solid #4d4d4d; }
+    @media (max-width: 570px) {
+      .socialLinks:before {
+        width: 5em;
+        margin-left: -2.5em; } }
   .socialLinks .socialContainer {
     display: block;
     float: left;
     width: 50%; }
+    @media (max-width: 570px) {
+      .socialLinks .socialContainer {
+        width: 100%;
+        padding: 2em; } }
   .socialLinks a {
     display: inline;
     position: relative;
@@ -703,37 +728,28 @@ blockquote {
     line-height: 1;
     text-transform: uppercase;
     font-style: italic; }
-    .socialLinks a:before {
-      font-family: "realIcons";
-      font-weight: normal;
-      font-style: normal;
+    .socialLinks a .icon {
+      font-size: 2.5em;
       position: absolute;
       display: block;
       width: 1em;
       height: 1em;
-      top: -25%;
+      top: -0.25em;
       left: -1.2em;
-      content: "&";
-      font-size: 2em;
       line-height: 1em;
       text-align: center;
-      color: #4d4d4d;
-      -webkit-transition-property: color;
-              transition-property: color;
+      fill: #4d4d4d;
+      -webkit-transition-property: fill;
+              transition-property: fill;
       -webkit-transition-duration: 0.3s;
-              transition-duration: 0.3s;
-      -webkit-transform: translateZ(0);
-              transform: translateZ(0); }
-    .socialLinks a.twitter:before {
-      content: "\e001"; }
-    .socialLinks a.github:before {
-      content: "\e002"; }
-    .socialLinks a:hover:before {
-      color: #00b7c6; }
+              transition-duration: 0.3s; }
+    .socialLinks a:hover .icon {
+      fill: #00b7c6; }
 
 .footer {
   text-align: center;
-  padding: 0 0 3em 0; }
+  padding: 3em 0;
+  margin: 0; }
   .footer a {
     background: none;
     font-weight: 700; }
