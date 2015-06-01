@@ -1,0 +1,44 @@
+.big-drop-cap{
+  font-weight:$book;
+  font-style:italic;
+  text-transform:uppercase;
+  padding-bottom:1em;
+}
+.runIn{
+  color:$primary;
+  margin-left:-1em;
+  // Kerning Table
+  &.d,&.g,&.o,&.r{margin-left:-1.5em;}
+  &.e,&.f{margin-left:-.7em;}
+  &.k,&.n,&.t,&.x,&.z{margin-left:-.5em;}
+  &.a,.l,&.q{margin-left:-2em;}
+  &.u,&.w{margin-left:0;}
+  &.v{margin-left:-.3em;}
+  &.y{margin-left:-.2em;}
+  @include breakpoint(XSsize){margin-left:0 !important;}// Janky use of !important, but saves writing MQeries for all kerning table
+}
+.dropcap{
+  display:block;
+  float:left;
+  font-size:12em;
+  line-height:.7;
+  font-weight:$bold;
+  color:$primary;
+  text-shadow:.05em .05em 0 $black;
+  padding:0 0 .1em 0;
+  width:.8em;
+  // Kerning Table
+  &.a,&.r{width:.75em;}
+  &.b,&.p,&.s{width:.7em;}
+  &.e,&.f,&.t{width:.65em;}
+  &.g,&.n,&.o{width:.9em;}
+  &.h{width:.87em;}
+  &.i{width:.5em;}
+  &.j{width:.57em;}
+  &.l{width:.55em;}
+  &.m{width:1em;}
+  &.q{width:.95em;}
+  &.v,&.x{width:.85em;}
+  &.w{width:1.15em;}
+  @include breakpoint(XSsize){font-size:5em;}
+}

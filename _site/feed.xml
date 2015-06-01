@@ -8,60 +8,6 @@
 
 <item>
 <title>Getting started with inline SVG icons</title>
-<description>&lt;p&gt;why icon fonts are good&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;style with css&lt;/li&gt;
-  &lt;li&gt;automate with Gulp&lt;/li&gt;
-  &lt;li&gt;resolution agnostic&lt;/li&gt;
-  &lt;li&gt;performant&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;why icon fonts are bad&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;unpredictable fallbacks&lt;/li&gt;
-  &lt;li&gt;rendering inconsistencies&lt;/li&gt;
-  &lt;li&gt;unpredictable gulp support&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;why SVG icons are better&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;good support, with better fallbacks&lt;/li&gt;
-  &lt;li&gt;in Jekyll even more performant: inline = no requests&lt;/li&gt;
-  &lt;li&gt;consistent rendering&lt;/li&gt;
-  &lt;li&gt;in-icon styling&lt;/li&gt;
-  &lt;li&gt;gulp automation more reliable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;how SVG icons work&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;symbols &amp;amp; use&lt;/li&gt;
-  &lt;li&gt;gulp-svg-sprite&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;“gotchas” with SVG icons&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;php weirdness&lt;/li&gt;
-  &lt;li&gt;fill on paths overrides everything&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;SVG icons with Jekyll&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Jekyll include&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-<pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
-<link>http://thomashazledine.com/inline-svg-Icons</link>
-<guid isPermaLink="true">http://thomashazledine.com/inline-svg-Icons</guid>
-</item>
-
-<item>
-<title>Getting started with inline SVG icons</title>
 <description>&lt;h2&gt;Why icon fonts are good&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -100,11 +46,16 @@
 
 &lt;h2&gt;php weirdness&lt;/h2&gt;
 
-&lt;p&gt;This code &lt;code&gt;include_once(&quot;assets/icons/symbol/svg/sprite.symbol.svg&quot;);&lt;/code&gt; did not work.&lt;/p&gt;
+&lt;p&gt;This code &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;include_once(&quot;assets/icons/symbol/svg/sprite.symbol.svg&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;did not work.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;?php
 $rawSVG = file_get_contents(get_template_directory_uri() . &quot;/assets/icons/symbol/svg/sprite.symbol.svg&quot;);
-echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i&#39;, &#39;&#39;, $rawSVG )
+echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawSVG )
 ?&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -118,9 +69,9 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
   &lt;li&gt;Jekyll include&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-<pubDate>Fri, 29 May 2015 00:00:00 +0100</pubDate>
-<link>http://thomashazledine.com/inline-svg-icons</link>
-<guid isPermaLink="true">http://thomashazledine.com/inline-svg-icons</guid>
+<pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
+<link>http://thomashazledine.com/inline-svg-Icons</link>
+<guid isPermaLink="true">http://thomashazledine.com/inline-svg-Icons</guid>
 </item>
 
 <item>
@@ -375,7 +326,7 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 
 &lt;h3&gt;It’s really easy.&lt;/h3&gt;
 &lt;p&gt;Keeping the journal up to date sounds like rather an onerous task, what with all the indexing, page-numbering, and three-tiered bullet system. In reality, keeping on top of all my lists is no hassle at all. Updating the list takes about 10 minutes every morning, and up to half-an-hour on the first day of every month (as I update my calendar, and re-set my long-term goals).
-&lt;img src=&quot;/img/build/photos/journal02.jpg&quot; title=&quot;&#39;My Bullet Journal&#39;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/img/build/photos/journal02.jpg&quot; title=&quot;'My Bullet Journal'&quot; /&gt;&lt;/p&gt;
 
 &lt;h2&gt;The journal isn’t &lt;em&gt;solely&lt;/em&gt; responsible for my productivity upswing, but it’s definitely helped.&lt;/h2&gt;
 &lt;p&gt;By way of a disclaimer, making the switch to a Bullet Journal workflow wasn’t the only change I’ve made recently. A few months ago I quit my day-job and struck out on my own; an intrepid freelancer &lt;em&gt;cum&lt;/em&gt; entrepreneur bound for riches and glory! So now that any-and-all money that I make is directly proportional to how much work I do, it’ll come as no surprise that I’m working harder and longer than ever before (and would be with or without the Bullet Journal).&lt;/p&gt;

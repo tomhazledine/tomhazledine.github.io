@@ -1,4 +1,8 @@
 // Add header and footer styles from native theme for pages with custom CSS
+@import "settings.colours";
+@import "settings.fonts";
+@import "settings.breakpoints";
+
 @import"utilities";
 @import"declarations";
 @import"global";

@@ -13,20 +13,20 @@ category: article
 featured: true
 ---
 
-why icon fonts are good
+## Why icon fonts are good
 
 * style with css
 * automate with Gulp
 * resolution agnostic
 * performant
 
-why icon fonts are bad
+## Why icon fonts are bad
 
 * unpredictable fallbacks
 * rendering inconsistencies
 * unpredictable gulp support
 
-why SVG icons are better
+## Why SVG icons are better
 
 * good support, with better fallbacks
 * in Jekyll even more performant: inline = no requests
@@ -34,16 +34,28 @@ why SVG icons are better
 * in-icon styling
 * gulp automation more reliable
 
-how SVG icons work
+## How SVG icons work
 
 * symbols & use
 * gulp-svg-sprite
 
-"gotchas" with SVG icons
+## "gotchas" with SVG icons
 
-* php weirdness
+## php weirdness
+
+This code 
+
+    include_once("assets/icons/symbol/svg/sprite.symbol.svg");
+
+did not work.
+
+    <?php
+    $rawSVG = file_get_contents(get_template_directory_uri() . "/assets/icons/symbol/svg/sprite.symbol.svg");
+    echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
+    ?>
+
 * fill on paths overrides everything
 
-SVG icons with Jekyll
+## SVG icons with Jekyll
 
 * Jekyll include

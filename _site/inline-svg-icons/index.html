@@ -66,13 +66,13 @@
 	<div class="bodyWrapper clearfix">
   		<section class="mainContent clearfix">
 
-			<article class="mainContentInner">
+			<article class="mainContentInner textContent">
 
   				<h1>Getting started with inline SVG icons</h1>
 
   				<h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
 
-  				<p>why icon fonts are good</p>
+  				<h2>Why icon fonts are good</h2>
 
 <ul>
   <li>style with css</li>
@@ -81,7 +81,7 @@
   <li>performant</li>
 </ul>
 
-<p>why icon fonts are bad</p>
+<h2>Why icon fonts are bad</h2>
 
 <ul>
   <li>unpredictable fallbacks</li>
@@ -89,7 +89,7 @@
   <li>unpredictable gulp support</li>
 </ul>
 
-<p>why SVG icons are better</p>
+<h2>Why SVG icons are better</h2>
 
 <ul>
   <li>good support, with better fallbacks</li>
@@ -99,21 +99,35 @@
   <li>gulp automation more reliable</li>
 </ul>
 
-<p>how SVG icons work</p>
+<h2>How SVG icons work</h2>
 
 <ul>
   <li>symbols &amp; use</li>
   <li>gulp-svg-sprite</li>
 </ul>
 
-<p>“gotchas” with SVG icons</p>
+<h2>“gotchas” with SVG icons</h2>
+
+<h2>php weirdness</h2>
+
+<p>This code </p>
+
+<pre><code>include_once("assets/icons/symbol/svg/sprite.symbol.svg");
+</code></pre>
+
+<p>did not work.</p>
+
+<pre><code>&lt;?php
+$rawSVG = file_get_contents(get_template_directory_uri() . "/assets/icons/symbol/svg/sprite.symbol.svg");
+echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
+?&gt;
+</code></pre>
 
 <ul>
-  <li>php weirdness</li>
   <li>fill on paths overrides everything</li>
 </ul>
 
-<p>SVG icons with Jekyll</p>
+<h2>SVG icons with Jekyll</h2>
 
 <ul>
   <li>Jekyll include</li>
@@ -124,7 +138,7 @@
 
 			<nav class="nav-outer clearfix">
   				
-    				<a href="/inline-svg-icons" class="nav-button-prev">Getting started with inline SVG icons</a>
+    				<a href="/inspiring-web-people" class="nav-button-prev">Inspirational Web People</a>
   				
 
   				
@@ -152,13 +166,6 @@
   <ul>
     
       
-        
-      
-        
-          <li><a href="/inline-svg-icons">Getting started with inline SVG icons</a>  
-          
-            As a typography nerd, using a custom font to serve icons felt really good. It turns out inline SVG icons are better in almost every way.
-          </li>
         
       
         

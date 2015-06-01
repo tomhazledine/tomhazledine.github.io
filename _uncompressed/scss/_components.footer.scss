@@ -1,50 +1,63 @@
-.footerMenu{
-	display:block;
-	padding:0 1em;
-	text-align:center;
-	li{
-		font-family:$caps;
-		text-transform:lowercase;
-		letter-spacing:.05em;
-		display:inline-block;
-		margin-right:1.5em;
-		&:last-of-type{margin-right:0;}
-		@include bp(d3){
-			margin-right:0;
-			display:block;
-		}
-		a{
-			font-size:.7em;
-			display:block;
-			line-height:1;
-			padding:.2em 0;
-			&:hover{
-				background:inherit;
-				// color:$primary;
-				box-shadow:$primary 0 .2em 0 0;
-			}
-			@include bp(d3){
-				margin-right:0;
-				display:block;
-				font-size:1em;
-				&:hover{
-					box-shadow:none;
-				}
-			}
-		}
-
-	}
+// Social Icons
+.socialLinks{
+    font-size:.8em;
+    position:relative;
+    margin:3rem auto 0;
+    padding:6rem 0 0 0;
+    text-align:center;
+    width:$contentWidth;
+    @include breakpoint(XSsize){
+        width:100%;
+    }
+    &:before{
+        @include horizontalRule(top);
+    }
+    .socialContainer{
+        display:block;
+        float:left;
+        width:50%;
+        @include breakpoint(XSsize){
+            width:100%;
+            padding:2em;
+        }
+    }
+    a{
+        display:inline;
+        position:relative;
+        margin-left:2em;
+        line-height:1;
+        text-transform:uppercase;
+        font-style:italic;
+        .icon{
+            font-size:2.5em;
+            position:absolute;
+            display:block;
+            width:1em;
+            height:1em;
+            top:-.25em;
+            left:-1.2em;
+            line-height:1em;
+            text-align:center;
+            fill:$black;
+            transition-property:fill;
+            transition-duration:.3s;
+        }
+        &:hover .icon{
+            fill:$primary;
+        }
+    }
 }
 
-.credits{
-	font-size:.7em;
-	font-family:$caps;
-	text-transform:lowercase;
-	text-align:center;
-	display:block;
-	padding:.5em 0 1em 0;
-	@include bp(d3){
-		font-size:1em;
-		padding-top:1em;
-	}
+// Email Link
+.footer{
+    text-align:center;
+    margin:0 0 3em 0;
+    a{
+        background:none;
+        font-weight:$bold;
+        &:hover{
+            color:$black;
+            background:$primary;
+        }
+    }
 }

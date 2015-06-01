@@ -1,0 +1,304 @@
+// 01. Portfolio Styles
+// 02. Showcase Styles
+// 03. Showcase Slider
+// 04. Showcase Slider Buttons
+
+// 01. Portfolio Styles
+.portfolioEntry{
+  padding-bottom:3em;
+}
+.portfolioH2{padding:0;}
+
+// 02. Showcase Styles
+.showcaseH1{
+  padding:0;
+  margin:0;
+  &:after{display:none;}
+}
+.showcaseLink{
+  display:block;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+  position:relative;
+  a{
+    position:relative;
+    .icon{
+      // font-family:$icons;
+      display:block;
+      // content:"\e000";
+      fill:darken($grey,5%);
+      font-size:2.5em;
+      position:absolute;
+      height:.5em;
+      width:.7em;
+      padding-right:.2em;
+      top:0;
+      right:100%;
+    }
+  }
+}
+.showcaseHeader{
+  position:relative;
+  padding:0 0 5rem 0;
+  margin:0 0 6rem 0;
+  &:after{@include horizontalRule(bottom);}
+}
+.showcaseExcerpt{
+  display:block;
+  width:60%;
+  margin:0 auto;
+  text-align:center;
+}
+
+// 03. Showcase Slider
+.showcaseSlider{
+  background:$black;
+  height:20em;
+  margin:1em auto;
+  transition-property:width, border, border-radius, height;
+  transition-duration:1s;
+  position:relative;
+  transform:translateZ(0);
+  box-shadow: darken($grey, 5%) 0 .2em 0 0,
+              lighten($grey, 5%) 0 .4em 0 0,
+              darken($grey, 20%) -.4em .8em 0 -.2em;
+  &.desktop{
+    .desktopImg{
+      opacity:1;
+      z-index:1;
+    }
+    .tabletImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .phoneImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    width:100%;
+    @include breakpoint(XSsize){height:10em;}
+    //min-width:22em;
+    border-top:$grey solid 1em;
+    border-bottom:$grey solid .2em;
+    border-radius:.5em .5em 0em 0em;
+    &:before{
+      content:"";
+      width:.5em;
+      height:.5em;
+      border-radius:.25em;
+      background:$primary;
+      position:absolute;
+      top:-.75em;
+      left:.5em;
+    }
+    &:after{
+      content:"";
+      width:.5em;
+      height:.5em;
+      border-radius:.25em;
+      background:$black;
+      position:absolute;
+      top:-.75em;
+      left:1.25em;
+    }
+    .showcaseAddons{
+      position:absolute;
+      top:-.9rem;
+      left:0;
+      width:100%;
+      text-align:center;
+      //z-index:10000;
+      font-size:.6em;
+      font-family:$code;
+      &:before{
+        content:"";
+        width:.5rem;
+        height:.5rem;
+        border-radius:.25rem;
+        background:$cream;
+        position:absolute;
+        top:.15rem;
+        left:2rem;
+      }
+    }
+  }
+  &.tablet{
+    .desktopImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .tabletImg{
+      opacity:1;
+      z-index:1;
+    }
+    .phoneImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    width:16em;
+    max-width:100%;
+    border-top:$grey solid 1.3em;
+    border-bottom:$grey solid 1.3em;
+    border-radius:.8em;
+    &:before{
+      content:"";
+      width:.5em;
+      height:.5em;
+      border-radius:.25em;
+      border:$black solid .2em;
+      background:$white;
+      position:absolute;
+      top:-.75em;
+      left:50%;
+      margin-left:-.25em;
+    }
+    &:after{
+      content:"";
+      width:1em;
+      height:1em;
+      position:absolute;
+      bottom:-1.1em;
+      left:50%;
+      margin-left:-.5em;
+      background:$grey;
+      border:$black solid .2em;
+      border-radius:50%;
+    }
+    .showcaseAddons{display:none;}
+  }
+  &.phone{
+    .desktopImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .tabletImg{
+      opacity:0;
+      z-index:0;
+      //height:100%;
+    }
+    .phoneImg{
+      opacity:1;
+      z-index:1;
+    }
+    width:12em;
+    //font-size:.8em;
+    border-top:$grey solid 1.6em;
+    border-bottom:$grey solid 1.6em;
+    border-radius:1em;
+    &:before{
+      content:"";
+      width:.7em;
+      height:.7em;
+      border-radius:.35em;
+      border:$black solid .3em;
+      background:$white;
+      position:absolute;
+      top:-1.15em;
+      left:3em;
+      z-index:2;
+    }
+    &:after{
+      content:"";
+      width:1.2em;
+      height:1.2em;
+      position:absolute;
+      bottom:-1.4em;
+      left:50%;
+      margin-left:-.6em;
+      background:$grey;
+      border:$black solid .2em;
+      border-radius:50%;
+    }
+    .showcaseAddons{
+      position:absolute;
+      top:-.9rem;
+      left:0;
+      width:100%;
+      z-index:1;
+      color:$grey;
+      font-size:0;
+      &:before{
+        content:"";
+        width:3rem;
+        height:.2rem;
+        border-radius:.25rem;
+        background:$primary;
+        position:absolute;
+        top:.3rem;
+        left:50%;
+        margin-left:-1.5rem;
+      }
+      &:after{
+        content:"";
+        width:2rem;
+        height:.3rem;
+        border-radius:.25rem;
+        background:$black;
+        position:absolute;
+        top:-.2rem;
+        left:50%;
+        margin-left:-1rem;
+      }
+    }
+  }
+}
+.showcaseSlider{
+  .imgCropper{
+    padding:0;
+    margin:0;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    //overflow-y:scroll;
+    position:relative;
+    img{
+      position:absolute;
+      top:0;
+      padding:0;
+      margin:0;
+      width:100%;
+      transition-property:opacity;
+      transition-duration:1s;
+      //height:100%;
+      //overflow-y:scroll;
+    }
+  }
+}
+// 04. Showcase Slider Buttons
+.showcaseControls{
+  //background:red;
+  text-align:center;
+  margin:0 auto 6em;
+  .showcaseControl{
+    border:none;
+    background:$grey;
+    color:$black;
+    font-family:$text;
+    font-style:italic;
+    text-transform:uppercase;
+    font-size:1em;
+    padding:0 1em;
+    margin:.5em;
+    border-radius:.5em;
+    cursor:pointer;
+    transition-property:background;
+    transition-duration:.3s;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    outline:none;
+    &:focus{outline:none;}
+    &.selected{
+      background:$primary;
+      color:$cream;
+      &:hover{background:$primary;color:$cream;}
+    }
+    &:hover{background:$black;color:$primary;}
+  }
+}

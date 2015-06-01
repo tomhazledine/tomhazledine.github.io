@@ -1,0 +1,104 @@
+@mixin navButton{
+  display:block;
+  width:30em;
+  font-style:italic;
+  font-size:1em;
+  font-weight:$bold;
+  color:$cream;
+  line-height:1;
+  position:fixed;
+  z-index:2000;
+  top:50%;
+  margin-top:-3.5em;
+  padding:3em 2em;
+}
+@mixin navButtonDot($mode){
+  position:absolute;
+  display:block;
+  content:"";
+  width:.5em;
+  height:1em;
+  top:3em;
+  background:$white;
+  @if $mode == prev{
+    border-radius:.5em 0 0 .5em;
+    right:0;
+  } @elseif $mode == next{
+    border-radius:0 .5em .5em 0;
+    left:0;
+  }
+}
+@mixin navButtonLabel($mode){
+  @if $mode == prev{
+    content:"Prev.";
+    padding:0 1em 0 0;
+  } @elseif $mode == next{
+    content:"Next";
+    padding:0 0 0 1em;
+  }
+  font-weight:$book;
+  text-transform:uppercase;
+}
+.nav-button-prev{
+  @include navButton;
+  left:-28.5em;
+  text-align:right;
+  &:after{@include navButtonDot(prev);}
+  &:before{@include navButtonLabel(prev);}
+  &:hover{
+    transform:translateX(20em);
+    &:after{background:$cream;}
+  }
+}
+.nav-button-next{
+  @include navButton;
+  right:-28.5em;
+  &:before{@include navButtonDot(next);}
+  &:after{@include navButtonLabel(next);}
+  &:hover{
+    transform:translateX(-20em);
+    &:before{background:$cream;}
+  }
+}
+.nextTitle{
+  font-weight:$bold;
+  text-transform:capitalize;
+  font-size:1rem;
+  float:left;
+  display:block;
+  height:2em;
+}
+
+// Small/Touch Next/Prev links
+@mixin navButtonRWD{
+  position:static;
+  width:45%;
+  padding:1em 0;
+  margin:0;
+  color:$black;
+  text-align:center;
+  &:hover{transform:none;}
+
+}
+@include breakpoint(XSsize){
+  .nav-button-prev{
+    @include navButtonRWD;
+    float:left;
+    &:after{display:none;}
+  }
+  .nav-button-next{
+    @include navButtonRWD;
+    float:right;
+    &:before{display:none;}
+  }
+}
+.touch{
+  .nav-button-prev{
+    @include navButtonRWD;
+    float:left;
+    &:after{display:none;}}
+  .nav-button-next{
+    @include navButtonRWD;
+    float:right;
+    &:before{display:none;}}
+}

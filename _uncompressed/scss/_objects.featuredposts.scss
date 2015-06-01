@@ -1,0 +1,33 @@
+.archive{
+  clear:both;
+  li{
+    padding:0 0 .4em 1em;
+    text-indent:-1em;
+  }
+}
+.featured{
+  position:relative;
+  margin:3em 0 0 0;
+  padding:6em 0 3em 0;
+  text-align:left;
+  @include bigFirstLetter;
+  &:after{
+    @include horizontalRule(top);
+  }
+}
+.relatedPostsTitle{
+  font-weight:$book;
+  font-style:italic;
+  text-transform:uppercase;
+
+}
+.relatedPostLi{
+  font-weight:$bold;
+  margin:1em 0 0 0;
+}
+.popularPosts{
+  margin:3em 0;
+}
+.popularPost{
+  padding:0 0 2em 0;
+}

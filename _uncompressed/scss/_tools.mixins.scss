@@ -27,3 +27,38 @@
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
 }
+
+// 05. Module Mixins
+@mixin horizontalRule($pos){
+  position:absolute;
+  @if $pos == top{
+    bottom:100%;
+  } @else if $pos == bottom{
+    top:100%;
+  }
+  left:50%;
+  content:"";
+  width:16rem;
+  margin-left:-8rem;
+  border-top:.1rem solid $black;
+  @include breakpoint(XSsize){
+    width:5em;
+    margin-left:-2.5em;
+  }
+}
+@mixin bigFirstLetter{
+  &::first-letter{
+    font-size:1.5em;
+    color:$primary;
+  }
+  a:first-letter{
+    font-size:1.5em;
+    color:$primary;
+    transition:color,background;
+    transition-duration:.3s;
+  }
+  a:hover:first-letter{
+    color:$cream;
+    font-size:1.5em;
+  }
+}
