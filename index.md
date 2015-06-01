@@ -3,8 +3,8 @@ layout: homepage
 location: home
 title: "about"
 group: "navigation"
-headline: I'm a web designer and developer based in Cornwall, UK.
-intro: Designing for the web is about more than painting pretty pictures of websites. You have to get down and dirty in the browser as soon as possible.
+headline: Hello. I'm a front-end developer and UX designer from Cornwall.
+intro: Lover of beer, whisky and lettering, and currently obsessing about the future of editorial design.
 ---
 
 In this post-smartphone age we have to build sites that work on everything from watch-sized screens to touch devices the size of table-tops. The print ‘canvas’ is a myth in web-design; as designers we must embrace the dynamic ever-changing beauty of the web.
