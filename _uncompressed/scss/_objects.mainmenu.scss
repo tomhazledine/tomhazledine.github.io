@@ -1,0 +1,101 @@
+.mainMenuToggle{
+    @extend %buttonReset;
+    height:1em;
+    width:1em;
+    margin:.2em .5em;
+    float:right;
+    // background:$red;
+    position:relative;
+    z-index:3;
+    &:focus{outline:none;}
+}
+
+.navicon{
+    display:block;
+    background:$cream;
+    height:.2rem;
+    margin:.4rem auto;
+    position:relative;
+    width:.8em;
+    transition:background;
+    transition-duration:.2s;
+    &:before,&:after{
+        content:'';
+        display:block;
+        position:absolute;
+        height:.2rem;
+        background:$cream;
+        width:100%;
+        left:50%;
+        margin-left:-.4em;
+        transform-origin:50% 50%;
+        transition:transform,top,bottom;
+        transition-duration:.2s;
+    }
+    &:before{
+        top:-.4rem;
+    }
+    &:after{
+        bottom:-.4rem;
+    }
+}
+.mainMenuToggle.open .navicon{
+    background:$black;
+    width:.6em;
+    &:before{
+        transform:rotate(45deg);
+        top:0;
+    }
+    &:after{
+        transform:rotate(-45deg);
+        bottom:0;
+    }
+}
+
+.mainMenuWrapper{
+    z-index:2;
+    position:fixed;
+    // top:0;
+    // right:0;
+    background:$primary;
+    width:100%;
+    display:table;
+    bottom:0;//100%;
+    left:100%;
+    transition:bottom,left;
+    transition-duration:.2s;
+    // max-height:0;
+    // overflow:hidden;
+    &.open{
+        bottom:0;
+        left:0;
+    }
+}
+
+.mainMenu{
+    list-style:none;
+    display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+    li{
+        display:block;
+        text-align:center;
+        a{
+            display:inline-block;
+            background:none;
+            color:$black;
+            font-weight:$bold;
+            padding:.5em 0;
+            box-shadow:
+                inset $cream 0 -.2em 0 0,
+                inset darken($primary,25%) 0 0 0 0;
+            transition:box-shadow;
+            transition-duration:.2s;
+            &:hover{
+                box-shadow:
+                    inset $cream 0 -.2em 0 0,
+                    inset darken($primary,25%) 0 -1.8em 0 0;
+            }
+        }
+    }
+}

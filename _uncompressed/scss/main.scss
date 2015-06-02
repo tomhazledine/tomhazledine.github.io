@@ -1,25 +1,28 @@
 // // 01. SETTINGS
-// @import "settings.colours";
-// @import "settings.fonts";
-// @import "settings.breakpoints";
+@import "settings.colours";
+@import "settings.fonts";
+@import "settings.breakpoints";
 
 // // 02. TOOLS
-// @import "tools.codepen-embed";
-// @import "tools.placeholders";
-// @import "tools.mixins";
-// @import "tools.general";
+@import "tools.codepen-embed";
+@import "tools.placeholders";
+@import "tools.mixins";
+@import "tools.general";
 
 // // 03. GENERIC
-// @import "generic.reset";
+@import "generic.reset";
+@import "generic.base";
 // @import "generic.theme";
 
 // // // 04. BASE
 // @import "base.contentareas";
 // @import "base.codeblocks";
 // // @import "base.generic";
-// @import "base.theme";
+@import "base.theme";
 
 // // // 05. OBJECTS
+@import "objects.mainmenu";
+@import "objects.header";
 // @import "objects.featuredposts";
 // @import "objects.nextPrevLinks";
 // @import "objects.dropcaps";
@@ -31,7 +34,7 @@
 // @import "components.portfolio";
 // @import "components.footer";
 // // // 07. TRUMPS
-// @import "trumps.utilities";
+@import "trumps.utilities";
 // // @import "trumps.theme";
 // // //@import "trumps.fout";
 
