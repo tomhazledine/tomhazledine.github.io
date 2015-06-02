@@ -79,7 +79,7 @@
       //height:100%;
     }
     width:100%;
-    @include breakpoint(XSsize){height:10em;}
+    @include bp(d3){height:10em;}
     //min-width:22em;
     border-top:$grey solid 1em;
     border-bottom:$grey solid .2em;

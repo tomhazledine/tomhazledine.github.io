@@ -84,7 +84,7 @@
   &:hover{transform:none;}
 
 }
-@include breakpoint(XSsize){
+@include bp(d3){
   .nav-button-prev{
     @include navButtonRWD;
     float:left;

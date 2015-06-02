@@ -41,7 +41,7 @@
   width:16rem;
   margin-left:-8rem;
   border-top:.1rem solid $black;
-  @include breakpoint(XSsize){
+  @include bp(d3){
     width:5em;
     margin-left:-2.5em;
   }

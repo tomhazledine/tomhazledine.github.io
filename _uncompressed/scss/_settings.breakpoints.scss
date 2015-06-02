@@ -9,22 +9,3 @@
     @else if $point == d2 { @media (max-width:800px)  { @content; } }
     @else if $point == d3 { @media (max-width:570px)  { @content; } }
 }
-
-// 02. Media Queries
-@mixin breakpoint($point){
-    @if $point == XLsize{
-        @media (min-width:1600px){@content;}
-    }
-    @elseif $point == Lsize{
-        @media (min-width:1200px){@content;}
-    }
-    @elseif $point == Msize{
-        @media (max-width:1000px){@content;}
-    }
-    @elseif $point == Ssize{
-        @media (max-width:800px){@content;}
-    }
-    @elseif $point == XSsize{
-        @media (max-width:570px){@content;}
-    }
-}
