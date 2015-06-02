@@ -1,85 +1,37 @@
 // Add header and footer styles from native theme for pages with custom CSS
+// // 01. SETTINGS
 @import "settings.colours";
 @import "settings.fonts";
 @import "settings.breakpoints";
 
-@import"utilities";
-@import"declarations";
-@import"global";
-@import"widgets";
-@import"header";
-//@import"footer";
+// // 02. TOOLS
+@import "tools.codepen-embed";
+@import "tools.placeholders";
+@import "tools.mixins";
+@import "tools.general";
 
-//body{font-family:$text;}
+// // 03. GENERIC
+@import "generic.reset";
+@import "generic.base";
 
-// Social Icons
-.socialLinks{
-  text-align:center;
-  max-width:30em;
-  margin:0 auto;
-  padding:1em;
-}
+// // // 04. BASE
+// @import "base.contentareas";
+// @import "base.codeblocks";
+@import "base.theme";
 
-.socialLinks{
-  font-size:.8em;
-  position:relative;
-  margin:3rem auto 0;
-  padding:6rem 0 0 0;
-  text-align:center;
-  width:$contentWidth;
-  @include bp(d3){
-    width:100%;
-  }
-  &:before{
-    @include horizontalRule(top);
-  }
-  .socialContainer{
-    display:block;
-    float:left;
-    width:50%;
-    @include bp(d3){
-      width:100%;
-      padding:2em;
-    }
-  }
-  a{
-    display:inline;
-    position:relative;
-    margin-left:2em;
-    line-height:1;
-    text-transform:uppercase;
-    font-style:italic;
-    .icon{
-      font-size:2.5em;
-      position:absolute;
-      display:block;
-      width:1em;
-      height:1em;
-      top:-.25em;
-      left:-1.2em;
-      line-height:1em;
-      text-align:center;
-      fill:$black;
-      transition-property:fill;
-      transition-duration:.3s;
-    }
-    &:hover .icon{
-      fill:$primary;
-    }
-  }
-}
+// // // 05. OBJECTS
+@import "objects.mainmenu";
+@import "objects.header";
+@import "objects.footer";
+@import "objects.sociallinks";
+// @import "objects.featuredposts";
+@import "objects.nextPrevLinks";
+// @import "objects.dropcaps";
+// @import "objects.blockquote";
+// @import "objects.archive";
 
-// Email Link
-.footer{
-  text-align:center;
-  padding:3em 0;
-  margin:0;
-  a{
-    background:none;
-    font-weight:$bold;
-    &:hover{
-      color:$black;
-      background:$primary;
-    }
-  }
-}
+// // // 06. COMPONENTS
+// @import "components.portfolio";
+
+// // // 07. TRUMPS
+@import "trumps.utilities";

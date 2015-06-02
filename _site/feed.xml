@@ -70,8 +70,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;/ul&gt;
 </description>
 <pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
-<link>http://thomashazledine.com/inline-svg-Icons</link>
-<guid isPermaLink="true">http://thomashazledine.com/inline-svg-Icons</guid>
+<link>http://thomashazledine.com/inline-svg-icons</link>
+<guid isPermaLink="true">http://thomashazledine.com/inline-svg-icons</guid>
 </item>
 
 <item>

@@ -12,12 +12,10 @@
 // // 03. GENERIC
 @import "generic.reset";
 @import "generic.base";
-// @import "generic.theme";
 
 // // // 04. BASE
 @import "base.contentareas";
 @import "base.codeblocks";
-// // @import "base.generic";
 @import "base.theme";
 
 // // // 05. OBJECTS
@@ -32,14 +30,7 @@
 @import "objects.archive";
 
 // // // 06. COMPONENTS
-// @import "components.header";
 @import "components.portfolio";
-// @import "components.footer";
+
 // // // 07. TRUMPS
 @import "trumps.utilities";
-// // @import "trumps.theme";
-// // //@import "trumps.fout";
-
-// // // html{color:red;}
-// // // UH OH!
-// // @import "shame";
