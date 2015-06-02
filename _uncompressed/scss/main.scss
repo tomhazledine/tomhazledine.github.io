@@ -15,23 +15,25 @@
 // @import "generic.theme";
 
 // // // 04. BASE
-// @import "base.contentareas";
-// @import "base.codeblocks";
+@import "base.contentareas";
+@import "base.codeblocks";
 // // @import "base.generic";
 @import "base.theme";
 
 // // // 05. OBJECTS
 @import "objects.mainmenu";
 @import "objects.header";
-// @import "objects.featuredposts";
-// @import "objects.nextPrevLinks";
-// @import "objects.dropcaps";
-// @import "objects.blockquote";
-// @import "objects.archive";
+@import "objects.footer";
+@import "objects.sociallinks";
+@import "objects.featuredposts";
+@import "objects.nextPrevLinks";
+@import "objects.dropcaps";
+@import "objects.blockquote";
+@import "objects.archive";
 
 // // // 06. COMPONENTS
 // @import "components.header";
-// @import "components.portfolio";
+@import "components.portfolio";
 // @import "components.footer";
 // // // 07. TRUMPS
 @import "trumps.utilities";

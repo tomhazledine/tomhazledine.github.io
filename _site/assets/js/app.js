@@ -10404,6 +10404,47 @@ $(document).ready(function() {
   }
  
 });
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+
+var header = $('#mainHeader');
+var navbarHeight = header.outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var scrollTop = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - scrollTop) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .tuckedUp.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (scrollTop > lastScrollTop && scrollTop > navbarHeight){
+        // Scroll Down
+        header.addClass('tuckedUp');
+    } else if(scrollTop + $(window).height() < $(document).height()) {
+        // Scroll Up
+        header.removeClass('tuckedUp');
+    }
+
+    lastScrollTop = scrollTop;
+}
+$(window).resize(function(){
+    $('header').removeClass('nav-up').addClass('nav-down');
+    $('.topNav ul').removeClass('down');
+});
 // 01. Test Alert
 // 02. Small-screen Nav Menu
 // 03. Fight the FOUT!
@@ -10486,49 +10527,49 @@ $(document).ready(function(){
 // 06. Hide nav on scroll
 //*
 // Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
+// var didScroll;
+// var lastScrollTop = 0;
+// var delta = 5;
+// var navbarHeight = $('header').outerHeight();
 
-$(window).scroll(function(event){
-    didScroll = true;
-});
+// $(window).scroll(function(event){
+//     didScroll = true;
+// });
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
+// setInterval(function() {
+//     if (didScroll) {
+//         hasScrolled();
+//         didScroll = false;
+//     }
+// }, 250);
 
-function hasScrolled() {
-    var st = $(this).scrollTop();
+// function hasScrolled() {
+//     var st = $(this).scrollTop();
 
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
+//     // Make sure they scroll more than delta
+//     if(Math.abs(lastScrollTop - st) <= delta)
+//         return;
 
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('header').removeClass('nav-down').addClass('nav-up');
-				$('.topNav ul').removeClass('down');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
-						$('.topNav ul').removeClass('down');
-        }
-    }
+//     // If they scrolled down and are past the navbar, add class .nav-up.
+//     // This is necessary so you never see what is "behind" the navbar.
+//     if (st > lastScrollTop && st > navbarHeight){
+//         // Scroll Down
+//         $('header').removeClass('nav-down').addClass('nav-up');
+// 				$('.topNav ul').removeClass('down');
+//     } else {
+//         // Scroll Up
+//         if(st + $(window).height() < $(document).height()) {
+//             $('header').removeClass('nav-up').addClass('nav-down');
+// 						$('.topNav ul').removeClass('down');
+//         }
+//     }
 
-    lastScrollTop = st;
-}
-$(window).resize(function(){
-	$('header').removeClass('nav-up').addClass('nav-down');
-	$('.topNav ul').removeClass('down');
-});
+//     lastScrollTop = st;
+// }
+// $(window).resize(function(){
+// 	$('header').removeClass('nav-up').addClass('nav-down');
+// 	$('.topNav ul').removeClass('down');
+// });
 
 //*/
 

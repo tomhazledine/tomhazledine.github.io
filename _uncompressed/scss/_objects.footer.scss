@@ -1,0 +1,12 @@
+.footer{
+    text-align:center;
+    margin:0 0 3em 0;
+    a{
+        background:none;
+        font-weight:$bold;
+        &:hover{
+            color:$black;
+            background:$primary;
+        }
+    }
+}

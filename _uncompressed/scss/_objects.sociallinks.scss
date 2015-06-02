@@ -1,20 +1,49 @@
-.socialLink{
-	float:left;
-	margin-right:1em;
-	height:2em;
-	// background:$yellow;
-	a{
-		display:block;
-		line-height:1;
-		// height:1.2em;
-		cursor:pointer;
-		padding-top:.5em;
-		border-bottom:.2em solid $black;
-		&:hover{border-bottom-color:$highlight;}
-		&:before{font-family:$icons;}
-		&.twitter:before{content:"\e004";}
-		&.facebook:before{content:"\e001";}
-		&.linkedIn:before{content:"\e003";}
-		&.googlePlus:before{content:"\e002";}
-	}
+// Social Icons
+.socialLinks{
+    font-size:.8em;
+    position:relative;
+    margin:3rem auto 0;
+    padding:6rem 0 0 0;
+    text-align:center;
+    // width:$30em;
+    @include bp(d3){
+        width:100%;
+    }
+    &:before{
+        @include horizontalRule(top);
+    }
+    .socialContainer{
+        display:block;
+        float:left;
+        width:50%;
+        @include bp(d3){
+            width:100%;
+            padding:2em;
+        }
+    }
+    a{
+        display:inline;
+        position:relative;
+        margin-left:2em;
+        line-height:1;
+        text-transform:uppercase;
+        font-style:italic;
+        .icon{
+            font-size:2.5em;
+            position:absolute;
+            display:block;
+            width:1em;
+            height:1em;
+            top:-.25em;
+            left:-1.2em;
+            line-height:1em;
+            text-align:center;
+            fill:$black;
+            transition-property:fill;
+            transition-duration:.3s;
+        }
+        &:hover .icon{
+            fill:$primary;
+        }
+    }
 }

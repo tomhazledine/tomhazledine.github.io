@@ -8,6 +8,16 @@
     width:100%;
     line-height:1;
     z-index:3;
+    min-width:300px;
+    transition:top;
+    transition-duration:.2s;
+    &.tuckedUp{
+        top:-1.4em;
+    }
+    .logo{
+        font-size:1em;
+        padding:0;
+    }
 }
 .siteName{
     display:inline-block;

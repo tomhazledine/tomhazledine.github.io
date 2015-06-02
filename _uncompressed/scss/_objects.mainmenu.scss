@@ -80,21 +80,19 @@
     li{
         display:block;
         text-align:center;
+        padding:.2em 0;
         a{
+            line-height:1;
             display:inline-block;
             background:none;
             color:$black;
             font-weight:$bold;
             padding:.5em 0;
-            box-shadow:
-                inset $cream 0 -.2em 0 0,
-                inset darken($primary,25%) 0 0 0 0;
+            box-shadow:inset $cream 0 -.2em 0 0;
             transition:box-shadow;
             transition-duration:.2s;
             &:hover{
-                box-shadow:
-                    inset $cream 0 -.2em 0 0,
-                    inset darken($primary,25%) 0 -1.8em 0 0;
+                box-shadow:inset $cream 0 -2em 0 0;
             }
         }
     }
