@@ -1,17 +1,55 @@
 // native css reset
-@import"nativeReset";
+// @import"nativeReset";
+@import "settings.colours";
+@import "settings.fonts";
+@import "settings.breakpoints";
 
-// Colours
-$white:#fff;
-$brown:#4d3b3b;
-$c90grey:#bbbbbb;
-$c90red:#dd342f;//#881615;
-$c90green:#4b9121;
-$c90black:#141311;
-$screwGrey:#5e5f5a;
-$red:#fd6139;
-$blue:#424ba8;
-$paper:#f8f1e1;//#d1cfb6;
+// // 02. TOOLS
+@import "tools.codepen-embed";
+@import "tools.placeholders";
+@import "tools.mixins";
+@import "tools.general";
+
+// // 03. GENERIC
+@import "generic.reset";
+// @import "generic.base";
+
+// // // 04. BASE
+// @import "base.contentareas";
+// @import "base.codeblocks";
+@import "base.theme";
+
+// // // 05. OBJECTS
+@import "objects.mainmenu";
+@import "objects.header";
+@import "objects.footer";
+@import "objects.sociallinks";
+// @import "objects.featuredposts";
+@import "objects.nextPrevLinks";
+// @import "objects.dropcaps";
+// @import "objects.blockquote";
+// @import "objects.archive";
+
+// // // 06. COMPONENTS
+// @import "components.portfolio";
+
+// // // 07. TRUMPS
+@import "trumps.utilities";
+
+*{box-sizing:border-box;}
+
+body{
+    line-height:1.4;
+}
+
+p{text-indent:0;}
+
+p:after{display:none;}
+
+p::first-letter {
+  font-size:inherit;
+  color:inherit;
+}
 
 // Typography
 @font-face {
@@ -25,48 +63,77 @@ $paper:#f8f1e1;//#d1cfb6;
     font-style: normal;
 }
 
+// Colours
+$black:#4d4d4d;
+$white:#ffffff;
+$cream:#efeeeb;
+$grey:#dad8d2;
+$primary:$cream;//#00b7c6;
+
+$brown:#4d3b3b;
+$c90grey:#bbbbbb;
+$c90red:#dd342f;//#881615;
+$c90green:#4b9121;
+$c90black:#141311;
+$screwGrey:#5e5f5a;
+$red:#fd6139;
+$blue:#424ba8;
+$paper:#f8f1e1;//#d1cfb6;
+
+// Typography
+$bold:900;
+$book:400;
+$sans:$text;
+$cursive:'cassette', cursive;
+
+// Animation
+$dur:1s;
+
+// Global
+// html{min-height:100%;}
+// body{
+//     //min-height:50em;
+//   font-family:$sans;
+//   font-size:1.5em;
+//   color:$black;
+//   background:$primary;//$white;
+//   //box-shadow:inset $grey 0 0 5em 2em;
+//   padding:5em 0 10em 0;
+//   line-height:1.4em;
+// }
+// Clearfix
+// .clearfix:before,
+// .clearfix:after {
+//     content:" "; // 1
+//     display:table; // 2
+// }
+// .clearfix:after {clear:both;}
+// // For IE 6/7 only – Include this rule to trigger hasLayout and contain floats.
+// .clearfix {*zoom:1;}
+
 // Variables
 $cassetteShadow1:-.9em;
 $cassetteShadow2:2em;
 $cassetteShadow3:0;
 $cassetteShadow4:.5em;
 
-// Global Styles
-html{
-  height:100%;
-}
-body{
-  min-height:100%;
-  background:$white;
-  box-shadow:inset $grey 0 0 5em 2em;
-  //overflow:hidden;
-}
-.cassetteHeading{
-  padding-top:1em;
-  font-size:2em;
-  text-align:center;
-  font-family:'cassette';
-  color:$blue;
-}
-.linkToBottom{
-  display:block;
-  width:10em;
-  text-align:center;
-  margin:6em auto 0;
+// Cassette
+
+.cassetteWrapper{
+    position:relative;
+    z-index:1;
 }
 
-
-// Cassette Illustation
 .cassetteOuter{
   position:relative;
-  margin:2em auto;
+  margin:0em auto;
   background:$c90grey;
   border-radius:.7em;
   width:20em;
   height:12em;
   box-shadow:
     darken($c90grey,15%) 0 .6em 0 0,
-    $grey $cassetteShadow1 $cassetteShadow2 0 $cassetteShadow4;
+    darken($primary,10%) $cassetteShadow1 $cassetteShadow2 0 $cassetteShadow4;
   padding:1em;
   border-top:lighten($c90grey,10%) solid .1em;
   border-bottom:darken($c90grey,10%) solid .1em;
@@ -79,11 +146,11 @@ body{
     border-right:darken($c90grey, 15%) solid .2em;
     border-top:transparent solid .2em;
     border-bottom:transparent solid .2em;
-    box-shadow:$grey $cassetteShadow1 $cassetteShadow2 0 $cassetteShadow4;
+    box-shadow:darken($primary,10%) $cassetteShadow1 $cassetteShadow2 0 $cassetteShadow4;
   }
   &:after{
     position:absolute;
-    z-index:-9000;
+    z-index:-1;
     bottom:1em;
     left:100%;
     content:"";
@@ -91,7 +158,7 @@ body{
     border-left:darken($c90grey, 5%) solid .2em;
     border-top:transparent solid .2em;
     border-bottom:transparent solid .2em;
-    box-shadow:$grey $cassetteShadow1 $cassetteShadow2 0 $cassetteShadow4;
+    box-shadow:darken($primary,10%) $cassetteShadow1 $cassetteShadow2 0 $cassetteShadow4;
   }
 }
 .screw{
@@ -171,6 +238,7 @@ body{
     border-radius:.1em;
     top:.8em;
     left:1em;
+    font-weight:$bold;
     display:block;
     background:$black;
     color:$cream;
@@ -181,7 +249,7 @@ body{
     text-align:center;
   }
   .cursive{
-    font-family:'cassette';
+    font-family:$cursive;
     display:block;
     padding: .5em .5em .5em 5em;
     transform:rotate(-3deg);
@@ -213,7 +281,7 @@ body{
 .middle{
   position:relative;
   width:60%;
-  margin:.5em auto 0;
+  margin:0em auto 0;
   background:$c90grey;
   padding:.2em;
   border-radius:.4em;
@@ -225,12 +293,13 @@ body{
 }
 .circle{
   display:block;
+  position:relative;
   float:left;
   &.two{float:right;}
   width:2.3em;
   height:2.4em;
   border-radius:50%;
-  background:$white;
+  background:$primary;
   border-top:darken($c90grey,10%) solid .1em;
   border-bottom:lighten($c90grey,15%) solid .1em;
   box-shadow:
@@ -238,11 +307,46 @@ body{
     inset darken($c90grey,15%) 0 .1em 0 .2em,
     inset $cream 0 .1em 0 .4em,
     inset darken($cream,25%) 0 .2em 0 .4em,
-    inset $grey -.7em 1.5em 0 0;
+    inset darken($primary,10%) -.7em 1.5em 0 0;
+}
+.teethBox{
+  position:absolute;
+  top:50%;
+  margin-top:-0.75em;
+  left:50%;
+  margin-left:-0.85em;
+  width:1.7em;
+  height:1.7em;
+  transition:transform;
+  transition-duration:$dur;
+  //background:$red;
+}
+.teeth{
+  display:block;
+  position:absolute;
+  top:50%;
+  margin-top:-.1em;
+  left:50%;
+  width:1.7em;
+  margin-left:-.85em;
+  height:.2em;
+  box-shadow:
+    inset $cream .25em 0 0 0,
+    //inset darken($cream,25%) .3em 0 0 0,
+    inset $cream -.25em 0 0 0,
+    //inset darken($cream,25%) -.3em 0 0 0,
+    ;
+  &:nth-of-type(2){
+    transform:rotate(60deg);
+  }
+  &:nth-of-type(3){
+    transform:rotate(-60deg);
+  }
 }
 .window{
   position:absolute;
-  top:.1em;
+  z-index:2;
+  top:.2em;
   left:50%;
   margin-left:-2.5em;
   margin-top:.3em;
@@ -250,7 +354,7 @@ body{
   height:1.8em;
   border-radius:.4em;
   overflow:hidden;
-  background:$grey;
+  background:darken($primary,10%);
   border-top:darken($c90grey,10%) solid .1em;
   border-bottom:lighten($c90grey,15%) solid .1em;
   box-shadow:
@@ -261,7 +365,7 @@ body{
   .reelOne{
     position:absolute;
     left:-1.4em;
-    top:1em;
+    top:.9em;
     display:block;
     margin-left:-4.5em;
     margin-top:-4.5em;
@@ -269,6 +373,8 @@ body{
     height:9em;
     background:$brown;
     border-radius:50%;
+    transition:width,height,margin;
+    transition-duration:$dur;
     &:after{
       position:absolute;
       top:50%;
@@ -286,7 +392,7 @@ body{
   .reelTwo{
     position:absolute;
     right:-1.4em;
-    top:1em;
+    top:.9em;
     display:block;
     margin-right:-3em;
     margin-top:-3em;
@@ -294,6 +400,8 @@ body{
     height:6em;
     background:$brown;
     border-radius:50%;
+    transition:width,height,margin;
+    transition-duration:$dur;
     &:after{
       position:absolute;
       top:50%;
@@ -355,7 +463,7 @@ body{
     bottom:100%;
     left:50%;
     margin-left:-5.5em;
-    width:11em;
+    width:10.4em;
     border-bottom:darken($c90grey,15%) solid .1em;
     border-right:transparent solid .3em;
     border-left:transparent solid .3em;
@@ -368,11 +476,11 @@ body{
     top:100%;
     left:50%;
     margin-left:-5.5em;
-    width:11em;
+    width:10.4em;
     border-top:darken($c90grey,15%) solid .1em;
     border-right:transparent solid .3em;
     border-left:transparent solid .3em;
-    box-shadow:$grey $cassetteShadow1 ($cassetteShadow2 - .6em) 0 $cassetteShadow4;
+    box-shadow:darken($primary,10%) $cassetteShadow1 ($cassetteShadow2 - .6em) 0 $cassetteShadow4;
   }
 }
 .holes{
@@ -442,6 +550,26 @@ body{
   &.three{right:.5em;}
 }
 
+// Hover Animation
+.cassetteOuter:hover{
+  .teethBox{
+    transform:rotate(369deg);
+  }
+  .reelOne{
+    margin-left:-4em;
+    margin-top:-4em;
+    width:8em;
+    height:8em;
+  }
+  .reelTwo{
+    margin-right:-3.5em;
+    margin-top:-3.5em;
+    width:7em;
+    height:7em;
+  }
+  
+}
+
 // Liner Notes
 .linerNotes{
   width:21em;
@@ -453,7 +581,7 @@ body{
 }
 .linerNotesTop{
   transform:rotate(180deg) skewX(10deg);
-  box-shadow:$grey 1.1em -1em 0 0;
+  box-shadow:darken($primary,10%) 1.1em -1em 0 0;
   position:relative;
   left:.3em;
   height:3em;
@@ -461,50 +589,55 @@ body{
   padding:.4em;
   .boxDesc{
     @include linerSpan;
+    font-size:.5em;
     float:left;
-    padding-top:.3rem;
+    //padding-top:.6em;
   }
   .infoBoxes{
     @include linerSpan;
     float:right;
-    width:40%;
+    width:48%;
     @mixin infoBox{
       display:block;
       text-transform:uppercase;
       text-align:center;
-      border:$black solid .1rem;
+      border:$black solid .2em;
       width:33.33%;
-      height:1.2rem;
+      height:2.4em;
       float:left;
       line-height:1em;
     }
     .box1{
       @include infoBox;
       font-size:.6em;
-      padding-top:1em;
+      padding-top:.1em;
+      //background:red;
     }
     .box2{
       @include infoBox;
+      font-size:.8em;
       background:$black;
       color:$paper;
       font-weight:$bold;
-      padding-top:.4em;
+      padding-top:.7em;
     }
     .box3{
       @include infoBox;
       font-size:.6em;
-      padding-top:.6em;
+      padding-top:.2em;//.6em;
     }
     .boxCopyright{
       display:block;
       width:100%;
-      font-size:.8em;
+      height:.8em;
+      font-size:.6em;
       text-align:center;
+      position:relative;
+      top:.4em;
     }
   }
 }
 .linerNotesSpine{
-  //transform:rotate(180deg);
   transform:skewX(-10deg) rotate(180deg);
   position:relative;
   left:.3em;
@@ -519,22 +652,28 @@ body{
     inset darken($paper,25%) 0 .3em 0 0,
     inset darken($paper,25%) 0 -.3em 0 0,
     inset $c90red 0 -.7em 0 0,
-    $grey .6em -1em 0 .2em;
+    darken($primary,10%) .6em -1em 0 .2em;
   .spineTitle{
     display:block;
     background:darken($paper,25%);
     width:8em;
     margin:0 auto;
   }
-  padding-top:.3em;
+  padding-top:.2em;
 }
 .green{color:$c90green;}
 .linerNotesMainContent{
   position:relative;
   height:12em;
   background:$paper;
-  box-shadow:$grey -1em 1em 0 0;
+  box-shadow:darken($primary,10%) -1em 1em 0 0;
   z-index:1;
+  h1{
+    padding:0;
+    margin:0;
+    color:$blue;
+    &:after{display:none;}
+  }
   &:before{
     content:'';
     position:absolute;
@@ -549,9 +688,10 @@ body{
     position:absolute;
     top:0;
     right:0;
-    width:21em;
+    width:20.5em;
     border-top:darken($paper,10%) solid 2em;
     border-right:transparent solid .5em;
+    //display:none;
   }
   .side{
     float:left;
@@ -568,8 +708,8 @@ body{
     top:3em;
     height:10em;
     left:2em;
-    width:19em;
-    font-family:'cassette';
+    width:16em;
+    font-family:$cursive;
     color:$blue;
     transform:rotate(3deg);
     h1{
@@ -584,6 +724,7 @@ body{
   z-index:2;
   height:12em;
   background:$paper;
+  line-height:1.6;
   box-shadow:
     inset $c90red 0 1.5em 0 0,
     inset $c90red 0 -1.5em 0 0,
@@ -591,10 +732,10 @@ body{
     inset $red 0 -3em 0 0,
     inset $black 0 4.5em 0 0,
     inset $black 0 -4.5em 0 0,
-    $grey 1em -1em 0 0;;
-  padding-top:1.5em;
+    darken($primary,10%) 1em -1em 0 0;;
+  padding-top:2em;
   text-align:center;
-  p{line-height:1.5rem;}
+  //p{line-height:1.5em;}
   .black{
     text-transform:uppercase;
     font-weight:$bold;
@@ -607,8 +748,8 @@ body{
   .title{
     font-weight:$bold;
     font-size:2em;
-    line-height:3rem;
-    padding-bottom:1.5rem;
+    line-height:2em;
+    padding-bottom:.35em;
   }
 
 }

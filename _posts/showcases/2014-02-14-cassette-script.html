@@ -1,11 +1,16 @@
 ---
-layout: bare
+layout: null
 title: "Cassette Script Typeface"
 excerpt: "Cassette Script is a quirky handwriting font with over 200 characters."
 category: showcase
 soloCss: cassette.min.css
 customCss: cassette.min.css
 ---
+
+{% include head.html %}
+{% include header.html %}
+
+
 <section class="cassetteWrapper clearfix">
 
     <h1 class="cassetteHeading">Cassette Script</h1>
@@ -25,12 +30,24 @@ customCss: cassette.min.css
                 <span class="c90">D-C90</span>
                 <span class="logo">T.F.H.®</span>
                 <div class="middle clearfix">
-                    <span class="circle one"></span>
+                    <span class="circle one">
+                        <span class="teethBox">
+                            <span class="teeth"></span>
+                            <span class="teeth"></span>
+                            <span class="teeth"></span>
+                        </span>
+                    </span>
                     <div class="window">
                         <span class="reelOne"></span>
                         <span class="reelTwo"></span>
                     </div>
-                    <span class="circle two"></span>
+                    <span class="circle two">
+                        <span class="teethBox">
+                            <span class="teeth"></span>
+                            <span class="teeth"></span>
+                            <span class="teeth"></span>
+                        </span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -48,9 +65,9 @@ customCss: cassette.min.css
 
     </div>
 
-    <a class="linkToBottom" href="#downloadLink">Download the beta now.</a>
+    <!-- <a class="linkToBottom" href="#downloadLink">Download the beta now.</a>
 
-    <a class="linkToBottom" href="#glyphs">See the full character set.</a>
+    <a class="linkToBottom" href="#glyphs">See the full character set.</a> -->
 
     <div class="linerNotes">
         <div class="linerNotesTop clearfix">
@@ -58,19 +75,22 @@ customCss: cassette.min.css
             <div class="infoBoxes clearfix">
                 <span class="box1">Tape Selector</span>
                 <span class="box2">Normal</span>
-                <span class="box3">Bias-Normal</br>EQ-120µS</span>
+                <span class="box3">Bias-Normal<!-- </br>EQ-120µS --></span>
                 <span class="boxCopyright">©1972-1977 TFH Electronics Co.,Ltd.</span>
             </div>
         </div>
+        
         <div class="linerNotesSpine"><span class="spineTitle">D-<span class="green">C90</span> TFH</span></div>
+        
         <div class="linerNotesMainContent clearfix">
             <span class="side">A</span>
             <span class="side">B</span>
             <div class="linerNotesMainContentInner">
-                <h1>Cassette Script</h1>
-                <p>A typeface specifically moddelled on handwritten liner-notes from old mix-tapes.</p>
+                <h1>Cassette CSS</h1>
+                <p>A typeface specifically modeled on handwritten liner-notes from old mix-tapes.</p>
             </div>
         </div>
+        
         <div class="linerNotesBottom">
             <p class="black">Dynamic Cassette</p>
             <p class="white">Precision Cassette Mechanism</p>
@@ -79,7 +99,7 @@ customCss: cassette.min.css
         </div>
     </div>
 
-    <div class="notebookWrapper">
+    <!-- <div class="notebookWrapper">
         <div class="notebook">
             <div class="leftPage">
                 <span class="ribbon"></span>
@@ -92,10 +112,10 @@ customCss: cassette.min.css
                 <p>Here's my visual homage to the ubiquitous music format of my youth. This is "Cassette Script"; a handwriting typeface with over 200 characters.</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
-    <div class="cassetteIntro" id="downloadLink">
+    <!-- <div class="cassetteIntro" id="downloadLink">
         <h2>Download the beta version of Cassette Script Here</h2>
         <p>While Cassette Script is still under development you can download it for free.</p>
 
@@ -128,9 +148,9 @@ customCss: cassette.min.css
         }
         </code></pre>
         <a href="#top">Back to top.</a>
-    </div>
+    </div> -->
 
-    <div id="comment-box" class="comments cassetteIntro">
+    <!-- <div id="comment-box" class="comments cassetteIntro">
         <h2>I'd like to know what you think of Cassette Script</h2>
         <p>I'm giving Cassette Script away for free because I need people to test it. While using it you may encounter bugs or quirky behaviour, or maybe (touch wood) it will work perfectly. Either way, I'd love to hear what you thought of it.</p>
 
@@ -149,9 +169,9 @@ customCss: cassette.min.css
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             <a href="#top">Back to top.</a>
-    </div>
+    </div> -->
 
-    <div class="cassetteIntro" id="glyphs">
+    <!-- <div class="cassetteIntro" id="glyphs">
         <h2>Glyph Chart</h2>
         <p>Cassette Script includes all the glyphs listed below. Unicode entities are included above each glyph to help you insert individual characters into your layout.</p>
 
@@ -343,9 +363,9 @@ customCss: cassette.min.css
             <div><p>&amp;#64258;</p>&#64258;</div>
         </div>
         <a href="#top">Back to top.</a>
-    </div>
+    </div> -->
 
-    <nav class="nav-outer clearfix">
+    <!-- <nav class="nav-outer clearfix">
         {% if page.next_in_category.url %}
             <a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
         {% endif %}
@@ -353,6 +373,8 @@ customCss: cassette.min.css
         {% if page.previous_in_category.url %}
             <a href="{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
         {% endif %}
-    </nav>
+    </nav> -->
 
 </section>
+
+{% include footer.html %}
