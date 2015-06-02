@@ -13,8 +13,6 @@ var cache        = require('gulp-cache');
 var scsslint     = require('gulp-scss-lint');
 var livereload   = require('gulp-livereload');
 var jshint       = require('gulp-jshint');
-var iconfont     = require('gulp-iconfont');
-var iconfontCss  = require('gulp-iconfont-css');
 var size         = require('gulp-size');
 var lr           = require('tiny-lr');
 var gutil        = require('gulp-util');
@@ -88,29 +86,6 @@ gulp.task('staticjs', function() {
         .pipe(livereload(server));
 });
 
-// Icon Font
-var fontName = 'icons';
-
-// Create icon fonts from SVG
-gulp.task('iconfont', function(){
-    gulp.src(['_uncompressed/icons/*.svg'])
-        .pipe(iconfontCss({
-            fontName: fontName,
-            //path: 'app/assets/css/templates/_icons.scss',
-            targetPath: '../../scss/_icons.scss',
-            fontPath: '_uncompressed/fonts/icons/'
-        }))
-        .pipe(iconfont({
-            fontName: fontName,
-            appendCodepoints:true
-        }))
-        .on('codepoints', function(codepoints, options) {
-            // CSS templating, e.g.
-            console.log(codepoints, options);
-        })
-        .pipe(gulp.dest('_uncompressed/fonts/icons/'));
-});
-
 gulp.task('jslint', function() {
     return gulp.src('_uncompressed/js/custom/*.js')
         .pipe(jshint())
@@ -167,7 +142,7 @@ gulp.task('watch', function() {
     gulp.watch('_uncompressed/scss/*.scss', ['sass']);
     gulp.watch('_uncompressed/images/**', ['images']);
     gulp.watch('_uncompressed/fonts/**', ['fonts']);
-    gulp.watch('_uncompressed/icons/**', ['iconfont']);
+    gulp.watch('_uncompressed/icons/**/*.svg', ['svg']);
 
     gulp.watch(['*.html','*.php']).on('change', function(file) {
         livereload(server).changed(file.path);
@@ -175,4 +150,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['sass', 'scripts', 'images', 'fonts', 'iconfont', 'listen', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'listen', 'watch']);
