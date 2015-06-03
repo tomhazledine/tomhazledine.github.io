@@ -19,8 +19,8 @@ This project was a complete rebuild of the Atlantic Brewery website; the kind of
 
 The new Atlantic website is fully resonsive; it delivers the full experience to devices of all sizes and resolutions, and takes into account the subtle differences in interaction that touch-enabled devices bring to the party.
 
-{% img /assets/images/photos/atlanticInfoPage.jpg "Information story page" "An information story page on the Atlantic Brewery website" %}
+![An information story page on the Atlantic Brewery website](/assets/images/photos/atlanticInfoPage.jpg)
 
-{% img /assets/images/photos/atlanticCasksPage.jpg "Casks info page" "The casks info page on the Atlantic Brewery website" %}
+![The casks info page on the Atlantic Brewery website](/assets/images/photos/atlanticCasksPage.jpg)
 
-{% img /assets/images/photos/atlanticProductPage.jpg "Product page" "A product page on the Atlantic Brewery website" %}
+![A product page on the Atlantic Brewery website](/assets/images/photos/atlanticProductPage.jpg)
