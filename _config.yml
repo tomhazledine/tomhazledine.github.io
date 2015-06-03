@@ -8,8 +8,8 @@ kramdown:
   auto_ids: false
 name: Tom Hazledine
 description: The personal web-hub for Tom Hazledine
-url: http://thomashazledine.com
-feed_url: http://thomashazledine.com/feed.xml
+url: http://tomhazledine.com
+feed_url: http://tomhazledine.com/feed.xml
 exclude: [config.rb,
           gruntfile.js,
           root.css,
