@@ -10,7 +10,7 @@
         <header class="showcaseHeader">
             <h1 class="showcaseH1">{{page.title}}</h1>
             <span class="showcaseLink">
-                <a href="{{page.showcaselink}}">
+                <a href="{{ site.url }}{{page.showcaselink}}">
                     <svg class="icon twitter">
                         <use xlink:href="#link"/>
                     </svg>
@@ -34,13 +34,13 @@
             <span class="showcaseAddons">{{page.title}}</span>
             <div class="imgCropper">
                 {% if page.desktopimg %}
-                    <img class="desktopImg" src="{{page.desktopimg}}" alt="site showcase" />
+                    <img class="desktopImg" src="{{ site.url }}{{page.desktopimg}}" alt="site showcase" />
                 {% endif %}
                 {% if page.tabletimg %}
-                    <img class="tabletImg" src="{{page.tabletimg}}" alt="site showcase" />
+                    <img class="tabletImg" src="{{ site.url }}{{page.tabletimg}}" alt="site showcase" />
                 {% endif %}
                 {% if page.phoneimg %}
-                    <img class="phoneImg" src="{{page.phoneimg}}" alt="site showcase" />
+                    <img class="phoneImg" src="{{ site.url }}{{page.phoneimg}}" alt="site showcase" />
                 {% endif %}
             </div>
         </div>
@@ -72,11 +72,11 @@
 
 <nav class="nav-outer clearfix">
     {% if page.next_in_category.url %}
-        <a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
+        <a href="{{ site.url }}{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
     {% endif %}
 
     {% if page.previous_in_category.url %}
-        <a href="{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
+        <a href="{{ site.url }}{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
     {% endif %}
 </nav>
 
