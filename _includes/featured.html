@@ -4,7 +4,7 @@
     {% for post in site.posts %}
       {% if post.featured and page.url != post.url %}
       <li class="popularPost">
-        <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+        <a class="archiveItemTitle" href="{{ site.url }}{{post.url}}">{{post.title}}</a>
         {% if post.excerptlong %}
           <span class="archiveItemExcerpt">{{post.excerptlong}}</span>
         {% else %}
