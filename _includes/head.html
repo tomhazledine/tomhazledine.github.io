@@ -15,21 +15,21 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
 
   {% if page.soloCss %}
-    <link rel="stylesheet" href="/assets/css/{{ page.soloCss }}">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}">
   {% else %}
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css">
     {% if page.customCss %}
-      <link rel="stylesheet" href="/assets/css/{{ page.customCss }}">
+      <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.customCss }}">
     {% endif %}
   {% endif %}
 
   <!-- Modernizr -->
-  <script src="/assets/js/static/modernizr-2.6.2.min.js"></script>
+  <script src="{{ site.url }}/assets/js/static/modernizr-2.6.2.min.js"></script>
 
   <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
   <!--[if lt IE 9]>
-    <script src="/assets/js/static/respond.min.js" type="text/javascript"></script>
-    <script src="/assets/js/static/html5.js" type="text/javascript"></script>
+    <script src="{{ site.url }}/assets/js/static/respond.min.js" type="text/javascript"></script>
+    <script src="{{ site.url }}/assets/js/static/html5.js" type="text/javascript"></script>
   <![endif]-->
 
   <!-- TYPEKIT: ‘TH Portfolio’ -->
