@@ -20,7 +20,7 @@ We should all know by now that using raster images for icons is a bad idea. Limi
 
 For a while it seemed that Icon Fonts were the answer. They're vector based and therefore resolution-independent. You can style them with CSS. They have smaller filesizes than .JPGs or .PNGs, so they improve a site's performance. A fontfile is one asset to download (more http requests = poorer site performance), so we don't need to mess around with image sprites any more. And on top of all that, iconfont creation can be easily automated with your task-runner of choice: simply drop your icon .SVGs into a folder and you're good to go.
 
-    // Calling an iconfont icon as a pseudo element within CSS.
+    /* Calling an iconfont icon as a pseudo element within CSS. */
 	.elementName:before {
         font-family:'iconfont';
 		content: "\e001"; // The unicode value of the font character you want.
@@ -29,7 +29,7 @@ For a while it seemed that Icon Fonts were the answer. They're vector based and 
 
 ## If it ain't broke, why fix it?
 
-Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: "that probem's already been solved", I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?
+Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: "that problem's already been solved", I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?
 
 * Some test.
 * Things in a list.
@@ -48,7 +48,7 @@ Lately the winds of change have been blowing. Fewer and fewer big-name sites are
 
 By contrast, pure SVG is a much more consistent format. I've been using SVGs within `<img>` tags since 2006, and I've never had any trouble with setting SVGs as CSS background images.
 
-    // SVG CSS background-image.
+    /* SVG CSS background-image. */
     .elementName {
         height:1em;
         width:1em;
@@ -56,36 +56,72 @@ By contrast, pure SVG is a much more consistent format. I've been using SVGs wit
         background-image: url(path/to/icon.svg);
     }
 
-## Why SVG icons are better
+The obvious *simple* solution is to just use SVGs like that: set them with CSS or use `<img>` elements. That gives you scaleable vector graphics that work well in most environments. The trouble is, you're loading in a new file for every icon. Every icon would represent another HTTP request to the server, and would be a performance nightmare. No matter how "squishy" your design, if your site is slow to load it is *not* "Responsive".
 
-* good support, with better fallbacks
-* in Jekyll even more performant: inline = no requests
-* consistent rendering
-* in-icon styling
-* gulp automation more reliable
+So we're back to the same multiple-requests problem we had in the bad old days of raster iconography. The answer back then was to use image sprites. Concatenate all the icons into one file, load them all with just one HTTP request, and use CSS to crop the image when you want to display a particular icon. It turns out we can do that with SVG too, except now we can do it better!
 
-## How SVG icons work
+## Inline SVG Sprites
 
-* symbols & use
-* gulp-svg-sprite
+SVGs are made of paths – collections of co-ordinates that describe the individual vectors of the image. Open an SVG in your favourite text editor and you can see those paths. What's more, you can add classes and IDs to them. Even more mindblowing: if you wrap the individual paths in a `symbol` tag you can combine multiple images into a single SVG file, and selectively pull them out using their IDs.
 
-## "gotchas" with SVG icons
+    <!-- Load the SVG file into your document... -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<symbol viewBox="0 0 10 10" id="iconID">
+			<path d="{ vector data }"/>
+		</symbol>
+	</svg>
+    
+	<!-- ...and then 'use' a specific icon -->
+    <svg class="icon">
+        <use xlink:href="#iconID"/>
+    </svg>
 
-## php weirdness
+Now you might be thinking that this all looks like a whole lot of work, and you'd be right. Making sprites by hand sucks. Thankfully the arrow of progress is on our side. We may not have jetpacks and flying cars yet, but we *do* have task runners. I used to use Grunt, but now I use Gulp (being a JS nerd, I find the syntax easier to follow) and there are SVG spriting plugins for both of them. I use `gulp-svg-sprite`, and so far it's worked like a charm (so far I've put it to work on a half-dozen private projects and a couple of client sites). In fact, it's proving to be much more reliable than any of the Gulp plugins for iconfonts ever were.
 
-This code 
+It takes a bit of configuring to get the drop-an-icon-into-a-folder-and-let-Gulp-do-the-rest workflow I'd maintained with iconfonts, but as long as you remember to specify that you want a `symbol` based sprite, you can't go too wrong.
 
-    <?php include_once("path/to/svg/sprite.svg"); ?>
+    // My Gulp config
+    var svgConfig = {
+	    shape : {
+	        dimension : { // Set maximum dimensions
+	            maxWidth : 32,
+	            maxHeight : 32
+	        }
+	    },
+	    mode : {
+	        symbol : true // Activate the «symbol» mode
+	    }
+	};
+	// The task itself
+	gulp.task('svg',function(){
+	    return gulp.src('_uncompressed/icons/**/*.svg')
+	        .pipe(svgSprite(svgConfig))
+	        .pipe(gulp.dest('_includes'));
+	});
 
-did not work.
+## Extra goodness and inevitable Gotchas
+
+### Jekyll eats inline SVG for breakfast.
+
+This site is built using the static-site generator Jekyll. Transferring this site's (admittedly meagre) icon set from an iconfont to an inline SVG sprite couldn't have been easier. Make sure your task-runner outputs your sprite into Jekyll's `_includes` directory and you can pull in your sprite with a simple `{% include /symbol/svg/sprite.symbol.svg %}`. And because Jekyll compiles *before* deployment, you don't even have to make a single HTTP request to get your icons: it's all truly inline.
+
+### Wordpress isn't so easy, but gets there eventually.
+
+Jekyll's all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things *that* easy for us. Including an automatically generated SVG sprite in PHP is a little trickier. `<?php include_once("path/to/svg/sprite.svg"); ?>` would seem like the obvious solution, but all that will give you is a face full of errors. It turns out the issue is with the XML and `DOCTYPE` added to the sprite by the gulp task, and the trick is to use `file_get_contents()` instead of `include_once()`.
+
+### SVG & CSS
+
+Styling the icons had a couple of little hurdles that I wasn't expecting. One of the joys of iconfonts was how easy they were to manipulate with CSS, and that's a feature that SVG sprites were promising too. Instead of `color: #000;` we use `fill: #000;` but, as with all CSS, watch out for specificity! If the paths themselves have explicit fills and strokes defined, then you won't be able to override them with external CSS.
+
+Some of my legacy icons have in-built colours, and going through and stripping them out would be a real pain. Thankfully my colleague [Daryll](http://twitter.com/enshrined) was on hand to build me a tidy RegEx to programatically strip out any rogue fills:
 
     <?php
+	// Save the SVG file in a variable...
     $rawSVG = file_get_contents(get_template_directory_uri() . "/path/to/svg/sprite.svg");
+	// ...then filter out any fills.
     echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
     ?>
 
-* fill on paths overrides everything
+When I'm using Jekyll I still have to manually manage explicit in-file styling, but Jekyll projects tend to require a more fine-grained approach anyway. Another Big Win for CSS styling and SVGs comes from being able to add classes and IDs to specific paths *within* individual icons. This provides us with the hooks we need to style (and animate and manipulate) almost every aspect of an icon discretely. Iconfonts were limited to one flat colour, but with SVG sprites we can colour every shape in an icon differently (should we need to).
 
-## SVG icons with Jekyll
-
-* Jekyll include
+For a long time I was very skeptical of using inline SVG for icon sets, primarily because of the perceived effort it would take to set up such a system. I'm happy to report that SVG sprites are considerably easier to get started with than I'd ever thought. I can't imagine ever using an iconfont again.
