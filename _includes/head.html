@@ -5,35 +5,39 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 
-  <meta charset="utf-8">
-  <title>
-    {% if page.title %} {{ page.title }} – {% endif %}Tom Hazledine Web Design
-  </title>
-  <meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{ site.description }}{% endif %}">
-  <meta name="viewport" content="width=device-width">
-  <link rel="shortcut icon" href="/favicon/favicon.ico">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
+    <meta charset="utf-8">
 
-  {% if page.soloCss %}
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}">
-  {% else %}
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css">
-    {% if page.customCss %}
-      <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.customCss }}">
+    <!-- Critical Path CSS -->
+    <style type="text/css">{% include criticalPath.min.css %}</style>
+
+    <title>
+        {% if page.title %} {{ page.title }} – {% endif %}Tom Hazledine Web Design
+    </title>
+    <meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{ site.description }}{% endif %}">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
+
+    {% if page.soloCss %}
+        <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}">
+    {% else %}
+        <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css">
+        {% if page.customCss %}
+            <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.customCss }}">
+        {% endif %}
     {% endif %}
-  {% endif %}
 
-  <!-- Modernizr -->
-  <!--<script src="{{ site.url }}/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!-- Modernizr -->
+    <!--<script src="{{ site.url }}/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
-  <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
-  <!--[if lt IE 9]>
-    <script src="{{ site.url }}/assets/js/static/respond.min.js" type="text/javascript"></script>
-    <script src="{{ site.url }}/assets/js/static/html5.js" type="text/javascript"></script>
-  <![endif]-->
+    <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
+    <!--[if lt IE 9]>
+        <script src="{{ site.url }}/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="{{ site.url }}/assets/js/static/html5.js" type="text/javascript"></script>
+    <![endif]-->
 
-  <!-- TYPEKIT: ‘TH Portfolio’ -->
-	<script type="text/javascript" src="//use.typekit.net/puc4nqb.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!-- TYPEKIT: ‘TH Portfolio’ -->
+    <script type="text/javascript" src="//use.typekit.net/puc4nqb.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
