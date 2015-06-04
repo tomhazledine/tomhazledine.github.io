@@ -121,6 +121,14 @@ p + p{
 .top-link{
     display:block;
     padding:2em 0 0 0;
+    font-weight:$bold;
+    font-size:.8em;
+    text-align:center;
+    a{
+        color:$greyDark;
+        background:none;
+        &:hover{color:$black;}
+    }
 }
 hr{
     display:block;

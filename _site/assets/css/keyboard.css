@@ -238,7 +238,15 @@ p + p a:hover:first-letter {
 
 .top-link {
   display: block;
-  padding: 2em 0 0 0; }
+  padding: 2em 0 0 0;
+  font-weight: 700;
+  font-size: 0.8em;
+  text-align: center; }
+  .top-link a {
+    color: #aca79a;
+    background: none; }
+    .top-link a:hover {
+      color: #4d4d4d; }
 
 hr {
   display: block;

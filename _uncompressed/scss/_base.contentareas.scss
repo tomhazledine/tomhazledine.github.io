@@ -1,21 +1,47 @@
 .textContent{
+    
+    ul,ol{
+        padding:1em 0;
+        width:90%;
+        margin:0 auto;
+    }
+
     li{
         font-style:italic;
         padding-left:1em;
         position:relative;
+        padding-bottom:1em;
+        margin-bottom:.5em;
         &:before{
             display:inline-block;
             content:"";
-            width:6px;
-            height:6px;
-            border-radius:3px;
+            width:8px;
+            height:8px;
+            border-radius:50%;
             background:$primary;
             position:absolute;
-            top:.5em;
+            top:.7em;
             left:.2em;
         }
+        &:after{
+            position:absolute;
+            content:'';
+            background:$grey;
+            width:10em;
+            bottom:0;
+            left:1em;//50%;
+            // margin-left:-5em;
+            height:2px;
+        }
+
         h1,h2,h3,h4,h5,h6{
             padding-top:0;
         }
+
+        p::first-letter{
+            font-size:inherit;
+            color:inherit;
+        }
+        p:after{display:none;}
     }
 }
