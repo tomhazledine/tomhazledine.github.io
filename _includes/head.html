@@ -17,13 +17,47 @@
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/feed.xml">
-
+    
+    <!-- async CSS -->
     {% if page.soloCss %}
-        <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}">
+        <script>
+          var cb = function() {
+            var l = document.createElement('link'); l.rel = 'stylesheet';
+            l.href = '{{ site.url }}/assets/css/{{ page.soloCss }}';
+            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+          };
+          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+              webkitRequestAnimationFrame || msRequestAnimationFrame;
+          if (raf) raf(cb);
+          else window.addEventListener('load', cb);
+        </script>
+        <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}"> -->
     {% else %}
-        <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css">
+        <script>
+          var cb = function() {
+            var l = document.createElement('link'); l.rel = 'stylesheet';
+            l.href = '{{ site.url }}/assets/css/main.min.css';
+            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+          };
+          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+              webkitRequestAnimationFrame || msRequestAnimationFrame;
+          if (raf) raf(cb);
+          else window.addEventListener('load', cb);
+        </script>
+        <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css"> -->
         {% if page.customCss %}
-            <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.customCss }}">
+            <script>
+              var cb = function() {
+                var l = document.createElement('link'); l.rel = 'stylesheet';
+                l.href = '{{ site.url }}/assets/css/{{ page.customCss }}';
+                var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+              };
+              var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                  webkitRequestAnimationFrame || msRequestAnimationFrame;
+              if (raf) raf(cb);
+              else window.addEventListener('load', cb);
+            </script>
+            <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.customCss }}"> -->
         {% endif %}
     {% endif %}
 
