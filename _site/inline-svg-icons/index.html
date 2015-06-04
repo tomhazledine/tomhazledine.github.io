@@ -7,9 +7,9 @@
 
   <meta charset="utf-8">
   <title>
-     about – Tom Hazledine Web Design
+     Getting started with inline SVG icons – Tom Hazledine Web Design
   </title>
-  <meta name="description" content="The personal web-hub for Tom Hazledine">
+  <meta name="description" content="I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="/favicon/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="Tom Hazledine" href="/feed.xml">
@@ -55,7 +55,7 @@
         <ul class="mainMenu clearfix" role="navigation">
             
             
-                <li class="active">
+                <li >
                     <a href="http://th.dev/">About</a>
                 </li>
             
@@ -63,7 +63,7 @@
                     <a href="http://th.dev/portfolio/">Portfolio</a>
                 </li>
             
-                <li >
+                <li class="active">
                     <a href="http://th.dev/blog/">Blog</a>
                 </li>
             
@@ -71,83 +71,192 @@
     </nav>
 
 
-<div class="bodyWrapper clearfix">
-  <section class="mainContent clearfix">
+	<div class="bodyWrapper clearfix">
+  		<section class="mainContent clearfix">
 
-    <article class="mainContentInner">
-        <h1>Hello. I'm a front-end developer and UX designer from Cornwall.</h1>
-        <h3 class="big-drop-cap">Lover of beer, whisky and lettering, and currently obsessing about the future of editorial design.</h3>
-        
-        <p>In this post-smartphone age we have to build sites that work on everything from watch-sized screens to touch devices the size of table-tops. The print ‘canvas’ is a myth in web-design; as designers we must embrace the dynamic ever-changing beauty of the web.</p>
+			<article class="mainContentInner textContent">
 
-<p>So how do we do it? By experimenting, by testing, by iterating. No one ever created a beautifully elegant checkout submission process by using static images, and no one did it in one abstract brainstorming session.</p>
+  				<h1>Getting started with inline SVG icons</h1>
 
-<p>I’m a UX designer and developer at <a href="//wearedwm.com">DWM</a>, where I currently spend most of my time re-designing client-onboarding processes and obsessing about whether or not to get a Standing Desk (for the crazy-start-up kudos).</p>
+  				<h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
 
-<p>Browse my <a href="/portfolio">portfolio</a> to see some (not so recent) examples of my work, and read more of my thoughts on designing for the web on my <a href="/blog">blog</a>. Say hi (and tell me how wrong you think I am, maybe?) by emailing me at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#116;&#111;&#109;&#064;&#116;&#111;&#109;&#104;&#097;&#122;&#108;&#101;&#100;&#105;&#110;&#101;&#046;&#099;&#111;&#109;">&#116;&#111;&#109;&#064;&#116;&#111;&#109;&#104;&#097;&#122;&#108;&#101;&#100;&#105;&#110;&#101;&#046;&#099;&#111;&#109;</a> or catch me on Twitter as <a href="//twitter.com/thomashazledine">@thomashazledine</a>; I’m always happy to answer any questions or engage in spirited debate.</p>
+  				<!--![png – font character – svg](/)
+with scale-slider?-->
+
+<p>We should all know by now that using raster images for icons is a bad idea. Limiting ourselves to one set resolution is not how we work in a multi-device ecosystem. It’s not responsive, it’s not performant, it’s not nice.</p>
+
+<p>For a while it seemed that Icon Fonts were the answer. They’re vector based and therefore resolution-independent. You can style them with CSS. They have smaller filesizes than .JPGs or .PNGs, so they improve a site’s performance. A fontfile is one asset to download (more http requests = poorer site performance), so we don’t need to mess around with image sprites any more. And on top of all that, iconfont creation can be easily automated with your task-runner of choice: simply drop your icon .SVGs into a folder and you’re good to go.</p>
+
+<pre><code>// Calling an iconfont icon as a pseudo element within CSS.
+.elementName:before {
+    font-family:'iconfont';
+	content: "\e001"; // The unicode value of the font character you want.
+	color: #000; // The icon is text, so you can style it using regular CSS
+}
+</code></pre>
+
+<h2>If it ain’t broke, why fix it?</h2>
+
+<p>Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: “that probem’s already been solved”, I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?</p>
+
+<ul>
+  <li>
+    <h3>When iconfonts fail, things get weird.</h3>
+
+    <p>Sometimes there’s no telling what crazy character a browser will display in place of an icon that hasn’t loaded.</p>
+  </li>
+  <li>
+    <h3>There are inexplicable rendering inconsistencies.</h3>
+
+    <p>Firefox in particular seemed, like an overly generous grandparent, determined to fatten my icons up. Faux-bold on regular fonts is ugly and annoying, but when it happens to brand assets like icons it’s excruciating (and something clients <em>always</em> pick up on).</p>
+  </li>
+  <li>
+    <h3>Automation isn’t so seamless after all.</h3>
+
+    <p>Oh hey, my <code>npm install</code> keeps failing. I wonder what the problem is: oh yeah, my <code>gulp-iconfont</code> is throwing errors all up in my grill. Again. #facepalm</p>
+  </li>
+</ul>
+
+<p>By contrast, pure SVG is a much more consistent format. I’ve been using SVGs within <code>&lt;img&gt;</code> tags since 2006, and I’ve never had any trouble with setting SVGs as CSS background images.</p>
+
+<pre><code>// SVG CSS background-image.
+.elementName {
+    height:1em;
+    width:1em;
+    background-image: url(path/to/icon.png); // Fallback for browsers that don't like SVG.
+    background-image: url(path/to/icon.svg);
+}
+</code></pre>
+
+<h2>Why SVG icons are better</h2>
+
+<ul>
+  <li>good support, with better fallbacks</li>
+  <li>in Jekyll even more performant: inline = no requests</li>
+  <li>consistent rendering</li>
+  <li>in-icon styling</li>
+  <li>gulp automation more reliable</li>
+</ul>
+
+<h2>How SVG icons work</h2>
+
+<ul>
+  <li>symbols &amp; use</li>
+  <li>gulp-svg-sprite</li>
+</ul>
+
+<h2>“gotchas” with SVG icons</h2>
+
+<h2>php weirdness</h2>
+
+<p>This code </p>
+
+<pre><code>&lt;?php include_once("path/to/svg/sprite.svg"); ?&gt;
+</code></pre>
+
+<p>did not work.</p>
+
+<pre><code>&lt;?php
+$rawSVG = file_get_contents(get_template_directory_uri() . "/path/to/svg/sprite.svg");
+echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
+?&gt;
+</code></pre>
+
+<ul>
+  <li>fill on paths overrides everything</li>
+</ul>
+
+<h2>SVG icons with Jekyll</h2>
+
+<ul>
+  <li>Jekyll include</li>
+</ul>
 
 
-    </article>
+			</article>
 
-    <section class="featured">
-  <h3>Popular articles:</h3>
+			<nav class="nav-outer clearfix">
+  				
+    				<a href="http://th.dev/inspiring-web-people" class="nav-button-prev">Inspirational Web People</a>
+  				
+
+  				
+			</nav>
+
+			
+  				<div id="disqus_thread"></div>
+  					<script type="text/javascript">
+        				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        				var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
+
+        				/* * * DON'T EDIT BELOW THIS LINE * * */
+        				(function() {
+            				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        				})();
+  					</script>
+  					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  					<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+			
+
+			<section class="archive">
+  <h3>More articles:</h3>
   <ul>
     
       
-      <li class="popularPost">
-        <a class="archiveItemTitle" href="http://th.dev/inline-svg-icons">Getting started with inline SVG icons</a>
         
-          <span class="archiveItemExcerpt">As a typography nerd, using a custom font to serve icons felt really good. It turns out inline SVG icons are better in almost every way.</span>
+      
         
-      </li>
-      
-    
-      
-      <li class="popularPost">
-        <a class="archiveItemTitle" href="http://th.dev/inspiring-web-people">Inspirational Web People</a>
+          <li><a href="http://th.dev/inspiring-web-people">Inspirational Web People</a>  
+          
+            The webby people that are shaping my career.
+          </li>
         
-          <span class="archiveItemExcerpt">Paul Boag recently talked about the ten ‘web people’ he's found most inspiring. I like the idea of calling out those members of the community that have shaped my time on the web, so here's my list.</span>
+      
         
-      </li>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-      <li class="popularPost">
-        <a class="archiveItemTitle" href="http://th.dev/futura-for-the-win">Futura for the win.</a>
+          <li><a href="http://th.dev/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
+          
+            Good advice on personal development.
+          </li>
         
-          <span class="archiveItemExcerpt">Picking the right typeface for this site took a long time, and my final choice wasn’t one I was expecting. Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.</span>
+      
         
-      </li>
+          <li><a href="http://th.dev/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
+          
+            No need for browser extensions; Firefox can do it natively.
+          </li>
+        
       
-    
+        
+          <li><a href="http://th.dev/futura-for-the-win">Futura for the win.</a>  
+          
+            Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.
+          </li>
+        
       
-    
+        
+          <li><a href="http://th.dev/simple-is-hard">Simple is hard</a>  
+          
+            Focus on substance over style.
+          </li>
+        
       
-    
-      
-    
+        
+          <li><a href="http://th.dev/bullet-journal-workflow">A bullet-journal workflow</a>  
+          
+            An analogue "to-do list" system.
+          </li>
+        
       
     
   </ul>
-  <a href="/blog">See all articles.</a>
 </section><!-- .archive -->
 
 
-    <section class="socialLinks clearfix">
+			<span class="top-link"><a href="#top">Back to top</a></span>
+
+			<section class="socialLinks clearfix">
     <span class="socialContainer">
         <a href="https://twitter.com/thomashazledine" class="twitter">
             <svg class="icon twitter">
@@ -167,8 +276,8 @@
 </section>
 
 
-  </div><!-- .mainContent -->
-</div><!-- .bodyWrapper -->
+  		</div><!-- .mainContent -->
+	</div><!-- .bodyWrapper -->
 
 <footer class="footer">
 	<a href="mailto:tom@tomhazledine.com">Let's get to work&hellip;</a>

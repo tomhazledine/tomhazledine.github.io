@@ -13,8 +13,8 @@ category: article
 featured: true
 ---
 
-![png – font character – svg](/)
-with scale-slider?
+<!--![png – font character – svg](/)
+with scale-slider?-->
 
 We should all know by now that using raster images for icons is a bad idea. Limiting ourselves to one set resolution is not how we work in a multi-device ecosystem. It's not responsive, it's not performant, it's not nice.
 
@@ -22,12 +22,9 @@ For a while it seemed that Icon Fonts were the answer. They're vector based and 
 
     // Calling an iconfont icon as a pseudo element within CSS.
 	.elementName:before {
+        font-family:'iconfont';
 		content: "\e001"; // The unicode value of the font character you want.
-		display: block;
-		height: 1em;
-		width: 1em;
-		color: black;
-		background: white;
+		color: #000; // The icon is text, so you can style it using regular CSS
 	}
 
 ## If it ain't broke, why fix it?
@@ -49,14 +46,12 @@ Lately the winds of change have been blowing. Fewer and fewer big-name sites are
 By contrast, pure SVG is a much more consistent format. I've been using SVGs within `<img>` tags since 2006, and I've never had any trouble with setting SVGs as CSS background images.
 
     // SVG CSS background-image.
-	.elementName {
-		width: 1em;
-		height: 1em;
-		background-color: white;
-		background-image: url(path/to/icon.png); // Fallback for browsers that don't like SVG.
-		background-image: url(path/to/icon.svg);
-		fill: black; // For SVGs we use `fill` rather than `color`.
-	}
+    .elementName {
+        height:1em;
+        width:1em;
+        background-image: url(path/to/icon.png); // Fallback for browsers that don't like SVG.
+        background-image: url(path/to/icon.svg);
+    }
 
 ## Why SVG icons are better
 
@@ -77,7 +72,7 @@ By contrast, pure SVG is a much more consistent format. I've been using SVGs wit
 
 This code 
 
-    include_once("path/to/svg/sprite.svg");
+    <?php include_once("path/to/svg/sprite.svg"); ?>
 
 did not work.
 

@@ -443,8 +443,12 @@ img {
           transition: top;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s; }
+  .header.mainMenuOpen {
+    top: 0; }
   .header.tuckedUp {
     top: -1.4em; }
+    .header.tuckedUp.mainMenuOpen {
+      top: 0; }
   .header .logo {
     font-size: 1em;
     padding: 0; }

@@ -3,8 +3,107 @@
 <channel>
 <title>Tom Hazledine</title>
 <description>The personal web-hub for Tom Hazledine</description>
-<link>http://tomhazledine.github.io/thomashazledine</link>
-<atom:link href="http://tomhazledine.github.io/thomashazledine/feed.xml" rel="self" type="application/rss+xml" />
+<link>http://th.dev</link>
+<atom:link href="http://th.dev/feed.xml" rel="self" type="application/rss+xml" />
+
+<item>
+<title>Getting started with inline SVG icons</title>
+<description>&lt;!--![png – font character – svg](/)
+with scale-slider?--&gt;
+
+&lt;p&gt;We should all know by now that using raster images for icons is a bad idea. Limiting ourselves to one set resolution is not how we work in a multi-device ecosystem. It’s not responsive, it’s not performant, it’s not nice.&lt;/p&gt;
+
+&lt;p&gt;For a while it seemed that Icon Fonts were the answer. They’re vector based and therefore resolution-independent. You can style them with CSS. They have smaller filesizes than .JPGs or .PNGs, so they improve a site’s performance. A fontfile is one asset to download (more http requests = poorer site performance), so we don’t need to mess around with image sprites any more. And on top of all that, iconfont creation can be easily automated with your task-runner of choice: simply drop your icon .SVGs into a folder and you’re good to go.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Calling an iconfont icon as a pseudo element within CSS.
+.elementName:before {
+    font-family:&#39;iconfont&#39;;
+	content: &quot;\e001&quot;; // The unicode value of the font character you want.
+	color: #000; // The icon is text, so you can style it using regular CSS
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;If it ain’t broke, why fix it?&lt;/h2&gt;
+
+&lt;p&gt;Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: “that probem’s already been solved”, I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h3&gt;When iconfonts fail, things get weird.&lt;/h3&gt;
+
+    &lt;p&gt;Sometimes there’s no telling what crazy character a browser will display in place of an icon that hasn’t loaded.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3&gt;There are inexplicable rendering inconsistencies.&lt;/h3&gt;
+
+    &lt;p&gt;Firefox in particular seemed, like an overly generous grandparent, determined to fatten my icons up. Faux-bold on regular fonts is ugly and annoying, but when it happens to brand assets like icons it’s excruciating (and something clients &lt;em&gt;always&lt;/em&gt; pick up on).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3&gt;Automation isn’t so seamless after all.&lt;/h3&gt;
+
+    &lt;p&gt;Oh hey, my &lt;code&gt;npm install&lt;/code&gt; keeps failing. I wonder what the problem is: oh yeah, my &lt;code&gt;gulp-iconfont&lt;/code&gt; is throwing errors all up in my grill. Again. #facepalm&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By contrast, pure SVG is a much more consistent format. I’ve been using SVGs within &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tags since 2006, and I’ve never had any trouble with setting SVGs as CSS background images.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// SVG CSS background-image.
+.elementName {
+    height:1em;
+    width:1em;
+    background-image: url(path/to/icon.png); // Fallback for browsers that don&#39;t like SVG.
+    background-image: url(path/to/icon.svg);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Why SVG icons are better&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;good support, with better fallbacks&lt;/li&gt;
+  &lt;li&gt;in Jekyll even more performant: inline = no requests&lt;/li&gt;
+  &lt;li&gt;consistent rendering&lt;/li&gt;
+  &lt;li&gt;in-icon styling&lt;/li&gt;
+  &lt;li&gt;gulp automation more reliable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;How SVG icons work&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;symbols &amp;amp; use&lt;/li&gt;
+  &lt;li&gt;gulp-svg-sprite&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;“gotchas” with SVG icons&lt;/h2&gt;
+
+&lt;h2&gt;php weirdness&lt;/h2&gt;
+
+&lt;p&gt;This code &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php include_once(&quot;path/to/svg/sprite.svg&quot;); ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;did not work.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+$rawSVG = file_get_contents(get_template_directory_uri() . &quot;/path/to/svg/sprite.svg&quot;);
+echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i&#39;, &#39;&#39;, $rawSVG )
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;fill on paths overrides everything&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;SVG icons with Jekyll&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jekyll include&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+<pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
+<link>http://th.dev/inline-svg-icons</link>
+<guid isPermaLink="true">http://th.dev/inline-svg-icons</guid>
+</item>
 
 <item>
 <title>Inspirational Web People</title>
@@ -101,8 +200,8 @@
 &lt;p&gt;People like this are what makes the web such a fantastic industry to be a part of, and I owe them all a debt of gratitude.&lt;/p&gt;
 </description>
 <pubDate>Tue, 09 Sep 2014 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.github.io/thomashazledine/inspiring-web-people</link>
-<guid isPermaLink="true">http://tomhazledine.github.io/thomashazledine/inspiring-web-people</guid>
+<link>http://th.dev/inspiring-web-people</link>
+<guid isPermaLink="true">http://th.dev/inspiring-web-people</guid>
 </item>
 
 <item>
@@ -122,8 +221,8 @@
 &lt;/nav&gt;
 </description>
 <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.github.io/thomashazledine/top-ten-ways-to-get-better-at-something</link>
-<guid isPermaLink="true">http://tomhazledine.github.io/thomashazledine/top-ten-ways-to-get-better-at-something</guid>
+<link>http://th.dev/top-ten-ways-to-get-better-at-something</link>
+<guid isPermaLink="true">http://th.dev/top-ten-ways-to-get-better-at-something</guid>
 </item>
 
 <item>
@@ -150,8 +249,8 @@
 &lt;p&gt;You can see some of the screenshots I took using this method over on my portfolio page. The ‘phone’ view of the &lt;a href=&quot;/atlantic-brewery&quot;&gt;Atlantic Brewery&lt;/a&gt; page is particularly long and thin – an image I’d have struggled to create using any other method.&lt;/p&gt;
 </description>
 <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.github.io/thomashazledine/fullpage-screenshots-in-firefox</link>
-<guid isPermaLink="true">http://tomhazledine.github.io/thomashazledine/fullpage-screenshots-in-firefox</guid>
+<link>http://th.dev/fullpage-screenshots-in-firefox</link>
+<guid isPermaLink="true">http://th.dev/fullpage-screenshots-in-firefox</guid>
 </item>
 
 <item>
@@ -191,8 +290,8 @@
 &lt;p&gt;Only time will tell how long this current designs sticks around for, but it already feels like this version is a more substantial website than any of my previous attempts. Picking Futura and sticking with it, despite the issues and imperfections, has meant I’ve been able to turn my attention to the finer details: the little moments of interaction design, the negative space, and above all the &lt;strong&gt;content&lt;/strong&gt;.&lt;/p&gt;
 </description>
 <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.github.io/thomashazledine/futura-for-the-win</link>
-<guid isPermaLink="true">http://tomhazledine.github.io/thomashazledine/futura-for-the-win</guid>
+<link>http://th.dev/futura-for-the-win</link>
+<guid isPermaLink="true">http://th.dev/futura-for-the-win</guid>
 </item>
 
 <item>
@@ -228,8 +327,8 @@
 &lt;p&gt;Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is a real challenge, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.&lt;/p&gt;
 </description>
 <pubDate>Thu, 26 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.github.io/thomashazledine/simple-is-hard</link>
-<guid isPermaLink="true">http://tomhazledine.github.io/thomashazledine/simple-is-hard</guid>
+<link>http://th.dev/simple-is-hard</link>
+<guid isPermaLink="true">http://th.dev/simple-is-hard</guid>
 </item>
 
 <item>
@@ -267,8 +366,8 @@
 &lt;p&gt;But using the &lt;a href=&quot;http://www.bulletjournal.com/&quot;&gt;Bullet Journal&lt;/a&gt; &lt;em&gt;has&lt;/em&gt; undeniably helped my workflow. My days now have structure, and (most importantly) I’m now much less likely to overlook an important task.&lt;/p&gt;
 </description>
 <pubDate>Tue, 24 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.github.io/thomashazledine/bullet-journal-workflow</link>
-<guid isPermaLink="true">http://tomhazledine.github.io/thomashazledine/bullet-journal-workflow</guid>
+<link>http://th.dev/bullet-journal-workflow</link>
+<guid isPermaLink="true">http://th.dev/bullet-journal-workflow</guid>
 </item>
 
 </channel>
