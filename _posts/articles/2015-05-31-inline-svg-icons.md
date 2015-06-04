@@ -31,6 +31,9 @@ For a while it seemed that Icon Fonts were the answer. They're vector based and 
 
 Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: "that probem's already been solved", I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?
 
+* Some test.
+* Things in a list.
+
 * ### When iconfonts fail, things get weird.
 
   Sometimes there's no telling what crazy character a browser will display in place of an icon that hasn't loaded.

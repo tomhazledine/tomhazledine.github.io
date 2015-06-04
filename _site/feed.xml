@@ -28,6 +28,10 @@ with scale-slider?--&gt;
 &lt;p&gt;Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: “that probem’s already been solved”, I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?&lt;/p&gt;
 
 &lt;ul&gt;
+  &lt;li&gt;Some test.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Things in a list.&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;h3&gt;When iconfonts fail, things get weird.&lt;/h3&gt;
 

@@ -8,42 +8,56 @@ code{
 pre{
     margin:1em 0;
     border-top:$grey solid 1em;
-    border-radius:.5rem .5rem 0 0;
+    border-radius:.5em .5em 0 0;
     position:relative;
+    // box-shadow:rgba($black,.8) 0 .1em .5em 0;
     &:before{
         content:"";
-        width:.5rem;
-        height:.5rem;
-        border-radius:.25rem;
+        width:.5em;
+        height:.5em;
+        border-radius:.25em;
         background:$primary;
         position:absolute;
-        top:-.75rem;
-        left:.5rem;
+        top:-.7em;
+        left:.4em;
+        box-shadow:
+            $cream .7em 0 0 0,
+            $black 1.4em 0 0 0;
     }
     &:after{
-        content:"";
-        width:.5rem;
-        height:.5rem;
-        border-radius:.25rem;
-        background:$black;
         position:absolute;
-        top:-.75rem;
-        left:1.25rem;
+        content:"Code Example";
+        font-family:$code;
+        font-size:.6em;
+        top:-1.5em;
+        left:0;
+        width:100%;
+        color:$black;
+        text-align:center;
+    }
+    &.css:after{content:'a CSS code example';}
+    &.php:after{content:'a PHP code example';}
+
+    width:140%;
+    margin-left:-20%;
+    @include bp(d2){
+        width:100%;
+        margin-left:0;
     }
 }
 pre code{
     display:block;
     width:100%;
     overflow:auto;
-    padding:.5em 1em;
-    &:after{
-        content:"";
-        width:.5rem;
-        height:.5rem;
-        border-radius:.25rem;
-        background:$cream;
-        position:absolute;
-        top:-.75rem;
-        left:2rem;
-    }
+    padding:1em !important;
+    // &:after{
+    //     content:"";
+    //     width:.5rem;
+    //     height:.5rem;
+    //     border-radius:.25rem;
+    //     background:$cream;
+    //     position:absolute;
+    //     top:-.75rem;
+    //     left:2rem;
+    // }
 }
