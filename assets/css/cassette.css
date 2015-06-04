@@ -419,6 +419,9 @@ img {
 .footer {
   text-align: center;
   padding: 0 0 3em 0; }
+  @media (max-width: 800px) {
+    .footer {
+      padding: 2em 0 5em 0; } }
   .footer a {
     background: none;
     font-weight: 700; }

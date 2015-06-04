@@ -1,3 +1,4 @@
+// Add header and footer styles from native theme for pages with custom CSS
 // // 01. SETTINGS
 @import "settings.colours";
 @import "settings.fonts";
@@ -14,8 +15,8 @@
 @import "generic.base";
 
 // // // 04. BASE
-@import "base.contentareas";
-@import "base.codeblocks";
+// @import "base.contentareas";
+// @import "base.codeblocks";
 @import "base.theme";
 
 // // // 05. OBJECTS
@@ -23,15 +24,14 @@
 @import "objects.header";
 @import "objects.footer";
 @import "objects.sociallinks";
-@import "objects.featuredposts";
+// @import "objects.featuredposts";
 @import "objects.nextPrevLinks";
-@import "objects.dropcaps";
-@import "objects.blockquote";
-@import "objects.archive";
+// @import "objects.dropcaps";
+// @import "objects.blockquote";
+// @import "objects.archive";
 
 // // // 06. COMPONENTS
-@import "components.portfolio";
+// @import "components.portfolio";
 
 // // // 07. TRUMPS
 @import "trumps.utilities";
-@import "trumps.theme";
