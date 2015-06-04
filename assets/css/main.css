@@ -1187,5 +1187,6 @@ blockquote {
 
 @media (max-width: 800px) {
   .extraSpaceOnMobile {
+    display: inline-block;
     margin-top: 2em;
     margin-bottom: 2em; } }
