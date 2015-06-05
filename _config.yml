@@ -9,7 +9,7 @@ kramdown:
 name: Tom Hazledine
 description: The personal web-hub for Tom Hazledine
 # url: http://th.dev # Local
-url: http://tomhazledine.com # Live
+# url: http://tomhazledine.com # Live
 # url: http://tomhazledine.github.io/thomashazledine # gh-pages
 # baseurl: /thomashazledine
 feed_url: http://tomhazledine.com/feed.xml

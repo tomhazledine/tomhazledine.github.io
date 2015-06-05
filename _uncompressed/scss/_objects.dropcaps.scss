@@ -2,6 +2,7 @@
   font-weight:$book;
   font-family:$text;
   font-style:italic;
+  line-height:1.5;
   // text-transform:uppercase;
   padding-bottom:1em;
 }
@@ -10,12 +11,13 @@
   font-family:$display;
   font-style:normal;
   margin-left:-1em;
+  font-size:1.2em;
   // Kerning Table
   &.d,&.g,&.o,&.r{margin-left:-1.5em;}
   &.e,&.f{margin-left:-.7em;}
   &.k,&.n,&.t,&.x,&.z,&.h{margin-left:-.5em;}
   &.q{margin-left:-2em;}
-  &.l,&.a{margin-left:-3em;}
+  &.l,&.a{margin-left:-2.5em;}
   &.u,&.w{margin-left:0;}
   &.v{margin-left:-.3em;}
   &.y{margin-left:-.2em;}

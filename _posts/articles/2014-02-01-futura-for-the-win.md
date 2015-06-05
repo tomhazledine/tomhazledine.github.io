@@ -12,7 +12,7 @@ featured: true
 ---
 
 {:.addendum}
-This post was written in 2014. As you've no doubt already noticed, I've moved on from Futura as the typeface for this site. Read about why I made the switch [here](/)
+This post was written in 2014. As you've no doubt already noticed, I've moved on from Futura as the typeface for this site. <!--Read about why I made the switch [here](/)-->
 
 My initial ‘Contemporary Drop Cap’ concept was much more florid and overtly ornamental than what you see today (as of April 2014). I burnt through many drafts experimenting with ornate serif fonts before I finally remembered that what I was trying to build was a **portfolio**; a neutral backdrop for my designs, not something that would distract from the work on show. In short, I needed a sans.
 

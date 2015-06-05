@@ -5,4 +5,82 @@
 // @import "trumps.criticalpath";
 
 // Generated at http://jonassebastianohlsson.com/criticalpathcssgenerator/
-::-moz-selection{color:#efeeeb;background:rgba(0,183,198,.5)}::selection{color:#efeeeb;background:rgba(0,183,198,.5)}body,div,html,span{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}html{font-size:62.5%;min-height:100%}@media (min-width:1200px){html{font-size:100%}}body{min-height:100%;font-size:1.6em;font-family:ff-tisa-web-pro,georgia,serif;font-weight:400;color:#4d4d4d;line-height:1.6;min-width:300px}.hidden{display:none!important;visibility:hidden}
+//::-moz-selection{color:#efeeeb;background:rgba(0,183,198,.5)}::selection{color:#efeeeb;background:rgba(0,183,198,.5)}body,div,html,span{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}html{font-size:62.5%;min-height:100%}@media (min-width:1200px){html{font-size:100%}}body{min-height:100%;font-size:1.6em;font-family:ff-tisa-web-pro,georgia,serif;font-weight:400;color:#4d4d4d;line-height:1.6;min-width:300px}.hidden{display:none!important;visibility:hidden}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6em;
+  font-family: ff-tisa-web-pro,georgia,serif;
+  font-weight: 400;
+  color: #4d4d4d;
+  line-height: 1.6;
+}
+
+.bodyWrapper {
+  background: #efeeeb;
+  width: 80%;
+  min-width: 30em;
+  margin: 5em auto 3em;
+  padding-top: 6em;
+}
+
+.hidden {
+  display: none!important;
+}
+
+.header {
+  font-size: 1.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #4d4d4d;
+  color: #efeeeb;
+  width: 100%;
+  line-height: 1;
+  z-index: 3;
+  min-width: 300px;
+}
+
+.mainMenuWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 100%;
+}
+
+.mainMenuToggle {
+  height: 1em;
+  width: 1em;
+  margin: .2em .5em;
+  float: right;
+  position: relative;
+  z-index: 3;
+}
+
+h1 {
+  position: relative;
+  font-size: 1.8em;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+  color: #4d4d4d;
+  padding: 4rem 0 10rem;
+  margin: 0 0 6rem;
+}
+
+.mainContent {
+  width: 28em;
+  margin: 0 auto;
+}
+
+.siteName {
+  display: inline-block;
+  color: #efeeeb;
+  background: #4d4d4d;
+  font-weight: 700;
+  font-size: .8em;
+  line-height: 1.2rem;
+  padding: .2em 1em .2em 1.5em;
+}
