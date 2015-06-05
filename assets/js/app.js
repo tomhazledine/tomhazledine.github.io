@@ -10508,7 +10508,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	var targetElement = $('blockquote'),
 			startingText = targetElement.text(),
-			openSpan = '<p><span class="runIn">'
+			openSpan = '<p><span class="quoteRunIn">'
 			closeSpan = '</span>';
 
 	// Make text into array split by spaces

@@ -13,7 +13,7 @@
 .navicon{
     display:block;
     background:$cream;
-    height:.2rem;
+    height:3px;
     margin:.4rem auto;
     position:relative;
     width:.8em;
@@ -23,7 +23,7 @@
         content:'';
         display:block;
         position:absolute;
-        height:.2rem;
+        height:3px;
         background:$cream;
         width:100%;
         left:50%;
@@ -33,10 +33,10 @@
         transition-duration:.2s;
     }
     &:before{
-        top:-.4rem;
+        top:-7px;
     }
     &:after{
-        bottom:-.4rem;
+        bottom:-7px;
     }
 }
 .mainMenuToggle.open .navicon{
@@ -77,11 +77,15 @@
     display:table-cell;
     text-align:center;
     vertical-align:middle;
+    font-size:.8em;
     li{
         display:block;
         text-align:center;
         padding:.2em 0;
         a{
+            font-family:$display;
+            // text-transform:uppercase;
+            // letter-spacing:.1em;
             line-height:1;
             display:inline-block;
             background:none;

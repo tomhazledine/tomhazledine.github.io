@@ -1,4 +1,5 @@
 .textContent{
+    // color:$black;
     
     ul,ol{
         padding:1em 0;
@@ -36,6 +37,7 @@
 
         h1,h2,h3,h4,h5,h6{
             padding-top:0;
+            font-style:normal;
         }
 
         p::first-letter{
@@ -43,5 +45,67 @@
             color:inherit;
         }
         p:after{display:none;}
+    }
+
+    > p{
+        text-indent:24%;
+        hyphens:none;
+        &:after{
+            content:"¶";
+            padding-left:.2em;
+            color:$grey;
+        }
+        &:first-of-type{
+            // clear:both;
+            text-indent:0;
+            //@include bigFirstLetter;
+        }
+        @include bigFirstLetter;
+    }
+    > p + p{
+        &:first-letter{
+            font-size:inherit;
+            color:inherit;
+        }
+        a:first-letter{
+            font-size:inherit;
+            color:inherit;
+            transition:color;
+            transition-duration:.3s;
+        }
+        a:hover:first-letter{
+            color:$cream;
+            font-size:inherit;
+        }
+    }
+    img{
+        margin-top:1em;
+        margin-bottom:-1.4em;
+        // margin-left:auto;
+        // margin-right:auto;
+    }
+    .addendum{
+        display:block;
+        font-family:$display;
+        // font-size:.8em;
+        padding:1em;
+        // width:80%;
+        background:rgba($primary,.3);
+        box-shadow:rgba($black,.4) 0 .2em .5em 0;
+        margin:1em auto;
+        &:after{color:rgba($black,.2);}
+        // &::first-letter{color:inherit;}
+        a{
+            background:rgba($black,.2);
+            &:hover{
+                background:$primary;
+                color:$black;
+            }
+        }
+        @include bp(u1){
+            font-size:.8em;
+            padding:2em;
+            width:80%;
+        }
     }
 }

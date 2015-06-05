@@ -7,6 +7,15 @@ blockquote{
     margin:3em 2em;
     &:before{@include horizontalRule(top);}
     &:after{@include horizontalRule(bottom);}
-    .runIn{text-transform:uppercase;}
+    .quoteRunIn{
+        // text-transform:uppercase;
+        color:$primary;
+    }
+    p::first-letter{
+        font-size:1em;
+        line-height:1em;
+        color:inherit;
+
+    }
     p:after{display:none;}
 }

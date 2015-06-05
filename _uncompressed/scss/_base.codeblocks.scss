@@ -1,9 +1,11 @@
 code{
     font-family:$code;
+    // font-style:normal;
     padding:0 .4em;
     font-size:.8em;
     color:$cream;
     background:$black;
+    word-wrap:break-word;
 }
 pre{
     margin:1em 0;
@@ -50,6 +52,7 @@ pre code{
     width:100%;
     overflow:auto;
     padding:1em !important;
+    word-wrap:normal;
     // &:after{
     //     content:"";
     //     width:.5rem;

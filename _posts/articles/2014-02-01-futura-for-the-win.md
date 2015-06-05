@@ -11,7 +11,13 @@ category: article
 featured: true
 ---
 
+{:.addendum}
+This post was written in 2014. As you've no doubt already noticed, I've moved on from Futura as the typeface for this site. Read about why I made the switch [here](/)
+
 My initial ‘Contemporary Drop Cap’ concept was much more florid and overtly ornamental than what you see today (as of April 2014). I burnt through many drafts experimenting with ornate serif fonts before I finally remembered that what I was trying to build was a **portfolio**; a neutral backdrop for my designs, not something that would distract from the work on show. In short, I needed a sans.
+
+{:.shadowImg}
+![Futura Dropcap](/assets/images/articleImages/futuraDropcap.png)
 
 ## Neutral doesn't mean flavourless.
 
@@ -33,9 +39,13 @@ Unlike many others, I actually quite like Futura's much-maligned question mark, 
 
 The lowercase “J” looks stylish and bizare in equal measure, and the semicolon is oddly top-heavy. In body copy the x-height is a tad lower than I find comfortable and the letter spacing after an apostrophe is massive. Not an issue in a programme that lets you kern, but an ugly cross to bear on the web.
 
-In fact, all the apostrophes and quotation marks look the same. It’s all well and good training yourself to press `alt shift ]` every time you want an apostrophe, but Futura renders such efforts irrelevant. How many different characters can you count in the following sentence? &nbsp; &nbsp; &nbsp; &nbsp; '‘’“”"" &nbsp; &nbsp; &nbsp; &nbsp; Tough, eh?! It's a little easier at larger sizes:
+In fact, all the apostrophes and quotation marks look the same. It’s all well and good training yourself to press `alt shift ]` every time you want an apostrophe, but Futura renders such efforts irrelevant. How many different characters can you count in the following sentence?
 
-### '‘’“”""
+!['‘’“”""](/assets/images/articleImages/futuraGlyphsSmall.png)
+
+Tough, eh?! It's a little easier at larger sizes:
+
+!['‘’“”""](/assets/images/articleImages/futuraGlyphsLarge.png)
 
 There's actually **seven** discrete glyphs there. There *are* differences, which at large sizes are delightfully subtle and nuanced, but at anything less than 72pt they all blur into one...
 

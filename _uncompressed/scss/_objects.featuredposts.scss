@@ -3,7 +3,11 @@
   li{
     padding:0 0 .4em 1em;
     text-indent:-1em;
+    a{font-family:$display;}
   }
+}
+.archiveItemTitle{
+  font-family:$display;
 }
 .featured{
   position:relative;
@@ -30,4 +34,8 @@
 }
 .popularPost{
   padding:0 0 2em 0;
+  a{
+    font-family:$display;
+
+  }
 }

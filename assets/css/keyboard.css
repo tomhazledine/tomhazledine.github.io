@@ -115,8 +115,9 @@ html {
 body {
   min-height: 100%;
   font-size: 1.6em;
-  font-family: "futura-pt", sans-serif;
+  font-family: "ff-tisa-web-pro", georgia, serif;
   font-weight: 400;
+  color: #4d4d4d;
   line-height: 1.6;
   min-width: 300px; }
 
@@ -133,7 +134,8 @@ a {
     background: #00b7c6; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700; }
+  font-weight: bold;
+  font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif; }
 
 li {
   list-style: none; }
@@ -196,46 +198,6 @@ h3 {
   font-size: 1.2em;
   padding: 1em 0 0 0; }
 
-p {
-  text-indent: 24%;
-  -webkit-hyphens: none;
-     -moz-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none; }
-  p:after {
-    content: "¶";
-    padding-left: 0.2em;
-    color: #00b7c6; }
-  p:first-of-type {
-    text-indent: 0; }
-  p::first-letter {
-    font-size: 1.5em;
-    color: #00b7c6; }
-  p a:first-letter {
-    font-size: 1.5em;
-    color: #00b7c6;
-    -webkit-transition: color, background;
-            transition: color, background;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s; }
-  p a:hover:first-letter {
-    color: #efeeeb;
-    font-size: 1.5em; }
-
-p + p:first-letter {
-  font-size: inherit;
-  color: inherit; }
-p + p a:first-letter {
-  font-size: inherit;
-  color: inherit;
-  -webkit-transition: color;
-          transition: color;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s; }
-p + p a:hover:first-letter {
-  color: #efeeeb;
-  font-size: inherit; }
-
 .top-link {
   display: block;
   padding: 2em 0 0 0;
@@ -272,10 +234,15 @@ hr {
 img {
   display: block;
   position: relative;
-  z-index: 1000;
-  width: 100%;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
   padding: 1em 0 0em 0;
   margin-bottom: -1.2em; }
+
+.shadowImg img {
+  -webkit-box-shadow: rgba(77, 77, 77, 0.4) 0 0.2em 0.5em 0;
+          box-shadow: rgba(77, 77, 77, 0.4) 0 0.2em 0.5em 0; }
 
 .mainMenuToggle {
   height: 1em;
@@ -290,7 +257,7 @@ img {
 .navicon {
   display: block;
   background: #efeeeb;
-  height: 0.2rem;
+  height: 3px;
   margin: 0.4rem auto;
   position: relative;
   width: 0.8em;
@@ -302,7 +269,7 @@ img {
     content: '';
     display: block;
     position: absolute;
-    height: 0.2rem;
+    height: 3px;
     background: #efeeeb;
     width: 100%;
     left: 50%;
@@ -315,9 +282,9 @@ img {
     -webkit-transition-duration: 0.2s;
             transition-duration: 0.2s; }
   .navicon:before {
-    top: -0.4rem; }
+    top: -7px; }
   .navicon:after {
-    bottom: -0.4rem; }
+    bottom: -7px; }
 
 .mainMenuToggle.open .navicon {
   background: #4d4d4d;
@@ -353,12 +320,14 @@ img {
   list-style: none;
   display: table-cell;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+  font-size: 0.8em; }
   .mainMenu li {
     display: block;
     text-align: center;
     padding: 0.2em 0; }
     .mainMenu li a {
+      font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
       line-height: 1;
       display: inline-block;
       background: none;
@@ -405,7 +374,9 @@ img {
   color: #efeeeb;
   background: #4d4d4d;
   font-weight: 700;
-  font-style: italic;
+  font-size: 0.8em;
+  line-height: 1.2rem;
+  font-style: normal;
   padding: 0.2em 1em 0.2em 1.5em;
   -webkit-box-shadow: inset #4d4d4d 0.5em 0 0 0, inset #00b7c6 1em 0 0 0;
           box-shadow: inset #4d4d4d 0.5em 0 0 0, inset #00b7c6 1em 0 0 0;
@@ -431,6 +402,7 @@ img {
     .footer {
       padding: 2em 0 5em 0; } }
   .footer a {
+    font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
     background: none;
     font-weight: 700; }
     .footer a:hover {
@@ -467,12 +439,11 @@ img {
         width: 100%;
         padding: 2em; } }
   .socialLinks a {
+    font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
     display: inline;
     position: relative;
     margin-left: 2em;
-    line-height: 1;
-    text-transform: uppercase;
-    font-style: italic; }
+    line-height: 1; }
     .socialLinks a .icon {
       font-size: 2.5em;
       position: absolute;
@@ -494,9 +465,8 @@ img {
 .nav-button-prev {
   display: block;
   width: 30em;
-  font-style: italic;
   font-size: 1em;
-  font-weight: 700;
+  font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
   color: #efeeeb;
   line-height: 1;
   position: fixed;
@@ -520,11 +490,6 @@ img {
     background: #ffffff;
     border-radius: 0.5em 0 0 0.5em;
     right: 0; }
-  .nav-button-prev:before {
-    content: "Prev.";
-    padding: 0 1em 0 0;
-    font-weight: 400;
-    text-transform: uppercase; }
   .nav-button-prev:hover {
     -webkit-transform: translateX(20em);
         -ms-transform: translateX(20em);
@@ -535,9 +500,8 @@ img {
 .nav-button-next {
   display: block;
   width: 30em;
-  font-style: italic;
   font-size: 1em;
-  font-weight: 700;
+  font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
   color: #efeeeb;
   line-height: 1;
   position: fixed;
@@ -560,11 +524,6 @@ img {
     background: #ffffff;
     border-radius: 0 0.5em 0.5em 0;
     left: 0; }
-  .nav-button-next:after {
-    content: "Next";
-    padding: 0 0 0 1em;
-    font-weight: 400;
-    text-transform: uppercase; }
   .nav-button-next:hover {
     -webkit-transform: translateX(-20em);
         -ms-transform: translateX(-20em);

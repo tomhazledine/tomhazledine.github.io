@@ -11,6 +11,7 @@ body{
     font-size:1.6em;
     font-family:$text;
     font-weight:$book;
+    color:$black;
     line-height:1.6;
     min-width:300px;
 
@@ -32,7 +33,9 @@ a{
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight:bold;
+  font-family:$display;
+
 }
 
 li{
@@ -87,37 +90,6 @@ h3{
     font-size:1.2em;
     padding:1em 0 0 0;
 }
-p{
-    text-indent:24%;
-    hyphens:none;
-    &:after{
-        content:"¶";
-        padding-left:.2em;
-        color:$primary;
-    }
-    &:first-of-type{
-        // clear:both;
-        text-indent:0;
-        //@include bigFirstLetter;
-    }
-    @include bigFirstLetter;
-}
-p + p{
-    &:first-letter{
-        font-size:inherit;
-        color:inherit;
-    }
-    a:first-letter{
-        font-size:inherit;
-        color:inherit;
-        transition:color;
-        transition-duration:.3s;
-    }
-    a:hover:first-letter{
-        color:$cream;
-        font-size:inherit;
-    }
-}
 .top-link{
     display:block;
     padding:2em 0 0 0;
@@ -143,11 +115,15 @@ hr{
     }
 }
 
-img {
-    display: block;
-    position: relative;
-    z-index: 1000;
-    width: 100%;
-    padding: 1em 0 0em 0;
-    margin-bottom: -1.2em;
+img{
+    display:block;
+    position:relative;
+    z-index:2;
+    max-width:100%;
+    height:auto;
+    padding:1em 0 0em 0;
+    margin-bottom:-1.2em;
+}
+.shadowImg img{
+    box-shadow:rgba($black,.4) 0 .2em .5em 0;
 }

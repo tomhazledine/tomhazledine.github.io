@@ -19,21 +19,13 @@ $silver:#ddd;
 $grey:#aaa;
 $black:#111;
 
-// Brand Colours
-// $black:#333333;
-// $white:#ffffff;
-// $cream:#fff8d8;
-// $primary:#7fbbcb;
-// $secondary:#fbae17;
-// $grey:#bbb;
-// $creamDark:#eee8d8;
-
 $black:#4d4d4d;
 $white:#ffffff;
 $cream:#efeeeb;
 $grey:#dad8d2;
 $greyDark:darken($grey,20%);
 $primary:#00b7c6;
+// $primaryLight:rgba($primary,.6);
 
 // Selection Colours
 ::selection{

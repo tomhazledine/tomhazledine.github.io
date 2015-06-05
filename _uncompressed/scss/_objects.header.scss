@@ -26,7 +26,10 @@
     color:$cream;
     background:$black;
     font-weight:$bold;
-    font-style:italic;
+    font-size:.8em;
+    line-height:1.2rem;
+    font-style:normal;
+    // font-style:italic;
     padding:.2em 1em .2em 1.5em;
     box-shadow:
         inset $black .5em 0 0 0,
