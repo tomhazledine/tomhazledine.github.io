@@ -1189,4 +1189,6 @@ blockquote {
   .extraSpaceOnMobile {
     display: inline-block;
     margin-top: 2em;
-    margin-bottom: 2em; } }
+    margin-bottom: 2em; }
+    .extraSpaceOnMobile a {
+      padding: 0.5em; } }
