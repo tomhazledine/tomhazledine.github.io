@@ -3,11 +3,12 @@
 .cp-css .bodyWrapper {
   background: #efeeeb;
   width: 80%;
-  margin: 5em auto 3em; }
+  margin: 5em auto 3em;
+  padding-top: 6em; }
 .cp-css .hidden {
   display: none !important; }
 .cp-css .header {
-  font-size: 1.2em;
+  height: 1.6rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,8 +26,7 @@
   width: 1em;
   margin: 0.2em 0.5em;
   float: right;
-  position: relative;
-  z-index: 3; }
+  display: none; }
 .cp-css h1 {
   font-size: 1.8em;
   line-height: 1.2;
@@ -35,10 +35,19 @@
   color: #4d4d4d;
   margin: 0 0 6rem; }
 .cp-css .mainContent {
+  width: 90%;
   margin: 0 auto; }
 .cp-css .siteName {
   display: inline-block;
   color: #efeeeb;
   background: #4d4d4d;
   font-weight: 700;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  margin-left: 1em; }
+.cp-css .logo {
+  margin: 0;
+  line-height: 1.6rem; }
+.cp-css a {
+  text-decoration: none;
+  background: #dad8d2;
+  color: #4d4d4d; }

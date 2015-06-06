@@ -23,7 +23,7 @@
         background: #efeeeb;
         width: 80%;
         margin: 5em auto 3em;
-        // padding-top: 6em;
+        padding-top: 6em;
     }
 
     .hidden {
@@ -31,7 +31,8 @@
     }
 
     .header {
-        font-size: 1.2em;
+        height:1.6rem;
+        // font-size: 1.2em;
         position: fixed;
         top: 0;
         left: 0;
@@ -53,8 +54,7 @@
         width: 1em;
         margin: .2em .5em;
         float: right;
-        position: relative;
-        z-index: 3;
+        display:none;
     }
 
     h1 {
@@ -69,7 +69,7 @@
     }
 
     .mainContent {
-        // width: 28em;
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -79,7 +79,15 @@
         background: #4d4d4d;
         font-weight: 700;
         font-size: .8em;
-        // line-height: 1.2rem;
-        // padding: .2em 1em .2em 1.5em;
+        margin-left:1em;
+    }
+    .logo{
+        margin:0;
+        line-height:1.6rem;
+    }
+    a{
+        text-decoration:none;
+        background: #dad8d2;
+        color: #4d4d4d;
     }
 }
