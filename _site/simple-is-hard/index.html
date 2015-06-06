@@ -8,7 +8,7 @@
     <meta charset="utf-8">
 
     <!-- Critical Path CSS -->
-    <style type="text/css">.cp-css body{color:#4d4d4d}.cp-css .bodyWrapper{background:#efeeeb;width:80%;margin:5em auto 3em;padding-top:6em}.cp-css .hidden{display:none!important}.cp-css .header{height:1.6rem;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3}.cp-css .mainMenuWrapper{position:fixed;bottom:0;left:100%}.cp-css .mainMenuToggle{height:1em;width:1em;margin:.2em .5em;float:right;display:none}.cp-css h1{font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;margin:0 0 6rem}.cp-css .mainContent{width:90%;margin:0 auto}.cp-css .siteName{display:inline-block;color:#efeeeb;background:#4d4d4d;font-weight:700;font-size:.8em;margin-left:1em}.cp-css .logo{margin:0;line-height:1.6rem}.cp-css a{text-decoration:none;background:#dad8d2;color:#4d4d4d}</style>
+    <style type="text/css">.cp-css html{font-size:62.5%}@media (min-width:1200px){.cp-css html{font-size:100%}}.cp-css body{color:#4d4d4d}.cp-css .bodyWrapper{background:#efeeeb;width:80%;margin:5em auto 3em;padding-top:6em}.cp-css .hidden{display:none!important}.cp-css .header{height:1.6rem;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3}.cp-css .mainMenuWrapper{position:fixed;bottom:0;left:100%}.cp-css .mainMenuToggle{height:1em;width:1em;margin:.2em .5em;float:right;display:none}.cp-css h1{font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;margin:0 0 6rem}.cp-css .mainContent{width:90%;margin:0 auto}.cp-css .siteName{display:inline-block;color:#efeeeb;background:#4d4d4d;font-weight:700;font-size:.8em;margin-left:1em}.cp-css .logo{margin:0;line-height:1.6rem}.cp-css a{text-decoration:none;background:#dad8d2;color:#4d4d4d}</style>
 
     <title>
          Simple is hard – Tom Hazledine Web Design
@@ -31,16 +31,16 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
             // Remove 'cp-css' class, wrapped in a tiny DOM-ready function.
-            function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
-            r(function(){
-                var cpHtml = document.getElementById('criticalPath');
-                var className = 'cp-css';
-                if (cpHtml.classList) {
-                    cpHtml.classList.remove(className);
-                } else {
-                    cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-                }
-            });
+            // function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+            // r(function(){
+            //     var cpHtml = document.getElementById('criticalPath');
+            //     var className = 'cp-css';
+            //     if (cpHtml.classList) {
+            //         cpHtml.classList.remove(className);
+            //     } else {
+            //         cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            //     }
+            // });
         </script>
         <!-- <link rel="stylesheet" href="http://www.tomhazledine.com/assets/css/main.min.css"> -->
         
@@ -324,21 +324,21 @@
 	  </div-->
 
 	<div class="scripts">
-  <!-- Javascript -->
-  <script src="http://www.tomhazledine.com/assets/js/app.min.js"></script>
-  
+    <!-- Javascript -->
+    <script src="http://www.tomhazledine.com/assets/js/app.min.js" async></script>
+    
 
-  <!-- Analytics -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36655973-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+    <!-- Analytics -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36655973-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 
 </div><!-- .scripts -->
 
