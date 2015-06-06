@@ -30,13 +30,17 @@
                 webkitRequestAnimationFrame || msRequestAnimationFrame;
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
-            var cpHtml = document.getElementById('criticalPath');
-            var className = 'cp-css';
-            if (cpHtml.classList) {
-                cpHtml.classList.remove(className);
-            } else {
-                cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-            }
+            // Remove 'cp-css' class, wrapped in a tiny DOM-ready function.
+            function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
+            r(function(){
+                var cpHtml = document.getElementById('criticalPath');
+                var className = 'cp-css';
+                if (cpHtml.classList) {
+                    cpHtml.classList.remove(className);
+                } else {
+                    cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+                }
+            });
         </script>
         <!-- <link rel="stylesheet" href="/assets/css/main.min.css"> -->
         
@@ -83,7 +87,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
