@@ -1,24 +1,12 @@
-html {
-  font-size: 62.5%; }
-
-body {
-  font-size: 1.6em;
-  font-family: ff-tisa-web-pro, georgia, serif;
-  font-weight: 400;
-  color: #4d4d4d;
-  line-height: 1.6; }
-
-.bodyWrapper {
+.cp-css body {
+  color: #4d4d4d; }
+.cp-css .bodyWrapper {
   background: #efeeeb;
   width: 80%;
-  min-width: 30em;
-  margin: 5em auto 3em;
-  padding-top: 6em; }
-
-.hidden {
+  margin: 5em auto 3em; }
+.cp-css .hidden {
   display: none !important; }
-
-.header {
+.cp-css .header {
   font-size: 1.2em;
   position: fixed;
   top: 0;
@@ -27,41 +15,30 @@ body {
   color: #efeeeb;
   width: 100%;
   line-height: 1;
-  z-index: 3;
-  min-width: 300px; }
-
-.mainMenuWrapper {
+  z-index: 3; }
+.cp-css .mainMenuWrapper {
   position: fixed;
   bottom: 0;
   left: 100%; }
-
-.mainMenuToggle {
+.cp-css .mainMenuToggle {
   height: 1em;
   width: 1em;
   margin: 0.2em 0.5em;
   float: right;
   position: relative;
   z-index: 3; }
-
-h1 {
-  position: relative;
+.cp-css h1 {
   font-size: 1.8em;
   line-height: 1.2;
   text-align: center;
   font-weight: 700;
   color: #4d4d4d;
-  padding: 4rem 0 10rem;
   margin: 0 0 6rem; }
-
-.mainContent {
-  width: 28em;
+.cp-css .mainContent {
   margin: 0 auto; }
-
-.siteName {
+.cp-css .siteName {
   display: inline-block;
   color: #efeeeb;
   background: #4d4d4d;
   font-weight: 700;
-  font-size: 0.8em;
-  line-height: 1.2rem;
-  padding: 0.2em 1em 0.2em 1.5em; }
+  font-size: 0.8em; }

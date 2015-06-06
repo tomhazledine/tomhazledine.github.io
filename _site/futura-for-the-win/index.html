@@ -2,13 +2,13 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html id="criticalPath" class="cp-css no-js"> <!--<![endif]-->
 <head>
 
     <meta charset="utf-8">
 
     <!-- Critical Path CSS -->
-    <style type="text/css">html{font-size:62.5%}body{font-size:1.6em;font-family:ff-tisa-web-pro,georgia,serif;font-weight:400;color:#4d4d4d;line-height:1.6}.bodyWrapper{background:#efeeeb;width:80%;min-width:30em;margin:5em auto 3em;padding-top:6em}.hidden{display:none!important}.header{font-size:1.2em;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3;min-width:300px}.mainMenuWrapper{position:fixed;bottom:0;left:100%}.mainMenuToggle{height:1em;width:1em;margin:.2em .5em;float:right;position:relative;z-index:3}h1{position:relative;font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;padding:4rem 0 10rem;margin:0 0 6rem}.mainContent{width:28em;margin:0 auto}.siteName{display:inline-block;color:#efeeeb;background:#4d4d4d;font-weight:700;font-size:.8em;line-height:1.2rem;padding:.2em 1em .2em 1.5em}</style>
+    <style type="text/css">.cp-css body{color:#4d4d4d}.cp-css .bodyWrapper{background:#efeeeb;width:80%;margin:5em auto 3em}.cp-css .hidden{display:none!important}.cp-css .header{font-size:1.2em;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3}.cp-css .mainMenuWrapper{position:fixed;bottom:0;left:100%}.cp-css .mainMenuToggle{height:1em;width:1em;margin:.2em .5em;float:right;position:relative;z-index:3}.cp-css h1{font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;margin:0 0 6rem}.cp-css .mainContent{margin:0 auto}.cp-css .siteName{display:inline-block;color:#efeeeb;background:#4d4d4d;font-weight:700;font-size:.8em}</style>
 
     <title>
          Futura for the win. – Tom Hazledine Web Design
@@ -21,15 +21,22 @@
     <!-- async CSS -->
     
         <script>
-          var cb = function() {
-            var l = document.createElement('link'); l.rel = 'stylesheet';
-            l.href = '/assets/css/main.min.css';
-            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-          };
-          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-              webkitRequestAnimationFrame || msRequestAnimationFrame;
-          if (raf) raf(cb);
-          else window.addEventListener('load', cb);
+            var cb = function() {
+              var l = document.createElement('link'); l.rel = 'stylesheet';
+              l.href = '/assets/css/main.min.css';
+              var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+            };
+            var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                webkitRequestAnimationFrame || msRequestAnimationFrame;
+            if (raf) raf(cb);
+            else window.addEventListener('load', cb);
+            var cpHtml = document.getElementById('criticalPath');
+            var className = 'cp-css';
+            if (cpHtml.classList) {
+                cpHtml.classList.remove(className);
+            } else {
+                cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
         </script>
         <!-- <link rel="stylesheet" href="/assets/css/main.min.css"> -->
         

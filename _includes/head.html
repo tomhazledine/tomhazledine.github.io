@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html id="criticalPath" class="cp-css no-js"> <!--<![endif]-->
 <head>
 
     <meta charset="utf-8">
@@ -34,15 +34,22 @@
         <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}"> -->
     {% else %}
         <script>
-          var cb = function() {
-            var l = document.createElement('link'); l.rel = 'stylesheet';
-            l.href = '{{ site.url }}/assets/css/main.min.css';
-            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-          };
-          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-              webkitRequestAnimationFrame || msRequestAnimationFrame;
-          if (raf) raf(cb);
-          else window.addEventListener('load', cb);
+            var cb = function() {
+              var l = document.createElement('link'); l.rel = 'stylesheet';
+              l.href = '{{ site.url }}/assets/css/main.min.css';
+              var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+            };
+            var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                webkitRequestAnimationFrame || msRequestAnimationFrame;
+            if (raf) raf(cb);
+            else window.addEventListener('load', cb);
+            var cpHtml = document.getElementById('criticalPath');
+            var className = 'cp-css';
+            if (cpHtml.classList) {
+                cpHtml.classList.remove(className);
+            } else {
+                cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            }
         </script>
         <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css"> -->
         {% if page.customCss %}

@@ -683,7 +683,7 @@ img {
   color: #efeeeb;
   line-height: 1;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 50%;
   margin-top: -3.5em;
   padding: 3em 2em;
@@ -718,7 +718,7 @@ img {
   color: #efeeeb;
   line-height: 1;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 50%;
   margin-top: -3.5em;
   padding: 3em 2em;
