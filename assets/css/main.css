@@ -410,10 +410,10 @@ img {
 .navicon {
   display: block;
   background: #efeeeb;
-  height: 3px;
+  height: 2px;
   margin: 0.4rem auto;
   position: relative;
-  width: 0.8em;
+  width: 16px;
   -webkit-transition: background;
           transition: background;
   -webkit-transition-duration: 0.2s;
@@ -422,11 +422,11 @@ img {
     content: '';
     display: block;
     position: absolute;
-    height: 3px;
+    height: 2px;
     background: #efeeeb;
-    width: 100%;
+    width: 16px;
     left: 50%;
-    margin-left: -0.4em;
+    margin-left: -8px;
     -webkit-transform-origin: 50% 50%;
         -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
@@ -435,13 +435,14 @@ img {
     -webkit-transition-duration: 0.2s;
             transition-duration: 0.2s; }
   .navicon:before {
-    top: -7px; }
+    top: -5px; }
   .navicon:after {
-    bottom: -7px; }
+    bottom: -5px; }
 
 .mainMenuToggle.open .navicon {
-  background: #4d4d4d;
-  width: 0.6em; }
+  background: #4d4d4d; }
+  .mainMenuToggle.open .navicon:before, .mainMenuToggle.open .navicon:after {
+    width: 12px; }
   .mainMenuToggle.open .navicon:before {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
