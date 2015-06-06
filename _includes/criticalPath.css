@@ -3,15 +3,12 @@ html {
 
 body {
   font-size: 1.6em;
-  font-family: ff-tisa-web-pro, georgia, serif;
-  font-weight: 400;
   color: #4d4d4d;
   line-height: 1.6; }
 
 .bodyWrapper {
   background: #efeeeb;
   width: 80%;
-  min-width: 30em;
   margin: 5em auto 3em;
   padding-top: 6em; }
 
@@ -27,8 +24,7 @@ body {
   color: #efeeeb;
   width: 100%;
   line-height: 1;
-  z-index: 3;
-  min-width: 300px; }
+  z-index: 3; }
 
 .mainMenuWrapper {
   position: fixed;
