@@ -13,7 +13,7 @@
     <title>
          Getting started with inline SVG icons – Tom Hazledine Web Design
     </title>
-    <meta name="description" content="I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.">
+    <meta name="description" content="I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're <strong>not</strong> the best option: inline SVG icons are better in almost every way.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Tom Hazledine" href="/feed.xml">
@@ -30,17 +30,6 @@
                 webkitRequestAnimationFrame || msRequestAnimationFrame;
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
-            // Remove 'cp-css' class, wrapped in a tiny DOM-ready function.
-            // function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
-            // r(function(){
-            //     var cpHtml = document.getElementById('criticalPath');
-            //     var className = 'cp-css';
-            //     if (cpHtml.classList) {
-            //         cpHtml.classList.remove(className);
-            //     } else {
-            //         cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-            //     }
-            // });
         </script>
         <!-- <link rel="stylesheet" href="http://www.tomhazledine.com/assets/css/main.min.css"> -->
         
@@ -125,7 +114,7 @@
 
   				<h1>Getting started with inline SVG icons</h1>
 
-  				<h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
+  				<h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're <strong>not</strong> the best option: inline SVG icons are better in almost every way.</h3>
 
   				<!--![png – font character – svg](/)
 with scale-slider?-->

@@ -207,7 +207,7 @@ html {
       width: 80%; } }
 
 code {
-  font-family: "droid-sans-mono", monospace;
+  font-family: Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Courier New', monospace;
   padding: 0 0.4em;
   font-size: 0.8em;
   color: #efeeeb;
@@ -235,7 +235,7 @@ pre {
   pre:after {
     position: absolute;
     content: "Code Example";
-    font-family: "droid-sans-mono", monospace;
+    font-family: Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Courier New', monospace;
     font-size: 0.6em;
     top: -1.5em;
     left: 0;
@@ -1035,7 +1035,7 @@ blockquote {
       width: 100%;
       text-align: center;
       font-size: 0.6em;
-      font-family: "droid-sans-mono", monospace; }
+      font-family: Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Courier New', monospace; }
       .showcaseSlider.desktop .showcaseAddons:before {
         content: "";
         width: 0.5rem;
