@@ -307,7 +307,7 @@ img {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  font-size: 0.8em; }
+  font-size: 1.2em; }
   @media (max-width: 800px) {
     .mainMenu {
       font-size: 1.2em; } }
@@ -351,7 +351,7 @@ img {
   .header.mainMenuOpen {
     top: 0; }
   .header.tuckedUp {
-    top: -1.4em; }
+    top: -2em; }
     .header.tuckedUp.mainMenuOpen {
       top: 0; }
 

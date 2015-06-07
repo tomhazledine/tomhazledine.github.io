@@ -13,7 +13,7 @@
     transition-duration:.2s;
     &.mainMenuOpen{top:0;}
     &.tuckedUp{
-        top:-1.4em;
+        top:-2em;
         &.mainMenuOpen{top:0;}
     }
 }
