@@ -1,0 +1,50 @@
+{% include head.html %}
+{% include header.html %}
+
+
+<div class="bodyWrapper clearfix">
+  <section class="mainContent clearfix">
+
+    <header class="showcaseHeader">
+      <h1 class="showcaseH1">{{ page.pageTitle }}</h1>
+      <span class="showcaseExcerpt">{{ content }}</span>
+    </header>
+
+    <section class="popularPosts">
+      <ul>
+        {% for post in site.posts %}
+          {% if post.featured and page.url != post.url %}
+          <li class="popularPost">
+            <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+            {% if post.excerptlong %}
+              <span class="archiveItemExcerpt">{{post.excerptlong}}</span>
+            {% else %}
+              <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+            {% endif %}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="archive main-content">
+      {% for post in site.categories["article"] %}
+        {% if post.featured != true %}
+          <div class="archiveItem clearfix">
+            <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+            {% if post.excerptmini %}
+              <span class="archiveItemExcerpt">{{post.excerptmini}}</span>
+            {% else %}
+              <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+
+    {% include sociallinks.html %}
+  
+  </section>
+</div>
+
+{% include footer.html %}
