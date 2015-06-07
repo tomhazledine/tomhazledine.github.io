@@ -8,7 +8,7 @@ excerptmini: "Ask 3-months-ago-me if I'd set a website entirely in Futura and I'
 
 comments: true
 category: article
-featured: true
+featured: false
 ---
 
 {:.addendum}

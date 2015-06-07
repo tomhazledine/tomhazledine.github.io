@@ -2,7 +2,7 @@
 layout: post
 title: "Getting started with inline SVG icons"
 
-excerptlong: As a typography nerd, using a custom font to serve icons felt really good. It turns out inline SVG icons are better in almost every way.
+excerptlong: As a typography nerd, using a custom font to serve icons felt really good. However, it turns out inline SVG icons are better in almost every way.
 
 excerptmini: "We should all be using SVG icon sets"
 
@@ -98,15 +98,15 @@ It takes a bit of configuring to get the drop-an-icon-into-a-folder-and-let-Gulp
 
 ---
 
-## Extra goodness and inevitable Gotchas
-
-### Jekyll eats inline SVG for breakfast.
+## Inline SVG in Jekyll
 
 This site is built using the static-site generator Jekyll. Transferring this site's (admittedly meagre) icon set from an iconfont to an inline SVG sprite couldn't have been easier. Make sure your task-runner outputs your sprite into Jekyll's `_includes` directory and you can pull in your sprite with a simple `{% raw %}{% include /symbol/svg/sprite.symbol.svg %}{% endraw %}`. And because Jekyll compiles *before* deployment, you don't even have to make a single HTTP request to get your icons: it's all truly inline.
 
-### Wordpress isn't so easy, but gets there eventually.
+## Inline SVG in Wordpress
 
-Jekyll's all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things *that* easy for us. Including an automatically generated SVG sprite in PHP is a little trickier. `<?php include_once("path/to/svg/sprite.svg"); ?>` would seem like the obvious solution, but all that will give you is a face full of errors. It turns out the issue is with the XML and `DOCTYPE` added to the sprite by the gulp task, and the trick is to use `file_get_contents()` instead of `include_once()`.
+Jekyll's all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things *that* easy for us. Wordpress sites don't have the advantage of being compiled before deployment, which means we need to use PHP to include the sprite.
+
+Including an automatically generated SVG sprite using PHP is a little trickier than it first appears. `<?php include_once("path/to/svg/sprite.svg"); ?>` would seem like the obvious solution, but all that will give you is a face full of errors (if you've got `WP_DEBUG` set to `true`). It turns out the issue is with the XML and `DOCTYPE` added to the sprite by the gulp task, and the trick is to use `file_get_contents()` instead of `include_once()`.
 
 ### SVG & CSS
 
