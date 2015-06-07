@@ -7,7 +7,7 @@
     color:$cream;
     width:100%;
     line-height:1;
-    z-index:3;
+    z-index:10;
     min-width:300px;
     transition:top;
     transition-duration:.2s;
@@ -27,7 +27,8 @@
     padding:.1em 1em;
     box-shadow:inset $primary .5em 0 0 0;
     transition:box-shadow;
-    transition-duration:.2s;
+    transition-duration:.4s;
+    overflow:hidden;
     &:hover{
         color:$cream;
         background:$black;

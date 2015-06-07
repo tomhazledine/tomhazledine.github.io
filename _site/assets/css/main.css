@@ -450,6 +450,7 @@ img {
 .mainMenuWrapper {
   z-index: 2;
   position: fixed;
+  z-index: 3;
   background: #00b7c6;
   width: 100%;
   display: table;
@@ -503,7 +504,7 @@ img {
   color: #efeeeb;
   width: 100%;
   line-height: 1;
-  z-index: 3;
+  z-index: 10;
   min-width: 300px;
   -webkit-transition: top;
           transition: top;
@@ -528,8 +529,9 @@ img {
           box-shadow: inset #00b7c6 0.5em 0 0 0;
   -webkit-transition: -webkit-box-shadow;
           transition: box-shadow;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s; }
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  overflow: hidden; }
   .siteName:hover {
     color: #efeeeb;
     background: #4d4d4d;
@@ -689,7 +691,7 @@ img {
   color: #efeeeb;
   line-height: 1;
   position: fixed;
-  z-index: 3;
+  z-index: 1;
   top: 50%;
   margin-top: -3.5em;
   padding: 3em 2em;
@@ -724,7 +726,7 @@ img {
   color: #efeeeb;
   line-height: 1;
   position: fixed;
-  z-index: 3;
+  z-index: 1;
   top: 50%;
   margin-top: -3.5em;
   padding: 3em 2em;

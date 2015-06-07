@@ -241,10 +241,81 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
 &lt;h2&gt;Practice [repeat, x10]&lt;/h2&gt;
 
-&lt;nav class=&quot;nav-outer clearfix&quot;&gt;
-  
+&lt;script&gt;
+    var postsList = [];
+    var currentPost = 0;
 
-  
+    
+
+        postsList[0] = [];
+        
+        postsList[0][&quot;url&quot;] = &quot;/inline-svg-icons&quot;;
+        postsList[0][&quot;title&quot;] = &quot;Getting started with inline SVG icons&quot;;
+
+        
+
+    
+
+        postsList[1] = [];
+        
+        postsList[1][&quot;url&quot;] = &quot;/inspiring-web-people&quot;;
+        postsList[1][&quot;title&quot;] = &quot;Inspirational Web People&quot;;
+
+        
+
+    
+
+        postsList[2] = [];
+        
+        postsList[2][&quot;url&quot;] = &quot;/top-ten-ways-to-get-better-at-something&quot;;
+        postsList[2][&quot;title&quot;] = &quot;Top ten ways to progress.&quot;;
+
+        
+            var currentPost = 2;
+        
+
+    
+
+        postsList[3] = [];
+        
+        postsList[3][&quot;url&quot;] = &quot;/fullpage-screenshots-in-firefox&quot;;
+        postsList[3][&quot;title&quot;] = &quot;Fullpage screenshots in Firefox.&quot;;
+
+        
+
+    
+
+        postsList[4] = [];
+        
+        postsList[4][&quot;url&quot;] = &quot;/futura-for-the-win&quot;;
+        postsList[4][&quot;title&quot;] = &quot;Futura for the win.&quot;;
+
+        
+
+    
+
+        postsList[5] = [];
+        
+        postsList[5][&quot;url&quot;] = &quot;/simple-is-hard&quot;;
+        postsList[5][&quot;title&quot;] = &quot;Simple is hard&quot;;
+
+        
+
+    
+
+        postsList[6] = [];
+        
+        postsList[6][&quot;url&quot;] = &quot;/bullet-journal-workflow&quot;;
+        postsList[6][&quot;title&quot;] = &quot;A bullet-journal workflow&quot;;
+
+        
+
+    
+&lt;/script&gt;
+
+&lt;nav id=&quot;nextPrevWrapper&quot; class=&quot;nav-outer clearfix&quot;&gt;
+    &lt;div id=&quot;nextBox&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;prevBox&quot;&gt;&lt;/div&gt;
 &lt;/nav&gt;
 </description>
 <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
