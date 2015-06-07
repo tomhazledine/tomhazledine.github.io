@@ -32,3 +32,5 @@ navigation:
   - text: Blog
     layout: post
     url: /blog/
+gems:
+  - jekyll-sitemap
