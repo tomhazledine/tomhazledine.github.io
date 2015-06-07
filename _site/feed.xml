@@ -3,8 +3,8 @@
 <channel>
 <title>Tom Hazledine</title>
 <description>The personal web-hub for Tom Hazledine</description>
-<link>http://www.tomhazledine.com</link>
-<atom:link href="http://www.tomhazledine.com/feed.xml" rel="self" type="application/rss+xml" />
+<link>http://tomhazledine.com</link>
+<atom:link href="http://tomhazledine.com/feed.xml" rel="self" type="application/rss+xml" />
 
 <item>
 <title>Getting started with inline SVG icons</title>
@@ -17,7 +17,7 @@ with scale-slider?--&gt;
 
 &lt;pre&gt;&lt;code&gt;/* Calling an iconfont icon as a pseudo element within CSS. */
 .elementName:before {
-    font-family:&#39;iconfont&#39;;
+    font-family:'iconfont';
 	content: &quot;\e001&quot;; // The unicode value of the font character you want.
 	color: #000; // The icon is text, so you can style it using regular CSS
 }
@@ -51,7 +51,7 @@ with scale-slider?--&gt;
 .elementName {
     height:1em;
     width:1em;
-    background-image: url(path/to/icon.png); // Fallback for browsers that don&#39;t like SVG.
+    background-image: url(path/to/icon.png); // Fallback for browsers that don't like SVG.
     background-image: url(path/to/icon.svg);
 }
 &lt;/code&gt;&lt;/pre&gt;
@@ -71,7 +71,7 @@ with scale-slider?--&gt;
 	&amp;lt;/symbol&amp;gt;
 &amp;lt;/svg&amp;gt;
 
-&amp;lt;!-- ...and then &#39;use&#39; a specific icon --&amp;gt;
+&amp;lt;!-- ...and then 'use' a specific icon --&amp;gt;
 &amp;lt;svg class=&quot;icon&quot;&amp;gt;
     &amp;lt;use xlink:href=&quot;#iconID&quot;/&amp;gt;
 &amp;lt;/svg&amp;gt;
@@ -94,24 +94,24 @@ var svgConfig = {
     }
 };
 // The task itself
-gulp.task(&#39;svg&#39;,function(){
-    return gulp.src(&#39;_uncompressed/icons/**/*.svg&#39;)
+gulp.task('svg',function(){
+    return gulp.src('_uncompressed/icons/**/*.svg')
         .pipe(svgSprite(svgConfig))
-        .pipe(gulp.dest(&#39;_includes&#39;));
+        .pipe(gulp.dest('_includes'));
 });
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
-&lt;h2&gt;Extra goodness and inevitable Gotchas&lt;/h2&gt;
-
-&lt;h3&gt;Jekyll eats inline SVG for breakfast.&lt;/h3&gt;
+&lt;h2&gt;Inline SVG in Jekyll&lt;/h2&gt;
 
 &lt;p&gt;This site is built using the static-site generator Jekyll. Transferring this site’s (admittedly meagre) icon set from an iconfont to an inline SVG sprite couldn’t have been easier. Make sure your task-runner outputs your sprite into Jekyll’s &lt;code&gt;_includes&lt;/code&gt; directory and you can pull in your sprite with a simple &lt;code&gt;{% include /symbol/svg/sprite.symbol.svg %}&lt;/code&gt;. And because Jekyll compiles &lt;em&gt;before&lt;/em&gt; deployment, you don’t even have to make a single HTTP request to get your icons: it’s all truly inline.&lt;/p&gt;
 
-&lt;h3&gt;Wordpress isn’t so easy, but gets there eventually.&lt;/h3&gt;
+&lt;h2&gt;Inline SVG in Wordpress&lt;/h2&gt;
 
-&lt;p&gt;Jekyll’s all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things &lt;em&gt;that&lt;/em&gt; easy for us. Including an automatically generated SVG sprite in PHP is a little trickier. &lt;code&gt;&amp;lt;?php include_once(&quot;path/to/svg/sprite.svg&quot;); ?&amp;gt;&lt;/code&gt; would seem like the obvious solution, but all that will give you is a face full of errors. It turns out the issue is with the XML and &lt;code&gt;DOCTYPE&lt;/code&gt; added to the sprite by the gulp task, and the trick is to use &lt;code&gt;file_get_contents()&lt;/code&gt; instead of &lt;code&gt;include_once()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Jekyll’s all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things &lt;em&gt;that&lt;/em&gt; easy for us. Wordpress sites don’t have the advantage of being compiled before deployment, which means we need to use PHP to include the sprite.&lt;/p&gt;
+
+&lt;p&gt;Including an automatically generated SVG sprite using PHP is a little trickier than it first appears. &lt;code&gt;&amp;lt;?php include_once(&quot;path/to/svg/sprite.svg&quot;); ?&amp;gt;&lt;/code&gt; would seem like the obvious solution, but all that will give you is a face full of errors (if you’ve got &lt;code&gt;WP_DEBUG&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;). It turns out the issue is with the XML and &lt;code&gt;DOCTYPE&lt;/code&gt; added to the sprite by the gulp task, and the trick is to use &lt;code&gt;file_get_contents()&lt;/code&gt; instead of &lt;code&gt;include_once()&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3&gt;SVG &amp;amp; CSS&lt;/h3&gt;
 
@@ -123,7 +123,7 @@ gulp.task(&#39;svg&#39;,function(){
 // Save the SVG file in a variable...
 $rawSVG = file_get_contents(get_template_directory_uri() . &quot;/path/to/svg/sprite.svg&quot;);
 // ...then filter out any fills.
-echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i&#39;, &#39;&#39;, $rawSVG )
+echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawSVG )
 ?&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -132,8 +132,8 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 &lt;p&gt;For a long time I was very skeptical of using inline SVG for icon sets, primarily because of the perceived effort it would take to set up such a system. I’m happy to report that SVG sprites are considerably easier to get started with than I’d ever thought. I can’t imagine ever using an iconfont again.&lt;/p&gt;
 </description>
 <pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
-<link>http://www.tomhazledine.com/inline-svg-icons</link>
-<guid isPermaLink="true">http://www.tomhazledine.com/inline-svg-icons</guid>
+<link>http://tomhazledine.com/inline-svg-icons</link>
+<guid isPermaLink="true">http://tomhazledine.com/inline-svg-icons</guid>
 </item>
 
 <item>
@@ -231,8 +231,8 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 &lt;p&gt;People like this are what makes the web such a fantastic industry to be a part of, and I owe them all a debt of gratitude.&lt;/p&gt;
 </description>
 <pubDate>Tue, 09 Sep 2014 00:00:00 +0100</pubDate>
-<link>http://www.tomhazledine.com/inspiring-web-people</link>
-<guid isPermaLink="true">http://www.tomhazledine.com/inspiring-web-people</guid>
+<link>http://tomhazledine.com/inspiring-web-people</link>
+<guid isPermaLink="true">http://tomhazledine.com/inspiring-web-people</guid>
 </item>
 
 <item>
@@ -241,19 +241,86 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 
 &lt;h2&gt;Practice [repeat, x10]&lt;/h2&gt;
 
-&lt;nav class=&quot;nav-outer clearfix&quot;&gt;
-  
-    &lt;a href=&quot;/fullpage-screenshots-in-firefox&quot; class=&quot;nav-button-prev&quot;&gt;Fullpage screenshots in Firefox.&lt;/a&gt;
-  
+&lt;script&gt;
+    var postsList = [];
+    var currentPost = 0;
 
-  
-    &lt;a href=&quot;/inspiring-web-people&quot; class=&quot;nav-button-next&quot;&gt;Inspirational Web People&lt;/a&gt;
-  
+    
+
+        postsList[0] = [];
+        
+        postsList[0][&quot;url&quot;] = &quot;/inline-svg-icons&quot;;
+        postsList[0][&quot;title&quot;] = &quot;Getting started with inline SVG icons&quot;;
+
+        
+
+    
+
+        postsList[1] = [];
+        
+        postsList[1][&quot;url&quot;] = &quot;/inspiring-web-people&quot;;
+        postsList[1][&quot;title&quot;] = &quot;Inspirational Web People&quot;;
+
+        
+
+    
+
+        postsList[2] = [];
+        
+        postsList[2][&quot;url&quot;] = &quot;/top-ten-ways-to-get-better-at-something&quot;;
+        postsList[2][&quot;title&quot;] = &quot;Top ten ways to progress.&quot;;
+
+        
+            var currentPost = 2;
+        
+
+    
+
+        postsList[3] = [];
+        
+        postsList[3][&quot;url&quot;] = &quot;/fullpage-screenshots-in-firefox&quot;;
+        postsList[3][&quot;title&quot;] = &quot;Fullpage screenshots in Firefox.&quot;;
+
+        
+
+    
+
+        postsList[4] = [];
+        
+        postsList[4][&quot;url&quot;] = &quot;/futura-for-the-win&quot;;
+        postsList[4][&quot;title&quot;] = &quot;Futura for the win.&quot;;
+
+        
+
+    
+
+        postsList[5] = [];
+        
+        postsList[5][&quot;url&quot;] = &quot;/simple-is-hard&quot;;
+        postsList[5][&quot;title&quot;] = &quot;Simple is hard&quot;;
+
+        
+
+    
+
+        postsList[6] = [];
+        
+        postsList[6][&quot;url&quot;] = &quot;/bullet-journal-workflow&quot;;
+        postsList[6][&quot;title&quot;] = &quot;A bullet-journal workflow&quot;;
+
+        
+
+    
+&lt;/script&gt;
+
+&lt;nav id=&quot;nextPrevWrapper&quot; class=&quot;nav-outer clearfix&quot;&gt;
+    &lt;div id=&quot;nextBox&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;prevBox&quot;&gt;&lt;/div&gt;
 &lt;/nav&gt;
 </description>
 <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
-<link>http://www.tomhazledine.com/top-ten-ways-to-get-better-at-something</link>
-<guid isPermaLink="true">http://www.tomhazledine.com/top-ten-ways-to-get-better-at-something</guid>
+<link>http://tomhazledine.com/top-ten-ways-to-get-better-at-something</link>
+<guid isPermaLink="true">http://tomhazledine.com/top-ten-ways-to-get-better-at-something</guid>
 </item>
 
 <item>
@@ -280,8 +347,8 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 &lt;p&gt;You can see some of the screenshots I took using this method over on my portfolio page. The ‘phone’ view of the &lt;a href=&quot;/atlantic-brewery&quot;&gt;Atlantic Brewery&lt;/a&gt; page is particularly long and thin – an image I’d have struggled to create using any other method.&lt;/p&gt;
 </description>
 <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://www.tomhazledine.com/fullpage-screenshots-in-firefox</link>
-<guid isPermaLink="true">http://www.tomhazledine.com/fullpage-screenshots-in-firefox</guid>
+<link>http://tomhazledine.com/fullpage-screenshots-in-firefox</link>
+<guid isPermaLink="true">http://tomhazledine.com/fullpage-screenshots-in-firefox</guid>
 </item>
 
 <item>
@@ -314,11 +381,11 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 
 &lt;p&gt;In fact, all the apostrophes and quotation marks look the same. It’s all well and good training yourself to press &lt;code&gt;alt shift ]&lt;/code&gt; every time you want an apostrophe, but Futura renders such efforts irrelevant. How many different characters can you count in the following sentence?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsSmall.png&quot; alt=&quot;&#39;‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsSmall.png&quot; alt=&quot;'‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tough, eh?! It’s a little easier at larger sizes:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsLarge.png&quot; alt=&quot;&#39;‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsLarge.png&quot; alt=&quot;'‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There’s actually &lt;strong&gt;seven&lt;/strong&gt; discrete glyphs there. There &lt;em&gt;are&lt;/em&gt; differences, which at large sizes are delightfully subtle and nuanced, but at anything less than 72pt they all blur into one…&lt;/p&gt;
 
@@ -329,8 +396,8 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 &lt;p&gt;Only time will tell how long this current designs sticks around for, but it already feels like this version is a more substantial website than any of my previous attempts. Picking Futura and sticking with it, despite the issues and imperfections, has meant I’ve been able to turn my attention to the finer details: the little moments of interaction design, the negative space, and above all the &lt;strong&gt;content&lt;/strong&gt;.&lt;/p&gt;
 </description>
 <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://www.tomhazledine.com/futura-for-the-win</link>
-<guid isPermaLink="true">http://www.tomhazledine.com/futura-for-the-win</guid>
+<link>http://tomhazledine.com/futura-for-the-win</link>
+<guid isPermaLink="true">http://tomhazledine.com/futura-for-the-win</guid>
 </item>
 
 <item>
@@ -366,8 +433,8 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 &lt;p&gt;Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is a real challenge, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.&lt;/p&gt;
 </description>
 <pubDate>Thu, 26 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://www.tomhazledine.com/simple-is-hard</link>
-<guid isPermaLink="true">http://www.tomhazledine.com/simple-is-hard</guid>
+<link>http://tomhazledine.com/simple-is-hard</link>
+<guid isPermaLink="true">http://tomhazledine.com/simple-is-hard</guid>
 </item>
 
 <item>
@@ -405,8 +472,8 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 &lt;p&gt;But using the &lt;a href=&quot;http://www.bulletjournal.com/&quot;&gt;Bullet Journal&lt;/a&gt; &lt;em&gt;has&lt;/em&gt; undeniably helped my workflow. My days now have structure, and (most importantly) I’m now much less likely to overlook an important task.&lt;/p&gt;
 </description>
 <pubDate>Tue, 24 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://www.tomhazledine.com/bullet-journal-workflow</link>
-<guid isPermaLink="true">http://www.tomhazledine.com/bullet-journal-workflow</guid>
+<link>http://tomhazledine.com/bullet-journal-workflow</link>
+<guid isPermaLink="true">http://tomhazledine.com/bullet-journal-workflow</guid>
 </item>
 
 </channel>

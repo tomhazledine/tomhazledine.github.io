@@ -1,21 +1,13 @@
-.mainMenuToggle{
-    @extend %buttonReset;
-    height:1em;
-    width:1em;
-    margin:.2em .5em;
-    float:right;
-    // background:$red;
-    position:relative;
-    z-index:3;
-    &:focus{outline:none;}
-}
-
 .navicon{
     display:block;
     background:$cream;
     height:2px;
-    margin:.4rem auto;
-    position:relative;
+    // margin:.4rem auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-1px;
+    margin-left:-8px;
     width:16px;
     transition:background;
     transition-duration:.2s;
@@ -57,6 +49,7 @@
 .mainMenuWrapper{
     z-index:2;
     position:fixed;
+    z-index:3;
     // top:0;
     // right:0;
     background:$primary;
@@ -79,7 +72,10 @@
     display:table-cell;
     text-align:center;
     vertical-align:middle;
-    font-size:.8em;
+    font-size:1.2em;
+    @include bp(d2){
+        font-size:1.2em;
+    }
     li{
         display:block;
         text-align:center;

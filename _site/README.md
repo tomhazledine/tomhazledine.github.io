@@ -1,4 +1,4 @@
-# Thomas Hazledine
+# Tom Hazledine
 
 ## My portfolio and personal blog
 
@@ -8,4 +8,4 @@ This site is built using Jekyll, meaning that what finally gets deployed are jus
 
 Follow me on Twitter: [@thomashazledine](https://twitter.com/thomashazledine)
 
-See this site in action: [thomashazledine.com](http://thomashazledine.com/)
+See this site in action: [tomhazledine.com](http://tomhazledine.com/)

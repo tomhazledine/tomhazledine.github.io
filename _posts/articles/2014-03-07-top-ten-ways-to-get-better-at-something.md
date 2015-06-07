@@ -13,12 +13,4 @@ comments: false
 
 ## Practice [repeat, x10]
 
-<nav class="nav-outer clearfix">
-  {% if page.next_in_category.url %}
-    <a href="{{page.next_in_category.url}}" class="nav-button-prev">{{page.next_in_category.title}}</a>
-  {% endif %}
-
-  {% if page.previous_in_category.url %}
-    <a href="{{page.previous_in_category.url}}" class="nav-button-next">{{page.previous_in_category.title}}</a>
-  {% endif %}
-</nav>
+{% include navigation.html %}

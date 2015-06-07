@@ -1,0 +1,23 @@
+<script>
+    var postsList = [];
+    var currentPost = 0;
+
+    {% for post in site.categories["article"] %}
+
+        postsList[{{ forloop.index0 }}] = [];
+        
+        postsList[{{ forloop.index0 }}]["url"] = "{{ post.url }}";
+        postsList[{{ forloop.index0 }}]["title"] = "{{ post.title }}";
+
+        {% if post.url == page.url %}
+            var currentPost = {{ forloop.index0 }};
+        {% endif %}
+
+    {% endfor %}
+</script>
+
+
+<nav id="nextPrevWrapper" class="nav-outer clearfix">
+    <div id="nextBox"></div>
+    <div id="prevBox"></div>
+</nav>
