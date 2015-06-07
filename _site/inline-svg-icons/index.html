@@ -107,16 +107,16 @@
     </nav>
 
 
-	<div class="bodyWrapper clearfix">
-  		<section class="mainContent clearfix">
+  <div class="bodyWrapper clearfix">
+      <section class="mainContent clearfix">
 
-			<article class="mainContentInner textContent">
+      <article class="mainContentInner textContent">
 
-  				<h1>Getting started with inline SVG icons</h1>
+          <h1>Getting started with inline SVG icons</h1>
 
-  				<h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
+          <h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
 
-  				<!--![png – font character – svg](/)
+          <!--![png – font character – svg](/)
 with scale-slider?-->
 
 <p>We should all know by now that using raster images for icons is a bad idea. Limiting ourselves to one set resolution is not how we work in a multi-device ecosystem. It’s not responsive, it’s not performant, it’s not nice.</p>
@@ -240,34 +240,104 @@ echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
 <p>For a long time I was very skeptical of using inline SVG for icon sets, primarily because of the perceived effort it would take to set up such a system. I’m happy to report that SVG sprites are considerably easier to get started with than I’d ever thought. I can’t imagine ever using an iconfont again.</p>
 
 
-			</article>
+      </article>
 
-			<nav class="nav-outer clearfix">
-  				
-    				<a href="http://th.dev/inspiring-web-people" class="nav-button-prev">Inspirational Web People</a>
-  				
+      <script>
+    var postsList = [];
+    var currentPost = 0;
 
-  				
-			</nav>
+    
 
-			
-  				<div id="disqus_thread"></div>
-  					<script type="text/javascript">
-        				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        				var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
+        postsList[0] = [];
+        
+        postsList[0]["url"] = "/inline-svg-icons";
+        postsList[0]["title"] = "Getting started with inline SVG icons";
 
-        				/* * * DON'T EDIT BELOW THIS LINE * * */
-        				(function() {
-            				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        				})();
-  					</script>
-  					<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  					<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-			
+        
+            var currentPost = 0;
+        
 
-			<section class="archive">
+    
+
+        postsList[1] = [];
+        
+        postsList[1]["url"] = "/inspiring-web-people";
+        postsList[1]["title"] = "Inspirational Web People";
+
+        
+
+    
+
+        postsList[2] = [];
+        
+        postsList[2]["url"] = "/top-ten-ways-to-get-better-at-something";
+        postsList[2]["title"] = "Top ten ways to progress.";
+
+        
+
+    
+
+        postsList[3] = [];
+        
+        postsList[3]["url"] = "/fullpage-screenshots-in-firefox";
+        postsList[3]["title"] = "Fullpage screenshots in Firefox.";
+
+        
+
+    
+
+        postsList[4] = [];
+        
+        postsList[4]["url"] = "/futura-for-the-win";
+        postsList[4]["title"] = "Futura for the win.";
+
+        
+
+    
+
+        postsList[5] = [];
+        
+        postsList[5]["url"] = "/simple-is-hard";
+        postsList[5]["title"] = "Simple is hard";
+
+        
+
+    
+
+        postsList[6] = [];
+        
+        postsList[6]["url"] = "/bullet-journal-workflow";
+        postsList[6]["title"] = "A bullet-journal workflow";
+
+        
+
+    
+</script>
+
+
+<nav id="nextPrevWrapper" class="nav-outer clearfix">
+    <div id="nextBox"></div>
+    <div id="prevBox"></div>
+</nav>
+
+      
+          <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'thomashazledine'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+      <section class="archive">
   <h3>More articles:</h3>
   <ul>
     
@@ -321,9 +391,9 @@ echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
 </section><!-- .archive -->
 
 
-			<span class="top-link"><a href="#top">Back to top</a></span>
+      <span class="top-link"><a href="#top">Back to top</a></span>
 
-			<section class="socialLinks clearfix">
+      <section class="socialLinks clearfix">
     <span class="socialContainer">
         <a href="https://twitter.com/thomashazledine" class="twitter">
             <svg class="icon twitter">
@@ -343,8 +413,8 @@ echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
 </section>
 
 
-  		</div><!-- .mainContent -->
-	</div><!-- .bodyWrapper -->
+      </div><!-- .mainContent -->
+  </div><!-- .bodyWrapper -->
 
 <footer class="footer">
 	<a href="mailto:tom@tomhazledine.com">Let's get to work&hellip;</a>

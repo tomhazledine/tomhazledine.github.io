@@ -243,11 +243,7 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
 &lt;nav class=&quot;nav-outer clearfix&quot;&gt;
   
-    &lt;a href=&quot;/fullpage-screenshots-in-firefox&quot; class=&quot;nav-button-prev&quot;&gt;Fullpage screenshots in Firefox.&lt;/a&gt;
-  
 
-  
-    &lt;a href=&quot;/inspiring-web-people&quot; class=&quot;nav-button-next&quot;&gt;Inspirational Web People&lt;/a&gt;
   
 &lt;/nav&gt;
 </description>
