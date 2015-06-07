@@ -43,17 +43,6 @@
                 webkitRequestAnimationFrame || msRequestAnimationFrame;
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
-            // Remove 'cp-css' class, wrapped in a tiny DOM-ready function.
-            // function r(f){/in/.test(document.readyState)?setTimeout('r('+f+')',9):f()}
-            // r(function(){
-            //     var cpHtml = document.getElementById('criticalPath');
-            //     var className = 'cp-css';
-            //     if (cpHtml.classList) {
-            //         cpHtml.classList.remove(className);
-            //     } else {
-            //         cpHtml.className = cpHtml.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-            //     }
-            // });
         </script>
         <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css"> -->
         {% if page.customCss %}

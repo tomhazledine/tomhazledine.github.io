@@ -1,5 +1,5 @@
 .header{
-    font-size:1.2em;
+    font-size:1em;
     position:fixed;
     top:0;
     left:0;
@@ -16,37 +16,45 @@
         top:-1.4em;
         &.mainMenuOpen{top:0;}
     }
-    .logo{
-        font-size:1em;
-        padding:0;
-    }
 }
 .siteName{
-    display:inline-block;
-    color:$cream;
+    display:block;
+    float:left;
     background:$black;
-    font-weight:$bold;
-    font-size:.8em;
-    line-height:1.2rem;
-    font-style:normal;
-    // font-style:italic;
-    padding:.2em 1em .2em 1.5em;
-    box-shadow:
-        inset $black .5em 0 0 0,
-        inset $primary 1em 0 0 0;
+    margin:.5em;
+    padding:.1em 0;
+    line-height:1em;
+    padding:.1em 1em;
+    box-shadow:inset $primary .5em 0 0 0;
     transition:box-shadow;
     transition-duration:.2s;
     &:hover{
         color:$cream;
         background:$black;
-        box-shadow:
-            inset $black .5em 0 0 0,
-            inset $primary 9em 0 0 0;
+        box-shadow:inset $primary 20em 0 0 0;
     }
 }
 
-.headerTagline{
-    display:inline-block;
-    font-style:italic;
-    padding:.2em 0;
+.logo{
+    font-size:.8em;
+    display:block;
+    padding:0;
+    line-height:1;
+    margin:0;
+    color:$white;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+}
+
+.mainMenuToggle{
+    @extend %buttonReset;
+    height:2em;
+    width:2em;
+    line-height:1;
+    // margin:.2em .5em;
+    float:right;
+    // background:$red;
+    position:relative;
+    // z-index:3;
+    &:focus{outline:none;}
 }

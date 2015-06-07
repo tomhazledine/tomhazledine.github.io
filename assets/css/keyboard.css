@@ -244,22 +244,15 @@ img {
   -webkit-box-shadow: rgba(77, 77, 77, 0.4) 0 0.2em 0.5em 0;
           box-shadow: rgba(77, 77, 77, 0.4) 0 0.2em 0.5em 0; }
 
-.mainMenuToggle {
-  height: 1em;
-  width: 1em;
-  margin: 0.2em 0.5em;
-  float: right;
-  position: relative;
-  z-index: 3; }
-  .mainMenuToggle:focus {
-    outline: none; }
-
 .navicon {
   display: block;
   background: #efeeeb;
   height: 2px;
-  margin: 0.4rem auto;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -8px;
   width: 16px;
   -webkit-transition: background;
           transition: background;
@@ -323,6 +316,9 @@ img {
   text-align: center;
   vertical-align: middle;
   font-size: 0.8em; }
+  @media (max-width: 800px) {
+    .mainMenu {
+      font-size: 1.2em; } }
   .mainMenu li {
     display: block;
     text-align: center;
@@ -346,7 +342,7 @@ img {
                 box-shadow: inset #efeeeb 0 -2em 0 0; }
 
 .header {
-  font-size: 1.2em;
+  font-size: 1em;
   position: fixed;
   top: 0;
   left: 0;
@@ -366,21 +362,17 @@ img {
     top: -1.4em; }
     .header.tuckedUp.mainMenuOpen {
       top: 0; }
-  .header .logo {
-    font-size: 1em;
-    padding: 0; }
 
 .siteName {
-  display: inline-block;
-  color: #efeeeb;
+  display: block;
+  float: left;
   background: #4d4d4d;
-  font-weight: 700;
-  font-size: 0.8em;
-  line-height: 1.2rem;
-  font-style: normal;
-  padding: 0.2em 1em 0.2em 1.5em;
-  -webkit-box-shadow: inset #4d4d4d 0.5em 0 0 0, inset #00b7c6 1em 0 0 0;
-          box-shadow: inset #4d4d4d 0.5em 0 0 0, inset #00b7c6 1em 0 0 0;
+  margin: 0.5em;
+  padding: 0.1em 0;
+  line-height: 1em;
+  padding: 0.1em 1em;
+  -webkit-box-shadow: inset #00b7c6 0.5em 0 0 0;
+          box-shadow: inset #00b7c6 0.5em 0 0 0;
   -webkit-transition: -webkit-box-shadow;
           transition: box-shadow;
   -webkit-transition-duration: 0.2s;
@@ -388,13 +380,27 @@ img {
   .siteName:hover {
     color: #efeeeb;
     background: #4d4d4d;
-    -webkit-box-shadow: inset #4d4d4d 0.5em 0 0 0, inset #00b7c6 9em 0 0 0;
-            box-shadow: inset #4d4d4d 0.5em 0 0 0, inset #00b7c6 9em 0 0 0; }
+    -webkit-box-shadow: inset #00b7c6 20em 0 0 0;
+            box-shadow: inset #00b7c6 20em 0 0 0; }
 
-.headerTagline {
-  display: inline-block;
-  font-style: italic;
-  padding: 0.2em 0; }
+.logo {
+  font-size: 0.8em;
+  display: block;
+  padding: 0;
+  line-height: 1;
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em; }
+
+.mainMenuToggle {
+  height: 2em;
+  width: 2em;
+  line-height: 1;
+  float: right;
+  position: relative; }
+  .mainMenuToggle:focus {
+    outline: none; }
 
 .footer {
   text-align: center;
