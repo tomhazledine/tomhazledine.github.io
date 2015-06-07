@@ -1,0 +1,31 @@
+{% include head.html %}
+{% include header.html %}
+
+<div class="bodyWrapper clearfix">
+    <section class="mainContent clearfix">
+
+        <div class="textContent">
+            
+            <h1>{{ page.title }}</h2>
+            
+            {{content}}
+        
+        </div>
+
+        {% for post in site.categories["showcase"] %}
+
+            <section class="portfolioEntry">
+                <h2 class="portfolioH2"><a href="{{ site.url }}{{post.url}}">{{post.title}}</a></h2>
+                <span>{{post.excerpt}}</span>
+            </section>
+
+        {% endfor %}
+
+        {% include featured.html %}
+
+        {% include sociallinks.html %}
+
+    </div><!-- .mainContent -->
+</div><!-- .bodyWrapper -->
+
+{% include footer.html %}
