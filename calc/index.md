@@ -31,6 +31,7 @@ customCss: "calc.min.css"
             </div>
 
             <div class="operators">
+                <button class="divide">÷</button>
                 <button class="plus">+</button>
                 <button class="minus">-</button>
                 <button class="times">&times;</button>
