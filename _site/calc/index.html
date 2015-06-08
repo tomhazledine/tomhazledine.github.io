@@ -11,9 +11,9 @@
     <style type="text/css">::-moz-selection{color:#efeeeb;background:rgba(0,183,198,.5)}::selection{color:#efeeeb;background:rgba(0,183,198,.5)}a::-moz-selection{color:#00b7c6;background:rgba(77,77,77,.5)}a::selection{color:#00b7c6;background:rgba(77,77,77,.5)}.cp-css html{font-size:62.5%}@media (min-width:1200px){.cp-css html{font-size:100%}}.cp-css body{color:#4d4d4d}.cp-css .hidden{display:none!important}.cp-css h1{font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;margin:0 0 6rem}.cp-css a{text-decoration:none;background:#dad8d2;color:#4d4d4d}.cp-css .bodyWrapper{background:#efeeeb;width:80%;margin:5em auto 3em;padding-top:6em}.cp-css .mainContent{width:90%;max-width:28em;margin:0 auto}.cp-css .header{font-size:1em;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3;min-width:300px}.cp-css .siteName{display:block;float:left;background:#4d4d4d;margin:.5em;line-height:1em;padding:.1em 1em;-webkit-box-shadow:inset #00b7c6 .5em 0 0 0;box-shadow:inset #00b7c6 .5em 0 0 0}.cp-css .logo{font-size:.8em;display:block;padding:0;line-height:1;margin:0;color:#fff;text-transform:uppercase;letter-spacing:.2em}.cp-css .mainMenuToggle{display:none}.cp-css .mainMenuWrapper{position:fixed;bottom:0;left:100%}.cp-css .icon{width:1em;height:1em}</style>
 
     <title>
-         E.C. Dawson & Company – Tom Hazledine Web Design
+         CSS and Javascript Calculator – Tom Hazledine Web Design
     </title>
-    <meta name="description" content="A dynamic band site with Twitter and Soundcloud integration.">
+    <meta name="description" content="A working calculator built using JS and styled with CSS.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Tom Hazledine" href="/feed.xml">
@@ -32,6 +32,19 @@
             else window.addEventListener('load', cb);
         </script>
         <!-- <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css"> -->
+        
+            <script>
+              var cb = function() {
+                var l = document.createElement('link'); l.rel = 'stylesheet';
+                l.href = 'http://th.dev/assets/css/calc.min.css';
+                var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+              };
+              var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                  webkitRequestAnimationFrame || msRequestAnimationFrame;
+              if (raf) raf(cb);
+              else window.addEventListener('load', cb);
+            </script>
+            <!-- <link rel="stylesheet" href="http://th.dev/assets/css/calc.min.css"> -->
         
     
 
@@ -107,97 +120,42 @@
     </nav>
 
 
-<div class="bodyWrapper clearfix">
-    <section class="mainContent clearfix">
+    <div id="calcWrap">
 
-<article class="mainContentInner">
-
-    
-        <header class="showcaseHeader">
-            <h1 class="showcaseH1">E.C. Dawson & Company</h1>
-            <span class="showcaseLink">
-                <a href="http://th.devhttp://ecdawson.com">
-                    <svg class="icon twitter">
-                        <use xlink:href="#link"/>
-                    </svg>
-                    http://ecdawson.com
-                </a>
-            </span>
-            <span class="showcaseExcerpt">A dynamic band site with Twitter and Soundcloud integration.</span>
-        </header>
-    
-
-    
+    <div class="note">
+        Not finished yet... (last update 2015.05.19)
+    </div>
+    <div class="wrapper">
+        <div class="output">0</div>
         
-            <div class="showcaseSlider desktop">
-        
-            <span class="showcaseAddons">E.C. Dawson & Company</span>
-            <div class="imgCropper">
-                
-                    <img class="desktopImg" src="http://th.dev/assets/images/photos/ecdDesktop.jpg" alt="site showcase" />
-                
-                
-                    <img class="tabletImg" src="http://th.dev/assets/images/photos/ecdTablet.jpg" alt="site showcase" />
-                
-                
+        <div class="buttons">
+
+            <div class="numbers">
+                <button class="number" data-num="9">9</button>
+                <button class="number" data-num="8">8</button>
+                <button class="number" data-num="7">7</button>
+                <button class="number" data-num="6">6</button>
+                <button class="number" data-num="5">5</button>
+                <button class="number" data-num="4">4</button>
+                <button class="number" data-num="3">3</button>
+                <button class="number" data-num="2">2</button>
+                <button class="number" data-num="1">1</button>
+                <button class="clear">C</button>
+                <button class="number number0" data-num="0">0</button>
+                <button class="decimal" data-num=".">.</button>
             </div>
-        </div>
-        <div class="showcaseControls">
+
+            <div class="operators">
+                <button class="plus">+</button>
+                <button class="minus">-</button>
+                <button class="times">&times;</button>
+                <button class="equals">=</button>
+            </div>
             
-                <button class="showcaseControl desktop selected">Desktop</button>
-                
-                    <button class="showcaseControl tablet">Tablet</button>
-                
-                
-            
         </div>
-    
+    </div>
+</div>
 
-    <h3 class="big-drop-cap">A dynamic band site with Twitter and Soundcloud integration.</h3>
-
-    
-
-
-</article>
-
-<nav class="nav-outer clearfix">
-    
-
-    
-</nav>
-
-<section class="archive">
-  <h3>More examples of my work:</h3>
-  <ul>
-    
-      
-        <li><a href="http://th.dev/atlantic-brewery">Atlantic Brewery</a> A responsive e-commerce site for one Cornwall's best craft-beer brewers.</li>
-      
-    
-      
-        <li><a href="http://th.dev/fairgrieve-and-horner">Fairgrieve & Horner records</a> A fully responsive custom Wordpress theme for a boutique record label.</li>
-      
-    
-      
-        <li><a href="http://th.dev/keyboard">CSS and Javascript Keyboard</a> A working piano keyboard built using the Web Audio API and styled with CSS.</li>
-      
-    
-      
-    
-      
-        <li><a href="http://th.dev/cassette-script">Cassette Script Typeface</a> Cassette Script is a quirky handwriting font with over 200 characters.</li>
-      
-    
-      
-        <li><a href="http://th.dev/eaten-by-monsters">Eaten by Monsters music blog</a> An award-winning, taste-making, discourse-shaping powerhouse (albeit in a very specific niche).</li>
-      
-    
-
-  </ul>
-</section><!-- .archive -->
-
-
-<span class="top-link"><a href="#top">Back to top</a></span>
 
 <section class="socialLinks clearfix">
     <span class="socialContainer">
@@ -217,10 +175,6 @@
         </a>
     </span>
 </section>
-
-
-    </div><!-- .mainContent -->
-</div><!-- .bodyWrapper -->
 
 <footer class="footer">
 	<a href="mailto:tom@tomhazledine.com">Let's get to work&hellip;</a>

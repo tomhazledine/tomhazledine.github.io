@@ -1,0 +1,175 @@
+@import "settings.colours";
+@import "settings.fonts";
+@import "settings.breakpoints";
+
+#calcWrap{
+
+    // $white: #ffffff;
+    // $primary: #00b7c6;
+    // $black: #2d2d2d;
+    $screen: lighten(orange,10%);//#ddd;
+    $button: #bbb;
+    $bg: #888;
+    $red: lighten(red, 10%);
+
+    .note{
+        font-weight:bold;
+        font-family:$display;
+        color:$black;
+        text-align:center;
+        padding:5em 0 0 0;
+    }
+
+    .wrapper {
+        width: 9.6em;
+        padding: .5em .5em 0 .5em;
+        margin: 4em auto;
+        font-size: 2em;
+        background: $bg;
+        /* overflow: auto; */
+        border-radius: .4em;
+        box-shadow:
+            darken($bg, 10%) 0 .3em 0 0,
+            lighten($bg, 10%) 0 .5em 0 0,
+            darken($white, 8%) -.5em 1em 0 0
+            ;
+        border: .1em solid darken($bg, 10%);
+        border-top-color: lighten($bg, 10%);
+        border-right-color: lighten($bg, 10%);
+        
+        /* margin: .2em; */
+    }
+
+    .output {
+        background: $screen;
+        padding: .6em .5em .2em;
+        line-height: 1;
+        text-align: right;
+        font-family: monospace;
+        font-size: 1.2em;
+        //margin: .5em .5em 1.2em .5em;//.2em .2em 1em .2em;
+        margin: .5em 0 1em 0;
+        border-radius: .2em;
+        color: darken($screen, 35%);
+        overflow: hidden;
+        position: relative;
+        border: .1em solid lighten($bg, 20%);
+        border-top-color: darken($bg, 20%);
+        border-right-color: darken($bg, 20%);
+        box-shadow:
+            inset rgba($white,.6) 0 .05em 0 0,
+            inset darken($bg,30%) 0 .15em 0 0,
+            inset rgba($black,.3) -.2em .35em 0 0;
+        &:before{
+            content: "";
+            height: 3em;
+            
+            width: 4em;
+            background: linear-gradient(
+                rgba($white,.3) 0%,
+                transparent 100%
+            );
+            transform: rotate(-70deg);
+            display: block;
+            position: absolute;
+            top:0;
+            /* top: -1.5em; */
+            left: 45%;
+        }
+    }
+
+    .buttons{
+        padding: .2em .3em .2em .5em;
+        overflow: hidden;
+        /* box-sizing:border-box; */
+        //box-shadow: inset darken($bg, 10%) -.2em .2em 0 0;
+        border: .2em solid darken($bg, 10%);
+        //border-top-color: lighten($red, 15%);
+        border-left-color: lighten($bg, 10%);
+        border-bottom: 0;
+        border-radius: .3em;
+        background: $bg;
+        //border-bottom: 1em solid yellow;
+        margin-bottom: -.2em;
+    }
+
+    button {
+        border: 0;
+        font-family:monospace;
+        background: $button;
+        color: $white;
+        font-size: .8em;
+        width: 2em;
+        height: 1.6em;
+        padding-top:.25em;
+        margin:0 0 .4em 0;
+        display: block;
+        float: left;
+        line-height: 1;
+        border-radius: .2em;
+        cursor: pointer;
+        border: .05em solid darken($button, 15%);
+        border-top-color: lighten($button, 15%);
+        border-right-color: lighten($button, 15%);
+        text-shadow:
+            darken($button, 15%) 0 -.1em 0;
+        
+        box-shadow:
+            darken($button, 15%) 0 .2em 0 0,
+            $black 0 .2em 0 .05em,
+            darken($bg, 10%) -.1em .3em 0 0,
+            darken($bg, 10%) -.2em .4em 0 0;
+        position: relative;
+        &:active {
+            top: .1em;
+            //background: $black;
+            box-shadow:
+                darken($button, 15%) 0 .1em 0 0,
+                $black 0 .1em 0 .05em,
+                darken($bg, 10%) -.1em .2em 0 0;
+        }
+        &:focus{outline:none;}
+    }
+
+    .numbers{
+        width: 5.53em;//2.4em per button
+        float: left;
+        //background:yellow;
+        button{
+            margin-right:.4em;
+            &:nth-of-type(3n){
+                margin-right:0;
+                //background:red;
+            }
+        }
+    }
+    .operators{
+        //background:red;
+        //overflow:hidden;
+        width:1.6em;
+        float:right;
+    }
+    .equals{
+        background: $red;
+        border: .05em solid darken($red, 15%);
+        border-top-color: lighten($red, 15%);
+        border-right-color: lighten($red, 15%);
+        text-shadow:
+            darken($red, 15%) 0 -.1em 0;
+        
+        box-shadow:
+            darken($red, 15%) 0 .2em 0 0,
+            $black 0 .2em 0 .05em,
+            darken($bg, 10%) -.1em .3em 0 0,
+            darken($bg, 10%) -.2em .4em 0 0;
+        &:active {
+            box-shadow:
+                darken($red, 15%) 0 .1em 0 0,
+                $black 0 .1em 0 .05em,
+                darken($bg, 10%) -.1em .2em 0 0;
+        }
+    }
+    /* .times{
+        &:before {content: '&mid;';}
+    } */
+}
