@@ -10,10 +10,27 @@ category: showcase
 comments: true
 featured: true
 
+customJs: audioPlayer.js
+customCss: audioPlayer.min.css
+
+audioLinks:
+- trackName: Lost That Easy
+  bandName: Cold War Kids
+  albumName: Dear Miss Lonelyhearts
+  url: http://eatenbymonsters.com/EbMBlog_mp3s/CWK_LostThatEasy.mp3
+- trackName: Bottled Affection
+  bandName: Cold War Kids
+  albumName: Dear Miss Lonelyhearts
+  url: http://eatenbymonsters.com/EbMBlog_mp3s/CWK_BottledAffection.mp3
+
 showcaselink: http://github.com/tomhazledine/stylefreeaudio
 ---
 
 The **Style-Free Audio Player (SFAP)** aims to solve this problem for audio players. You bring the markup, you bring the CSS, SFAP brings the functionality.
+
+---
+
+{% include audioPlayer.html %}
 
 ---
 
@@ -141,3 +158,5 @@ This is a HTML `range` input field that shows a visual representation of the aud
 To work, this `range` element must trigger the `sliderScrub()` function on input change, and must pass the value of the input (`this.value`) and the target audio file's index number.
 
 The position information is calculated as a percentage of the audio file's play-time, so set the input's `min` and `max` values to `0` and `100` respectively.
+
+{% include audioData.html %}

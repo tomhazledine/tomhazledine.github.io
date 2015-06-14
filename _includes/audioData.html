@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    var songs = [
+            {% assign first = true %}
+            {% for audioLink in page.audioLinks %}
+                {% unless first %},{% endunless %}
+                {
+                    {% if audioLink.url %}
+                        "url": "{{ audioLink.url }}"
+                    {% endif %}
+                }
+                {% assign first = false %}
+            {% endfor %}
+        ];
+</script>

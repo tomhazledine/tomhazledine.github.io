@@ -23,7 +23,7 @@
         <script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
-              l.href = 'http://tomhazledine.com/assets/css/main.min.css';
+              l.href = 'http://th.dev/assets/css/main.min.css';
               var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
             };
             var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -31,17 +31,30 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
         </script>
-        <!-- <link rel="stylesheet" href="http://tomhazledine.com/assets/css/main.min.css"> -->
+        <!-- <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css"> -->
+        
+            <script>
+              var cb = function() {
+                var l = document.createElement('link'); l.rel = 'stylesheet';
+                l.href = 'http://th.dev/assets/css/audioPlayer.min.css';
+                var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+              };
+              var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                  webkitRequestAnimationFrame || msRequestAnimationFrame;
+              if (raf) raf(cb);
+              else window.addEventListener('load', cb);
+            </script>
+            <!-- <link rel="stylesheet" href="http://th.dev/assets/css/audioPlayer.min.css"> -->
         
     
 
     <!-- Modernizr -->
-    <!--<script src="http://tomhazledine.com/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="http://th.dev/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
     <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
     <!--[if lt IE 9]>
-        <script src="http://tomhazledine.com/assets/js/static/respond.min.js" type="text/javascript"></script>
-        <script src="http://tomhazledine.com/assets/js/static/html5.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/html5.js" type="text/javascript"></script>
     <![endif]-->
 
     <!-- TYPEKIT: ‘TH Portfolio’ -->
@@ -76,7 +89,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="http://tomhazledine.com/" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="http://th.dev/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
@@ -92,15 +105,15 @@
             
             
                 <li >
-                    <a href="http://tomhazledine.com/">About</a>
+                    <a href="http://th.dev/">About</a>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/portfolio/">Portfolio</a>
+                    <a href="http://th.dev/portfolio/">Portfolio</a>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/blog/">Blog</a>
+                    <a href="http://th.dev/blog/">Blog</a>
                 </li>
             
         </ul>
@@ -132,6 +145,67 @@
     <h3 class="big-drop-cap">A smooth user experience hinges on consistency. Every time you break from your brand's styleguide to include an external widget, you're adding inconsistency.</h3>
 
     <p>The <strong>Style-Free Audio Player (SFAP)</strong> aims to solve this problem for audio players. You bring the markup, you bring the CSS, SFAP brings the functionality.</p>
+
+<hr />
+
+<div id="audioExamples">
+    
+    
+        <div class="playlistSongWrapper song0" data-song-index="0">
+            <button class="playlistSongTrigger songPaused notPlayedYet" data-song-index="0">
+                <span class="playPauseIcon"></span>
+                <span class="playlistInfo playlistSongName">Lost That Easy</span>
+                <span class="playlistInfo playlistInfoBandAlbum">
+                    <span class="playlistBandName">Cold War Kids</span> – <span class="playlistAlbumName"><em>Dear Miss Lonelyhearts</em></span>
+                </span>
+            </button>
+
+            <div class="songProgress clearfix">
+
+                <div class="songPlayTimer">
+                    0:00
+                </div>
+
+                <input type="range" class="songProgressSlider" min="0" max="100" value="0" oninput="myAudioPlayer.sliderScrub(this.value, 0)" />
+
+                <!--oninput="sliderScrub(value,0)"/>-->
+
+                <div class="songDuration">
+                    0:00
+                </div>
+
+            </div>
+        </div>
+        
+    
+        <div class="playlistSongWrapper song1" data-song-index="1">
+            <button class="playlistSongTrigger songPaused notPlayedYet" data-song-index="1">
+                <span class="playPauseIcon"></span>
+                <span class="playlistInfo playlistSongName">Bottled Affection</span>
+                <span class="playlistInfo playlistInfoBandAlbum">
+                    <span class="playlistBandName">Cold War Kids</span> – <span class="playlistAlbumName"><em>Dear Miss Lonelyhearts</em></span>
+                </span>
+            </button>
+
+            <div class="songProgress clearfix">
+
+                <div class="songPlayTimer">
+                    0:00
+                </div>
+
+                <input type="range" class="songProgressSlider" min="0" max="100" value="0" oninput="myAudioPlayer.sliderScrub(this.value, 1)" />
+
+                <!--oninput="sliderScrub(value,1)"/>-->
+
+                <div class="songDuration">
+                    0:00
+                </div>
+
+            </div>
+        </div>
+        
+    
+</div>
 
 <hr />
 
@@ -262,8 +336,49 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
 
 <p>The position information is calculated as a percentage of the audio file’s play-time, so set the input’s <code>min</code> and <code>max</code> values to <code>0</code> and <code>100</code> respectively.</p>
 
+<script type="text/javascript">
+    var songs = [
+            
+            
+                
+                {
+                    
+                        "url": "http://eatenbymonsters.com/EbMBlog_mp3s/CWK_LostThatEasy.mp3"
+                    
+                }
+                
+            
+                ,
+                {
+                    
+                        "url": "http://eatenbymonsters.com/EbMBlog_mp3s/CWK_BottledAffection.mp3"
+                    
+                }
+                
+            
+        ];
+</script>
+
+
 
 </article>
+
+
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'hazledine'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
 
 <nav class="nav-outer clearfix">
     
@@ -285,7 +400,7 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
         
             
                 
-                    <li><a href="http://tomhazledine.com/keyboard">CSS and Javascript Keyboard</a> A working piano keyboard built using the Web Audio API and styled with CSS.</li>
+                    <li><a href="http://th.dev/keyboard">CSS and Javascript Keyboard</a> A working piano keyboard built using the Web Audio API and styled with CSS.</li>
                 
             
         
@@ -293,7 +408,7 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
         
             
                 
-                    <li><a href="http://tomhazledine.com/cassette-script">Cassette Script Typeface</a> Cassette Script is a quirky handwriting font with over 200 characters.</li>
+                    <li><a href="http://th.dev/cassette-script">Cassette Script Typeface</a> Cassette Script is a quirky handwriting font with over 200 characters.</li>
                 
             
         
@@ -388,7 +503,9 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
 
 	<div class="scripts">
     <!-- Javascript -->
-    <script src="http://tomhazledine.com/assets/js/app.min.js" async></script>
+    <script src="http://th.dev/assets/js/app.min.js" async></script>
+    
+        <script src="http://th.dev/assets/js/static/audioPlayer.js" async></script>
     
 
     <!-- Analytics -->
