@@ -3,14 +3,16 @@
   <ul>
     {% for post in site.posts %}
       {% if post.featured and page.url != post.url %}
-      <li class="popularPost">
-        <a class="archiveItemTitle" href="{{ site.url }}{{post.url}}">{{post.title}}</a>
-        {% if post.excerptlong %}
-          <span class="archiveItemExcerpt">{{post.excerptlong}}</span>
-        {% else %}
-          <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+        {% if post.category == "article" %}
+        <li class="popularPost">
+          <a class="archiveItemTitle" href="{{ site.url }}{{post.url}}">{{post.title}}</a>
+          {% if post.excerptlong %}
+            <span class="archiveItemExcerpt">{{post.excerptlong}}</span>
+          {% else %}
+            <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+          {% endif %}
+        </li>
         {% endif %}
-      </li>
       {% endif %}
     {% endfor %}
   </ul>

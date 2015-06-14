@@ -116,9 +116,18 @@ html {
   font-style: italic;
   padding-left: 1em;
   position: relative;
-  padding-bottom: 1em;
   margin-bottom: 0.5em; }
-  .textContent li:before {
+  .textContent li h1, .textContent li h2, .textContent li h3, .textContent li h4, .textContent li h5, .textContent li h6 {
+    padding-top: 0;
+    font-style: normal; }
+  .textContent li p::first-letter {
+    font-size: inherit;
+    color: inherit; }
+  .textContent li p:after {
+    display: none; }
+.textContent ul li {
+  padding-bottom: 1em; }
+  .textContent ul li:before {
     display: inline-block;
     content: "";
     width: 8px;
@@ -128,7 +137,7 @@ html {
     position: absolute;
     top: 0.7em;
     left: 0.2em; }
-  .textContent li:after {
+  .textContent ul li:after {
     position: absolute;
     content: '';
     background: #dad8d2;
@@ -136,13 +145,19 @@ html {
     bottom: 0;
     left: 1em;
     height: 2px; }
-  .textContent li h1, .textContent li h2, .textContent li h3, .textContent li h4, .textContent li h5, .textContent li h6 {
-    padding-top: 0;
-    font-style: normal; }
-  .textContent li p::first-letter {
-    font-size: inherit;
-    color: inherit; }
-  .textContent li p:after {
+.textContent ol {
+  counter-reset: myBadassCounter; }
+  .textContent ol li:before {
+    position: absolute;
+    top: 0;
+    left: 0em;
+    width: 1em;
+    height: 1em;
+    color: #00b7c6;
+    display: inline-block;
+    content: counter(myBadassCounter);
+    counter-increment: myBadassCounter; }
+  .textContent ol li:after {
     display: none; }
 .textContent > p {
   text-indent: 24%;
@@ -205,6 +220,11 @@ html {
       font-size: 0.8em;
       padding: 2em;
       width: 80%; } }
+.textContent .noFancyPs {
+  text-indent: 0; }
+  .textContent .noFancyPs::first-letter {
+    font-size: inherit;
+    color: inherit; }
 
 code {
   font-family: Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Courier New', monospace;

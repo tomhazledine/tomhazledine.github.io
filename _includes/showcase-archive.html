@@ -1,11 +1,13 @@
 <section class="archive">
-  <h3>More examples of my work:</h3>
-  <ul>
-    {% for post in site.categories["showcase"] %}
-      {% if page.url != post.url %}
-        <li><a href="{{ site.url }}{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
-      {% endif %}
-    {% endfor %}
+    <h3>More examples of my work:</h3>
+    <ul>
+        {% for post in site.categories["showcase"] %}
+            {% if post.featured == true %}
+                {% if page.url != post.url %}
+                    <li><a href="{{ site.url }}{{post.url}}">{{post.title}}</a> {{post.excerpt}}</li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
 
-  </ul>
+    </ul>
 </section><!-- .archive -->
