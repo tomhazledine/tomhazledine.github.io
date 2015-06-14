@@ -23,7 +23,7 @@
         <script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
-              l.href = 'http://th.dev/assets/css/main.min.css';
+              l.href = 'http://tomhazledine.com/assets/css/main.min.css';
               var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
             };
             var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -31,12 +31,12 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
         </script>
-        <!-- <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css"> -->
+        <!-- <link rel="stylesheet" href="http://tomhazledine.com/assets/css/main.min.css"> -->
         
             <script>
               var cb = function() {
                 var l = document.createElement('link'); l.rel = 'stylesheet';
-                l.href = 'http://th.dev/assets/css/audioPlayer.min.css';
+                l.href = 'http://tomhazledine.com/assets/css/audioPlayer.min.css';
                 var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
               };
               var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -44,17 +44,17 @@
               if (raf) raf(cb);
               else window.addEventListener('load', cb);
             </script>
-            <!-- <link rel="stylesheet" href="http://th.dev/assets/css/audioPlayer.min.css"> -->
+            <!-- <link rel="stylesheet" href="http://tomhazledine.com/assets/css/audioPlayer.min.css"> -->
         
     
 
     <!-- Modernizr -->
-    <!--<script src="http://th.dev/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="http://tomhazledine.com/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
     <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
     <!--[if lt IE 9]>
-        <script src="http://th.dev/assets/js/static/respond.min.js" type="text/javascript"></script>
-        <script src="http://th.dev/assets/js/static/html5.js" type="text/javascript"></script>
+        <script src="http://tomhazledine.com/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="http://tomhazledine.com/assets/js/static/html5.js" type="text/javascript"></script>
     <![endif]-->
 
     <!-- TYPEKIT: ‘TH Portfolio’ -->
@@ -89,7 +89,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="http://th.dev/" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="http://tomhazledine.com/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
@@ -105,15 +105,15 @@
             
             
                 <li >
-                    <a href="http://th.dev/">About</a>
+                    <a href="http://tomhazledine.com/">About</a>
                 </li>
             
                 <li >
-                    <a href="http://th.dev/portfolio/">Portfolio</a>
+                    <a href="http://tomhazledine.com/portfolio/">Portfolio</a>
                 </li>
             
                 <li >
-                    <a href="http://th.dev/blog/">Blog</a>
+                    <a href="http://tomhazledine.com/blog/">Blog</a>
                 </li>
             
         </ul>
@@ -154,9 +154,9 @@
         <div class="playlistSongWrapper song0" data-song-index="0">
             <button class="playlistSongTrigger songPaused notPlayedYet" data-song-index="0">
                 <span class="playPauseIcon"></span>
-                <span class="playlistInfo playlistSongName">Lost That Easy</span>
+                <span class="playlistInfo playlistSongName">Hands</span>
                 <span class="playlistInfo playlistInfoBandAlbum">
-                    <span class="playlistBandName">Cold War Kids</span> – <span class="playlistAlbumName"><em>Dear Miss Lonelyhearts</em></span>
+                    <span class="playlistBandName">Four Tet</span> – <span class="playlistAlbumName"><em>Rounds</em></span>
                 </span>
             </button>
 
@@ -181,9 +181,9 @@
         <div class="playlistSongWrapper song1" data-song-index="1">
             <button class="playlistSongTrigger songPaused notPlayedYet" data-song-index="1">
                 <span class="playPauseIcon"></span>
-                <span class="playlistInfo playlistSongName">Bottled Affection</span>
+                <span class="playlistInfo playlistSongName">The Woodpile</span>
                 <span class="playlistInfo playlistInfoBandAlbum">
-                    <span class="playlistBandName">Cold War Kids</span> – <span class="playlistAlbumName"><em>Dear Miss Lonelyhearts</em></span>
+                    <span class="playlistBandName">Frightened Rabbit</span> – <span class="playlistAlbumName"><em>Pedestrian Verse</em></span>
                 </span>
             </button>
 
@@ -196,6 +196,33 @@
                 <input type="range" class="songProgressSlider" min="0" max="100" value="0" oninput="myAudioPlayer.sliderScrub(this.value, 1)" />
 
                 <!--oninput="sliderScrub(value,1)"/>-->
+
+                <div class="songDuration">
+                    0:00
+                </div>
+
+            </div>
+        </div>
+        
+    
+        <div class="playlistSongWrapper song2" data-song-index="2">
+            <button class="playlistSongTrigger songPaused notPlayedYet" data-song-index="2">
+                <span class="playPauseIcon"></span>
+                <span class="playlistInfo playlistSongName">Lost That Easy</span>
+                <span class="playlistInfo playlistInfoBandAlbum">
+                    <span class="playlistBandName">Cold War Kids</span> – <span class="playlistAlbumName"><em>Dear Miss Lonelyhearts</em></span>
+                </span>
+            </button>
+
+            <div class="songProgress clearfix">
+
+                <div class="songPlayTimer">
+                    0:00
+                </div>
+
+                <input type="range" class="songProgressSlider" min="0" max="100" value="0" oninput="myAudioPlayer.sliderScrub(this.value, 2)" />
+
+                <!--oninput="sliderScrub(value,2)"/>-->
 
                 <div class="songDuration">
                     0:00
@@ -343,7 +370,7 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
                 
                 {
                     
-                        "url": "http://eatenbymonsters.com/EbMBlog_mp3s/CWK_LostThatEasy.mp3"
+                        "url": "http://eatenbymonsters.com/EbMBlog_mp3s/FourTet_Hands.mp3"
                     
                 }
                 
@@ -351,7 +378,15 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
                 ,
                 {
                     
-                        "url": "http://eatenbymonsters.com/EbMBlog_mp3s/CWK_BottledAffection.mp3"
+                        "url": "http://eatenbymonsters.com/EbMBlog_mp3s/FrightenedRabbit/TheWoodpile.mp3"
+                    
+                }
+                
+            
+                ,
+                {
+                    
+                        "url": "http://eatenbymonsters.com/EbMBlog_mp3s/CWK_LostThatEasy.mp3"
                     
                 }
                 
@@ -400,7 +435,7 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
         
             
                 
-                    <li><a href="http://th.dev/keyboard">CSS and Javascript Keyboard</a> A working piano keyboard built using the Web Audio API and styled with CSS.</li>
+                    <li><a href="http://tomhazledine.com/keyboard">CSS and Javascript Keyboard</a> A working piano keyboard built using the Web Audio API and styled with CSS.</li>
                 
             
         
@@ -408,7 +443,7 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
         
             
                 
-                    <li><a href="http://th.dev/cassette-script">Cassette Script Typeface</a> Cassette Script is a quirky handwriting font with over 200 characters.</li>
+                    <li><a href="http://tomhazledine.com/cassette-script">Cassette Script Typeface</a> Cassette Script is a quirky handwriting font with over 200 characters.</li>
                 
             
         
@@ -503,9 +538,9 @@ var myAudioPlayer = StyleFreeAudio(audioData,playerWrapper);
 
 	<div class="scripts">
     <!-- Javascript -->
-    <script src="http://th.dev/assets/js/app.min.js" async></script>
+    <script src="http://tomhazledine.com/assets/js/app.min.js" async></script>
     
-        <script src="http://th.dev/assets/js/static/audioPlayer.js" async></script>
+        <script src="http://tomhazledine.com/assets/js/static/audioPlayer.js" async></script>
     
 
     <!-- Analytics -->

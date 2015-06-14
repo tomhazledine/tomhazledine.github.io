@@ -14,14 +14,18 @@ customJs: audioPlayer.js
 customCss: audioPlayer.min.css
 
 audioLinks:
+- trackName: Hands
+  bandName: Four Tet
+  albumName: Rounds
+  url: http://eatenbymonsters.com/EbMBlog_mp3s/FourTet_Hands.mp3
+- trackName: The Woodpile
+  bandName: Frightened Rabbit
+  albumName: Pedestrian Verse
+  url: http://eatenbymonsters.com/EbMBlog_mp3s/FrightenedRabbit/TheWoodpile.mp3
 - trackName: Lost That Easy
   bandName: Cold War Kids
   albumName: Dear Miss Lonelyhearts
   url: http://eatenbymonsters.com/EbMBlog_mp3s/CWK_LostThatEasy.mp3
-- trackName: Bottled Affection
-  bandName: Cold War Kids
-  albumName: Dear Miss Lonelyhearts
-  url: http://eatenbymonsters.com/EbMBlog_mp3s/CWK_BottledAffection.mp3
 
 showcaselink: http://github.com/tomhazledine/stylefreeaudio
 ---
