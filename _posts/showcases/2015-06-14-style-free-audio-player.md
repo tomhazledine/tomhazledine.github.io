@@ -7,7 +7,7 @@ excerpt: A lightweight style-free audio player.
 excerptlong: A smooth user experience hinges on consistency. Every time you break from your brand's styleguide to include an external widget, you're adding inconsistency.
 
 category: showcase
-comments: false
+comments: true
 featured: true
 
 showcaselink: http://github.com/tomhazledine/stylefreeaudio
@@ -21,8 +21,6 @@ The **Style-Free Audio Player (SFAP)** aims to solve this problem for audio play
 2. [Installation](#install)
 3. [Initialization](#init)
 4. [Markup](#markup)
-
----
 
 {:#over}
 ## 1. Overview
