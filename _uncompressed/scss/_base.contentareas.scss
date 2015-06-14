@@ -1,5 +1,14 @@
 .textContent{
     // color:$black;
+    // 
+    
+    em{
+        font-style:italic;
+    }
+
+    strong{
+        font-weight:bold;
+    }
     
     ul,ol{
         padding:1em 0;

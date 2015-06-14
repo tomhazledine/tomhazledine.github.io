@@ -108,6 +108,10 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
+.textContent em {
+  font-style: italic; }
+.textContent strong {
+  font-weight: bold; }
 .textContent ul, .textContent ol {
   padding: 1em 0;
   width: 90%;
