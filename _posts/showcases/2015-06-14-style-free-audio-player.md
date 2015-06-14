@@ -10,7 +10,7 @@ category: showcase
 comments: false
 featured: true
 
-showcaselink: https://github.com/tomhazledine/stylefreeaudio
+showcaselink: http://github.com/tomhazledine/stylefreeaudio
 ---
 
 The **Style-Free Audio Player (SFAP)** aims to solve this problem for audio players. You bring the markup, you bring the CSS, SFAP brings the functionality.
