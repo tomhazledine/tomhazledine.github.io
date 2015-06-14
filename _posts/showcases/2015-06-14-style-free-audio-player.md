@@ -25,6 +25,9 @@ The **Style-Free Audio Player (SFAP)** aims to solve this problem for audio play
 ---
 
 {:#over}
+## 1. Overview
+
+{:.noFancyPs}
 SFAP is all about keeping it simple. Every audio file you want to include in a page gets:
 
 * A play/pause button.
@@ -38,7 +41,7 @@ Anything else is up to you. As long as those elements are present for each audio
 ---
 
 {:#install}
-## Installation
+## 2. Installation
 
 {:.noFancyPs}
 To install SFAP, just include the `styleFreeAudio.min.js` file at the bottom of your HTML before your custom javascript.
@@ -52,12 +55,10 @@ Then add the [initialization code](#init) to your custom JS file, and add the [r
 ---
 
 {:#init}
-## Initialization
+## 3. Initialization
 
 {:.noFancyPs}
-To initialize SFAP you need two things: Audio data, and a wrapper element for your player markup.
-
-Then pass these into the SFAP javascript function and you're good to go.
+To initialize SFAP you need two things: Audio data, and a wrapper element for your player markup. Pass these into the SFAP javascript function and you're good to go.
 
     // Get the element that wraps all your player's markup.
     var playerWrapper = document.getElementById('audioPlayerIdGoesHere');
@@ -95,7 +96,7 @@ The simplest way to save this JSON data for **SFAP** to read is as a JS variable
 ---
 
 {:#markup}
-## Required Markup
+## 4. Required Markup
 
 To give your audio player controls ("Play", "Pause") and song-data displays ("Song Length", "Time Played"), you need to add some classes to your markup.
 
