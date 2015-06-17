@@ -14,7 +14,11 @@
                     <svg class="icon twitter">
                         <use xlink:href="#link"/>
                     </svg>
-                    {{page.showcaselink}}
+                    {% if page.showcaselinkshort %}
+                        {{ page.showcaselinkshort }}
+                    {% else %}
+                        {{ page.showcaselink }}
+                    {% endif %}
                 </a>
             </span>
             <span class="showcaseExcerpt">{{page.excerpt}}</span>
@@ -71,7 +75,7 @@
 </article>
 
 {% if page.comments %}
-  <div id="disqus_thread"></div>
+    <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'hazledine'; // required: replace example with your forum shortname

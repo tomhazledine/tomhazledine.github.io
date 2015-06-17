@@ -108,6 +108,10 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
+.textContent em {
+  font-style: italic; }
+.textContent strong {
+  font-weight: bold; }
 .textContent ul, .textContent ol {
   padding: 1em 0;
   width: 90%;
@@ -913,7 +917,9 @@ blockquote {
   position: relative;
   font-style: italic;
   padding: 3em 0;
-  margin: 3em 2em; }
+  margin: 3em 2em;
+  color: #00b7c6;
+  font-size: 1.2em; }
   blockquote:before {
     position: absolute;
     bottom: 100%;
@@ -938,8 +944,6 @@ blockquote {
       blockquote:after {
         width: 5em;
         margin-left: -2.5em; } }
-  blockquote .quoteRunIn {
-    color: #00b7c6; }
   blockquote p::first-letter {
     font-size: 1em;
     line-height: 1em;
@@ -962,7 +966,9 @@ blockquote {
 
 .showcaseH1 {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  position: relative;
+  z-index: 1; }
   .showcaseH1:after {
     display: none; }
 
@@ -982,7 +988,7 @@ blockquote {
       height: 0.5em;
       width: 0.7em;
       padding-right: 0.2em;
-      top: 0;
+      top: 0.08em;
       right: 100%; }
 
 .showcaseHeader {
