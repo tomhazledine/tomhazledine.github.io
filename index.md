@@ -11,4 +11,4 @@ If you like working with HTML `<audio>` and the Web Audio API, checkout [SFAP.js
     
 And if you like CSS callisthenics, have a look at my [CSS tape player](/cassette-script). Not "useful" if the slightest, but a fun bit of illustration built in the browser. Illustrator and Photoshop are for chumps! (unless, of course, you're building super-performant resolution agnostic [inline SVG icons](/inline-svg-icons)...)
 
-Say "hi" via email at [tom@tomhazledine.com](mailto:tom@tomhazledine.com) or catch me on Twitter as [@thomashazledine](//twitter.com/thomashazledine); I'm always happy to answer questions, receive advice, or engage in spirited debate.
+You can catch me on Twitter as [@thomashazledine](//twitter.com/thomashazledine), or if 140 characters isn't enough you can always reach me by email at [tom@tomhazledine.com](mailto:tom@tomhazledine.com); I'm always happy to answer questions, receive advice, or engage in spirited debate.
