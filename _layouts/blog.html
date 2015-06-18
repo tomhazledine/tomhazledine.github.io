@@ -14,7 +14,7 @@
       <ul>
         {% for post in site.posts %}
           {% if post.featured and page.url != post.url %}
-			{% if post.category == "article" %}
+            {% if post.category == "article" %}
               <li class="popularPost">
                 <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
                 {% if post.excerptlong %}
@@ -23,7 +23,7 @@
                   <span class="archiveItemExcerpt">{{post.excerpt}}</span>
                 {% endif %}
               </li>
-		    {% endif %}
+		        {% endif %}
           {% endif %}
         {% endfor %}
       </ul>

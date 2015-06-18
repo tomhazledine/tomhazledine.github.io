@@ -6,6 +6,8 @@ excerpt: A lightweight style-free audio player.
 
 excerptlong: A smooth user experience hinges on consistency. Every time you break from your brand's styleguide to include an external widget, you're adding inconsistency.
 
+summary: Styling default HTML audio elements is a pain. Thankfully we can use the Web Audio API to recreate our own audio player. One we can style with CSS. One where *we* have control of the markup.
+
 category: showcase
 comments: true
 featured: true

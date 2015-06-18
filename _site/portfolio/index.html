@@ -13,7 +13,7 @@
     <title>
          Portfolio – Tom Hazledine Web Design
     </title>
-    <meta name="description" content="Inbetween sipping fine scotch and basking in the glory of my vinyl collection, I make websites. These are some of the best projects I've worked on lately. Click through to see them in action.">
+    <meta name="description" content="In between sipping fine scotch and basking in the glory of my vinyl collection, I make websites. These are some of the best projects I've worked on lately. Click through to see them in action.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Tom Hazledine" href="/feed.xml">
@@ -23,7 +23,7 @@
         <script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
-              l.href = 'http://tomhazledine.com/assets/css/main.min.css';
+              l.href = 'http://th.dev/assets/css/main.min.css';
               var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
             };
             var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -31,17 +31,17 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
         </script>
-        <!-- <link rel="stylesheet" href="http://tomhazledine.com/assets/css/main.min.css"> -->
+        <!-- <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css"> -->
         
     
 
     <!-- Modernizr -->
-    <!--<script src="http://tomhazledine.com/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="http://th.dev/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
     <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
     <!--[if lt IE 9]>
-        <script src="http://tomhazledine.com/assets/js/static/respond.min.js" type="text/javascript"></script>
-        <script src="http://tomhazledine.com/assets/js/static/html5.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/html5.js" type="text/javascript"></script>
     <![endif]-->
 
     <!-- TYPEKIT: ‘TH Portfolio’ -->
@@ -76,7 +76,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="http://tomhazledine.com/" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="http://th.dev/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
@@ -92,15 +92,15 @@
             
             
                 <li >
-                    <a href="http://tomhazledine.com/">About</a>
+                    <a href="http://th.dev/">About</a>
                 </li>
             
                 <li class="active">
-                    <a href="http://tomhazledine.com/portfolio/">Portfolio</a>
+                    <a href="http://th.dev/portfolio/">Portfolio</a>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/blog/">Blog</a>
+                    <a href="http://th.dev/blog/">Blog</a>
                 </li>
             
         </ul>
@@ -119,56 +119,96 @@
         
         </div>
 
-        
+        <section class="popularPosts">
+            <ul>
+                
+                    
+                        <li class="popularPost">
+                            <a class="archiveItemTitle" href="/style-free-audio-player">SFAP.js</a>
+                            
+                                <span class="archiveItemExcerpt">Styling default HTML audio elements is a pain. Thankfully we can use the Web Audio API to recreate our own audio player. One we can style with CSS. One where *we* have control of the markup.</span>
+                            
+                        </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li class="popularPost">
+                            <a class="archiveItemTitle" href="/keyboard">CSS and Javascript Keyboard</a>
+                            
+                                
+                                    <span class="archiveItemExcerpt">A working piano keyboard built using the Web Audio API and styled with CSS.</span>
+                                
+                            
+                        </li>
+                    
+                
+                    
+                
+                    
+                        <li class="popularPost">
+                            <a class="archiveItemTitle" href="/cassette-script">Cassette Script Typeface</a>
+                            
+                                
+                                    <span class="archiveItemExcerpt">Cassette Script is a quirky handwriting font with over 200 characters. View the demo, which features some overblown CSS illustration.</span>
+                                
+                            
+                        </li>
+                    
+                
+                    
+                
+            </ul>
+        </section>
 
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="http://tomhazledine.com/style-free-audio-player">SFAP.js</a></h2>
-                <span>A lightweight style-free audio player.</span>
-            </section>
-
-        
-
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="http://tomhazledine.com/atlantic-brewery">Atlantic Brewery</a></h2>
-                <span>A responsive e-commerce site for one Cornwall's best craft-beer brewers.</span>
-            </section>
-
-        
-
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="http://tomhazledine.com/fairgrieve-and-horner">Fairgrieve & Horner records</a></h2>
-                <span>A fully responsive custom Wordpress theme for a boutique record label.</span>
-            </section>
-
-        
-
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="http://tomhazledine.com/keyboard">CSS and Javascript Keyboard</a></h2>
-                <span>A working piano keyboard built using the Web Audio API and styled with CSS.</span>
-            </section>
-
-        
-
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="http://tomhazledine.com/ecdawson">E.C. Dawson & Company</a></h2>
-                <span>A dynamic band site with Twitter and Soundcloud integration.</span>
-            </section>
-
-        
-
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="http://tomhazledine.com/cassette-script">Cassette Script Typeface</a></h2>
-                <span>Cassette Script is a quirky handwriting font with over 200 characters.</span>
-            </section>
-
-        
-
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="http://tomhazledine.com/eaten-by-monsters">Eaten by Monsters music blog</a></h2>
-                <span>An award-winning, taste-making, discourse-shaping powerhouse (albeit in a very specific niche).</span>
-            </section>
-
-        
+        <section class="archive main-content">
+            
+                
+            
+                
+                    <div class="archiveItem clearfix">
+                        <a class="archiveItemTitle" href="/atlantic-brewery">Atlantic Brewery</a>
+                        
+                            <span class="archiveItemExcerpt">A responsive e-commerce site for one Cornwall's best craft-beer brewers.</span>
+                        
+                    </div>
+                
+            
+                
+                    <div class="archiveItem clearfix">
+                        <a class="archiveItemTitle" href="/fairgrieve-and-horner">Fairgrieve & Horner records</a>
+                        
+                            <span class="archiveItemExcerpt">A fully responsive custom Wordpress theme for a boutique record label.</span>
+                        
+                    </div>
+                
+            
+                
+            
+                
+                    <div class="archiveItem clearfix">
+                        <a class="archiveItemTitle" href="/ecdawson">E.C. Dawson & Company</a>
+                        
+                            <span class="archiveItemExcerpt">A dynamic band site with Twitter and Soundcloud integration.</span>
+                        
+                    </div>
+                
+            
+                
+            
+                
+                    <div class="archiveItem clearfix">
+                        <a class="archiveItemTitle" href="/eaten-by-monsters">Eaten by Monsters music blog</a>
+                        
+                            <span class="archiveItemExcerpt">An award-winning, taste-making, discourse-shaping powerhouse (albeit in a very specific niche).</span>
+                        
+                    </div>
+                
+            
+        </section>
 
         <section class="featured">
   <h3>Featured articles:</h3>
@@ -181,7 +221,7 @@
       
         
         <li class="popularPost">
-          <a class="archiveItemTitle" href="http://tomhazledine.com/inline-svg-icons">Getting started with inline SVG icons</a>
+          <a class="archiveItemTitle" href="http://th.dev/inline-svg-icons">Getting started with inline SVG icons</a>
           
             <span class="archiveItemExcerpt">As a typography nerd, using a custom font to serve icons felt really good. However, it turns out inline SVG icons are better in almost every way.</span>
           
@@ -192,7 +232,7 @@
       
         
         <li class="popularPost">
-          <a class="archiveItemTitle" href="http://tomhazledine.com/inspiring-web-people">Inspirational Web People</a>
+          <a class="archiveItemTitle" href="http://th.dev/inspiring-web-people">Inspirational Web People</a>
           
             <span class="archiveItemExcerpt">Paul Boag recently talked about the ten ‘web people’ he's found most inspiring. I like the idea of calling out those members of the community that have shaped my time on the web, so here's my list.</span>
           
@@ -317,7 +357,7 @@
 
 	<div class="scripts">
     <!-- Javascript -->
-    <script src="http://tomhazledine.com/assets/js/app.min.js" async></script>
+    <script src="http://th.dev/assets/js/app.min.js" async></script>
     
 
     <!-- Analytics -->

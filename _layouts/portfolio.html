@@ -12,14 +12,41 @@
         
         </div>
 
-        {% for post in site.categories["showcase"] %}
+        <section class="popularPosts">
+            <ul>
+                {% for post in site.categories["showcase"] %}
+                    {% if post.featured %}
+                        <li class="popularPost">
+                            <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+                            {% if post.summary %}
+                                <span class="archiveItemExcerpt">{{post.summary}}</span>
+                            {% else %}
+                                {%if post.excerptlong %}
+                                    <span class="archiveItemExcerpt">{{post.excerptlong}}</span>
+                                {% else %}
+                                    <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+                                {% endif %}
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </section>
 
-            <section class="portfolioEntry">
-                <h2 class="portfolioH2"><a href="{{ site.url }}{{post.url}}">{{post.title}}</a></h2>
-                <span>{{post.excerpt}}</span>
-            </section>
-
-        {% endfor %}
+        <section class="archive main-content">
+            {% for post in site.categories["showcase"] %}
+                {% if post.featured != true %}
+                    <div class="archiveItem clearfix">
+                        <a class="archiveItemTitle" href="{{post.url}}">{{post.title}}</a>
+                        {% if post.excerptmini %}
+                            <span class="archiveItemExcerpt">{{post.excerptmini}}</span>
+                        {% else %}
+                            <span class="archiveItemExcerpt">{{post.excerpt}}</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </section>
 
         {% include featured.html %}
 
