@@ -70,6 +70,10 @@ I like making CSS Illustrations. Partly to keep my CSS skills honed, but mostly 
 
 ### 5. Typography, Type Design, and Lettering
 
+Type design is long-time hobby of mine. I've yet to make a decent typeface all of my own, but my experiments have given me a fantastic insight into the world of typography and typesetting.
+
+A few years ago I bought and restored an old hand-cranked letterpress machine. Setting type by hand has given me an intimate physical understanding of design concepts like 'measure' and 'leading' and 'ems' and 'ens'.
+
 
 
 ---
