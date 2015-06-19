@@ -133,7 +133,7 @@ body{
         border-top:$grey solid .1rem;
         transition:right, color;
         transition-duration:.4s;
-        box-shadow:rgba($black,.2) -.5em .5em 0 0;
+        box-shadow:rgba($black,.1) -.5em .5em 0 0;
         &:hover{
             color:$black;
         }
