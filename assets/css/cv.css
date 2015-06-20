@@ -24,6 +24,9 @@ a::selection {
   color: #00b7c6;
   background: rgba(77, 77, 77, 0.5); }
 
+html {
+  font-size: 62.5% !important; }
+
 body {
   background: #fafafa; }
 

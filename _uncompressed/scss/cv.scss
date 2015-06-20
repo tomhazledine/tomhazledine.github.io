@@ -5,8 +5,13 @@
 
 $offWhite:#fafafa;
 
+html{
+    font-size:62.5% !important;
+}
+
 body{
     background:$offWhite;
+    // font-size:1.6rem;
 }
 
 .cvWrapper{
