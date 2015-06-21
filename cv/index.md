@@ -25,9 +25,9 @@ customCss: cv.min.css
 ---
 
 {:.intro#intro}
-I am a front-end developer and UX/UI designer, currently working for the DWM agency in Newquay. Frustrated with being seen as merely a "contractor", I feel the time has come to switch to more product-led workflow.
+I am a front-end developer and UX/UI designer, currently working for the DWM agency in Newquay, Cornwall. Frustrated with being seen as merely a "contractor", I feel the time has come to switch to more product-led workflow.
 
-I'm becoming more and more excited by the idea of iterative problem solving and marginal improvements. I read about the exiting work that organizations like GDS and The Guardian are doing, and want some of that action for myself here in Cornwall.
+I'm becoming increasingly excited by the idea of iterative problem solving and marginal improvements. I hear about the exiting work coming out of organizations like GDS and The Guardian, and want some of that action for myself here in Cornwall.
 
 There's only so many side-projects I can fit into evenings and weekends, and I want to experience that same sense of fulfillment in my day job too.
 

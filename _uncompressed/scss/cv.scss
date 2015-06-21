@@ -72,25 +72,6 @@ body{
         // }
     }
 
-    .cvMeta{
-        font-size:.8em;
-        padding:0;
-        @extend %cf;
-        li{
-            padding:0;
-            margin:0;
-            border-left:0;
-            float:left;
-            width:50%;
-            @include bp(d2){
-                width:100%;
-            }
-            // &:last-of-type{
-            //     width:100%;
-            // }
-        }
-    }
-
     ul{
         font-style:italic;
         padding:0 0 1em 0;
@@ -145,5 +126,31 @@ body{
         &.visible{
             right:-1em;
         }
+    }
+}
+
+.cvMenu{
+    display:inline-block;
+    border-left:0;
+    margin:0 .5em .5em 0;
+    float:left;
+}
+
+.cvMeta{
+    font-size:.8em;
+    padding:0;
+    @extend %cf;
+    li{
+        padding:0;
+        margin:0;
+        border-left:0;
+        float:left;
+        width:50%;
+        @include bp(d2){
+            width:100%;
+        }
+        // &:last-of-type{
+        //     width:100%;
+        // }
     }
 }
