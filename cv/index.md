@@ -7,10 +7,13 @@ customCss: cv.min.css
 # Tom Hazledine
 
 {:.cvMenu}
-* [Intro](#intro)
+* [Overview](#intro)
 * [Current Responsibilities and Interests](#skills)
 * [Experience](#experience)
+* [Side Projects](#side)
 * [Qualifications](#qualifications)
+
+---
 
 {:.cvMeta}
 * DOB: 01-12-1985
@@ -25,25 +28,32 @@ customCss: cv.min.css
 ---
 
 {:.intro#intro}
-I am a front-end developer and UX/UI designer, currently working for the DWM agency in Newquay, Cornwall. Frustrated with being seen as merely a "contractor", I feel the time has come to switch to more product-led workflow.
+I am a front-end developer and UX/UI designer, currently working for the DWM agency in Newquay, Cornwall. 
+
+Frustrated with being seen as merely a "contractor", I feel the time has come to switch to more product-led workflow.
 
 I'm becoming increasingly excited by the idea of iterative problem solving and marginal improvements. I hear about the exiting work coming out of organizations like GDS and The Guardian, and want some of that action for myself here in Cornwall.
 
-There's only so many side-projects I can fit into evenings and weekends, and I want to experience that same sense of fulfillment in my day job too.
+There ares only *so* many side-projects I can fit into evenings and weekends, and I want to experience that same sense of fulfillment in my day job too.
 
 > I try to build things that are "of the web" not just "on the web".
 
 {:#skills}
 ## Current Responsibilities and Interests
 
-### 1. Designing and building all visual "interactions" for client sites.
+### 1. Front-end Templating
 
-Using pure CSS wherever possible, but often including Javascript for more complex functionality. Regularly use plenty of third-party libraries and plugins, but not always. I try to be judicial with my inclusion of jQuery: if a couple of extra lines of vanilla JS can replace an entire library, that's what I'll aim for.
+Currently responsible for designing and building all visual "interactions" for client sites. Regularly work within a given styleguide or static design from an external "visual" designer (which comes with it's own *special* set of issues).
 
-* Animated icons and mobile menus.
-* Scrollers and sliders.
-* Datepickers and checkboxes.
-* Accordions and dropdowns.
+I use pure CSS wherever possible, but frequently use plenty of Javascript. Regularly use third-party libraries and plugins, but not always. I try to be judicial with my inclusion of jQuery: if a couple of extra lines of vanilla JS can replace an entire library, that's what I'll aim for.
+
+Recent projects have included:
+
+* "View" development for MVC projects (several projects built in Laravel, but lately I've been using Vue.js for front-end data binding etc.).
+* Interaction with JSON APIs (most recently the Wordpress REST API).
+* Animations and iconsets: mobile menus, scrollers and sliders, etc.
+* Custom CSS for form elements: datepickers, selects and checkboxes.
+* Automated workflow: always use Gulp.js as a task-runner, and employ GIT-based deployment for more complex projects.
 
 ### 2. Performance
 
@@ -82,62 +92,74 @@ A few years ago I bought and restored an old hand-cranked letterpress machine. S
 ## Experience
 
 ### Lead UX Designer and Front-End Developer
+
+{:.cvSubMeta}
 * DWM
 * 2014–
 
-Specialist in web-specific responsive-first design: user experience, content architecture, atomic and object-oriented design and development. Trying my best to stop people creating *paintings* of websites and focus instead on actually designing *functional* websites.
-
 ### Web Designer / Developer
+
+{:.cvSubMeta}
 * Freelance
 * 2013–2014
 
-Built websites for various clients, including Atlantic Brewery; a Newquay-based independent brewery. Also undertook graphic design projects for Radio Exe and The Cornwall Brewers' Alliance.
-
 ### Audio Editor
+
+{:.cvSubMeta}
 * Plain Text Ltd.
 * 2004–2007
 
-Solely responsible for editing raw interview recordings into broadcast-quality podcasts and radio features for clients such as Hewlett Packard, Unilever and Exeter FM. Required a high level of fluency with DAW software, particularly Logic Studio.
+Worked on broadcast-quality podcasts and radio features for clients such as Hewlett Packard, Unilever and Exeter FM/Radio Exe.
 
+---
 
-### Writer/Designer/Developer
+{:#side}
+## Side Projects
+
+### Burndown App
+
+{:.cvSubMeta}
+* burndown.co.uk
+
+Web app for tracking Sprint progress with Burndown charts. Branding, UI design, & front-end dev.
+
+### Eaten by Monsters music blog
+
+{:.cvSubMeta}
 * eatenbymonsters.com
 * 2008–2014
 
-My music blog (a mixture of reviews and music industry comment) has now attracted over 100,000 unique visitors. I am on the press mailing lists for several record labels and receive a high volume of review submissions from unsigned bands. Through running the site, I have made numerous contacts with other bloggers, press agencies, and independent labels, and with a host of up-coming artists; lending me a certain legitimacy when I claim to be at the very coalface of new music in England.
+Content creation, design, & full-stack development.
 
-### Session Musician
+### Session Musician [guitar]
+
+{:.cvSubMeta}
 * Freelance
-* 2006-Present
-
-Provided guitar for a number of projects over the years, including sessions at the EMI studios at the Roundhouse in Camden, various corporate functions and gallery openings, and on one occasion even playing in front of Led Zeppelin’s Jimmy Page.
+* 2006-2011
 
 ---
 
 {:#qualifications}
 ## Qualifications
 
-### MA in Music from Goldsmiths University, London
+### MA in Music
 
+* Goldsmiths University, London
 * 2010 – 2011
 
-A fiercely academic programme focused on the 20th century avant-garde. My time at Goldsmiths instructed me in rigorous research practices and taught me to critically evaluate a wide range of complex concepts, theories, and modes of thought.
+### BMus (Hons) in Commercial Music
 
-### BMus (Hons) [2.1] in Commercial Music from the University of Westminster
-
+* University of Westminster
 * 2006 – 2009
 
-Here I developed my more serious academic faculties and vastly improved my musical ability (both as a performer and producer). Crucially, it was here that I first began to seriously engage with making things for the web: to support various uni-based projects I started my first blog and coded my first solo websites. Baby-steps, to be sure, but from here onwards I have had an incrementally-expanding day-to-day interaction with the concepts and languages of the web.
+### BTEC National Diploma, Music Performance [Distinction]
 
-### BTEC National Diploma, Music Performance [Distinction] from Truro College
-
+* Truro College
 * 2004 – 2006
-* Also attained Music Theory, Grade 5 [Distinction].
 
-Founded an independent record label, and designed our website. Convinced a much more technical friend to build it for us, with me peering over his shoulder every step of the way. "Together", we hand-rolled our own PHP content management system and graphical backend interface.
+### A-Levels
 
-### 3 A-Levels from Truro School
-
+* Truro School
 * 2002 – 2004
 * Art [B]
 * Geology [B]
