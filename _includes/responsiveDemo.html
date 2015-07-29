@@ -1,0 +1,38 @@
+{% if page.desktopimg %}
+    <div class="showcaseSlider desktop">
+{% elsif page.tabletimg %}
+    <div class="showcaseSlider tablet">
+{% elsif page.phoneimg %}
+    <div class="showcaseSlider phone">
+{% endif %}
+    <span class="showcaseAddons">{{page.title}}</span>
+    <div class="imgCropper">
+        {% if page.desktopimg %}
+            <img class="desktopImg" src="{{ site.url }}{{page.desktopimg}}" alt="site showcase" />
+        {% endif %}
+        {% if page.tabletimg %}
+            <img class="tabletImg" src="{{ site.url }}{{page.tabletimg}}" alt="site showcase" />
+        {% endif %}
+        {% if page.phoneimg %}
+            <img class="phoneImg" src="{{ site.url }}{{page.phoneimg}}" alt="site showcase" />
+        {% endif %}
+    </div>
+</div>
+<div class="showcaseControls">
+    {% if page.desktopimg %}
+        <button class="showcaseControl desktop selected">Desktop</button>
+        {% if page.tabletimg %}
+            <button class="showcaseControl tablet">Tablet</button>
+        {% endif %}
+        {% if page.phoneimg %}
+            <button class="showcaseControl phone">Phone</button>
+        {% endif %}
+    {% elsif page.tabletimg %}
+        <button class="showcaseControl tablet selected">Tablet</button>
+        {% if page.phoneimg %}
+            <button class="showcaseControl phone">Phone</button>
+        {% endif %}
+    {% else %}
+        <button class="showcaseControl phone selected">Phone</button>
+    {% endif %}
+</div>

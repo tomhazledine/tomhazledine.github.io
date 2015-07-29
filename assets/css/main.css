@@ -77,7 +77,12 @@ a::selection {
 .clearfix {
   zoom: 1; }
 
-.mainMenuToggle {
+.thumbnailImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.mainMenuToggle, .thumbnailMore {
   display: block;
   background: inherit;
   color: inherit;
@@ -957,6 +962,96 @@ blockquote {
 .archiveItemTitle {
   font-size: 1.2em;
   font-weight: 700; }
+
+.thumbnailImages {
+  clear: both;
+  width: 220%;
+  margin: 4em 0;
+  margin-left: -60%;
+  -webkit-box-shadow: rgba(77, 77, 77, 0.3) -0.5em 0.5em 0;
+          box-shadow: rgba(77, 77, 77, 0.3) -0.5em 0.5em 0; }
+  @media (max-width: 1000px) {
+    .thumbnailImages {
+      width: 140%;
+      margin-left: -20%; } }
+  @media (max-width: 800px) {
+    .thumbnailImages {
+      width: 100%;
+      margin-left: 0%; } }
+
+.thumbnailImage {
+  width: 25%;
+  padding-bottom: 25%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
+          transition-property: transform, box-shadow;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+  z-index: 1;
+  border: #ffffff 0.5em solid;
+  -webkit-box-shadow: rgba(77, 77, 77, 0.3) 0 0 0 0;
+          box-shadow: rgba(77, 77, 77, 0.3) 0 0 0 0; }
+  .thumbnailImage:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: rgba(77, 77, 77, 0.3) -0.5em 0.5em 0;
+            box-shadow: rgba(77, 77, 77, 0.3) -0.5em 0.5em 0;
+    z-index: 2; }
+  @media (max-width: 800px) {
+    .thumbnailImage {
+      width: 50%;
+      padding-bottom: 50%; } }
+
+.thumbnailMore {
+  position: absolute;
+  top: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  background: rgba(0, 183, 198, 0.5);
+  font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
+  -webkit-transition: top, 0.2s;
+          transition: top, 0.2s; }
+
+.thumbnailImage:hover .thumbnailMore {
+  top: 0; }
+
+.iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-scrolling: touch; }
+
+.responsiveFrame {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .portfolioEntry {
   padding-bottom: 3em; }

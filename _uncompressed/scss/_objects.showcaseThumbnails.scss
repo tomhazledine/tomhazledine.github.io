@@ -1,0 +1,61 @@
+.thumbnailImages{
+    clear:both;
+    width:220%;
+    margin:4em 0;
+    margin-left:-60%;
+    box-shadow:rgba($black,.3) -.5em .5em 0;
+    @include bp(d1){
+        width:140%;
+        margin-left:-20%;
+    }
+    @include bp(d2){
+        width:100%;
+        margin-left:0%;
+    }
+}
+
+.thumbnailImage{
+    width:25%;
+    padding-bottom:25%;
+    position:relative;
+    overflow:hidden;
+    float:left;
+    @extend %imgBg;
+    transition-property:transform, box-shadow;
+    transition-duration:.2s;
+    cursor:pointer;
+    z-index:1;
+    border:$white .5em solid;
+    box-shadow:rgba($black,.3) 0 0 0 0;
+    &:hover{
+        transform:scale(1.1);
+        box-shadow:rgba($black,.3) -.5em .5em 0;
+        z-index:2;
+    }
+    @include bp(d2){
+        width:50%;
+        padding-bottom:50%;
+    }
+}
+
+.thumbnailMore{
+    @extend %buttonReset;
+    position:absolute;
+    top:100%;
+    display:block;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content:center;
+    color:$white;
+    background:rgba($primary,.5);
+    // font-weight:$bold;
+    font-family:$display;
+    transition:top, .2s;
+    // text-transform:uppercase;
+}
+.thumbnailImage:hover .thumbnailMore{
+    top:0;
+}
