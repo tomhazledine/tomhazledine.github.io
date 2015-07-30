@@ -1047,6 +1047,14 @@ blockquote {
     .thumbnailImages {
       width: 100%;
       margin-left: 0%; } }
+  @media (min-width: 1200px) {
+    .thumbnailImages {
+      width: 140%;
+      margin-left: -20%; } }
+  @media (min-width: 1600px) {
+    .thumbnailImages {
+      width: 220%;
+      margin-left: -60%; } }
 
 .thumbnailImage {
   width: 25%;

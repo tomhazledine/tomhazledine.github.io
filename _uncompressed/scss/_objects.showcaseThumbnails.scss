@@ -12,6 +12,14 @@
         width:100%;
         margin-left:0%;
     }
+    @include bp(u1){
+        width:140%;
+        margin-left:-20%;
+    }
+    @include bp(u2){
+        width:220%;
+        margin-left:-60%;
+    }
 }
 
 .thumbnailImage{
