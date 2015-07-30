@@ -9,12 +9,22 @@
 </div>
 
 <div class="fullscreenWrapper">
-    <div class="fullscreenImages">
+    <div class="loadingGraphic"></div>
+    <div 
+        id="gallery"
+        class="gallery fullscreenImages clearfix"
+        data-cycle-timeout="0"
+        data-cycle-swipe="true"
+        data-cycle-swipe-fx="scrollHorz"
+        data-cycle-log="false"
+    >
         {% assign count = 0 %}
         {% for thumbnail in page.thumbnailImages %}
             <div class="fullscreenImage thumbnailToggle{{ count }}" style="background-image:url('/assets/images/{{ thumbnail.large }}')"></div>
             {% assign count = count | plus: 1 %}
         {% endfor %}
     </div>
+    <button class="nextPrev prev">Previous</button>
+    <button class="nextPrev next">Next</button>
     <button class="fullscreenClose">Close</button>
 </div>

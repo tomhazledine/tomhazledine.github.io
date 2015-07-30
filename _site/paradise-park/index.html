@@ -165,7 +165,15 @@
 </div>
 
 <div class="fullscreenWrapper">
-    <div class="fullscreenImages">
+    <div class="loadingGraphic"></div>
+    <div 
+        id="gallery"
+        class="gallery fullscreenImages clearfix"
+        data-cycle-timeout="0"
+        data-cycle-swipe="true"
+        data-cycle-swipe-fx="scrollHorz"
+        data-cycle-log="false"
+    >
         
         
             <div class="fullscreenImage thumbnailToggle0" style="background-image:url('/assets/images/workExamples/paradisePark/owlPage.png')"></div>
@@ -181,6 +189,8 @@
             
         
     </div>
+    <button class="nextPrev prev">Previous</button>
+    <button class="nextPrev next">Next</button>
     <button class="fullscreenClose">Close</button>
 </div>
     
