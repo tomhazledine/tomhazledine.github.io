@@ -1188,7 +1188,10 @@ blockquote {
       -ms-transform: rotate(0deg), scale(1);
           transform: rotate(0deg), scale(1);
   -webkit-animation: loader 0.5s infinite;
-          animation: loader 0.5s infinite; }
+          animation: loader 0.5s infinite;
+  display: none; }
+  .loadingGraphic.loading {
+    display: block; }
 
 @-webkit-keyframes loader {
   0% {

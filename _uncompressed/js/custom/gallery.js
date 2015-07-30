@@ -2,6 +2,7 @@ var galleryToggles = $('.thumbnailImage');
 var gallery = $('.fullscreenWrapper');
 var galleryClose = $('.fullscreenClose');
 var galleryWrapper = $('#gallery');
+var loadingGraphic = $('.loadingGraphic');
 
 if (galleryToggles.length) {
     galleryWrapper.slick({
@@ -34,4 +35,14 @@ if (galleryToggles.length) {
             galleryWrapper[0].slick.slickNext();
         }
     });
+
+    var count = 0;
+    galleryWrapper.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        if (count < 1) {
+        } else {
+            loadingGraphic.removeClass('loading');
+        }
+        count++;
+    });
+
 }
