@@ -10,11 +10,17 @@ comments: false
 
 showcaselink: "http://paradisepark.org.uk"
 
+logo: workExamples/paradisePark/butterfly.png
+
 thumbnailImages:
-- workExamples/paradisePark/owlPage.png
-- workExamples/paradisePark/parrotSlider.png
-- workExamples/paradisePark/twitterLink.png
-- workExamples/paradisePark/mobileMenu.png
+- small: workExamples/paradisePark/owlPage_small.png
+  large: workExamples/paradisePark/owlPage.png
+- small: workExamples/paradisePark/parrotSlider.png
+  large: workExamples/paradisePark/parrotSlider.png
+- small: workExamples/paradisePark/twitterLink.png
+  large: workExamples/paradisePark/twitterLink.png
+- small: workExamples/paradisePark/mobileMenu.png
+  large: workExamples/paradisePark/mobileMenu.png
 ---
 
 * Complete theme build.

@@ -77,12 +77,12 @@ a::selection {
 .clearfix {
   zoom: 1; }
 
-.thumbnailImage {
+.thumbnailImage, .showcaseLogo {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
 
-.mainMenuToggle, .thumbnailMore {
+.mainMenuToggle, .thumbnailMore, .fullscreenClose {
   display: block;
   background: inherit;
   color: inherit;
@@ -1038,26 +1038,44 @@ blockquote {
 .thumbnailImage:hover .thumbnailMore {
   top: 0; }
 
-.iframeWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  overflow-scrolling: touch; }
+.imgCropper.responsiveFrame {
+  -webkit-transform: scale(0.75);
+      -ms-transform: scale(0.75);
+          transform: scale(0.75); }
 
-.responsiveFrame {
-  display: block;
-  position: absolute;
+.fullscreenWrapper {
+  position: fixed;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
-  height: 100%; }
+  background: #ff4136;
+  z-index: 10;
+  display: none; }
+  .fullscreenWrapper.open {
+    display: block; }
+
+.fullscreenClose {
+  width: 100%;
+  padding: 1em;
+  background: rgba(77, 77, 77, 0.6);
+  color: #efeeeb;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif; }
 
 .portfolioEntry {
   padding-bottom: 3em; }
 
 .portfolioH2 {
   padding: 0; }
+
+.showcaseLogo {
+  width: 100%;
+  height: 6em;
+  background-size: contain;
+  margin: 0 auto 1em; }
 
 .showcaseH1 {
   padding: 0;

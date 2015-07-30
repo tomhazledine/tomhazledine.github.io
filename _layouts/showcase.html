@@ -6,6 +6,10 @@
 
 <article class="mainContentInner textContent">
 
+    {% if page.logo %}
+        <div class="showcaseLogo" style="background-image:url('/assets/images/{{ page.logo }}');"></div>
+    {% endif %}
+
     {% if page.showcaselink %}
         <header class="showcaseHeader">
             <h1 class="showcaseH1">{{page.title}}</h1>

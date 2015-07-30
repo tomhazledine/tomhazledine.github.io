@@ -9,6 +9,14 @@
 }
 .portfolioH2{padding:0;}
 
+.showcaseLogo{
+  width:100%;
+  height:6em;
+  @extend %imgBg;
+  background-size:contain;
+  margin:0 auto 1em;
+}
+
 // 02. Showcase Styles
 .showcaseH1{
   padding:0;

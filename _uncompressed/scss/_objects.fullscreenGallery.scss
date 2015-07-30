@@ -1,0 +1,25 @@
+.fullscreenWrapper{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:$red;
+    z-index:10;
+    display:none;
+    &.open{
+        display:block;
+    }
+}
+
+.fullscreenClose{
+    @extend %buttonReset;
+    width:100%;
+    padding:1em;
+    background:rgba($black,.6);
+    color:$cream;
+    position:absolute;
+    left:0;
+    bottom:0;
+    font-family:$display;
+}

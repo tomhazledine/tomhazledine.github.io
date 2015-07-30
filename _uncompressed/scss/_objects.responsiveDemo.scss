@@ -1,16 +1,19 @@
-.iframeWrapper{
-    position:relative;
-    width:100%;
-    height:100%;
-    overflow:auto;
-    overflow-scrolling:touch;
-}
+// .iframeWrapper{
+//     position:relative;
+//     width:100%;
+//     height:100%;
+//     overflow:auto;
+//     overflow-scrolling:touch;
+// }
 
-.responsiveFrame{
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+// .responsiveFrame{
+//     display:block;
+//     position:absolute;
+//     top:0;
+//     left:0;
+//     width:100%;
+//     height:100%;
+// }
+.imgCropper.responsiveFrame{
+    transform:scale(0.75);
 }
