@@ -82,7 +82,7 @@ a::selection {
   background-size: cover;
   background-position: center; }
 
-.mainMenuToggle, .thumbnailMore, .fullscreenClose, .fullscreenWrapper .nextPrev {
+.mainMenuToggle, .thumbnailMore, .fullscreenClose, .fullscreenWrapper .nextPrev, .fullscreenCaption .rawImageLink {
   display: block;
   background: inherit;
   color: inherit;
@@ -1144,7 +1144,8 @@ blockquote {
 
 .fullscreenImage {
   background-size: contain;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 #gallery {
   position: relative;
@@ -1228,6 +1229,48 @@ blockquote {
   100% {
     -webkit-transform: rotate(90deg) scale(1);
             transform: rotate(90deg) scale(1); } }
+
+.fullscreenCaption {
+  background: #4d4d4d;
+  color: #ffffff;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 22em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.5em solid #00b7c6;
+  -webkit-box-shadow: rgba(77, 77, 77, 0.3) -1em 1em 0 0;
+          box-shadow: rgba(77, 77, 77, 0.3) -1em 1em 0 0; }
+  .fullscreenCaption .rawImageLink {
+    width: 8em;
+    padding: 1em;
+    height: 100%;
+    background: #4d4d4d;
+    display: inline-block;
+    font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
+    color: #00b7c6;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em; }
+  .fullscreenCaption .fullscreenCaptionInner {
+    width: 14em;
+    padding: 1em; }
 
 .portfolioEntry {
   padding-bottom: 3em; }

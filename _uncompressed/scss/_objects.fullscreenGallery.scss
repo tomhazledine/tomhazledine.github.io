@@ -30,6 +30,7 @@
     background-size:contain;
     // padding-bottom:100%;
     height:100vh;
+    position:relative;
 }
 
 #gallery{
@@ -106,5 +107,41 @@
     }
     100%{
         transform:rotate(90deg) scale(1);
+    }
+}
+
+.fullscreenCaption{
+    // padding:1em;
+    background:$black;
+    color:$white;
+    position:absolute;
+    top:1em;
+    right:1em;
+    width:22em;
+    display:flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content:center;
+    border:.5em solid $primary;
+    box-shadow:rgba($black,.3) -1em 1em 0 0;
+    .rawImageLink{
+        @extend %buttonReset;
+        // padding:1em;
+        width:8em;
+        padding:1em;
+        height:100%;
+        // float:left;
+        background:$black;
+        display:inline-block;
+        font-family:$display;
+        color:$primary;//darken($primary,15%);
+        text-transform:uppercase;
+        font-size:.8em;
+        letter-spacing:.1em;
+    }
+    .fullscreenCaptionInner{
+        // float:right;
+        width:14em;
+        padding:1em;
     }
 }

@@ -15,9 +15,10 @@ logo: workExamples/paradisePark/butterfly.png
 thumbnailImages:
 - small: workExamples/paradisePark/owlPage_small.png
   large: workExamples/paradisePark/owlPage.jpg
-  info: The site has been built so that every species in the park can have it's own information page, complete with image sliders, conservation-status info, and a logical inter-species navigation.
+  info: Top-level pages serve as hubs for different site sections, dynamically pulling in relevant content, and with several customisable layout options.
 - small: workExamples/paradisePark/parrotSlider_small.png
   large: workExamples/paradisePark/pandaPage.jpg
+  info: The site has been built so that every species in the park can have it's own information page, complete with image sliders, conservation-status info, and a logical inter-species navigation.
 - small: workExamples/paradisePark/twitterLink_small.png
   large: workExamples/paradisePark/conservationPage.jpg
 - small: workExamples/paradisePark/mobileMenu_small.png

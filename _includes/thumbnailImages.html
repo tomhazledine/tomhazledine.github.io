@@ -22,8 +22,11 @@
         {% for thumbnail in page.thumbnailImages %}
             <div class="fullscreenImage thumbnailToggle{{ count }}" style="background-image:url('/assets/images/{{ thumbnail.large }}')">
                 {% if thumbnail.info %}
-                    <div class="fullscreenCaption">
-                        <p>{{ thumbnail.info }}</p>
+                    <div class="fullscreenCaption clearfix">
+                        <a class="rawImageLink" href="/assets/images/{{ thumbnail.large }}">View the full image</a>
+                        <div class="fullscreenCaptionInner">
+                            <p>{{ thumbnail.info }}</p>
+                        </div>
                     </div>
                 {% endif %}
             </div>
