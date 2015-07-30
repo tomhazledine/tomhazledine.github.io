@@ -20,7 +20,13 @@
     >
         {% assign count = 0 %}
         {% for thumbnail in page.thumbnailImages %}
-            <div class="fullscreenImage thumbnailToggle{{ count }}" style="background-image:url('/assets/images/{{ thumbnail.large }}')"></div>
+            <div class="fullscreenImage thumbnailToggle{{ count }}" style="background-image:url('/assets/images/{{ thumbnail.large }}')">
+                {% if thumbnail.info %}
+                    <div class="fullscreenCaption">
+                        <p>{{ thumbnail.info }}</p>
+                    </div>
+                {% endif %}
+            </div>
             {% assign count = count | plus: 1 %}
         {% endfor %}
     </div>
