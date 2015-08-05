@@ -87,9 +87,11 @@ var UltimaSynth = function ultimaSynth(contextClass){
         vco1.frequency.value = note;// Set note pitch
         vco2.frequency.value = (note / vco2PM);// Set note pitch
         vca.gain.value = 1;// Start note
+        addPressedClass(note);
     }
 
-    function noteEnd(){
+    function noteEnd(note){
+        removePressedClass(note);
         // console.log('The note has ended.');
         vca.gain.value = 0;// End note
     }
@@ -196,6 +198,28 @@ var UltimaSynth = function ultimaSynth(contextClass){
     }
 
     /**
+     * ----------------------------
+     * TOGGLE CLASSES TO STYLE KEYS
+     *
+     * Requires "noQuery" module
+     * ----------------------------
+     */
+    
+    function addPressedClass(note){
+        targetPitch = Math.floor(note);
+        targetClass = 'pitchClass' + targetPitch;
+        targetKey = document.getElementsByClassName(targetClass);
+        noQuery.addClass(targetKey[0],'pressed');
+    }
+
+    function removePressedClass(note){
+        targetPitch = Math.floor(note);
+        targetClass = 'pitchClass' + targetPitch;
+        targetKey = document.getElementsByClassName(targetClass);
+        noQuery.removeClass(targetKey[0],'pressed');
+    }
+
+    /**
      * ------------------------------
      * Public API
      *
@@ -294,13 +318,15 @@ var UltimaSynthInputs = function ultimaSynthInputs(controls,keys){
 
     function _noteMouseout(){
         if (keyIsDown) {
-            newSynth.noteEnd();
+            var noteValue = this.getAttribute('data-pitch');
+            newSynth.noteEnd(noteValue);
         }
     }
 
     function _noteMouseup(){
         keyIsDown = false;
-        newSynth.noteEnd();
+        var noteValue = this.getAttribute('data-pitch');
+        newSynth.noteEnd(noteValue);
     }
 
     /**
@@ -316,6 +342,76 @@ var UltimaSynthInputs = function ultimaSynthInputs(controls,keys){
         newSynth.controlChanged(sliderName,sliderValue);
     }
 }
+
+var noQuery = (function(){
+
+    /**
+     * ------------------------------------
+     * HELPERS
+     * These are basic utilities that allow
+     * for cross-browser support, replacing
+     * the need to use jQuery.
+     *
+     * Has Class
+     * Add Class
+     * Remove Class
+     * ------------------------------------
+     */
+    
+    /**
+     * Has Class:
+     * Does the target element have the target class?
+     * @param  {object}  el        The target element.
+     * @param  {string}  className The target class.
+     * @return {Boolean}           If the el has the class, output 'true'. Otherwise 'false'.
+     */
+    function _hasClass(el, className){
+        if (el.classList) {
+            var result = el.classList.contains(className);
+        } else {
+            var result = new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+        }
+        return result;
+    }
+
+    /**
+     * Add Class:
+     * Add a class to the target element.
+     * @param {object} el        The target element.
+     * @param {string} className The target class.
+     */
+    function _addClass(el, className){
+        if (el.classList) {
+            el.classList.add(className);
+        }
+        else {
+            el.className += ' ' + className;
+        }
+    }
+
+    /**
+     * Remove Class:
+     * Remove a class from the target element.
+     * @param  {object} el        The target element.
+     * @param  {string} className The target class.
+     */
+    function _removeClass(el, className){
+        if (el.classList) {
+            el.classList.remove(className);
+        }
+        else {
+            el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
+    }
+
+
+    var publicAPI = {
+        hasClass: _hasClass,
+        addClass: _addClass,
+        removeClass: _removeClass
+    };
+    return publicAPI;
+})();
 
 var controlsWrapper = document.getElementById('synthControls');
 var keysWrapper = document.getElementById('synthKeys');
