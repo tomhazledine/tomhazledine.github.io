@@ -4,69 +4,74 @@ title: "CSS and Javascript Keyboard"
 excerpt: "A working piano keyboard built using the Web Audio API and styled with CSS."
 category: showcase
 soloCss: "keyboard.min.css"
-customJs: "keyboard.js"
+customJs: "keyboardNew.js"
 featured: true
 ---
 <article class="keyboard clearfix">
 
   <h1>CSS & Javascript Keyboard</h1>
 
-  <div class="controls">
+  <div id="testOutput">
+    <p>Current Note: <span class="noteDisplay">--</span></p>
+    <p>Current Volume: <span class="volumeDisplay">0.5</span></p>
+  </div>
+
+  <div id="synthControls" class="controls">
     <div class="controlStrip">
       <span>Master Volume</span>
-      <input type="range" min="0" max="1" value="0.5" step="0.1" onchange="masterVolume(this.value)">
+      <input class="masterVolume" data-controlName="masterVolume" type="range" min="0" max="1" value="0.5" step="0.1">
     </div>
     <div class="controlStrip">
       <span>Osc. #1 Volume</span>
-      <input type="range" min="0" max="1" value="1" step="0.1" onchange="oscOneVolume(this.value)">
+      <input class="oscOneVolume" data-controlName="oscOneVolume" type="range" min="0" max="1" value="1" step="0.1">
     </div>
     <div class="controlStrip">
       <span>Osc. #2 Volume</span>
-      <input type="range" min="0" max="1" value="1" step="0.1" onchange="oscTwoVolume(this.value)">
+      <input class="oscTwoVolume" data-controlName="oscTwoVolume" type="range" min="0" max="1" value="1" step="0.1">
     </div>
     <div class="controlStrip">
       <span>Osc. #1: Wave</span>
-      <input type="range" min="0" max="3" value="0" step="1" onchange="oscOneWave(this.value)">
+      <input class="oscOneWave" data-controlName="oscOneWave" type="range" min="0" max="3" value="0" step="1">
     </div>
     <div class="controlStrip">
       <span>Osc. #2: Wave</span>
-      <input type="range" min="0" max="3" value="1" step="1" onchange="oscTwoWave(this.value)">
+      <input class="oscTwoWave" data-controlName="oscTwoWave" type="range" min="0" max="3" value="1" step="1">
     </div>
     <div class="controlStrip">
       <span>Oscillator #2: Pitch</span>
-      <input type="range" min="1" max="5" value="2" step="0.1" onchange="vcoTwoPitch(this.value)">
+      <input class="oscTwoPitch" data-controlName="oscTwoPitch" type="range" min="1" max="5" value="2" step="0.1">
     </div>
   </div>
 
   <div class="pianoWrapper">
     <div class="piano">
       <div class="octave-wrapper clearfix">
-        <ol class="octave clearfix">
-          <li class="piano-key natural"    data-pitch="261.63" data-note="C"  data-octave="4" ></li>
-          <li class="piano-key accidental" data-pitch="277.18" data-note="C#" data-octave="4" ></li>
-          <li class="piano-key natural"    data-pitch="293.66" data-note="D"  data-octave="4" ></li>
-          <li class="piano-key accidental" data-pitch="311.13" data-note="D#" data-octave="4" ></li>
-          <li class="piano-key natural"    data-pitch="329.63" data-note="E"  data-octave="4" ></li>
-          <li class="piano-key natural"    data-pitch="349.23" data-note="F"  data-octave="4" ></li>
-          <li class="piano-key accidental" data-pitch="369.99" data-note="F#" data-octave="4" ></li>
-          <li class="piano-key natural"    data-pitch="392.00" data-note="G"  data-octave="4" ></li>
-          <li class="piano-key accidental" data-pitch="415.30" data-note="G#" data-octave="4" ></li>
-          <li class="piano-key natural"    data-pitch="440.00" data-note="A"  data-octave="4" ></li>
-          <li class="piano-key accidental" data-pitch="466.16" data-note="A#" data-octave="4" ></li>
-          <li class="piano-key natural"    data-pitch="493.88" data-note="B"  data-octave="4" ></li>
+        <ol id="synthKeys" class="octave clearfix">
+          <li class="synthKey piano-key natural"    data-pitch="261.63" data-note="C"  data-octave="4" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="277.18" data-note="C#" data-octave="4" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="293.66" data-note="D"  data-octave="4" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="311.13" data-note="D#" data-octave="4" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="329.63" data-note="E"  data-octave="4" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="349.23" data-note="F"  data-octave="4" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="369.99" data-note="F#" data-octave="4" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="392.00" data-note="G"  data-octave="4" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="415.30" data-note="G#" data-octave="4" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="440.00" data-note="A"  data-octave="4" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="466.16" data-note="A#" data-octave="4" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="493.88" data-note="B"  data-octave="4" ></li>
 
-          <li class="piano-key natural"    data-pitch="523.25" data-note="C"  data-octave="5" ></li>
-          <li class="piano-key accidental" data-pitch="554.37" data-note="C#" data-octave="5" ></li>
-          <li class="piano-key natural"    data-pitch="587.33" data-note="D"  data-octave="5" ></li>
-          <li class="piano-key accidental" data-pitch="622.25" data-note="D#" data-octave="5" ></li>
-          <li class="piano-key natural"    data-pitch="659.26" data-note="E"  data-octave="5" ></li>
-          <li class="piano-key natural"    data-pitch="698.46" data-note="F"  data-octave="5" ></li>
-          <li class="piano-key accidental" data-pitch="739.99" data-note="F#" data-octave="5" ></li>
-          <li class="piano-key natural"    data-pitch="783.99" data-note="G"  data-octave="5" ></li>
-          <li class="piano-key accidental" data-pitch="830.61" data-note="G#" data-octave="5" ></li>
-          <li class="piano-key natural"    data-pitch="880.00" data-note="A"  data-octave="5" ></li>
-          <li class="piano-key accidental" data-pitch="932.33" data-note="A#" data-octave="5" ></li>
-          <li class="piano-key natural"    data-pitch="987.77" data-note="B"  data-octave="5" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="523.25" data-note="C"  data-octave="5" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="554.37" data-note="C#" data-octave="5" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="587.33" data-note="D"  data-octave="5" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="622.25" data-note="D#" data-octave="5" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="659.26" data-note="E"  data-octave="5" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="698.46" data-note="F"  data-octave="5" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="739.99" data-note="F#" data-octave="5" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="783.99" data-note="G"  data-octave="5" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="830.61" data-note="G#" data-octave="5" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="880.00" data-note="A"  data-octave="5" ></li>
+          <li class="synthKey piano-key accidental" data-pitch="932.33" data-note="A#" data-octave="5" ></li>
+          <li class="synthKey piano-key natural"    data-pitch="987.77" data-note="B"  data-octave="5" ></li>
         </ol>
     </div>
     </div>
