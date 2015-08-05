@@ -261,12 +261,33 @@ var UltimaSynthInputs = function ultimaSynthInputs(controls,keys){
         oscTwoPitchSlider = controls.getElementsByClassName('oscTwoPitch');
 
     var // Utility Variables
-        keyIsDown = false;
+        keyIsDown = false,
+        keysDown = [];
 
-    var // Test Variables
-        testOutput = document.getElementById('testOutput'),
-        noteDisplay = testOutput.getElementsByClassName('noteDisplay'),
-        volumeDisplay = testOutput.getElementsByClassName('volumeDisplay');
+    var // Map keys as array
+        keyToKey = {
+             65: '261.63',//'Cl',
+             87: '277.18',//'C#l',
+             83: '293.66',//'Dl',
+             69: '311.13',//'D#l',
+             68: '329.63',//'El',
+             70: '349.23',//'Fl',
+             84: '369.99',//'F#l',
+             71: '392.00',//'Gl',
+             89: '415.30',//'G#l',
+             72: '440.00',//'Al',
+             85: '466.16',//'A#l',
+             74: '493.88',//'Bl',
+             75: '523.25',//'Cu',
+             79: '554.37',//'C#u',
+             76: '587.33',//'Du',
+             80: '622.25',//'D#u',
+             59: '659.26',//'Eu',
+            186: '698.46',//'Eu',
+            222: '739.99',//'Fu',
+            221: '783.99',//'F#u',
+            220: '830.61'//'Gu'
+        };
 
     /**
      * ---------------------
@@ -279,7 +300,8 @@ var UltimaSynthInputs = function ultimaSynthInputs(controls,keys){
         synthKeys[i].addEventListener('mouseout',_noteMouseout,false);
         synthKeys[i].addEventListener('mouseup',_noteMouseup,false);
     };
-    // document.addEventListener('mouseup',_noteMouseup,false);
+    document.addEventListener('keydown',_noteKeydown,false);
+    document.addEventListener('keyup',_noteKeyup,false);
     masterVolumeSlider[0].addEventListener('change',_controlPress,false);
     oscOneVolumeSlider[0].addEventListener('change',_controlPress,false);
     oscTwoVolumeSlider[0].addEventListener('change',_controlPress,false);
@@ -341,22 +363,55 @@ var UltimaSynthInputs = function ultimaSynthInputs(controls,keys){
         var sliderName = this.getAttribute('data-controlName');
         newSynth.controlChanged(sliderName,sliderValue);
     }
-}
-
-var noQuery = (function(){
 
     /**
-     * ------------------------------------
-     * HELPERS
-     * These are basic utilities that allow
-     * for cross-browser support, replacing
-     * the need to use jQuery.
-     *
-     * Has Class
-     * Add Class
-     * Remove Class
-     * ------------------------------------
+     * ------------
+     * KEY BINDINGS
+     * ------------
      */
+    function _noteKeydown(key){
+        // If the key is already being held down, abort function.
+        if (key.keyCode in keysDown){
+            key.preventDefault();
+            return;
+        }
+        // Log the key in keysDown
+        keysDown[key.keyCode] = true;
+        if (typeof keyToKey[key.keyCode] !== 'undefined'){
+            key.preventDefault();
+            noteValue = keyToKey[key.keyCode];
+            //console.log(noteValue);
+            newSynth.noteStart(noteValue);
+        }
+    }
+
+    function _noteKeyup(key){
+        delete keysDown[key.keyCode];
+        if (typeof keyToKey[key.keyCode] !== 'undefined'){
+            key.preventDefault();
+            noteValue = keyToKey[key.keyCode];
+            //console.log(noteValue);
+            newSynth.noteEnd(noteValue);
+        }
+    }
+
+    
+}
+
+/**
+ * ------------------------------------
+ * noQuery
+ * 
+ * These are basic utilities that allow
+ * for cross-browser support, replacing
+ * the need to use jQuery.
+ *
+ * Has Class
+ * Add Class
+ * Remove Class
+ * ------------------------------------
+ */
+var noQuery = (function(){
     
     /**
      * Has Class:
