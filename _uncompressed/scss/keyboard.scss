@@ -14,6 +14,15 @@ $blackKey:#4d4d4d;
 $blackKeyHighlight:#808080;
 $clothCol:$primary;
 
+html {
+     box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+     box-sizing:inherit;
+}
+
 // Keyboard M-Queries
 @mixin breakpoint($point){
   @if $point == kbOne{
@@ -92,6 +101,20 @@ body{
   left:0;
   position:relative;
   z-index:1;
+
+  .controls{
+    height:10em;
+    overflow:hidden;
+    .controlStrip{
+      width:50%;
+      float:left;
+      height:2em;
+      span{
+        display:block;
+        width:100%;
+      }
+    }
+  }
 
   .piano{
     width:43em;
@@ -310,3 +333,80 @@ $moog-hover:yellow;//$secondary;
   }//key
 }//piano-keys
 //*/
+
+@import "base.range";
+
+.controls{
+  max-width:40em;
+  margin:0 auto;
+  // height:10em;
+  // overflow:hidden;
+  .controlStripOuter{
+    width:33.33%;
+    float:left;
+    margin:2em 0;
+  }
+  .controlStrip{
+    font-size:.5em;
+    width:5.5em;
+    height:10em;
+    // float:left;
+    margin:0 auto;
+    // height:5em;
+    // padding:0 1em;
+    // background:rgba(red,.5);
+    // font-size:.8em;
+    .controlStripInner{
+      width:10em;
+      height:5.5em;
+      position:relative;
+      top:100%;
+      transform:rotate(270deg);
+      transform-origin:0% 0%;
+      // background:rgba(blue,.5);
+    }
+    input[type="range"]{
+      display:block;
+      width:10em;
+      font-size:1em;
+      // margin:2em 0 2em 0;
+      position:absolute;
+      top:2em;
+      left:0;
+    //   width:50%;
+    //   margin:0;
+    //   // height:3em;
+    }
+  }
+  .controlStripOuter > span{
+    display:block;
+    line-height:1;
+    font-family:$display;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-size:.8em;
+    padding-bottom:1em;
+  }
+  .controlStripOuter > span.controlValue{
+    display:inline-block;
+    min-width:3em;
+    background:$primary;
+    color:$white;
+    // font-family:$display;
+    line-height:1;
+    padding:.4em .5em .4em .5em;
+    position:relative;
+    margin-top:1em;
+    &:before{
+      content:"";
+      display:block;
+      position:absolute;
+      bottom:100%;
+      left:50%;
+      border-bottom:.5em solid $primary;
+      border-left:.5em solid transparent;
+      border-right:.5em solid transparent;
+      margin-left:-.5em;
+    }
+  }
+}

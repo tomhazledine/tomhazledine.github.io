@@ -11,40 +11,73 @@ featured: true
 
   <h1>CSS & Javascript Keyboard</h1>
 
-  <div class="visuallyhidden" id="testOutput">
-    <p>Current Note: <span class="noteDisplay">--</span></p>
-    <p>Current Volume: <span class="volumeDisplay">0.5</span></p>
-  </div>
+  <div id="synthControls" class="controls clearfix">
 
-  <div id="synthControls" class="controls">
-    <div class="controlStrip">
+    <div class="controlStripOuter">
       <span>Master Volume</span>
-      <input class="masterVolume" data-controlName="masterVolume" type="range" min="0" max="1" value="0.5" step="0.1">
+      <div class="controlStrip clearfix">
+        <div class="controlStripInner">
+          <input class="pianoController masterVolume" data-controlName="masterVolume" type="range" min="0" max="1" value="0.5" step="0.1">
+        </div>
+      </div>
+      <span data-labelName="masterVolume" class="controlValue">0</span>
     </div>
-    <div class="controlStrip">
+
+    <div class="controlStripOuter">
       <span>Osc. #1 Volume</span>
-      <input class="oscOneVolume" data-controlName="oscOneVolume" type="range" min="0" max="1" value="1" step="0.1">
+      <div class="controlStrip clearfix">
+        <div class="controlStripInner">
+          <input class="pianoController oscOneVolume" data-controlName="oscOneVolume" type="range" min="0" max="1" value="1" step="0.1">
+        </div>
+      </div>
+      <span data-labelName="masterVolume" class="controlValue">0</span>
     </div>
-    <div class="controlStrip">
+    
+    <div class="controlStripOuter">
       <span>Osc. #2 Volume</span>
-      <input class="oscTwoVolume" data-controlName="oscTwoVolume" type="range" min="0" max="1" value="1" step="0.1">
+      <div class="controlStrip clearfix">
+        <div class="controlStripInner">
+          <input class="pianoController oscTwoVolume" data-controlName="oscTwoVolume" type="range" min="0" max="1" value="1" step="0.1">
+        </div>
+      </div>
+      <span data-labelName="masterVolume" class="controlValue">0</span>
     </div>
-    <div class="controlStrip">
+
+    <div class="controlStripOuter">
       <span>Osc. #1: Wave</span>
-      <input class="oscOneWave" data-controlName="oscOneWave" type="range" min="0" max="3" value="0" step="1">
+      <div class="controlStrip clearfix">
+        <div class="controlStripInner">
+          <input class="pianoController oscOneWave" data-controlName="oscOneWave" type="range" min="0" max="3" value="0" step="1">
+        </div>
+      </div>
+      <span data-labelName="masterVolume" class="controlValue">0</span>
     </div>
-    <div class="controlStrip">
+    
+    <div class="controlStripOuter">
       <span>Osc. #2: Wave</span>
-      <input class="oscTwoWave" data-controlName="oscTwoWave" type="range" min="0" max="3" value="1" step="1">
+      <div class="controlStrip clearfix">
+        <div class="controlStripInner">
+          <input class="pianoController oscTwoWave" data-controlName="oscTwoWave" type="range" min="0" max="3" value="1" step="1">
+        </div>
+      </div>
+      <span data-labelName="masterVolume" class="controlValue">0</span>
     </div>
-    <div class="controlStrip">
+
+    <div class="controlStripOuter">
       <span>Oscillator #2: Pitch</span>
-      <input class="oscTwoPitch" data-controlName="oscTwoPitch" type="range" min="1" max="5" value="2" step="0.1">
+      <div class="controlStrip clearfix">
+        <div class="controlStripInner">
+          <input class="pianoController oscTwoPitch" data-controlName="oscTwoPitch" type="range" min="1" max="5" value="2" step="0.1">
+        </div>
+      </div>
+      <span data-labelName="masterVolume" class="controlValue">0</span>
     </div>
+    
   </div>
 
   <div class="pianoWrapper">
     <div class="piano">
+
       <div class="octave-wrapper clearfix">
         <ol id="synthKeys" class="octave clearfix">
           <li class="synthKey piano-key pitchClass261 natural"    data-pitch="261.63" data-note="C"  data-octave="4" ></li>
