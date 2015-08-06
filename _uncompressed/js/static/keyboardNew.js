@@ -105,7 +105,7 @@ var UltimaSynth = function ultimaSynth(contextClass){
      * oscTwoVolumeControl
      * oscOneWaveControl
      * oscTwoWaveControl
-     * vcoTwoPitchControl
+     * oscTwoPitchControl
      * -------------------
      */
     
@@ -131,7 +131,7 @@ var UltimaSynth = function ultimaSynth(contextClass){
         vco2.type = vco2wav;
     }
     
-    function vcoTwoPitchControl(pitchMultiplier){
+    function oscTwoPitchControl(pitchMultiplier){
         vco2PM = pitchMultiplier;
     }
 
@@ -146,7 +146,7 @@ var UltimaSynth = function ultimaSynth(contextClass){
      * -------------------
      */
     function _controlRouter(name,value){
-        console.log('the ' + name + ' control has been set to ' + value);
+        // console.log('the ' + name + ' control has been set to ' + value);
         switch (name) {
             case 'masterVolume':
                 masterVolumeControl(value);
@@ -163,8 +163,8 @@ var UltimaSynth = function ultimaSynth(contextClass){
             case 'oscTwoWave':
                 oscTwoWaveControl(value);
                 break;
-            case 'vcoTwoPitch':
-                vcoTwoPitch(value);
+            case 'oscTwoPitch':
+                oscTwoPitchControl(value);
                 break;
         }
 
@@ -362,6 +362,7 @@ var UltimaSynthInputs = function ultimaSynthInputs(controls,keys){
         var sliderValue = this.value;
         var sliderName = this.getAttribute('data-controlName');
         newSynth.controlChanged(sliderName,sliderValue);
+        newControlSliderDisplay.sliderChange(sliderName,sliderValue);
     }
 
     /**
@@ -468,6 +469,68 @@ var noQuery = (function(){
     return publicAPI;
 })();
 
+/**
+ * CONTROL DISPLAY
+ * Show live value for control sliders.
+ */
+var controlSliderDisplay = function(){
+
+    function sliderChange(name,value){
+        var targetClass = "controlLabel_" + name;
+        var target = document.getElementsByClassName(targetClass);
+        var outputValue;
+
+        switch (name) {
+            case 'masterVolume':
+                outputValue = value * 10;
+                break;
+            case 'oscOneVolume':
+                outputValue = value * 10;
+                break;
+            case 'oscTwoVolume':
+                outputValue = value * 10;
+                break;
+            case 'oscOneWave':
+                outputValue = _handleWaveType(value);
+                break;
+            case 'oscTwoWave':
+                outputValue = _handleWaveType(value);
+                break;
+            case 'oscTwoPitch':
+                outputValue = 0 - value;
+                console.log()
+                break;
+        }
+
+        target[0].textContent = outputValue;
+    }
+
+    function _handleWaveType(int){
+        var rawWaveValue = parseInt(int);
+        switch (rawWaveValue) {
+            case 0:
+                stringWaveValue = 'sine';
+                break;
+            case 1:
+                stringWaveValue = 'square';
+                break;
+            case 2:
+                stringWaveValue = 'sawtooth';
+                break;
+            case 3:
+                stringWaveValue = 'triangle';
+                break;
+        }
+        return stringWaveValue;
+    }
+
+    var publicAPI = {
+        sliderChange: sliderChange
+    };
+    return publicAPI;
+}
+
+
 var controlsWrapper = document.getElementById('synthControls');
 var keysWrapper = document.getElementById('synthKeys');
 
@@ -477,4 +540,5 @@ var // determine if Web Audio API is available
 if (contextClass) {
     var newSynth = UltimaSynth(contextClass);
     var newSynthInputs = UltimaSynthInputs(controlsWrapper,keysWrapper);
+    var newControlSliderDisplay = controlSliderDisplay();
 }
