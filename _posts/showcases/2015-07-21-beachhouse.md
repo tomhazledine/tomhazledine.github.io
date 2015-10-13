@@ -35,3 +35,6 @@ In both cases, properties were set up as custom post types in WordPress and link
 * Traditional high-resolution fullscreen image gallery
 * Calendar that allows users to select date ranges and check availability dynamically.
 * Pricing tables.
+
+This site was built while I was part of the team at [DWM](http://wearedwm.com/), and my main areas of responsibility were the front-end templates and WordPress shenanigans. The backend aspect, most notably the integration with the booking API, was handled by the inimitable [Daryll Doyle](http://enshrined.co.uk/). Visual design was created by [Liminal](http://www.liminal-design.co.uk/).
+

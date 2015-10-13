@@ -29,3 +29,5 @@ thumbnailImages:
 * Complex menu structures.
 * Page templates with multiple customizable layouts and optional content areas.
 * Converting static desktop-only designs into fully responsive templates.
+
+This site was built while I was part of the team at [DWM](http://wearedwm.com/).
