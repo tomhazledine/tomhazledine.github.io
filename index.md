@@ -3,12 +3,12 @@ layout: homepage
 location: home
 title: "about"
 group: "navigation"
-headline: Hello. I'm a front-end developer and IoT nerd from Cornwall.
-intro: Lover of beer, whisky and lettering. I try to build things that are "of the web", not just "on the web".
+headline: Hello. I'm a front-end developer and data-vis nerd from Cornwall.
+intro: The “Internet of Things” is my current area of interest, with a particular focus on visualising all the data these “things” are generating.
 ---
 
-If you like working with HTML `<audio>` and the Web Audio API, checkout [SFAP.js](/audio) and my [keyboard project](/keyboard). SFAP.js is an open-source tool that allows us to style an audio player with CSS. My keyboard project is a fully-functional synthesizer built using JS, HTML and CSS.
-    
-And if you like CSS calisthenics, have a look at my [CSS tape player](http://codepen.io/tomhazledine/pen/IwEDu). Not "useful" in the slightest, but a fun bit of illustration built in the browser. Illustrator and Photoshop are for chumps! (unless, of course, you're building super-performant resolution agnostic [inline SVG icons](/inline-svg-icons)...)
+Data without context in *not* information. To get real insight from our data it must be presented in a useful way.
 
-You can catch me on Twitter as [@thomashazledine](//twitter.com/thomashazledine), or if 140 characters isn't enough you can always reach me by email at [tom@tomhazledine.com](mailto:tom@tomhazledine.com); I'm always happy to answer questions, receive advice, or engage in spirited debate.
+I'm a web-specialist at heart, and I believe that web-technologies make the best interface for our IoT projects. If you also think the web (and the burgeoning IoT industry) is a force for good, follow me on Twitter [@thomashazledine](//twitter.com/thomashazledine), or if 140 characters isn't enough you can always reach me by email at [tom@tomhazledine.com](mailto:tom@tomhazledine.com).
+
+When I'm not tinkering with sensors and Raspberry Pis or making websites, I muck about with [CSS illustration](http://codepen.io/tomhazledine/pen/IwEDu) and build interfaces for the web audio API, including a [fully-functional synthesizer built using JS, HTML and CSS](http://tomhazledine.com/keyboard/).
