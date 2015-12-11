@@ -3,7 +3,7 @@ layout: homepage
 location: home
 title: "about"
 group: "navigation"
-headline: Hello. I'm a front-end developer and UX designer from Cornwall.
+headline: Hello. I'm a front-end developer and IoT nerd from Cornwall.
 intro: Lover of beer, whisky and lettering. I try to build things that are "of the web", not just "on the web".
 ---
 
