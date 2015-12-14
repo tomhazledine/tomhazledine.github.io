@@ -10,7 +10,7 @@ excerptlong: "Paul Boag recently talked about the ten ‘web people’ he's foun
 
 comments: true
 category: article
-featured: true
+featured: false
 ---
 
 There's an [episode of the Boagworld podcast](http://boagworld.com/season/10/episode/1007/) where Marcus and Paul list the ten ‘web people’ they've found most *inspiring*. This has in turn inspired *me* to publish my own list.

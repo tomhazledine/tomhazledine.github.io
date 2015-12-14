@@ -1,12 +1,36 @@
 {% include head.html %}
 {% include header.html %}
 
-  <div class="bodyWrapper clearfix">
-      <section class="mainContent clearfix">
+    <div class="bodyWrapper clearfix">
+        <section class="mainContent clearfix">
 
-      <article class="mainContentInner textContent">
+            <article class="mainContentInner textContent">
 
-          <h1>{{page.title}}</h1>
+                <!-- <h1>{{page.title}}</h1> -->
+                {% if page.subheading || page.herolink %}
+                    <header class="showcaseHeader">
+                        <h1 class="showcaseH1">{{page.title}}</h1>
+                        {% if page.herolink %}
+                            <span class="showcaseLink">
+                                <a href="{{page.herolink}}">
+                                    <svg class="icon twitter">
+                                        <use xlink:href="#link"/>
+                                    </svg>
+                                    {% if page.herolinkshort %}
+                                        {{ page.herolinkshort }}
+                                    {% else %}
+                                        {{ page.herolink }}
+                                    {% endif %}
+                                </a>
+                            </span>
+                        {% endif %}
+                        {% if page.subheading %}
+                            <span class="showcaseExcerpt">{{page.subheading}}</span>
+                        {% endif %}
+                    </header>
+                {% else %}
+                    <h1>{{page.title}}</h1>
+                {% endif %}
 
           <h3 class="big-drop-cap">{{page.excerpt}}</h3>
 
