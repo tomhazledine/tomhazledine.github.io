@@ -42,7 +42,7 @@ User-experience expert [Claire Rowland](http://www.designingconnectedproducts.co
 
 * We don't expect "things" to behave like the internet. Light bulbs shouldn't "buffer".
 * Interfaces (if they are honest) should introduce the concept of failure to users. Don't fake success when a user clicks a button in a low-connectivity area: show in interstitial "loading" state wherever possible.
-* You often have to choose between fuzzy-and-current or accurate-but-old. A cat-tracker can either say "Mrs. Tibbles was at this exact location 3 hours ago" or "Mrs. Tibbles is someehere within this range right now".
+* You often have to choose between fuzzy-and-current or accurate-but-old. A cat-tracker can either say "Mrs. Tibbles was at this exact location 3 hours ago" or "Mrs. Tibbles is somewhere within this range right now".
 * Linking physical and digital interfaces takes special thought. A traditional dimmer-switch always knows it's ‘state’, where as a remotely-controlled version has to account for the fact that the ‘state’ of the bulb might have changed since it last checked.
 
 ![Dimmer-switch controls: unconnected vs. connected](/)
@@ -55,7 +55,7 @@ Sam Winslet & Sophie Riches from IBM presented us with the "Seven Deadly Sins fo
 
 * Greed: designing for yourself.
 * Envy: being a copycat.
-* Glutony: focusing on features & functions.
+* Gluttony: focusing on features & functions.
 * Wrath: assuming your users know what IoT is.
 * Lust: IoT for the sake of it, without any real ideas.
 * Pride: don't over-complicate and don't over-simplify. IBM use a strategy they call “Progressive Disclosure”: where an interface reveals deeper levels of detail as a user interacts with it.
@@ -67,8 +67,28 @@ Sam Winslet & Sophie Riches from IBM presented us with the "Seven Deadly Sins fo
 
 Nick Ludlum from [Moo](http://moo.com/) gave (with a little help from colleague Kai Turner) one of the more engaging and tech-focused presentations of the event. The team at Moo have (after considerable time spent in R&D) figured out how to print NFC chips into business cards.
 
+Every attendee at the conference was given a Moo business card on arrival, which was embedded with an NFC chip with tokens for free coffee and beer.
+
 * For NFC to work, you need a chip and an antenna. The chip is tiny – literally mm across – and the antenna gets printed between to laminated sheets of paper using conductive silver ink. This means the finished business card looks and feels just like a regular card - after all, it's still mostly just card and ink.
 * To build a reader, all you need is a "smarter" chip, an antenna, and a power source. Android phones have the ability to be NFC readers, but IOS ones do not.
+* `nfcpy` is the Python library for NFC.
+* The cards can store a variety of MIME-type information (webpages, lat. & lng. data, etc) but URLs are the most versatile (and can be re-purposed without reprogramming the card itself).
+* Security is still ongoing project, and the Moo team would welcome any insights or help in that area that the developer community can provide.
+
+---
+
+## The Things Network: London
+
+Mark Hill, from [Open TRV](http://opentrv.org.uk/) (a company that makes smart Thermostatic Radiator Valves) got the short-straw: his talk was right before lunch, and therefore had to be shortened because the conf. was running over time.
+
+* [The Things Network](http://thethingsnetwork.org/) is a low-power, wide-area network.
+* Crowdsourced a complete city-wide IoT data network in Amsterdam.
+* Launching the network in cities across the world. London had its network launched this month.
+* Powered by gateways installed on roofs of businesses, accessible to all. ($1000 - $1500 per gateway).
+
+---
+
+## Data Gravity & Time-series
 
 
 
