@@ -45,8 +45,6 @@ User-experience expert [Claire Rowland](http://www.designingconnectedproducts.co
 * You often have to choose between fuzzy-and-current or accurate-but-old. A cat-tracker can either say "Mrs. Tibbles was at this exact location 3 hours ago" or "Mrs. Tibbles is somewhere within this range right now".
 * Linking physical and digital interfaces takes special thought. A traditional dimmer-switch always knows it's ‘state’, where as a remotely-controlled version has to account for the fact that the ‘state’ of the bulb might have changed since it last checked.
 
-![Dimmer-switch controls: unconnected vs. connected](/)
-
 ---
 
 ## From 2 to 2 billion: How to Design for Scale.
