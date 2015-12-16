@@ -138,32 +138,37 @@ Juan Perez (from Microsoft) said some stuff about Azure (a new MS Cloud platform
 
 The official father of the term “Silicon Roundabout”, Matt Biddulph, closed day one with a talk about how 'conversation' can help solve some of the main issues with many IoT devices. He was very coy about his new venture, [Thington](http://thington.com/), but hinted that it will be using this concept of conversation in conjunction with the “social graph” when it launches in early 2016.
 
-* Traditional light-bulbs are an interface an messaging bus. A light-switch is a state messaging transport.
-* Adding connectivity to a bulb (*a la* Philips Hue) adds issues:
-    - latency
-    - state
-    - consensus
-    - trust
-    - location
-    - power
-* Old scholarly article on the 8 fallacies of distributed computing:
-    1. The network is reliable.
-    2. Latency is zero.
-    3. Bandwidth is infinite.
-    4. The network is secure.
-    5. Topology doesn't change.
-    6. There is one administrator.
-    7. Transport cost is zero.
-    8. The network is homogeneous.
-* New fallacies of Distributes *Services*:
-    1. Devices are powered.
-    2. Devices are reachable.
-    3. Devices stay in one place.
-    4. Messages can be trusted.
-    5. Causality is unambiguous.
-    6. All device state is known.
-    7. There is one clock.
-* How do we solve these issues? Simple: a conversation. If the devices can 'talk' to one-another, they can iron out inconsistencies and neutralize many of the problems.
+Traditional light-bulbs are an interface an messaging bus. A light-switch is a state messaging transport. Adding connectivity to a bulb (*a la* Philips Hue) adds issues:
+
+* latency
+* state
+* consensus
+* trust
+* location
+* power
+
+There's an 'old' scholarly article that outlines the 8 fallacies of distributed computing:
+    
+* The network is reliable.
+* Latency is zero.
+* Bandwidth is infinite.
+* The network is secure.
+* Topology doesn't change.
+* There is one administrator.
+* Transport cost is zero.
+* The network is homogeneous.
+
+Matt's “New fallacies of Distributes *Services*”:
+
+* Devices are powered.
+* Devices are reachable.
+* Devices stay in one place.
+* Messages can be trusted.
+* Causality is unambiguous.
+* All device state is known.
+* There is one clock.
+
+How do we solve these issues? Simple: a conversation. If the devices can 'talk' to one-another, they can iron out inconsistencies and neutralize many of the problems.
 
 
 
