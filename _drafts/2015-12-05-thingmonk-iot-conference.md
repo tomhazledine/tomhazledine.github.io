@@ -90,6 +90,83 @@ Mark Hill, from [Open TRV](http://opentrv.org.uk/) (a company that makes smart T
 
 ## Data Gravity & Time-series
 
+Dave McCrory, allegedly famous for for coining the term “data gravity”, delivered an engaging talk with a charming hand-drawn slide-deck. He touched briefly on how data != information, but his main point was that dealing with time (in an IoT setting) is important but very, very hard.
+
+* Data Gravity: data has a 'weight' and can be hard to deal with. Some datasets might take 40 years to even upload, let alone process.
+* `0` is just data. `0°C` is data with context. `0°C in London today` is information.
+* When you are working with real-time analytics, how do you deal with that data? System clocks become important - do you trust your machine, your cloud server, or the machine in the field?
+* Do you deliver a constant stream of data? Sometimes it might be better to time-stamp it and package it up, then send packets of data at regular intervals. That leads to less chance of drops in connection causing data loss.
+
+---
+
+## The Secret Life of Buildings
+
+It was interesting to head Yodit Stanton's insights into working with “connected“ buildings, particularly some of the pitfalls and unexpected issues.
+
+* Her company [opensensors.io](https://www.opensensors.io/) deals with commercial spaces with pre-existing Building Management Systems (BMSs).
+* Automation in a machine-to-machine sense (M2M) has been around for years: office lights that turn on when you enter the room, automatic doors, etc.
+* Learning about a building's 'health' in the form of lighting-levels, environmental factors, footfall, etc. can give you insight into employee absenteeism, efficiency of your workforce, and on and on...
+* Average cost of one desk in London is £12k p.a. Small percentage increases in efficiency can reap big rewards.
+* Legacy protocols (`bacnet`, `dali`, `modbus`, `knx`) are building-data standards and will be around for a while. Contracts are typically 15-20 years long, and cost between £50k and £200k. They won't be thrown out anytime soon.
+* They lock down their data too much. None of those services have an API.
+* Open Source integrations are more sustainable and easier to manage.
+* Don't use WiFi - there are “edge dependencies” on people (in one example, an office manager unplugged the wi-fi router every night!).
+
+---
+
+## It's none of your effing business
+
+The award for most curmudgeonly speaker at the event goes to Boris Adryan (according to ThingMonk host James Governor). Boris devoted a large portion of his talk to dissecting an article depicting a [near-future IoT-fueled wakeup routine](http://knowledge.openboxsoftware.com/blog/the-evolution-of-business-intelligence). The post is well-worth a read.
+
+He also touched on machine learning, and I started craving a cup of tea and took fewer notes... In short, we need our systems to be smart because people instinctively lack an understanding of statistical p-values.
+
+---
+
+## Things, People, and Beer
+
+Craig Cmehil, from [SAP](http://go.sap.com/uk/index.html), subtitled his talk “voice as an alternative user interface for analytics”. He gave a demonstration of the voice-activated Amazon Echo, essentially a programmable Siri in a large box.
+
+He ran a mini competition, too, where he gave away an Echo (not yet available in Europe) which involved some live-coding: always a brave mood in a live presentation...
+
+---
+
+## IoT Device Management
+
+Juan Perez (from Microsoft) said some stuff about Azure (a new MS Cloud platform or something-or-other). I may have slept through this one...
+
+---
+
+## Welcome to the Conversation
+
+The official father of the term “Silicon Roundabout”, Matt Biddulph, closed day one with a talk about how 'conversation' can help solve some of the main issues with many IoT devices. He was very coy about his new venture, [Thington](http://thington.com/), but hinted that it will be using this concept of conversation in conjunction with the “social graph” when it launches in early 2016.
+
+* Traditional light-bulbs are an interface an messaging bus. A light-switch is a state messaging transport.
+* Adding connectivity to a bulb (*a la* Philips Hue) adds issues:
+    - latency
+    - state
+    - consensus
+    - trust
+    - location
+    - power
+* Old scholarly article on the 8 fallacies of distributed computing:
+    1. The network is reliable.
+    2. Latency is zero.
+    3. Bandwidth is infinite.
+    4. The network is secure.
+    5. Topology doesn't change.
+    6. There is one administrator.
+    7. Transport cost is zero.
+    8. The network is homogeneous.
+* New fallacies of Distributes *Services*:
+    1. Devices are powered.
+    2. Devices are reachable.
+    3. Devices stay in one place.
+    4. Messages can be trusted.
+    5. Causality is unambiguous.
+    6. All device state is known.
+    7. There is one clock.
+* How do we solve these issues? Simple: a conversation. If the devices can 'talk' to one-another, they can iron out inconsistencies and neutralize many of the problems.
+
 
 
 
