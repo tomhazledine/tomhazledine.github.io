@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes from ThinkMonk"
+title: "Notes from ThinkMonk: Day One
 
 subheading: 3rd & 4th December 2015, Arcola Theatre Dalston.
 
@@ -22,7 +22,7 @@ ThingMonk styles itself as a conference “for developers, designers, data wrang
 
 I was there with my web-developer hat on, but was keeping my eyes peeled for hints at the future of business-tech in general. I'm already deeply embedded in data-visualisation and dynamic analytics, but eager to connect my digital skills to a hardware framework.
 
----
+# Day One
 
 ## Bullet-Proof & Profitable Things
 
@@ -170,7 +170,9 @@ Matt's “New fallacies of Distributes *Services*”:
 
 How do we solve these issues? Simple: a conversation. If the devices can 'talk' to one-another, they can iron out inconsistencies and neutralize many of the problems.
 
+---
 
+At somepoint in the next week or so (mid-late Dec 2015) I'll post my notes from day 2 of ThingMonk. I'll add the link here, but if you're really desparate not to miss out, drop me a line (tom@tomhazledine.com) and I'll add you to the slowly-growing list of people who I'll email when I've published the notes.
 
 
 
