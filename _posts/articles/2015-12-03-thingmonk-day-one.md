@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes from ThinkMonk: Day One
+title: "Notes from ThinkMonk: Day One"
 
 subheading: 3rd & 4th December 2015, Arcola Theatre Dalston.
 
