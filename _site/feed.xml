@@ -3,8 +3,215 @@
 <channel>
 <title>Tom Hazledine</title>
 <description>The personal web-hub for Tom Hazledine</description>
-<link>http://tomhazledine.com</link>
-<atom:link href="http://tomhazledine.com/feed.xml" rel="self" type="application/rss+xml" />
+<link>http://th.dev</link>
+<atom:link href="http://th.dev/feed.xml" rel="self" type="application/rss+xml" />
+
+<item>
+<title>Notes from ThinkMonk: Day Two</title>
+<description>&lt;p class=&quot;addendum&quot;&gt;These are my notes from day two of the conference. If you want to catch, read &lt;a href=&quot;/thingmonk-day-one&quot;&gt;my notes from the first day of ThingMonk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Day Two&lt;/h1&gt;
+
+&lt;h2&gt;The Ambient Kettle Project&lt;/h2&gt;
+
+&lt;p&gt;Andy Stanford-Clark, from IBM, kicked-off day two by introducing us to the &lt;em&gt;Hy Pi Zero&lt;/em&gt;. The original &lt;em&gt;Hy Pi&lt;/em&gt; had debuted at ThingMonk 2014 and was a Raspberry Pi powered by a hydrogen fuel cell. The &lt;em&gt;Hy Pi Zero&lt;/em&gt; was the same concept, only this time using the newly-released Raspberry Pi Zero. It had taken the team at Arcola all the preceding day to get it up-and-running, and was now powering the slide-deck for the presentation.&lt;/p&gt;
+
+&lt;p&gt;He then handed us over to his colleague, Laura Cowen, who talked us through the “Ambient Kettle” she and Andy had been working on.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+<pubDate>Fri, 04 Dec 2015 00:00:00 +0000</pubDate>
+<link>http://th.dev/thingmonk-day-two</link>
+<guid isPermaLink="true">http://th.dev/thingmonk-day-two</guid>
+</item>
+
+<item>
+<title>Notes from ThinkMonk: Day One</title>
+<description>&lt;p&gt;ThingMonk styles itself as a conference “for developers, designers, data wranglers and decision-makers that want to turn ideas and concepts into industrial scale systems”.&lt;/p&gt;
+
+&lt;p&gt;I was there with my web-developer hat on, but was keeping my eyes peeled for hints at the future of business-tech in general. I’m already deeply embedded in data-visualisation and dynamic analytics, but eager to connect my digital skills to a hardware framework.&lt;/p&gt;
+
+&lt;h1&gt;Day One&lt;/h1&gt;
+
+&lt;h2&gt;Bullet-Proof &amp;amp; Profitable Things&lt;/h2&gt;
+
+&lt;p&gt;Ubuntu guru and part-time space tourist &lt;a href=&quot;http://canonical.com/&quot;&gt;Mark Shuttleworth&lt;/a&gt; made for a high-profile, big-picture opening speaker. It was interesting to hear that his idea of “scale” was not massive super-computers costing exorbitant amounts of money, but rather lots and lots of cheap, tiny micro-computers all working in unison over a network.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It takes five to ten years to make an overnight success, and &lt;em&gt;now&lt;/em&gt; is the time to be getting deep into IoT. Wait 12 months and the train will have left the station.&lt;/li&gt;
+  &lt;li&gt;Real disruption comes from riding a wave of change, and the disaggregation and componentisation we’re seeing in the IoT sphere at the moment will inevitably lead to the “hockey stick” graph of innovation.&lt;/li&gt;
+  &lt;li&gt;Data can be a liability - you must have a responsible security strategy when handling lots of data. One mistake or hack can cripple a big-data company.&lt;/li&gt;
+  &lt;li&gt;The next version of Ubuntu will be highly modular. Apps will be isolated and contained, and will each have a predefined area they can write to. This allows for robust version control across the system, and no more fear when updating the OS.&lt;/li&gt;
+  &lt;li&gt;The “Internet of Toys” is going to be more influential than people realise. It’s easier to innovate with things that won’t kill people. Long-term projects will have to use standards already set by short-term projects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Coherent UX for Distributed Systems&lt;/h2&gt;
+
+&lt;p&gt;User-experience expert &lt;a href=&quot;http://www.designingconnectedproducts.com/&quot;&gt;Claire Rowland&lt;/a&gt; had some fascinating insights into the challenges of managing UX in a world of connected “things”.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We don’t expect “things” to behave like the internet. Light bulbs shouldn’t “buffer”.&lt;/li&gt;
+  &lt;li&gt;Interfaces (if they are honest) should introduce the concept of failure to users. Don’t fake success when a user clicks a button in a low-connectivity area: show in interstitial “loading” state wherever possible.&lt;/li&gt;
+  &lt;li&gt;You often have to choose between fuzzy-and-current or accurate-but-old. A cat-tracker can either say “Mrs. Tibbles was at this exact location 3 hours ago” or “Mrs. Tibbles is somewhere within this range right now”.&lt;/li&gt;
+  &lt;li&gt;Linking physical and digital interfaces takes special thought. A traditional dimmer-switch always knows it’s ‘state’, where as a remotely-controlled version has to account for the fact that the ‘state’ of the bulb might have changed since it last checked.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;From 2 to 2 billion: How to Design for Scale.&lt;/h2&gt;
+
+&lt;p&gt;Sam Winslet &amp;amp; Sophie Riches from IBM presented us with the “Seven Deadly Sins for Design of IoT”:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Greed: designing for yourself.&lt;/li&gt;
+  &lt;li&gt;Envy: being a copycat.&lt;/li&gt;
+  &lt;li&gt;Gluttony: focusing on features &amp;amp; functions.&lt;/li&gt;
+  &lt;li&gt;Wrath: assuming your users know what IoT is.&lt;/li&gt;
+  &lt;li&gt;Lust: IoT for the sake of it, without any real ideas.&lt;/li&gt;
+  &lt;li&gt;Pride: don’t over-complicate and don’t over-simplify. IBM use a strategy they call “Progressive Disclosure”: where an interface reveals deeper levels of detail as a user interacts with it.&lt;/li&gt;
+  &lt;li&gt;Sloth: assuming users have ∞ patience or care about you/your product.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Hacking NFC&lt;/h2&gt;
+
+&lt;p&gt;Nick Ludlum from &lt;a href=&quot;http://moo.com/&quot;&gt;Moo&lt;/a&gt; gave (with a little help from colleague Kai Turner) one of the more engaging and tech-focused presentations of the event. The team at Moo have (after considerable time spent in R&amp;amp;D) figured out how to print NFC chips into business cards.&lt;/p&gt;
+
+&lt;p&gt;Every attendee at the conference was given a Moo business card on arrival, which was embedded with an NFC chip with tokens for free coffee and beer.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For NFC to work, you need a chip and an antenna. The chip is tiny – literally mm across – and the antenna gets printed between to laminated sheets of paper using conductive silver ink. This means the finished business card looks and feels just like a regular card - after all, it’s still mostly just card and ink.&lt;/li&gt;
+  &lt;li&gt;To build a reader, all you need is a “smarter” chip, an antenna, and a power source. Android phones have the ability to be NFC readers, but IOS ones do not.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;nfcpy&lt;/code&gt; is the Python library for NFC.&lt;/li&gt;
+  &lt;li&gt;The cards can store a variety of MIME-type information (webpages, lat. &amp;amp; lng. data, etc) but URLs are the most versatile (and can be re-purposed without reprogramming the card itself).&lt;/li&gt;
+  &lt;li&gt;Security is still ongoing project, and the Moo team would welcome any insights or help in that area that the developer community can provide.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;The Things Network: London&lt;/h2&gt;
+
+&lt;p&gt;Mark Hill, from &lt;a href=&quot;http://opentrv.org.uk/&quot;&gt;Open TRV&lt;/a&gt; (a company that makes smart Thermostatic Radiator Valves) got the short-straw: his talk was right before lunch, and therefore had to be shortened because the conf. was running over time.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://thethingsnetwork.org/&quot;&gt;The Things Network&lt;/a&gt; is a low-power, wide-area network.&lt;/li&gt;
+  &lt;li&gt;Crowdsourced a complete city-wide IoT data network in Amsterdam.&lt;/li&gt;
+  &lt;li&gt;Launching the network in cities across the world. London had its network launched this month.&lt;/li&gt;
+  &lt;li&gt;Powered by gateways installed on roofs of businesses, accessible to all. ($1000 - $1500 per gateway).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Data Gravity &amp;amp; Time-series&lt;/h2&gt;
+
+&lt;p&gt;Dave McCrory, allegedly famous for for coining the term “data gravity”, delivered an engaging talk with a charming hand-drawn slide-deck. He touched briefly on how data != information, but his main point was that dealing with time (in an IoT setting) is important but very, very hard.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Data Gravity: data has a ‘weight’ and can be hard to deal with. Some datasets might take 40 years to even upload, let alone process.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;0&lt;/code&gt; is just data. &lt;code&gt;0°C&lt;/code&gt; is data with context. &lt;code&gt;0°C in London today&lt;/code&gt; is information.&lt;/li&gt;
+  &lt;li&gt;When you are working with real-time analytics, how do you deal with that data? System clocks become important - do you trust your machine, your cloud server, or the machine in the field?&lt;/li&gt;
+  &lt;li&gt;Do you deliver a constant stream of data? Sometimes it might be better to time-stamp it and package it up, then send packets of data at regular intervals. That leads to less chance of drops in connection causing data loss.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;The Secret Life of Buildings&lt;/h2&gt;
+
+&lt;p&gt;It was interesting to head Yodit Stanton’s insights into working with “connected“ buildings, particularly some of the pitfalls and unexpected issues.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Her company &lt;a href=&quot;https://www.opensensors.io/&quot;&gt;opensensors.io&lt;/a&gt; deals with commercial spaces with pre-existing Building Management Systems (BMSs).&lt;/li&gt;
+  &lt;li&gt;Automation in a machine-to-machine sense (M2M) has been around for years: office lights that turn on when you enter the room, automatic doors, etc.&lt;/li&gt;
+  &lt;li&gt;Learning about a building’s ‘health’ in the form of lighting-levels, environmental factors, footfall, etc. can give you insight into employee absenteeism, efficiency of your workforce, and on and on…&lt;/li&gt;
+  &lt;li&gt;Average cost of one desk in London is £12k p.a. Small percentage increases in efficiency can reap big rewards.&lt;/li&gt;
+  &lt;li&gt;Legacy protocols (&lt;code&gt;bacnet&lt;/code&gt;, &lt;code&gt;dali&lt;/code&gt;, &lt;code&gt;modbus&lt;/code&gt;, &lt;code&gt;knx&lt;/code&gt;) are building-data standards and will be around for a while. Contracts are typically 15-20 years long, and cost between £50k and £200k. They won’t be thrown out anytime soon.&lt;/li&gt;
+  &lt;li&gt;They lock down their data too much. None of those services have an API.&lt;/li&gt;
+  &lt;li&gt;Open Source integrations are more sustainable and easier to manage.&lt;/li&gt;
+  &lt;li&gt;Don’t use WiFi - there are “edge dependencies” on people (in one example, an office manager unplugged the wi-fi router every night!).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;It’s none of your effing business&lt;/h2&gt;
+
+&lt;p&gt;The award for most curmudgeonly speaker at the event goes to Boris Adryan (according to ThingMonk host James Governor). Boris devoted a large portion of his talk to dissecting an article depicting a &lt;a href=&quot;http://knowledge.openboxsoftware.com/blog/the-evolution-of-business-intelligence&quot;&gt;near-future IoT-fueled wakeup routine&lt;/a&gt;. The post is well-worth a read.&lt;/p&gt;
+
+&lt;p&gt;He also touched on machine learning, and I started craving a cup of tea and took fewer notes… In short, we need our systems to be smart because people instinctively lack an understanding of statistical p-values.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Things, People, and Beer&lt;/h2&gt;
+
+&lt;p&gt;Craig Cmehil, from &lt;a href=&quot;http://go.sap.com/uk/index.html&quot;&gt;SAP&lt;/a&gt;, subtitled his talk “voice as an alternative user interface for analytics”. He gave a demonstration of the voice-activated Amazon Echo, essentially a programmable Siri in a large box.&lt;/p&gt;
+
+&lt;p&gt;He ran a mini competition, too, where he gave away an Echo (not yet available in Europe) which involved some live-coding: always a brave mood in a live presentation…&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;IoT Device Management&lt;/h2&gt;
+
+&lt;p&gt;Juan Perez (from Microsoft) said some stuff about Azure (a new MS Cloud platform or something-or-other). I may have slept through this one…&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Welcome to the Conversation&lt;/h2&gt;
+
+&lt;p&gt;The official father of the term “Silicon Roundabout”, Matt Biddulph, closed day one with a talk about how ‘conversation’ can help solve some of the main issues with many IoT devices. He was very coy about his new venture, &lt;a href=&quot;http://thington.com/&quot;&gt;Thington&lt;/a&gt;, but hinted that it will be using this concept of conversation in conjunction with the “social graph” when it launches in early 2016.&lt;/p&gt;
+
+&lt;p&gt;Traditional light-bulbs are an interface an messaging bus. A light-switch is a state messaging transport. Adding connectivity to a bulb (&lt;em&gt;a la&lt;/em&gt; Philips Hue) adds issues:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;latency&lt;/li&gt;
+  &lt;li&gt;state&lt;/li&gt;
+  &lt;li&gt;consensus&lt;/li&gt;
+  &lt;li&gt;trust&lt;/li&gt;
+  &lt;li&gt;location&lt;/li&gt;
+  &lt;li&gt;power&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There’s an ‘old’ scholarly article that outlines the 8 fallacies of distributed computing:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The network is reliable.&lt;/li&gt;
+  &lt;li&gt;Latency is zero.&lt;/li&gt;
+  &lt;li&gt;Bandwidth is infinite.&lt;/li&gt;
+  &lt;li&gt;The network is secure.&lt;/li&gt;
+  &lt;li&gt;Topology doesn’t change.&lt;/li&gt;
+  &lt;li&gt;There is one administrator.&lt;/li&gt;
+  &lt;li&gt;Transport cost is zero.&lt;/li&gt;
+  &lt;li&gt;The network is homogeneous.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Matt’s “New fallacies of Distributes &lt;em&gt;Services&lt;/em&gt;”:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Devices are powered.&lt;/li&gt;
+  &lt;li&gt;Devices are reachable.&lt;/li&gt;
+  &lt;li&gt;Devices stay in one place.&lt;/li&gt;
+  &lt;li&gt;Messages can be trusted.&lt;/li&gt;
+  &lt;li&gt;Causality is unambiguous.&lt;/li&gt;
+  &lt;li&gt;All device state is known.&lt;/li&gt;
+  &lt;li&gt;There is one clock.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How do we solve these issues? Simple: a conversation. If the devices can ‘talk’ to one-another, they can iron out inconsistencies and neutralize many of the problems.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;At somepoint in the next week or so (mid-late Dec 2015) I’ll post my notes from day 2 of ThingMonk. I’ll add the link here, but if you’re really desparate not to miss out, drop me a line (tom@tomhazledine.com) and I’ll add you to the slowly-growing list of people who I’ll email when I’ve published the notes.&lt;/p&gt;
+
+</description>
+<pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
+<link>http://th.dev/thingmonk-day-one</link>
+<guid isPermaLink="true">http://th.dev/thingmonk-day-one</guid>
+</item>
 
 <item>
 <title>Getting started with inline SVG icons</title>
@@ -132,8 +339,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;For a long time I was very skeptical of using inline SVG for icon sets, primarily because of the perceived effort it would take to set up such a system. I’m happy to report that SVG sprites are considerably easier to get started with than I’d ever thought. I can’t imagine ever using an iconfont again.&lt;/p&gt;
 </description>
 <pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/inline-svg-icons</link>
-<guid isPermaLink="true">http://tomhazledine.com/inline-svg-icons</guid>
+<link>http://th.dev/inline-svg-icons</link>
+<guid isPermaLink="true">http://th.dev/inline-svg-icons</guid>
 </item>
 
 <item>
@@ -231,8 +438,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;People like this are what makes the web such a fantastic industry to be a part of, and I owe them all a debt of gratitude.&lt;/p&gt;
 </description>
 <pubDate>Tue, 09 Sep 2014 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/inspiring-web-people</link>
-<guid isPermaLink="true">http://tomhazledine.com/inspiring-web-people</guid>
+<link>http://th.dev/inspiring-web-people</link>
+<guid isPermaLink="true">http://th.dev/inspiring-web-people</guid>
 </item>
 
 <item>
@@ -249,8 +456,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[0] = [];
         
-        postsList[0][&quot;url&quot;] = &quot;/inline-svg-icons&quot;;
-        postsList[0][&quot;title&quot;] = &quot;Getting started with inline SVG icons&quot;;
+        postsList[0][&quot;url&quot;] = &quot;/thingmonk-day-two&quot;;
+        postsList[0][&quot;title&quot;] = &quot;Notes from ThinkMonk: Day Two&quot;;
 
         
 
@@ -258,8 +465,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[1] = [];
         
-        postsList[1][&quot;url&quot;] = &quot;/inspiring-web-people&quot;;
-        postsList[1][&quot;title&quot;] = &quot;Inspirational Web People&quot;;
+        postsList[1][&quot;url&quot;] = &quot;/thingmonk-day-one&quot;;
+        postsList[1][&quot;title&quot;] = &quot;Notes from ThinkMonk: Day One&quot;;
 
         
 
@@ -267,19 +474,17 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[2] = [];
         
-        postsList[2][&quot;url&quot;] = &quot;/top-ten-ways-to-get-better-at-something&quot;;
-        postsList[2][&quot;title&quot;] = &quot;Top ten ways to progress.&quot;;
+        postsList[2][&quot;url&quot;] = &quot;/inline-svg-icons&quot;;
+        postsList[2][&quot;title&quot;] = &quot;Getting started with inline SVG icons&quot;;
 
-        
-            var currentPost = 2;
         
 
     
 
         postsList[3] = [];
         
-        postsList[3][&quot;url&quot;] = &quot;/fullpage-screenshots-in-firefox&quot;;
-        postsList[3][&quot;title&quot;] = &quot;Fullpage screenshots in Firefox.&quot;;
+        postsList[3][&quot;url&quot;] = &quot;/inspiring-web-people&quot;;
+        postsList[3][&quot;title&quot;] = &quot;Inspirational Web People&quot;;
 
         
 
@@ -287,17 +492,19 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[4] = [];
         
-        postsList[4][&quot;url&quot;] = &quot;/futura-for-the-win&quot;;
-        postsList[4][&quot;title&quot;] = &quot;Futura for the win.&quot;;
+        postsList[4][&quot;url&quot;] = &quot;/top-ten-ways-to-get-better-at-something&quot;;
+        postsList[4][&quot;title&quot;] = &quot;Top ten ways to progress.&quot;;
 
+        
+            var currentPost = 4;
         
 
     
 
         postsList[5] = [];
         
-        postsList[5][&quot;url&quot;] = &quot;/simple-is-hard&quot;;
-        postsList[5][&quot;title&quot;] = &quot;Simple is hard&quot;;
+        postsList[5][&quot;url&quot;] = &quot;/fullpage-screenshots-in-firefox&quot;;
+        postsList[5][&quot;title&quot;] = &quot;Fullpage screenshots in Firefox.&quot;;
 
         
 
@@ -305,8 +512,26 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[6] = [];
         
-        postsList[6][&quot;url&quot;] = &quot;/bullet-journal-workflow&quot;;
-        postsList[6][&quot;title&quot;] = &quot;A bullet-journal workflow&quot;;
+        postsList[6][&quot;url&quot;] = &quot;/futura-for-the-win&quot;;
+        postsList[6][&quot;title&quot;] = &quot;Futura for the win.&quot;;
+
+        
+
+    
+
+        postsList[7] = [];
+        
+        postsList[7][&quot;url&quot;] = &quot;/simple-is-hard&quot;;
+        postsList[7][&quot;title&quot;] = &quot;Simple is hard&quot;;
+
+        
+
+    
+
+        postsList[8] = [];
+        
+        postsList[8][&quot;url&quot;] = &quot;/bullet-journal-workflow&quot;;
+        postsList[8][&quot;title&quot;] = &quot;A bullet-journal workflow&quot;;
 
         
 
@@ -319,8 +544,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;/nav&gt;
 </description>
 <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.com/top-ten-ways-to-get-better-at-something</link>
-<guid isPermaLink="true">http://tomhazledine.com/top-ten-ways-to-get-better-at-something</guid>
+<link>http://th.dev/top-ten-ways-to-get-better-at-something</link>
+<guid isPermaLink="true">http://th.dev/top-ten-ways-to-get-better-at-something</guid>
 </item>
 
 <item>
@@ -347,8 +572,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;You can see some of the screenshots I took using this method over on my portfolio page. The ‘phone’ view of the &lt;a href=&quot;/atlantic-brewery&quot;&gt;Atlantic Brewery&lt;/a&gt; page is particularly long and thin – an image I’d have struggled to create using any other method.&lt;/p&gt;
 </description>
 <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.com/fullpage-screenshots-in-firefox</link>
-<guid isPermaLink="true">http://tomhazledine.com/fullpage-screenshots-in-firefox</guid>
+<link>http://th.dev/fullpage-screenshots-in-firefox</link>
+<guid isPermaLink="true">http://th.dev/fullpage-screenshots-in-firefox</guid>
 </item>
 
 <item>
@@ -396,8 +621,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;Only time will tell how long this current designs sticks around for, but it already feels like this version is a more substantial website than any of my previous attempts. Picking Futura and sticking with it, despite the issues and imperfections, has meant I’ve been able to turn my attention to the finer details: the little moments of interaction design, the negative space, and above all the &lt;strong&gt;content&lt;/strong&gt;.&lt;/p&gt;
 </description>
 <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.com/futura-for-the-win</link>
-<guid isPermaLink="true">http://tomhazledine.com/futura-for-the-win</guid>
+<link>http://th.dev/futura-for-the-win</link>
+<guid isPermaLink="true">http://th.dev/futura-for-the-win</guid>
 </item>
 
 <item>
@@ -433,8 +658,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is a real challenge, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.&lt;/p&gt;
 </description>
 <pubDate>Thu, 26 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/simple-is-hard</link>
-<guid isPermaLink="true">http://tomhazledine.com/simple-is-hard</guid>
+<link>http://th.dev/simple-is-hard</link>
+<guid isPermaLink="true">http://th.dev/simple-is-hard</guid>
 </item>
 
 <item>
@@ -472,8 +697,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;But using the &lt;a href=&quot;http://www.bulletjournal.com/&quot;&gt;Bullet Journal&lt;/a&gt; &lt;em&gt;has&lt;/em&gt; undeniably helped my workflow. My days now have structure, and (most importantly) I’m now much less likely to overlook an important task.&lt;/p&gt;
 </description>
 <pubDate>Tue, 24 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/bullet-journal-workflow</link>
-<guid isPermaLink="true">http://tomhazledine.com/bullet-journal-workflow</guid>
+<link>http://th.dev/bullet-journal-workflow</link>
+<guid isPermaLink="true">http://th.dev/bullet-journal-workflow</guid>
 </item>
 
 </channel>
