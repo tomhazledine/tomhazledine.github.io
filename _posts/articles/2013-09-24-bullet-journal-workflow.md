@@ -9,7 +9,7 @@ category: article
 comments: true
 ---
 
-Making task lists can be fantastically useful, but it's all too easy to loose them. My paper lists get buried under reams of doodles and random notes, or lost in the depths of a full notebook that simply has *too much in it*. Even digital lists get lost, and I find I lack the discipline to open a mammoth text file every morning. Paper is much better for immediate reference, even if it is easy to miss-place.
+Making task lists can be fantastically useful, but it's all too easy to lose them. My paper lists get buried under reams of doodles and random notes, or lost in the depths of a full notebook that simply has *too much in it*. Even digital lists get lost, and I find I lack the discipline to open a mammoth text file every morning. Paper is much better for immediate reference, even if it is easy to miss-place.
 
 ## Productivity Hacking
 The quest for elegant ‘productivity hacks’ is both fantastically useful and fantastically counter-productive. You can waste days reading about how not to waste your time. Finally, however, it seems that all the hours I've spent reading about productivity-hacks weren't wasted after all; my current system finds me being *more* efficient and productive than I've ever been before. And at the hub of my new-found momentum lies my Bullet Journal.

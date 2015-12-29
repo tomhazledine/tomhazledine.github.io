@@ -3,8 +3,8 @@
 <channel>
 <title>Tom Hazledine</title>
 <description>The personal web-hub for Tom Hazledine</description>
-<link>http://tomhazledine.com</link>
-<atom:link href="http://tomhazledine.com/feed.xml" rel="self" type="application/rss+xml" />
+<link>http://th.dev</link>
+<atom:link href="http://th.dev/feed.xml" rel="self" type="application/rss+xml" />
 
 <item>
 <title>Notes from ThinkMonk: Day One</title>
@@ -186,8 +186,8 @@
 
 </description>
 <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.com/thingmonk-day-one</link>
-<guid isPermaLink="true">http://tomhazledine.com/thingmonk-day-one</guid>
+<link>http://th.dev/thingmonk-day-one</link>
+<guid isPermaLink="true">http://th.dev/thingmonk-day-one</guid>
 </item>
 
 <item>
@@ -316,8 +316,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;For a long time I was very skeptical of using inline SVG for icon sets, primarily because of the perceived effort it would take to set up such a system. I’m happy to report that SVG sprites are considerably easier to get started with than I’d ever thought. I can’t imagine ever using an iconfont again.&lt;/p&gt;
 </description>
 <pubDate>Sun, 31 May 2015 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/inline-svg-icons</link>
-<guid isPermaLink="true">http://tomhazledine.com/inline-svg-icons</guid>
+<link>http://th.dev/inline-svg-icons</link>
+<guid isPermaLink="true">http://th.dev/inline-svg-icons</guid>
 </item>
 
 <item>
@@ -415,8 +415,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;People like this are what makes the web such a fantastic industry to be a part of, and I owe them all a debt of gratitude.&lt;/p&gt;
 </description>
 <pubDate>Tue, 09 Sep 2014 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/inspiring-web-people</link>
-<guid isPermaLink="true">http://tomhazledine.com/inspiring-web-people</guid>
+<link>http://th.dev/inspiring-web-people</link>
+<guid isPermaLink="true">http://th.dev/inspiring-web-people</guid>
 </item>
 
 <item>
@@ -512,8 +512,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;/nav&gt;
 </description>
 <pubDate>Fri, 07 Mar 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.com/top-ten-ways-to-get-better-at-something</link>
-<guid isPermaLink="true">http://tomhazledine.com/top-ten-ways-to-get-better-at-something</guid>
+<link>http://th.dev/top-ten-ways-to-get-better-at-something</link>
+<guid isPermaLink="true">http://th.dev/top-ten-ways-to-get-better-at-something</guid>
 </item>
 
 <item>
@@ -540,8 +540,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;You can see some of the screenshots I took using this method over on my portfolio page. The ‘phone’ view of the &lt;a href=&quot;/atlantic-brewery&quot;&gt;Atlantic Brewery&lt;/a&gt; page is particularly long and thin – an image I’d have struggled to create using any other method.&lt;/p&gt;
 </description>
 <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.com/fullpage-screenshots-in-firefox</link>
-<guid isPermaLink="true">http://tomhazledine.com/fullpage-screenshots-in-firefox</guid>
+<link>http://th.dev/fullpage-screenshots-in-firefox</link>
+<guid isPermaLink="true">http://th.dev/fullpage-screenshots-in-firefox</guid>
 </item>
 
 <item>
@@ -589,8 +589,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;Only time will tell how long this current designs sticks around for, but it already feels like this version is a more substantial website than any of my previous attempts. Picking Futura and sticking with it, despite the issues and imperfections, has meant I’ve been able to turn my attention to the finer details: the little moments of interaction design, the negative space, and above all the &lt;strong&gt;content&lt;/strong&gt;.&lt;/p&gt;
 </description>
 <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
-<link>http://tomhazledine.com/futura-for-the-win</link>
-<guid isPermaLink="true">http://tomhazledine.com/futura-for-the-win</guid>
+<link>http://th.dev/futura-for-the-win</link>
+<guid isPermaLink="true">http://th.dev/futura-for-the-win</guid>
 </item>
 
 <item>
@@ -626,8 +626,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is a real challenge, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.&lt;/p&gt;
 </description>
 <pubDate>Thu, 26 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/simple-is-hard</link>
-<guid isPermaLink="true">http://tomhazledine.com/simple-is-hard</guid>
+<link>http://th.dev/simple-is-hard</link>
+<guid isPermaLink="true">http://th.dev/simple-is-hard</guid>
 </item>
 
 <item>
@@ -665,8 +665,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 &lt;p&gt;But using the &lt;a href=&quot;http://www.bulletjournal.com/&quot;&gt;Bullet Journal&lt;/a&gt; &lt;em&gt;has&lt;/em&gt; undeniably helped my workflow. My days now have structure, and (most importantly) I’m now much less likely to overlook an important task.&lt;/p&gt;
 </description>
 <pubDate>Tue, 24 Sep 2013 00:00:00 +0100</pubDate>
-<link>http://tomhazledine.com/bullet-journal-workflow</link>
-<guid isPermaLink="true">http://tomhazledine.com/bullet-journal-workflow</guid>
+<link>http://th.dev/bullet-journal-workflow</link>
+<guid isPermaLink="true">http://th.dev/bullet-journal-workflow</guid>
 </item>
 
 </channel>
