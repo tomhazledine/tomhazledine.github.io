@@ -21,6 +21,7 @@
             {% for link in site.navigation %}
                 <li {% if url == link.url or page.layout == link.layout %}class="active"{% endif %}>
                     <a href="{{ site.url }}{{ link.url }}">{{ link.text }}</a>
+                    <p class="mainMenuDescription">{{ link.description }}</p>
                 </li>
             {% endfor %}
         </ul>

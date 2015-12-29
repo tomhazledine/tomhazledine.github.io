@@ -25,12 +25,15 @@ exclude: [config.rb,
           img/raw*,
           node_modules]
 navigation:
-  - text: About
+  - text: Home
     url: /
+    description: A little introduction to who I am and what I do.
   - text: Portfolio
     url: /portfolio/
+    description: Some examples of my work.
   - text: Blog
     layout: post
     url: /blog/
+    description: Selected ramblings about the web and technology.
 # gems:
   # - jekyll-sitemap
