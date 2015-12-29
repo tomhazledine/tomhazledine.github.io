@@ -8,8 +8,8 @@ kramdown:
   auto_ids: false
 name: Tom Hazledine
 description: The personal web-hub for Tom Hazledine
-url: http://th.dev # Local
-# url: http://tomhazledine.com # Live
+# url: http://th.dev # Local
+url: http://tomhazledine.com # Live
 # url: http://tomhazledine.github.io/thomashazledine # gh-pages
 # baseurl: /thomashazledine
 feed_url: http://tomhazledine.com/feed.xml
@@ -31,7 +31,7 @@ navigation:
   - text: Portfolio
     url: /portfolio/
     description: Some examples of my work.
-  - text: Blog
+  - text: Articles
     layout: post
     url: /blog/
     description: Selected ramblings about the web and technology.

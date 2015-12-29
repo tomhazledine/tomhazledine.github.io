@@ -1,4 +1,6 @@
-.cvWrapper .cvMenu:before, .cvWrapper .cvMeta:before, .cvWrapper .cvMenu:after, .cvWrapper .cvMeta:after {
+.cvWrapper .cvMenu:before, .cvWrapper .cvMeta:before,
+.cvWrapper .cvMenu:after,
+.cvWrapper .cvMeta:after {
   content: ' ';
   display: table; }
 
@@ -51,7 +53,7 @@ body {
     line-height: 1.2; }
   .cvWrapper h3 {
     line-height: 1.2;
-    padding: 0 0 0.2em 0; }
+    padding: 0 0 .2em 0; }
   .cvWrapper hr {
     clear: both; }
     @media (max-width: 570px) {
@@ -88,21 +90,21 @@ body {
     font-style: italic;
     padding: 0 0 1em 0; }
     .cvWrapper ul li {
-      margin-bottom: 0.5em;
+      margin-bottom: .5em;
       position: relative;
       line-height: 1.4;
       display: block;
-      padding-left: 0.5em;
+      padding-left: .5em;
       border-left: 0.2em solid #00b7c6;
-      margin-left: 0.5em; }
+      margin-left: .5em; }
   .cvWrapper .backToTop {
-    font-size: 0.6em;
+    font-size: .6em;
     line-height: 1;
     text-align: center;
     width: 8em;
-    font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
+    font-family: "brandon-grotesque", "futura", "gil sans", sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: .2em;
     color: #dad8d2;
     display: block;
     position: fixed;
@@ -110,16 +112,13 @@ body {
     right: -14em;
     background: #efeeeb;
     padding: 1em 2em 1em 1em;
-    border-radius: 0.5em 0 0 0.5em;
+    border-radius: .5em 0 0 .5em;
     border-bottom: #dad8d2 solid 0.1rem;
     border-left: #dad8d2 solid 0.1rem;
     border-top: #dad8d2 solid 0.1rem;
-    -webkit-transition: right, color;
-            transition: right, color;
-    -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
-    -webkit-box-shadow: rgba(77, 77, 77, 0.1) -0.5em 0.5em 0 0;
-            box-shadow: rgba(77, 77, 77, 0.1) -0.5em 0.5em 0 0; }
+    transition: right, color;
+    transition-duration: .4s;
+    box-shadow: rgba(77, 77, 77, 0.1) -0.5em 0.5em 0 0; }
     .cvWrapper .backToTop:hover {
       color: #4d4d4d; }
     .cvWrapper .backToTop.visible {
@@ -130,35 +129,32 @@ body {
   width: auto;
   border-left: 0;
   padding: 0;
-  margin: 0 0.5em 0.5em 0;
+  margin: 0 .5em .5em 0;
   float: left; }
   .cvWrapper .cvMenu li a {
     display: block;
     background: #00b7c6;
     color: #ffffff;
-    padding: 0.2em 1em;
-    font-family: "brandon-grotesque", 'futura', 'gil sans', sans-serif;
+    padding: .2em 1em;
+    font-family: "brandon-grotesque", "futura", "gil sans", sans-serif;
     font-style: normal;
-    letter-spacing: 0.2em;
+    letter-spacing: .2em;
     text-transform: uppercase;
-    font-size: 0.7em;
-    -webkit-box-shadow: inset #008993 0 0 0 0;
-            box-shadow: inset #008993 0 0 0 0;
-    -webkit-transition: padding, -webkit-box-shadow;
-            transition: padding, box-shadow;
-    -webkit-transition-duration: 0.2s;
-            transition-duration: 0.2s; }
+    font-size: .7em;
+    box-shadow: inset #008893 0 0 0 0;
+    transition: padding,box-shadow;
+    transition-duration: .2s; }
     .cvWrapper .cvMenu li a:hover {
-      padding: 0.4em 1em 0;
-      -webkit-box-shadow: inset #008993 0 0.2em 0 0;
-              box-shadow: inset #008993 0 0.2em 0 0; }
+      padding: .4em 1em 0;
+      box-shadow: inset #008893 0 0.2em 0 0; }
+
 @media (max-width: 570px) {
   .cvWrapper .cvMenu {
     padding-bottom: 1em; } }
 
 .cvWrapper .cvMeta {
   clear: both;
-  font-size: 0.8em;
+  font-size: .8em;
   padding: 0; }
   .cvWrapper .cvMeta li {
     padding: 0 1em;
@@ -180,12 +176,12 @@ body {
       padding: 1em 0; } }
 
 .cvWrapper .cvSubMeta {
-  font-size: 0.8em;
-  padding: 0.5em 0;
+  font-size: .8em;
+  padding: .5em 0;
   margin: 0; }
   .cvWrapper .cvSubMeta li {
     display: inline-block;
     width: auto;
     border-left: #00b7c6 solid 0.4rem;
     margin: 0;
-    padding: 0 1.5em 0 0.5em; }
+    padding: 0 1.5em 0 .5em; }

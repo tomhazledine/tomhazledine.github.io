@@ -80,6 +80,7 @@
         display:block;
         text-align:center;
         padding:.2em 0;
+        margin-bottom:2em;
         a{
             font-family:$display;
             // text-transform:uppercase;
@@ -96,6 +97,12 @@
             &:hover{
                 box-shadow:inset $cream 0 -2em 0 0;
             }
+        }
+        .mainMenuDescription{
+            max-width:14em;
+            font-size:.8em;
+            line-height:1;
+            margin:1em auto 0;
         }
     }
 }

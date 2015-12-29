@@ -56,8 +56,7 @@ input[type=range].songProgressSlider::-webkit-slider-thumb {
   background: #4d4d4d;
   background: rgba(77, 77, 77, 0.4);
   cursor: pointer;
-  -webkit-box-shadow: 0;
-          box-shadow: 0; }
+  box-shadow: 0; }
 
 input[type=range].songProgressSlider::-moz-range-thumb {
   box-shadow: 0;
@@ -83,8 +82,7 @@ input[type=range].songProgressSlider::-webkit-slider-runnable-track {
   width: 100%;
   height: 2em;
   cursor: pointer;
-  -webkit-box-shadow: 0;
-          box-shadow: 0;
+  box-shadow: 0;
   background: #00b7c6;
   border-radius: 0;
   border: 0; }
@@ -107,7 +105,7 @@ input[type=range].songProgressSlider::-ms-track {
   cursor: pointer;
   background: transparent;
   border-color: transparent;
-  border-width: 0.5em 0;
+  border-width: .5em 0;
   color: transparent; }
 
 input[type=range].songProgressSlider::-ms-fill-lower {
@@ -144,7 +142,7 @@ input[type=range].songProgressSlider:focus::-ms-fill-upper {
 .standardAudioPlayer {
   border-bottom: 4px solid #4d4d4d;
   margin: 2em 0;
-  padding: 0.2em 0; }
+  padding: .2em 0; }
   .standardAudioPlayer p {
     padding-bottom: 0; }
 
@@ -154,23 +152,20 @@ input[type=range].songProgressSlider:focus::-ms-fill-upper {
 .playlistSongTrigger {
   display: block;
   width: 100%;
-  padding: 0.5em 0.5em 0.5em 2.5em;
+  padding: .5em .5em .5em 2.5em;
   background: rgba(0, 183, 198, 0.3);
   text-align: left;
   position: relative;
-  -webkit-box-shadow: inset #4d4d4d 2em 0 0 0;
-          box-shadow: inset #4d4d4d 2em 0 0 0;
-  -webkit-transition: background;
-          transition: background;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s; }
+  box-shadow: inset #4d4d4d 2em 0 0 0;
+  transition: background;
+  transition-duration: .2s; }
   .playlistSongTrigger:focus {
     outline: none; }
   .playlistSongTrigger .playPauseIcon {
     line-height: 1;
     display: block;
     width: 2em;
-    padding: 0.9em 0;
+    padding: .9em 0;
     background: #4d4d4d;
     position: absolute;
     top: 0em;
@@ -189,12 +184,12 @@ input[type=range].songProgressSlider:focus::-ms-fill-upper {
   display: block;
   position: absolute;
   top: 0;
-  margin-top: 0.9em;
+  margin-top: .9em;
   left: 50%;
-  margin-left: -0.2em;
-  border-top: 0.5em solid transparent;
+  margin-left: -.2em;
+  border-top: .5em solid transparent;
   border-left: 0.6em solid #efeeeb;
-  border-bottom: 0.5em solid transparent; }
+  border-bottom: .5em solid transparent; }
 
 .playlistSongTrigger.songPlaying .playPauseIcon:before {
   content: "";
@@ -203,9 +198,9 @@ input[type=range].songProgressSlider:focus::-ms-fill-upper {
   top: 0;
   margin-top: 1em;
   left: 50%;
-  height: 0.8em;
-  width: 0.8em;
-  margin-left: -0.35em;
+  height: .8em;
+  width: .8em;
+  margin-left: -.35em;
   border-top: none;
   border-left: 0.3em solid #efeeeb;
   border-right: 0.3em solid #efeeeb;
@@ -219,7 +214,7 @@ input[type=range].songProgressSlider:focus::-ms-fill-upper {
   font-weight: bold; }
 
 .playlistInfoBandAlbum {
-  font-size: 0.8em;
+  font-size: .8em;
   color: rgba(77, 77, 77, 0.8); }
 
 .songProgress {
