@@ -15,7 +15,7 @@ excerpt: "ThingMonk is a conference “for developers, designers, data wranglers
 
 comments: true
 category: article
-featured: true
+featured: false
 ---
 
 If day one of ThingMonk was mostly about the internet of things at near-scale - IoT for our daily routine, in our houses and in our offices – day two had a more “big picture” focus to it. The headline talks were about large thorny environmental problems, and how big-industry is using IoT to make enormous efficiency savings.
