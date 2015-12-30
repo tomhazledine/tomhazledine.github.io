@@ -7,6 +7,144 @@
 <atom:link href="http://tomhazledine.com/feed.xml" rel="self" type="application/rss+xml" />
 
 <item>
+<title>Notes from ThinkMonk: Day Two</title>
+<description>&lt;p&gt;If day one of ThingMonk was mostly about the internet of things at near-scale - IoT for our daily routine, in our houses and in our offices – day two had a more “big picture” focus to it. The headline talks were about large thorny environmental problems, and how big-industry is using IoT to make enormous efficiency savings.&lt;/p&gt;
+
+&lt;p class=&quot;addendum&quot;&gt;These are my notes from day two of the conference. If you want to catch, read &lt;a href=&quot;/thingmonk-day-one&quot;&gt;my notes from the first day of ThingMonk&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Day Two&lt;/h1&gt;
+
+&lt;h2&gt;The Ambient Kettle Project&lt;/h2&gt;
+
+&lt;p&gt;Andy Stanford-Clark, from IBM, kicked-off day two by introducing us to the &lt;em&gt;Hy Pi Zero&lt;/em&gt;. The original &lt;em&gt;Hy Pi&lt;/em&gt; had debuted at ThingMonk 2014 and was a Raspberry Pi powered by a hydrogen fuel cell. The &lt;em&gt;Hy Pi Zero&lt;/em&gt; was the same concept, only this time using the newly-released &lt;em&gt;Raspberry Pi Zero&lt;/em&gt;. It had taken the team at Arcola all the preceding day to get it up-and-running, and was now powering the slide-deck for the presentation.&lt;/p&gt;
+
+&lt;p&gt;He then handed us over to his colleague, Laura Cowen, who talked us through the “Ambient Kettle” she and Andy had been working on.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It had started when Laura made her kettle post to a custom twitter account every time she made a cup of tea.&lt;/li&gt;
+  &lt;li&gt;Her mum then started following the kettle’s account, and Laura tried to think of ways to streamline the “ambient intimacy” her and her mum were experiencing.&lt;/li&gt;
+  &lt;li&gt;By abstracting the fundamental characteristics of the experience, Laura and Andy then experimented putting those elements together independently of the act of making a cup of tea itself.&lt;/li&gt;
+  &lt;li&gt;They identified many UX facets: the sound of the water boiling and the click of the kettle, the shape and feel of the physical object, the colour of the kettle’s indicator lights as it boiled, the fact that the experience needed no configuration at all.&lt;/li&gt;
+  &lt;li&gt;Iterating over various prototypes, they built a pseudo-kettle that severed as a remote indicator that someone (presumably someone you care about) has just made a cup of tea.&lt;/li&gt;
+  &lt;li&gt;The end result was a tiny dolls-house scale 3D-printed kettle with an LED and speaker.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;The Convergence of IoT and Energy&lt;/h2&gt;
+
+&lt;p&gt;The real show-stopper talk of the conference was given by Tom Raftery, an analyst at GreenMonk (the environment-focused arm of RedMonk; the event organisers).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Energy networks are built around spikes and “peak load” (&lt;em&gt;Bake Off&lt;/em&gt; finishes, and everyone up and down the country puts the kettle on and flushes the loo).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;2°C&lt;/strong&gt; = cap for global warming set by 2009 Copenhagen Climate Accord.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;565GtCO&lt;sub&gt;2&lt;/sub&gt;&lt;/strong&gt; = Gigatons of CO&lt;sub&gt;2&lt;/sub&gt; needed to reach a 2°C increase (a carbon budget that leaves us with 20-30 years at current emissions rates).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;2795GtCO&lt;sub&gt;2&lt;/sub&gt;&lt;/strong&gt; = Proven reserves.&lt;/li&gt;
+  &lt;li&gt;We’ve now passed the 400 parts-per-million CO&lt;sub&gt;2&lt;/sub&gt; threshold in the atmosphere, and will never cross it again. The &lt;a href=&quot;https://scripps.ucsd.edu/programs/keelingcurve/&quot;&gt;stats from the Scripps Institution of Oceanography&lt;/a&gt; make for scary reading.&lt;/li&gt;
+  &lt;li&gt;Electricity Grids are dumb. They only learn about outages when customers phone up to complain. They then need a truck-roll (apparently the biz-speak for “sending a truck”) to diagnose the problem, and then a second truck-roll with the specialist equipment to deal with the issue.&lt;/li&gt;
+  &lt;li&gt;The grid is provisioned for ‘hits’ – the two weeks of the year with peak-demand dictate the infrastructure for the whole system.&lt;/li&gt;
+  &lt;li&gt;Wind and solar are unpredictable – you can’t just order-up more capacity to match demand. However, Denmark already meets 140% of its energy demand with wind-power, allowing them to sell-on excess supply.&lt;/li&gt;
+  &lt;li&gt;Nuclear doesn’t scale easily: there’s a 10-20 year runway for new projects.&lt;/li&gt;
+  &lt;li&gt;1GW is roughly the output of one nuclear power station. China are building 700GW worth of solar production.&lt;/li&gt;
+  &lt;li&gt;Industrial IoT is often divided into two concerns: &lt;em&gt;Predictive Maintenance&lt;/em&gt; and &lt;em&gt;Demand Management&lt;/em&gt;. Dynamic management of energy demand could be the silver-bullet to deal with the problem of un-environmental energy production.&lt;/li&gt;
+  &lt;li&gt;Connected devices can look at energy prices, and when the price drops suck up all the energy they can store. Increased storage capacity helps even out the miss-match between supply and demand.&lt;/li&gt;
+  &lt;li&gt;Energy from renewables is always cheaper: fixed costs mean ‘old’ providers drop out of the market when the price drops below a certain point. Renewables can sell at any price.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Becoming a Digital Industrial Company&lt;/h2&gt;
+
+&lt;p&gt;Jeremiah Stone from GE spoke about how his company is transitioning from a traditional heavy-industry &amp;amp; manufacturing company into one that fully realises the potential of ‘digital’. His colleague Stephan King then gave a demo of their new IoT cloud platform (all buzz-words, little substance, very boring).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GE are adding analytics infrastructure to their &lt;em&gt;massive&lt;/em&gt; fleet of trains * Data fuels insight: using their new analytics, they discovered they needed to wash jet engines that operate in dusty environments, saving themselves expensive replacements (and avoiding potential fleet-grounding from the FAA) and saving $7m p.a. in fuel costs.&lt;/li&gt;
+  &lt;li&gt;Every extra 1mph in capacity generated on the US rail network equates to $200k in savings.&lt;/li&gt;
+  &lt;li&gt;In windfarms, turbines create a cone of turbulence behind them. Using ‘smart’ blades that can adjust their angle based on live data means they can reduce turbulence and increase efficiency across the whole farm.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Log, I Am Your Father&lt;/h2&gt;
+
+&lt;p&gt;James Hodge &amp;amp; Matt Davies came from Splunk (one of the event sponsors). Splunk deal with data analytics.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A lot of data already exists, unused, in log files: we just don’t know we have it.&lt;/li&gt;
+  &lt;li&gt;Data like this can fuel the “Build-&amp;gt;Measure-&amp;gt;Learn” cycle: Have an idea, build a product, measure the data that product creates, and learn from that data to generate new ideas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;We Need to Talk About Telco&lt;/h2&gt;
+
+&lt;p&gt;Keith O’Byrne works at Asavie, a large-scale telecommunications infrastructure company.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Connectivity is a big issue for IoT projects.&lt;/li&gt;
+  &lt;li&gt;No-one will run a copper cable into a power station. In that scenario, connectivity &lt;em&gt;must&lt;/em&gt; be wireless.&lt;/li&gt;
+  &lt;li&gt;All IoT plans start like this: “step one: assume internet”.&lt;/li&gt;
+  &lt;li&gt;Tesla (the electric car people) addressed this problem badly - they routed the in-car WiFi hotspot through Spain. It seemed an economical solution, but had side-effects: Google was in Spanish, and location-based services (such as BBC iPlayer in the UK) would not work.&lt;/li&gt;
+  &lt;li&gt;If you need to use a SIM in your project, use a Global Sim. They have better connectivity because they can use any network, the support and API is much better, and there’s safety in numbers - most big systems use them. The only downside is they don’t have a phone number, so take a bit more tech-savvy to get them working.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Industry Things at Scale&lt;/h2&gt;
+
+&lt;p&gt;Redmonk analyst Tomas Grassl spoke about the difference between consumer and business IoT. Consumer IoT has many areas (health, household appliances, toys, etc.) but the business space is where the revolutionary work is being done.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Big ports cannot simply build new roads into big cities. They need to leverage efficiencies in order to grow. E.g. routing trucks to overflow carparks based on live data.&lt;/li&gt;
+  &lt;li&gt;Smart bathrooms in sports-stadia allow for efficient management of supply (water, soap, loo-roll etc.) to deal with massive demand in short time-windows.&lt;/li&gt;
+  &lt;li&gt;$447bn is spent annually on maintenance.&lt;/li&gt;
+  &lt;li&gt;Pirelli tires for trucks now measure speed, heat, pressure, etc. They can be replaced &lt;em&gt;before&lt;/em&gt; they fail, and the company has changed to a new business model: leasing the tires rather than selling them.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=O1Rzyn2OIkI&quot;&gt;James Gosling’s IoT talk&lt;/a&gt; is well worth a watch, apparently.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Brought to You by the Number Ten&lt;/h2&gt;
+
+&lt;p&gt;Recent AWS aqui-hiree Kyle Roche recreates the &lt;a href=&quot;https://www.youtube.com/watch?v=0fKBhvDjuy0&quot;&gt;Eames’ famous Powers of Ten video&lt;/a&gt;, but talking about IoT tech at the different scales, with various insights along the way.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When automatic gunshot detectors were installed in New Jersey, authorities discovers that only 38% of gunshots were reported by humans.&lt;/li&gt;
+  &lt;li&gt;The F-35 jet’s HUD allows the pilot to see 360° ‘through’ the plane. It also orders its own replacement parts.&lt;/li&gt;
+  &lt;li&gt;From source to house, the US mains loses 16% of its water.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;!-- 
+## Intelligent Alerts and Pay-As-You-Go for Off-Grid Power
+
+Tamara Giltsoff came to plug her start-up Product Health, which is providing industrial battery analytics in the third-world.
+ --&gt;
+
+&lt;h2&gt;From Killer Robot to Killer Product&lt;/h2&gt;
+
+&lt;p&gt;Pat Patterson is a “Developer Evangelist Architect” for event-sponsor SalesForce. His job sounds amazing: traveling from event to event showcasing interesting techy things.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A snazzy demo can be very useful and powerful as a tool to drive engagement (his main example was an industrial robotic arm, normally used for manufacturing, that he’d taught to do a dance).&lt;/li&gt;
+  &lt;li&gt;We’re living in an age of cheap components - creating a working prototype for an IoT project can be very quick and very affordable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;On the whole, ThingMonk 2015 was amazing. I met loads of people working on all sorts of interesting projects, and it hammered home to me that the IoT revolution has already started. I’ve come away inspired to get even more stuck-in to my IoT side-projects, and with a feeling that it is now essential to start bringing IoT concepts into my day-to-day work too.&lt;/p&gt;
+
+&lt;p class=&quot;addendum&quot;&gt;If you missed them, don’t forget to check out &lt;a href=&quot;/thingmonk-day-one&quot;&gt;my notes from day one of ThingMonk&lt;/a&gt;.&lt;/p&gt;
+</description>
+<pubDate>Fri, 04 Dec 2015 00:00:00 +0000</pubDate>
+<link>http://tomhazledine.com/thingmonk-day-two</link>
+<guid isPermaLink="true">http://tomhazledine.com/thingmonk-day-two</guid>
+</item>
+
+<item>
 <title>Notes from ThinkMonk: Day One</title>
 <description>&lt;p&gt;ThingMonk styles itself as a conference “for developers, designers, data wranglers and decision-makers that want to turn ideas and concepts into industrial scale systems”.&lt;/p&gt;
 
@@ -433,8 +571,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[0] = [];
         
-        postsList[0][&quot;url&quot;] = &quot;/thingmonk-day-one&quot;;
-        postsList[0][&quot;title&quot;] = &quot;Notes from ThinkMonk: Day One&quot;;
+        postsList[0][&quot;url&quot;] = &quot;/thingmonk-day-two&quot;;
+        postsList[0][&quot;title&quot;] = &quot;Notes from ThinkMonk: Day Two&quot;;
 
         
 
@@ -442,8 +580,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[1] = [];
         
-        postsList[1][&quot;url&quot;] = &quot;/inline-svg-icons&quot;;
-        postsList[1][&quot;title&quot;] = &quot;Getting started with inline SVG icons&quot;;
+        postsList[1][&quot;url&quot;] = &quot;/thingmonk-day-one&quot;;
+        postsList[1][&quot;title&quot;] = &quot;Notes from ThinkMonk: Day One&quot;;
 
         
 
@@ -451,8 +589,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[2] = [];
         
-        postsList[2][&quot;url&quot;] = &quot;/inspiring-web-people&quot;;
-        postsList[2][&quot;title&quot;] = &quot;Inspirational Web People&quot;;
+        postsList[2][&quot;url&quot;] = &quot;/inline-svg-icons&quot;;
+        postsList[2][&quot;title&quot;] = &quot;Getting started with inline SVG icons&quot;;
 
         
 
@@ -460,28 +598,28 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[3] = [];
         
-        postsList[3][&quot;url&quot;] = &quot;/top-ten-ways-to-get-better-at-something&quot;;
-        postsList[3][&quot;title&quot;] = &quot;Top ten ways to progress.&quot;;
+        postsList[3][&quot;url&quot;] = &quot;/inspiring-web-people&quot;;
+        postsList[3][&quot;title&quot;] = &quot;Inspirational Web People&quot;;
 
-        
-            var currentPost = 3;
         
 
     
 
         postsList[4] = [];
         
-        postsList[4][&quot;url&quot;] = &quot;/fullpage-screenshots-in-firefox&quot;;
-        postsList[4][&quot;title&quot;] = &quot;Fullpage screenshots in Firefox.&quot;;
+        postsList[4][&quot;url&quot;] = &quot;/top-ten-ways-to-get-better-at-something&quot;;
+        postsList[4][&quot;title&quot;] = &quot;Top ten ways to progress.&quot;;
 
+        
+            var currentPost = 4;
         
 
     
 
         postsList[5] = [];
         
-        postsList[5][&quot;url&quot;] = &quot;/futura-for-the-win&quot;;
-        postsList[5][&quot;title&quot;] = &quot;Futura for the win.&quot;;
+        postsList[5][&quot;url&quot;] = &quot;/fullpage-screenshots-in-firefox&quot;;
+        postsList[5][&quot;title&quot;] = &quot;Fullpage screenshots in Firefox.&quot;;
 
         
 
@@ -489,8 +627,8 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[6] = [];
         
-        postsList[6][&quot;url&quot;] = &quot;/simple-is-hard&quot;;
-        postsList[6][&quot;title&quot;] = &quot;Simple is hard&quot;;
+        postsList[6][&quot;url&quot;] = &quot;/futura-for-the-win&quot;;
+        postsList[6][&quot;title&quot;] = &quot;Futura for the win.&quot;;
 
         
 
@@ -498,8 +636,17 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
         postsList[7] = [];
         
-        postsList[7][&quot;url&quot;] = &quot;/bullet-journal-workflow&quot;;
-        postsList[7][&quot;title&quot;] = &quot;A bullet-journal workflow&quot;;
+        postsList[7][&quot;url&quot;] = &quot;/simple-is-hard&quot;;
+        postsList[7][&quot;title&quot;] = &quot;Simple is hard&quot;;
+
+        
+
+    
+
+        postsList[8] = [];
+        
+        postsList[8][&quot;url&quot;] = &quot;/bullet-journal-workflow&quot;;
+        postsList[8][&quot;title&quot;] = &quot;A bullet-journal workflow&quot;;
 
         
 
