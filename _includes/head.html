@@ -8,7 +8,7 @@
     <meta charset="utf-8">
 
     <!-- Critical Path CSS -->
-    <style type="text/css">{% include criticalPath.min.css %}</style>
+    <!--<style type="text/css">{% include criticalPath.min.css %}</style>-->
 
     <title>
         {% if page.title %} {{ page.title }} – {% endif %}Tom Hazledine Web Design
@@ -20,7 +20,7 @@
     
     <!-- async CSS -->
     {% if page.soloCss %}
-        <script>
+        <!--<script>
           var cb = function() {
             var l = document.createElement('link'); l.rel = 'stylesheet';
             l.href = '{{ site.url }}/assets/css/{{ page.soloCss }}';
@@ -30,10 +30,10 @@
               webkitRequestAnimationFrame || msRequestAnimationFrame;
           if (raf) raf(cb);
           else window.addEventListener('load', cb);
-        </script>
-        <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}"> -->
+        </script>-->
+        <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.soloCss }}">
     {% else %}
-        <script>
+        <!--<script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
               l.href = '{{ site.url }}/assets/css/main.min.css';
@@ -43,10 +43,10 @@
                 webkitRequestAnimationFrame || msRequestAnimationFrame;
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
-        </script>
-        <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css"> -->
+        </script>-->
+        <link rel="stylesheet" href="{{ site.url }}/assets/css/main.min.css">
         {% if page.customCss %}
-            <script>
+            <!--<script>
               var cb = function() {
                 var l = document.createElement('link'); l.rel = 'stylesheet';
                 l.href = '{{ site.url }}/assets/css/{{ page.customCss }}';
@@ -56,8 +56,8 @@
                   webkitRequestAnimationFrame || msRequestAnimationFrame;
               if (raf) raf(cb);
               else window.addEventListener('load', cb);
-            </script>
-            <!-- <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.customCss }}"> -->
+            </script>-->
+            <link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.customCss }}">
         {% endif %}
     {% endif %}
 
