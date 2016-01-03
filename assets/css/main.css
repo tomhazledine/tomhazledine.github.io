@@ -1350,12 +1350,16 @@ blockquote {
   display: block;
   width: 60%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  font-style: italic; }
   @media (max-width: 570px) {
     .showcaseExcerpt {
       width: 70%;
       font-size: .8em;
       line-height: 1.2; } }
+
+.pageIntroSnippet {
+  margin-top: 1em; }
 
 .showcaseSlider {
   background: #4d4d4d;
