@@ -19,10 +19,10 @@ audioLinks:
 - trackName: The Woodpile
   bandName: Frightened Rabbit
   albumName: Pedestrian Verse
-  url: http://eatenbymonsters.com/EbMBlog_mp3s/FrightenedRabbit/TheWoodpile.mp3
+  url: /assets/audio/TheWoodpile.mp3
 
-showcaselink: http://tomhazledine.com/audioDemo/
-showcaselinkshort: tomhazledine.com/audioDemo
+showcaselink: http://tomhazledine.com/audio/
+showcaselinkshort: tomhazledine.com/audio
 ---
 
 Styling default HTML `<audio>` elements is a pain. We *should* be able to do it with CSS, but sadly at the moment we have to battle the "shadow DOM" to get anywhere. Thankfully we can use the Web Audio API to recreate our own audio player. One we can style with CSS. One where *we* have control of the markup.
