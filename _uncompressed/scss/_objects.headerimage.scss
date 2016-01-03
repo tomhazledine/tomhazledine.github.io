@@ -1,0 +1,8 @@
+.headerImage{
+    max-width:80%;
+    height:auto;
+    margin:0 auto;
+    @include bp(d3){
+        max-width:50%;
+    }
+}

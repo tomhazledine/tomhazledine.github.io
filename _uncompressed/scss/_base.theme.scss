@@ -13,7 +13,7 @@ body{
     font-weight:$book;
     color:$black;
     line-height:1.6;
-    min-width:300px;
+    min-width:280px;
 
     // padding:10em;
     // background:$cream;
@@ -55,15 +55,18 @@ li{
         min-width:0em;
         width:90%;
         margin:3em auto 1em;
+        padding-top:2em;
     }
 }
 .mainContent{
-    width:34em;
+    max-width:34em;
     // width:$contentWidth;
     margin:0 auto;
+    padding:0 1em;
     @include bp(d3){
         min-width:0em;
         width:90%;
+        padding:0;
     }
 }
 .mainContentInner{

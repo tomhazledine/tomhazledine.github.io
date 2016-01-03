@@ -422,7 +422,7 @@ body {
   font-weight: 400;
   color: #4d4d4d;
   line-height: 1.6;
-  min-width: 300px; }
+  min-width: 280px; }
 
 a {
   background: #dad8d2;
@@ -452,15 +452,18 @@ li {
     .bodyWrapper {
       min-width: 0em;
       width: 90%;
-      margin: 3em auto 1em; } }
+      margin: 3em auto 1em;
+      padding-top: 2em; } }
 
 .mainContent {
-  width: 34em;
-  margin: 0 auto; }
+  max-width: 34em;
+  margin: 0 auto;
+  padding: 0 1em; }
   @media (max-width: 570px) {
     .mainContent {
       min-width: 0em;
-      width: 90%; } }
+      width: 90%;
+      padding: 0; } }
 
 .mainContentInner {
   padding-bottom: 3rem; }
@@ -1279,6 +1282,14 @@ blockquote {
     width: 14em;
     padding: 1em; }
 
+.headerImage {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto; }
+  @media (max-width: 570px) {
+    .headerImage {
+      max-width: 50%; } }
+
 .portfolioEntry {
   padding-bottom: 3em; }
 
@@ -1340,6 +1351,11 @@ blockquote {
   width: 60%;
   margin: 0 auto;
   text-align: center; }
+  @media (max-width: 570px) {
+    .showcaseExcerpt {
+      width: 70%;
+      font-size: .8em;
+      line-height: 1.2; } }
 
 .showcaseSlider {
   background: #4d4d4d;

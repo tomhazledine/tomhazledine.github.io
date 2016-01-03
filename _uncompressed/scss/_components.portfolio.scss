@@ -59,6 +59,11 @@
   width:60%;
   margin:0 auto;
   text-align:center;
+  @include bp(d3){
+    width:70%;
+    font-size:.8em;
+    line-height:1.2;
+  }
 }
 
 // 03. Showcase Slider
