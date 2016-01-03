@@ -6,12 +6,22 @@
     <section class="mainContent clearfix">
 
         <header class="showcaseHeader">
-            <img class="headerImage" src="/assets/images/articleImages/pencil.png" alt="">
-            <h1 class="showcaseH1">{{ page.pageTitle }}</h1>
+            {% if page.headerImage %}
+                <img class="headerImage" src="/assets/images/{{ page.headerImage }}" alt="">
+            {% endif %}
+            <h1 class="showcaseH1">
+                {% if page.pageTitle %}
+                    {{ page.pageTitle }}
+                {% else %}
+                    {{ page.title }}
+                {% endif %}
+            </h1>
             {% if page.subheading %}
                 <span class="showcaseExcerpt">{{page.subheading}}</span>
             {% endif %}
-            <p class="pageIntroSnippet">{{ content }}</p>
+            <div class="textContent pageIntroSnippet">
+                {{ content }}
+            </div>
         </header>
 
         <section class="popularPosts">

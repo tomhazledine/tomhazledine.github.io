@@ -4,13 +4,24 @@
 <div class="bodyWrapper clearfix">
     <section class="mainContent clearfix">
 
-        <div class="textContent">
-            
-            <h1>{{ page.title }}</h2>
-            
-            {{content}}
-        
-        </div>
+        <header class="showcaseHeader">
+            {% if page.headerImage %}
+                <img class="headerImage" src="/assets/images/{{ page.headerImage }}" alt="">
+            {% endif %}
+            <h1 class="showcaseH1">
+                {% if page.pageTitle %}
+                    {{ page.pageTitle }}
+                {% else %}
+                    {{ page.title }}
+                {% endif %}
+            </h1>
+            {% if page.subheading %}
+                <span class="showcaseExcerpt">{{page.subheading}}</span>
+            {% endif %}
+            <div class="textContent pageIntroSnippet">
+                {{ content }}
+            </div>
+        </header>
 
         <section class="popularPosts">
             <ul>
