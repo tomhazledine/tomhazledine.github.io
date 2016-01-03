@@ -13,4 +13,10 @@ comments: false
 
 ## Practice [repeat, x10]
 
+*or alternatively:*
+
+    for (i = 0; i < 10; i++) {
+        skill.practice();
+    }
+
 {% include navigation.html %}

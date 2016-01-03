@@ -563,6 +563,13 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
 &lt;h2&gt;Practice [repeat, x10]&lt;/h2&gt;
 
+&lt;p&gt;&lt;em&gt;or alternatively:&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for (i = 0; 1 &amp;lt; 10; i++) {
+    skill.practice();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;script&gt;
     var postsList = [];
     var currentPost = 0;
