@@ -565,7 +565,7 @@ echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawS
 
 &lt;p&gt;&lt;em&gt;or alternatively:&lt;/em&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;for (i = 0; 1 &amp;lt; 10; i++) {
+&lt;pre&gt;&lt;code&gt;for (i = 0; i &amp;lt; 10; i++) {
     skill.practice();
 }
 &lt;/code&gt;&lt;/pre&gt;

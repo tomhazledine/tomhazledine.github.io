@@ -15,7 +15,7 @@ excerpt: "ThinkMonk was wall-to-wall interesting and inspiring. I took lots of n
 
 comments: true
 category: article
-featured: true
+featured: false
 ---
 
 ThingMonk styles itself as a conference “for developers, designers, data wranglers and decision-makers that want to turn ideas and concepts into industrial scale systems”.
