@@ -1,0 +1,16 @@
+.homeGraph {
+  width: 100%;
+  height: 10em;
+  margin: 0 auto; }
+
+.homeGraph path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none; }
+
+.homeGraph .axis path,
+.homeGraph .axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges; }

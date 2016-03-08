@@ -1290,6 +1290,34 @@ blockquote {
     .headerImage {
       max-width: 50%; } }
 
+.homeGraph {
+  width: 100%;
+  height: 10em;
+  margin: 0 auto 4em; }
+
+.homeGraph {
+  font-family: "brandon-grotesque", "futura", "gil sans", sans-serif;
+  cursor: pointer;
+  color: #dad8d2; }
+  .homeGraph path {
+    stroke: #00b7c6;
+    stroke-width: .2em;
+    fill: none; }
+  .homeGraph .axis path,
+  .homeGraph .axis line {
+    fill: none;
+    stroke: #dad8d2;
+    stroke-width: .1em;
+    shape-rendering: crispEdges; }
+  .homeGraph .hover {
+    stroke: #00b7c6;
+    fill: #efeeeb;
+    stroke-width: .2em;
+    r: .4em; }
+  .homeGraph .chartarea {
+    stroke: none;
+    fill: rgba(0, 183, 198, 0.2); }
+
 .portfolioEntry {
   padding-bottom: 3em; }
 

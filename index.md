@@ -5,6 +5,9 @@ title: "about"
 group: "navigation"
 headline: Hello. I'm a front-end developer and data-visualization geek from Cornwall.
 intro: Data without context is not information. In the burgeoning “Internet of Things” industry, we generate a lot of data. The big challenge now is making that data useful.
+customJs:
+    - d3.js
+    - d3home.js
 ---
 
 To get real insight from our data it must be presented in a useful way. I'm a web-specialist at heart, and I believe that web-technologies make the best interfaces for our IoT projects.

@@ -1,0 +1,34 @@
+.homeGraph{
+    width:100%;
+    height:10em;
+    // background:rgba(red,.4);
+    margin:0 auto 4em;
+}
+
+.homeGraph{
+    font-family:$display;
+    cursor:pointer;
+    color:$grey;
+    path { 
+        stroke:$primary;
+        stroke-width:.2em;
+        fill:none;
+    }
+    .axis path,
+    .axis line {
+        fill:none;
+        stroke:$grey;
+        stroke-width:.1em;
+        shape-rendering:crispEdges;
+    }
+    .hover{
+        stroke:$primary;
+        fill:$cream;
+        stroke-width:.2em;
+        r:.4em;
+    }
+    .chartarea{
+        stroke:none;
+        fill:rgba($primary,.2);
+    }
+}
