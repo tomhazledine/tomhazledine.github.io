@@ -6,7 +6,6 @@ group: "navigation"
 headline: Hello. I'm a front-end developer and data-visualization geek from Cornwall.
 intro: Data without context is not information. In the burgeoning “Internet of Things” industry, we generate a lot of data. The big challenge now is making that data useful.
 customJs:
-    - d3.js
     - d3home.js
 ---
 
