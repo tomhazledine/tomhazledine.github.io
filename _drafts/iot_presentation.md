@@ -72,6 +72,7 @@ Call to Action
     - The company has changed to a new business model: leasing the tires rather than selling them.
 
 ## Design Challenges:
+
 * We don’t expect “things” to behave like the internet. Light bulbs shouldn’t “buffer”.
 * Interfaces (if they are honest) should introduce the concept of failure to users. Don’t fake success when a user clicks a button in a low-connectivity area: show in interstitial “loading” state wherever possible.
 * You often have to choose between fuzzy-and-current or accurate-but-old. A cat-tracker can either say “Mrs. Tibbles was at this exact location 3 hours ago” or “Mrs. Tibbles is somewhere within this range right now”.
