@@ -21,6 +21,7 @@ if (homeGraphCheck.length) {
     // Set the ranges
     var x = d3.time.scale().range([0, width]);
     var y = d3.scale.linear().range([height, 0]);
+    var y_mus = d3.scale.linear().range([height, 0]);
 
     // Define the axes
     var xAxis = d3.svg.axis().scale(x)
@@ -31,7 +32,13 @@ if (homeGraphCheck.length) {
     // Define the line
     var valueline = d3.svg.line()
         .x(function(d) { return x(d.date); })
-        .y(function(d) { return y(d.close); })
+        .y(function(d) { return y(d.happiness); })
+        .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
+
+    // Define the line
+    var valueline_mus = d3.svg.line()
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.musician); })
         .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
         
     // Adds the svg canvas
@@ -50,33 +57,53 @@ if (homeGraphCheck.length) {
     d3.csv("/data/homegraph.csv", function(error, data) {
         data.forEach(function(d) {
             d.date = parseDate(d.date);
-            d.close = +d.close;
+            d.happiness = +d.happiness;
+            d.musician = +d.musician;
         });
         
         // Scale the range of the data
         x.domain(d3.extent(data, function(d) { return d.date; }));
-        y.domain([0, d3.max(data, function(d) { return d.close; })]);
+        y.domain([0, d3.max(data, function(d) { return d.happiness; })]);
+        y_mus.domain([0, d3.max(data, function(d) { return d.musician; })]);
         
         // Add the valueline path.
         lineSvg.append("path")
             .attr("class", "line")
             .attr("d", valueline(data));
 
+        // Add the valueline path.
+        lineSvg.append("path")
+            .attr("class", "line line_mus")
+            .attr("d", valueline_mus(data));
+
         /**
          * AREAS
          */
         
         areas = lineSvg.append('path');
+        areas_mus = lineSvg.append('path');
 
         areaShape = d3.svg.area()
             // .defined(function(d) { return !isNaN(d[]); })
             .x(function(d){ return x(d.date); })
             .y0(function(d){ return y(0); })
-            .y1(function(d){ return y(d.close); })
+            .y1(function(d){ return y(d.happiness); })
+            .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
+
+        areaShape_mus = d3.svg.area()
+            // .defined(function(d) { return !isNaN(d[]); })
+            .x(function(d){ return x(d.date); })
+            .y0(function(d){ return y(0); })
+            .y1(function(d){ return y(d.musician); })
             .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
 
         areas
             .attr('d',areaShape(data))
+            .attr('fill','none')
+            .classed('chartarea', true);
+
+        areas_mus
+            .attr('d',areaShape_mus(data))
             .attr('fill','none')
             .classed('chartarea', true);
         
@@ -94,6 +121,15 @@ if (homeGraphCheck.length) {
         // append the circle at the intersection 
         focus.append("circle")
             .classed("y",true)
+            .classed("hover",true)
+            // .style("fill", "white")
+            // .style("stroke", "steelblue")
+            // .style("stroke-width", "2px")
+            .attr("r", 4);
+
+        // append the circle at the intersection 
+        focus.append("circle")
+            .classed("y_mus",true)
             .classed("hover",true)
             // .style("fill", "white")
             // .style("stroke", "steelblue")
@@ -118,7 +154,11 @@ if (homeGraphCheck.length) {
             focus.select("circle.y")
                 .attr("transform",
                       "translate(" + x(d.date) + "," +
-                                     y(d.close) + ")");
+                                     y(d.happiness) + ")");
+            focus.select("circle.y_mus")
+                .attr("transform",
+                      "translate(" + x(d.date) + "," +
+                                     y_mus(d.musician) + ")");
         }
     });
 
