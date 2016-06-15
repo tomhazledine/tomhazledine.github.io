@@ -11,8 +11,14 @@
     color:$grey;
     path { 
         stroke:$primary;
-        stroke-width:.2em;
+        stroke-width:.1em;
         fill:none;
+        &.line_pilot{
+            stroke:$yellow;
+        }
+        &.line_mus{
+            stroke:$green;
+        }
     }
     .axis path,
     .axis line {
@@ -24,8 +30,14 @@
     .hover{
         stroke:$primary;
         fill:$cream;
-        stroke-width:.2em;
-        r:.4em;
+        stroke-width:.1em;
+        r:.3em;
+        &.y_pilot{
+            stroke:$yellow;
+        }
+        &.y_mus{
+            stroke:$green;
+        }
     }
     .chartarea{
         stroke:none;

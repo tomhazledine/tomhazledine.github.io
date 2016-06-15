@@ -1301,8 +1301,12 @@ blockquote {
   color: #dad8d2; }
   .homeGraph path {
     stroke: #00b7c6;
-    stroke-width: .2em;
+    stroke-width: .1em;
     fill: none; }
+    .homeGraph path.line_pilot {
+      stroke: #ffdc00; }
+    .homeGraph path.line_mus {
+      stroke: #2ecc40; }
   .homeGraph .axis path,
   .homeGraph .axis line {
     fill: none;
@@ -1312,8 +1316,12 @@ blockquote {
   .homeGraph .hover {
     stroke: #00b7c6;
     fill: #efeeeb;
-    stroke-width: .2em;
-    r: .4em; }
+    stroke-width: .1em;
+    r: .3em; }
+    .homeGraph .hover.y_pilot {
+      stroke: #ffdc00; }
+    .homeGraph .hover.y_mus {
+      stroke: #2ecc40; }
   .homeGraph .chartarea {
     stroke: none;
     fill: rgba(0, 183, 198, 0.2); }
