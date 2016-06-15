@@ -279,7 +279,7 @@ Tamara Giltsoff came to plug her start-up Product Health, which is providing ind
 &lt;ul&gt;
   &lt;li&gt;For NFC to work, you need a chip and an antenna. The chip is tiny – literally mm across – and the antenna gets printed between to laminated sheets of paper using conductive silver ink. This means the finished business card looks and feels just like a regular card - after all, it’s still mostly just card and ink.&lt;/li&gt;
   &lt;li&gt;To build a reader, all you need is a “smarter” chip, an antenna, and a power source. Android phones have the ability to be NFC readers, but IOS ones do not.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nfcpy&lt;/code&gt; is the Python library for NFC.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;nfcpy&lt;/code&gt; is the Python library for NFC.&lt;/li&gt;
   &lt;li&gt;The cards can store a variety of MIME-type information (webpages, lat. &amp;amp; lng. data, etc) but URLs are the most versatile (and can be re-purposed without reprogramming the card itself).&lt;/li&gt;
   &lt;li&gt;Security is still ongoing project, and the Moo team would welcome any insights or help in that area that the developer community can provide.&lt;/li&gt;
 &lt;/ul&gt;
@@ -305,7 +305,7 @@ Tamara Giltsoff came to plug her start-up Product Health, which is providing ind
 
 &lt;ul&gt;
   &lt;li&gt;Data Gravity: data has a ‘weight’ and can be hard to deal with. Some datasets might take 40 years to even upload, let alone process.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt; is just data. &lt;code class=&quot;highlighter-rouge&quot;&gt;0°C&lt;/code&gt; is data with context. &lt;code class=&quot;highlighter-rouge&quot;&gt;0°C in London today&lt;/code&gt; is information.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;0&lt;/code&gt; is just data. &lt;code&gt;0°C&lt;/code&gt; is data with context. &lt;code&gt;0°C in London today&lt;/code&gt; is information.&lt;/li&gt;
   &lt;li&gt;When you are working with real-time analytics, how do you deal with that data? System clocks become important - do you trust your machine, your cloud server, or the machine in the field?&lt;/li&gt;
   &lt;li&gt;Do you deliver a constant stream of data? Sometimes it might be better to time-stamp it and package it up, then send packets of data at regular intervals. That leads to less chance of drops in connection causing data loss.&lt;/li&gt;
 &lt;/ul&gt;
@@ -321,7 +321,7 @@ Tamara Giltsoff came to plug her start-up Product Health, which is providing ind
   &lt;li&gt;Automation in a machine-to-machine sense (M2M) has been around for years: office lights that turn on when you enter the room, automatic doors, etc.&lt;/li&gt;
   &lt;li&gt;Learning about a building’s ‘health’ in the form of lighting-levels, environmental factors, footfall, etc. can give you insight into employee absenteeism, efficiency of your workforce, and on and on…&lt;/li&gt;
   &lt;li&gt;Average cost of one desk in London is £12k p.a. Small percentage increases in efficiency can reap big rewards.&lt;/li&gt;
-  &lt;li&gt;Legacy protocols (&lt;code class=&quot;highlighter-rouge&quot;&gt;bacnet&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;dali&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;modbus&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;knx&lt;/code&gt;) are building-data standards and will be around for a while. Contracts are typically 15-20 years long, and cost between £50k and £200k. They won’t be thrown out anytime soon.&lt;/li&gt;
+  &lt;li&gt;Legacy protocols (&lt;code&gt;bacnet&lt;/code&gt;, &lt;code&gt;dali&lt;/code&gt;, &lt;code&gt;modbus&lt;/code&gt;, &lt;code&gt;knx&lt;/code&gt;) are building-data standards and will be around for a while. Contracts are typically 15-20 years long, and cost between £50k and £200k. They won’t be thrown out anytime soon.&lt;/li&gt;
   &lt;li&gt;They lock down their data too much. None of those services have an API.&lt;/li&gt;
   &lt;li&gt;Open Source integrations are more sustainable and easier to manage.&lt;/li&gt;
   &lt;li&gt;Don’t use WiFi - there are “edge dependencies” on people (in one example, an office manager unplugged the wi-fi router every night!).&lt;/li&gt;
@@ -412,14 +412,13 @@ with scale-slider?--&gt;
 
 &lt;p&gt;For a while it seemed that Icon Fonts were the answer. They’re vector based and therefore resolution-independent. You can style them with CSS. They have smaller filesizes than .JPGs or .PNGs, so they improve a site’s performance. A fontfile is one asset to download (more http requests = poorer site performance), so we don’t need to mess around with image sprites any more. And on top of all that, iconfont creation can be easily automated with your task-runner of choice: simply drop your icon .SVGs into a folder and you’re good to go.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* Calling an iconfont icon as a pseudo element within CSS. */
+&lt;pre&gt;&lt;code&gt;/* Calling an iconfont icon as a pseudo element within CSS. */
 .elementName:before {
-    font-family:&#39;iconfont&#39;;
+    font-family:'iconfont';
 	content: &quot;\e001&quot;; // The unicode value of the font character you want.
 	color: #000; // The icon is text, so you can style it using regular CSS
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2&gt;If it ain’t broke, why fix it?&lt;/h2&gt;
 
@@ -439,49 +438,47 @@ with scale-slider?--&gt;
   &lt;li&gt;
     &lt;h3&gt;Automation isn’t so seamless after all.&lt;/h3&gt;
 
-    &lt;p&gt;Oh hey, my &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; keeps failing. I wonder what the problem is: oh yeah, my &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp-iconfont&lt;/code&gt; is throwing errors all up in my grill. Again. #facepalm&lt;/p&gt;
+    &lt;p&gt;Oh hey, my &lt;code&gt;npm install&lt;/code&gt; keeps failing. I wonder what the problem is: oh yeah, my &lt;code&gt;gulp-iconfont&lt;/code&gt; is throwing errors all up in my grill. Again. #facepalm&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;By contrast, pure SVG is a much more consistent format. I’ve been using SVGs within &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tags since 2006, and I’ve never had any trouble with setting SVGs as CSS background images.&lt;/p&gt;
+&lt;p&gt;By contrast, pure SVG is a much more consistent format. I’ve been using SVGs within &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tags since 2006, and I’ve never had any trouble with setting SVGs as CSS background images.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* SVG CSS background-image. */
+&lt;pre&gt;&lt;code&gt;/* SVG CSS background-image. */
 .elementName {
     height:1em;
     width:1em;
-    background-image: url(path/to/icon.png); // Fallback for browsers that don&#39;t like SVG.
+    background-image: url(path/to/icon.png); // Fallback for browsers that don't like SVG.
     background-image: url(path/to/icon.svg);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;The obvious &lt;em&gt;simple&lt;/em&gt; solution is to just use SVGs like that: set them with CSS or use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; elements. That gives you scaleable vector graphics that work well in most environments. The trouble is, you’re loading in a new file for every icon. Every icon would represent another HTTP request to the server, and would be a performance nightmare. No matter how “squishy” your design, if your site is slow to load it is &lt;em&gt;not&lt;/em&gt; “Responsive”.&lt;/p&gt;
+&lt;p&gt;The obvious &lt;em&gt;simple&lt;/em&gt; solution is to just use SVGs like that: set them with CSS or use &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; elements. That gives you scaleable vector graphics that work well in most environments. The trouble is, you’re loading in a new file for every icon. Every icon would represent another HTTP request to the server, and would be a performance nightmare. No matter how “squishy” your design, if your site is slow to load it is &lt;em&gt;not&lt;/em&gt; “Responsive”.&lt;/p&gt;
 
 &lt;p&gt;So we’re back to the same multiple-requests problem we had in the bad old days of raster iconography. The answer back then was to use image sprites. Concatenate all the icons into one file, load them all with just one HTTP request, and use CSS to crop the image when you want to display a particular icon. It turns out we can do that with SVG too, except now we can do it better!&lt;/p&gt;
 
 &lt;h2&gt;Inline SVG Sprites&lt;/h2&gt;
 
-&lt;p&gt;SVGs are made of paths – collections of co-ordinates that describe the individual vectors of the image. Open an SVG in your favourite text editor and you can see those paths. What’s more, you can add classes and IDs to them. Even more mindblowing: if you wrap the individual paths in a &lt;code class=&quot;highlighter-rouge&quot;&gt;symbol&lt;/code&gt; tag you can combine multiple images into a single SVG file, and selectively pull them out using their IDs.&lt;/p&gt;
+&lt;p&gt;SVGs are made of paths – collections of co-ordinates that describe the individual vectors of the image. Open an SVG in your favourite text editor and you can see those paths. What’s more, you can add classes and IDs to them. Even more mindblowing: if you wrap the individual paths in a &lt;code&gt;symbol&lt;/code&gt; tag you can combine multiple images into a single SVG file, and selectively pull them out using their IDs.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;!-- Load the SVG file into your document... --&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- Load the SVG file into your document... --&amp;gt;
 &amp;lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&amp;gt;
 	&amp;lt;symbol viewBox=&quot;0 0 10 10&quot; id=&quot;iconID&quot;&amp;gt;
 		&amp;lt;path d=&quot;{ vector data }&quot;/&amp;gt;
 	&amp;lt;/symbol&amp;gt;
 &amp;lt;/svg&amp;gt;
 
-&amp;lt;!-- ...and then &#39;use&#39; a specific icon --&amp;gt;
+&amp;lt;!-- ...and then 'use' a specific icon --&amp;gt;
 &amp;lt;svg class=&quot;icon&quot;&amp;gt;
     &amp;lt;use xlink:href=&quot;#iconID&quot;/&amp;gt;
 &amp;lt;/svg&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;Now you might be thinking that this all looks like a whole lot of work, and you’d be right. Making sprites by hand sucks. Thankfully the arrow of progress is on our side. We may not have jetpacks and flying cars yet, but we &lt;em&gt;do&lt;/em&gt; have task runners. I used to use Grunt, but now I use Gulp (being a JS nerd, I find the syntax easier to follow) and there are SVG spriting plugins for both of them. I use &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp-svg-sprite&lt;/code&gt;, and so far it’s worked like a charm (so far I’ve put it to work on a half-dozen private projects and a couple of client sites). In fact, it’s proving to be much more reliable than any of the Gulp plugins for iconfonts ever were.&lt;/p&gt;
+&lt;p&gt;Now you might be thinking that this all looks like a whole lot of work, and you’d be right. Making sprites by hand sucks. Thankfully the arrow of progress is on our side. We may not have jetpacks and flying cars yet, but we &lt;em&gt;do&lt;/em&gt; have task runners. I used to use Grunt, but now I use Gulp (being a JS nerd, I find the syntax easier to follow) and there are SVG spriting plugins for both of them. I use &lt;code&gt;gulp-svg-sprite&lt;/code&gt;, and so far it’s worked like a charm (so far I’ve put it to work on a half-dozen private projects and a couple of client sites). In fact, it’s proving to be much more reliable than any of the Gulp plugins for iconfonts ever were.&lt;/p&gt;
 
-&lt;p&gt;It takes a bit of configuring to get the drop-an-icon-into-a-folder-and-let-Gulp-do-the-rest workflow I’d maintained with iconfonts, but as long as you remember to specify that you want a &lt;code class=&quot;highlighter-rouge&quot;&gt;symbol&lt;/code&gt; based sprite, you can’t go too wrong.&lt;/p&gt;
+&lt;p&gt;It takes a bit of configuring to get the drop-an-icon-into-a-folder-and-let-Gulp-do-the-rest workflow I’d maintained with iconfonts, but as long as you remember to specify that you want a &lt;code&gt;symbol&lt;/code&gt; based sprite, you can’t go too wrong.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// My Gulp config
+&lt;pre&gt;&lt;code&gt;// My Gulp config
 var svgConfig = {
     shape : {
         dimension : { // Set maximum dimensions
@@ -494,40 +491,38 @@ var svgConfig = {
     }
 };
 // The task itself
-gulp.task(&#39;svg&#39;,function(){
-    return gulp.src(&#39;_uncompressed/icons/**/*.svg&#39;)
+gulp.task('svg',function(){
+    return gulp.src('_uncompressed/icons/**/*.svg')
         .pipe(svgSprite(svgConfig))
-        .pipe(gulp.dest(&#39;_includes&#39;));
+        .pipe(gulp.dest('_includes'));
 });
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;h2&gt;Inline SVG in Jekyll&lt;/h2&gt;
 
-&lt;p&gt;This site is built using the static-site generator Jekyll. Transferring this site’s (admittedly meagre) icon set from an iconfont to an inline SVG sprite couldn’t have been easier. Make sure your task-runner outputs your sprite into Jekyll’s &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; directory and you can pull in your sprite with a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/symbol/svg/sprite.symbol.svg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;. And because Jekyll compiles &lt;em&gt;before&lt;/em&gt; deployment, you don’t even have to make a single HTTP request to get your icons: it’s all truly inline.&lt;/p&gt;
+&lt;p&gt;This site is built using the static-site generator Jekyll. Transferring this site’s (admittedly meagre) icon set from an iconfont to an inline SVG sprite couldn’t have been easier. Make sure your task-runner outputs your sprite into Jekyll’s &lt;code&gt;_includes&lt;/code&gt; directory and you can pull in your sprite with a simple &lt;code&gt;{% include /symbol/svg/sprite.symbol.svg %}&lt;/code&gt;. And because Jekyll compiles &lt;em&gt;before&lt;/em&gt; deployment, you don’t even have to make a single HTTP request to get your icons: it’s all truly inline.&lt;/p&gt;
 
 &lt;h2&gt;Inline SVG in Wordpress&lt;/h2&gt;
 
 &lt;p&gt;Jekyll’s all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things &lt;em&gt;that&lt;/em&gt; easy for us. Wordpress sites don’t have the advantage of being compiled before deployment, which means we need to use PHP to include the sprite.&lt;/p&gt;
 
-&lt;p&gt;Including an automatically generated SVG sprite using PHP is a little trickier than it first appears. &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;?php include_once(&quot;path/to/svg/sprite.svg&quot;); ?&amp;gt;&lt;/code&gt; would seem like the obvious solution, but all that will give you is a face full of errors (if you’ve got &lt;code class=&quot;highlighter-rouge&quot;&gt;WP_DEBUG&lt;/code&gt; set to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;). It turns out the issue is with the XML and &lt;code class=&quot;highlighter-rouge&quot;&gt;DOCTYPE&lt;/code&gt; added to the sprite by the gulp task, and the trick is to use &lt;code class=&quot;highlighter-rouge&quot;&gt;file_get_contents()&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;include_once()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Including an automatically generated SVG sprite using PHP is a little trickier than it first appears. &lt;code&gt;&amp;lt;?php include_once(&quot;path/to/svg/sprite.svg&quot;); ?&amp;gt;&lt;/code&gt; would seem like the obvious solution, but all that will give you is a face full of errors (if you’ve got &lt;code&gt;WP_DEBUG&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;). It turns out the issue is with the XML and &lt;code&gt;DOCTYPE&lt;/code&gt; added to the sprite by the gulp task, and the trick is to use &lt;code&gt;file_get_contents()&lt;/code&gt; instead of &lt;code&gt;include_once()&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3&gt;SVG &amp;amp; CSS&lt;/h3&gt;
 
-&lt;p&gt;Styling the icons had a couple of little hurdles that I wasn’t expecting. One of the joys of iconfonts was how easy they were to manipulate with CSS, and that’s a feature that SVG sprites were promising too. Instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;color: #000;&lt;/code&gt; we use &lt;code class=&quot;highlighter-rouge&quot;&gt;fill: #000;&lt;/code&gt; but, as with all CSS, watch out for specificity! If the paths themselves have explicit fills and strokes defined, then you won’t be able to override them with external CSS.&lt;/p&gt;
+&lt;p&gt;Styling the icons had a couple of little hurdles that I wasn’t expecting. One of the joys of iconfonts was how easy they were to manipulate with CSS, and that’s a feature that SVG sprites were promising too. Instead of &lt;code&gt;color: #000;&lt;/code&gt; we use &lt;code&gt;fill: #000;&lt;/code&gt; but, as with all CSS, watch out for specificity! If the paths themselves have explicit fills and strokes defined, then you won’t be able to override them with external CSS.&lt;/p&gt;
 
 &lt;p&gt;Some of my legacy icons have in-built colours, and going through and stripping them out would be a real pain. Thankfully my colleague &lt;a href=&quot;http://twitter.com/enshrined&quot;&gt;Daryll&lt;/a&gt; was on hand to build me a tidy RegEx to programatically strip out any rogue fills:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;?php
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
 // Save the SVG file in a variable...
 $rawSVG = file_get_contents(get_template_directory_uri() . &quot;/path/to/svg/sprite.svg&quot;);
 // ...then filter out any fills.
-echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i&#39;, &#39;&#39;, $rawSVG )
+echo preg_replace( '/fill=(&quot;|\')(#)?([a-fA-F0-9]*)(&quot;|\')/i', '', $rawSVG )
 ?&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;When I’m using Jekyll I still have to manually manage explicit in-file styling, but Jekyll projects tend to require a more fine-grained approach anyway. Another Big Win for CSS styling and SVGs comes from being able to add classes and IDs to specific paths &lt;em&gt;within&lt;/em&gt; individual icons. This provides us with the hooks we need to style (and animate and manipulate) almost every aspect of an icon discretely. Iconfonts were limited to one flat colour, but with SVG sprites we can colour every shape in an icon differently (should we need to).&lt;/p&gt;
 
@@ -645,11 +640,10 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 
 &lt;p&gt;&lt;em&gt;or alternatively:&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for (i = 0; i &amp;lt; 10; i++) {
+&lt;pre&gt;&lt;code&gt;for (i = 0; i &amp;lt; 10; i++) {
     skill.practice();
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;script&gt;
     var postsList = [];
@@ -762,7 +756,7 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 
 <item>
 <title>Fullpage screenshots in Firefox.</title>
-<description>&lt;p&gt;Every now and then I need to take a screenshot of an entire webpage, gnerally to use in my &lt;a href=&quot;/portfolio&quot;&gt;portfolio&lt;/a&gt;. Manually positioning the cursor for a &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd shift 4&lt;/code&gt; screenshot (on a Mac) feels a little imprecise for my tastes, and I want to capture the &lt;em&gt;whole&lt;/em&gt; of a site, not just the area visible in the viewport.&lt;/p&gt;
+<description>&lt;p&gt;Every now and then I need to take a screenshot of an entire webpage, gnerally to use in my &lt;a href=&quot;/portfolio&quot;&gt;portfolio&lt;/a&gt;. Manually positioning the cursor for a &lt;code&gt;cmd shift 4&lt;/code&gt; screenshot (on a Mac) feels a little imprecise for my tastes, and I want to capture the &lt;em&gt;whole&lt;/em&gt; of a site, not just the area visible in the viewport.&lt;/p&gt;
 
 &lt;p&gt;All the browser extensions I tried turned out a little buggy. Areas of the page would be repeated, like a visual interpretation of a CD skipping, or fonts would render strangely, as if they’d been run through an IE8 simulator or something.&lt;/p&gt;
 
@@ -770,11 +764,10 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 
 &lt;h2&gt;The answer!&lt;/h2&gt;
 
-&lt;p&gt;Navigate to the page you want to shoot and open up Firefox’s Developer Tools command line using &lt;code class=&quot;highlighter-rouge&quot;&gt;shift f2&lt;/code&gt; (Mac users might need to remember to press &lt;code class=&quot;highlighter-rouge&quot;&gt;fn&lt;/code&gt; as well, if their keyboard rebinds &lt;code class=&quot;highlighter-rouge&quot;&gt;f2&lt;/code&gt; to increase the monitor’s brightness). Then all you need to do is type the following line:&lt;/p&gt;
+&lt;p&gt;Navigate to the page you want to shoot and open up Firefox’s Developer Tools command line using &lt;code&gt;shift f2&lt;/code&gt; (Mac users might need to remember to press &lt;code&gt;fn&lt;/code&gt; as well, if their keyboard rebinds &lt;code&gt;f2&lt;/code&gt; to increase the monitor’s brightness). Then all you need to do is type the following line:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;screenshot --fullpage YourFileNameHere
+&lt;pre&gt;&lt;code&gt;screenshot --fullpage YourFileNameHere
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;And voilà! A screenshot has been taken of the current page in its entirety – not just the visible area! If you’re super lazy, you can even leave off the file name; Firefox will just use the current date and time to save the image under.&lt;/p&gt;
 
@@ -817,13 +810,13 @@ echo preg_replace( &#39;/fill=(&quot;|\&#39;)(#)?([a-fA-F0-9]*)(&quot;|\&#39;)/i
 
 &lt;p&gt;The lowercase “J” looks stylish and bizare in equal measure, and the semicolon is oddly top-heavy. In body copy the x-height is a tad lower than I find comfortable and the letter spacing after an apostrophe is massive. Not an issue in a programme that lets you kern, but an ugly cross to bear on the web.&lt;/p&gt;
 
-&lt;p&gt;In fact, all the apostrophes and quotation marks look the same. It’s all well and good training yourself to press &lt;code class=&quot;highlighter-rouge&quot;&gt;alt shift ]&lt;/code&gt; every time you want an apostrophe, but Futura renders such efforts irrelevant. How many different characters can you count in the following sentence?&lt;/p&gt;
+&lt;p&gt;In fact, all the apostrophes and quotation marks look the same. It’s all well and good training yourself to press &lt;code&gt;alt shift ]&lt;/code&gt; every time you want an apostrophe, but Futura renders such efforts irrelevant. How many different characters can you count in the following sentence?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsSmall.png&quot; alt=&quot;&#39;‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsSmall.png&quot; alt=&quot;'‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tough, eh?! It’s a little easier at larger sizes:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsLarge.png&quot; alt=&quot;&#39;‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/articleImages/futuraGlyphsLarge.png&quot; alt=&quot;'‘’“”&amp;quot;&amp;quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There’s actually &lt;strong&gt;seven&lt;/strong&gt; discrete glyphs there. There &lt;em&gt;are&lt;/em&gt; differences, which at large sizes are delightfully subtle and nuanced, but at anything less than 72pt they all blur into one…&lt;/p&gt;
 

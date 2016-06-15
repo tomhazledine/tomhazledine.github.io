@@ -21,9 +21,9 @@ if (homeGraphCheck.length) {
     // Set the ranges
     var x = d3.time.scale().range([0, width]);
     var y = d3.scale.linear().range([height, 0]);
-    var y_mus = d3.scale.linear().range([height, 0]);
-    var y_pilot = d3.scale.linear().range([height, 0]);
-    var y_art = d3.scale.linear().range([height, 0]);
+    // var y_mus = d3.scale.linear().range([height, 0]);
+    // var y_pilot = d3.scale.linear().range([height, 0]);
+    // var y_art = d3.scale.linear().range([height, 0]);
 
     // Define the axes
     var xAxis = d3.svg.axis().scale(x)
@@ -41,22 +41,36 @@ if (homeGraphCheck.length) {
     var valueline_mus = d3.svg.line()
         .defined(function(d) { return !isNaN(d.musician); })
         .x(function(d) { return x(d.date); })
-        .y(function(d) { return y_mus(d.musician); })
+        .y(function(d) { return y(d.musician); })
         .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
 
     // Define the line
     var valueline_pilot = d3.svg.line()
         .defined(function(d) { return !isNaN(d.pilot); })
         .x(function(d) { return x(d.date); })
-        .y(function(d) { return y_pilot(d.pilot); })
+        .y(function(d) { return y(d.pilot); })
         .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
 
     // Define the line
     var valueline_art = d3.svg.line()
         .defined(function(d) { return !isNaN(d.artist); })
         .x(function(d) { return x(d.date); })
-        .y(function(d) { return y_art(d.artist); })
-        .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
+        .y(function(d) { return y(d.artist); })
+        .interpolate('monotone');
+
+    // Define the line
+    var valueline_des = d3.svg.line()
+        .defined(function(d) { return !isNaN(d.designer); })
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.designer); })
+        .interpolate('monotone');
+
+    // Define the line
+    var valueline_dev = d3.svg.line()
+        .defined(function(d) { return !isNaN(d.developer); })
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.developer); })
+        .interpolate('monotone');
         
     // Adds the svg canvas
     var svg = d3.select(".homeGraph")
@@ -78,14 +92,16 @@ if (homeGraphCheck.length) {
             d.musician = +d.musician;
             d.pilot = +d.pilot;
             d.artist = +d.artist;
+            d.designer = +d.designer;
+            d.developer = +d.developer;
         });
         
         // Scale the range of the data
         x.domain(d3.extent(data, function(d) { return d.date; }));
-        y.domain([0, d3.max(data, function(d) { return d.happiness; })]);
-        y_mus.domain([0, d3.max(data, function(d) { return d.musician; })]);
-        y_pilot.domain([0, d3.max(data, function(d) { return d.pilot; })]);
-        y_art.domain([0, d3.max(data, function(d) { return d.artist; })]);
+        y.domain([0, 150]);//d3.max(data, function(d) { return d.happiness; })]);
+        // y_mus.domain([0, d3.max(data, function(d) { return d.musician; })]);
+        // y_pilot.domain([0, d3.max(data, function(d) { return d.pilot; })]);
+        // y_art.domain([0, d3.max(data, function(d) { return d.artist; })]);
         
         // Add the valueline path.
         // lineSvg.append("path")
@@ -106,6 +122,16 @@ if (homeGraphCheck.length) {
         lineSvg.append("path")
             .attr("class", "line line_art")
             .attr("d", valueline_art(data));
+
+        // Add the valueline path.
+        lineSvg.append("path")
+            .attr("class", "line line_des")
+            .attr("d", valueline_des(data));
+
+        // Add the valueline path.
+        lineSvg.append("path")
+            .attr("class", "line line_dev")
+            .attr("d", valueline_dev(data));
 
         /**
          * AREAS
@@ -201,6 +227,18 @@ if (homeGraphCheck.length) {
             .classed("y_art",true)
             .classed("hover",true)
             .attr("r", 4);
+
+        // append the circle at the intersection 
+        focus.append("circle")
+            .classed("y_des",true)
+            .classed("hover",true)
+            .attr("r", 4);
+
+        // append the circle at the intersection 
+        focus.append("circle")
+            .classed("y_dev",true)
+            .classed("hover",true)
+            .attr("r", 4);
         
         // append the rectangle to capture mouse
         svg.append("rect")
@@ -221,21 +259,62 @@ if (homeGraphCheck.length) {
             //     .attr("transform",
             //           "translate(" + x(d.date) + "," +
             //                          y(d.happiness) + ")");
-            focus.select("circle.y_mus")
-                // .defined(function(d) { return !isNaN(d.musician); })
-                .attr("transform",
-                      "translate(" + x(d.date) + "," +
-                                     y_mus(d.musician) + ")");
-            focus.select("circle.y_pilot")
-                // .defined(function(d) { return !isNaN(d.pilot); })
-                .attr("transform",
-                      "translate(" + x(d.date) + "," +
-                                     y_pilot(d.pilot) + ")");
-            focus.select("circle.y_art")
-                // .defined(function(d) { return !isNaN(d.artist); })
-                .attr("transform",
-                      "translate(" + x(d.date) + "," +
-                                     y_art(d.artist) + ")");
+            if (!isNaN(d.musician)) {
+                focus.select("circle.y_mus")
+                    .classed('active',true)
+                    // .defined(function(d) { return !isNaN(d.musician); })
+                    .attr("transform",
+                          "translate(" + x(d.date) + "," +
+                                         y(d.musician) + ")");
+            } else {
+                focus.select("circle.y_mus")
+                    .classed('active',false);
+            }
+            
+            if (!isNaN(d.pilot)) {
+                focus.select("circle.y_pilot")
+                    .classed('active',true)
+                    // .defined(function(d) { return !isNaN(d.pilot); })
+                    .attr("transform",
+                          "translate(" + x(d.date) + "," +
+                                         y(d.pilot) + ")");
+            } else {
+                focus.select("circle.y_pilot")
+                    .classed('active',false);
+            }
+
+            if (!isNaN(d.artist)) {
+                focus.select("circle.y_art")
+                    .classed('active',true)
+                    .attr("transform",
+                          "translate(" + x(d.date) + "," +
+                                         y(d.artist) + ")");
+            } else {
+                focus.select("circle.y_art")
+                    .classed('active',false);
+            }
+
+            if (!isNaN(d.designer)) {
+                focus.select("circle.y_des")
+                    .classed('active',true)
+                    .attr("transform",
+                          "translate(" + x(d.date) + "," +
+                                         y(d.designer) + ")");
+            } else {
+                focus.select("circle.y_des")
+                    .classed('active',false);
+            }
+
+            if (!isNaN(d.developer)) {
+                focus.select("circle.y_dev")
+                    .classed('active',true)
+                    .attr("transform",
+                          "translate(" + x(d.date) + "," +
+                                         y(d.developer) + ")");
+            } else {
+                focus.select("circle.y_dev")
+                    .classed('active',false);
+            }
         }
     });
 

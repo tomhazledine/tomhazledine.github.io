@@ -1,6 +1,6 @@
 .homeGraph{
     width:100%;
-    height:10em;
+    height:15em;
     // background:rgba(red,.4);
     margin:0 auto 4em;
 }
@@ -11,33 +11,37 @@
     color:$grey;
     path { 
         stroke:$primary;
-        stroke-width:.1em;
+        stroke:rgba($black,.4);
+        stroke-width:.2rem;
         fill:none;
-        &.line_pilot{
-            stroke:$yellow;
-        }
-        &.line_mus{
-            stroke:$green;
-        }
+        // &.line_pilot{stroke:$white;}
+        // &.line_mus{stroke:$green;}
+        // &.line_art{stroke:$grey;}
+        // &.line_des{stroke:$black;}
+        &.line_dev{stroke:$primary;}
     }
     .axis path,
     .axis line {
         fill:none;
         stroke:$grey;
-        stroke-width:.1em;
+        stroke-width:.2rem;
         shape-rendering:crispEdges;
     }
     .hover{
         stroke:$primary;
+        stroke:rgba($black,.4);
         fill:$cream;
-        stroke-width:.1em;
+        stroke-width:.2rem;
         r:.3em;
-        &.y_pilot{
-            stroke:$yellow;
+        display:none;
+        &.active{
+            display:block;
         }
-        &.y_mus{
-            stroke:$green;
-        }
+        // &.y_pilot{stroke:$white;}
+        // &.y_mus{stroke:$green;}
+        // &.y_art{stroke:$grey;}
+        // &.y_des{stroke:$black;}
+        &.y_dev{stroke:$primary;}
     }
     .chartarea{
         stroke:none;
