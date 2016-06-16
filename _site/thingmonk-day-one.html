@@ -23,7 +23,7 @@
         <!--<script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
-              l.href = 'http://tomhazledine.com/assets/css/main.min.css';
+              l.href = 'http://th.dev/assets/css/main.min.css';
               var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
             };
             var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -31,17 +31,17 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
         </script>-->
-        <link rel="stylesheet" href="http://tomhazledine.com/assets/css/main.min.css">
+        <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css">
         
     
 
     <!-- Modernizr -->
-    <!--<script src="http://tomhazledine.com/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="http://th.dev/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
     <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
     <!--[if lt IE 9]>
-        <script src="http://tomhazledine.com/assets/js/static/respond.min.js" type="text/javascript"></script>
-        <script src="http://tomhazledine.com/assets/js/static/html5.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/html5.js" type="text/javascript"></script>
     <![endif]-->
 
     <!-- TYPEKIT: ‘TH Portfolio’ -->
@@ -76,7 +76,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="http://tomhazledine.com/" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="http://th.dev/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
@@ -92,17 +92,17 @@
             
             
                 <li >
-                    <a href="http://tomhazledine.com/">Home</a>
+                    <a href="http://th.dev/">Home</a>
                     <p class="mainMenuDescription">A little introduction to who I am and what I do.</p>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/portfolio/">Portfolio</a>
+                    <a href="http://th.dev/portfolio/">Portfolio</a>
                     <p class="mainMenuDescription">Some examples of my work.</p>
                 </li>
             
                 <li class="active">
-                    <a href="http://tomhazledine.com/blog/">Articles</a>
+                    <a href="http://th.dev/blog/">Articles</a>
                     <p class="mainMenuDescription">Selected ramblings about the web and technology.</p>
                 </li>
             
@@ -197,7 +197,7 @@
 <ul>
   <li>For NFC to work, you need a chip and an antenna. The chip is tiny – literally mm across – and the antenna gets printed between to laminated sheets of paper using conductive silver ink. This means the finished business card looks and feels just like a regular card - after all, it’s still mostly just card and ink.</li>
   <li>To build a reader, all you need is a “smarter” chip, an antenna, and a power source. Android phones have the ability to be NFC readers, but IOS ones do not.</li>
-  <li><code>nfcpy</code> is the Python library for NFC.</li>
+  <li><code class="highlighter-rouge">nfcpy</code> is the Python library for NFC.</li>
   <li>The cards can store a variety of MIME-type information (webpages, lat. &amp; lng. data, etc) but URLs are the most versatile (and can be re-purposed without reprogramming the card itself).</li>
   <li>Security is still ongoing project, and the Moo team would welcome any insights or help in that area that the developer community can provide.</li>
 </ul>
@@ -223,7 +223,7 @@
 
 <ul>
   <li>Data Gravity: data has a ‘weight’ and can be hard to deal with. Some datasets might take 40 years to even upload, let alone process.</li>
-  <li><code>0</code> is just data. <code>0°C</code> is data with context. <code>0°C in London today</code> is information.</li>
+  <li><code class="highlighter-rouge">0</code> is just data. <code class="highlighter-rouge">0°C</code> is data with context. <code class="highlighter-rouge">0°C in London today</code> is information.</li>
   <li>When you are working with real-time analytics, how do you deal with that data? System clocks become important - do you trust your machine, your cloud server, or the machine in the field?</li>
   <li>Do you deliver a constant stream of data? Sometimes it might be better to time-stamp it and package it up, then send packets of data at regular intervals. That leads to less chance of drops in connection causing data loss.</li>
 </ul>
@@ -239,7 +239,7 @@
   <li>Automation in a machine-to-machine sense (M2M) has been around for years: office lights that turn on when you enter the room, automatic doors, etc.</li>
   <li>Learning about a building’s ‘health’ in the form of lighting-levels, environmental factors, footfall, etc. can give you insight into employee absenteeism, efficiency of your workforce, and on and on…</li>
   <li>Average cost of one desk in London is £12k p.a. Small percentage increases in efficiency can reap big rewards.</li>
-  <li>Legacy protocols (<code>bacnet</code>, <code>dali</code>, <code>modbus</code>, <code>knx</code>) are building-data standards and will be around for a while. Contracts are typically 15-20 years long, and cost between £50k and £200k. They won’t be thrown out anytime soon.</li>
+  <li>Legacy protocols (<code class="highlighter-rouge">bacnet</code>, <code class="highlighter-rouge">dali</code>, <code class="highlighter-rouge">modbus</code>, <code class="highlighter-rouge">knx</code>) are building-data standards and will be around for a while. Contracts are typically 15-20 years long, and cost between £50k and £200k. They won’t be thrown out anytime soon.</li>
   <li>They lock down their data too much. None of those services have an API.</li>
   <li>Open Source integrations are more sustainable and easier to manage.</li>
   <li>Don’t use WiFi - there are “edge dependencies” on people (in one example, an office manager unplugged the wi-fi router every night!).</li>
@@ -447,14 +447,14 @@
     
       
         
-          <li><a href="http://tomhazledine.com/web-apps">Which do you choose: native app or web app?</a>  
+          <li><a href="http://th.dev/web-apps">Which do you choose: native app or web app?</a>  
           
             Are web apps even a real thing? I think they are.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/thingmonk-day-two">Notes from ThinkMonk: Day Two</a>  
+          <li><a href="http://th.dev/thingmonk-day-two">Notes from ThinkMonk: Day Two</a>  
           
             My thoughts on the IoT conference (Pt. II).
           </li>
@@ -463,49 +463,49 @@
         
       
         
-          <li><a href="http://tomhazledine.com/inline-svg-icons">Getting started with inline SVG icons</a>  
+          <li><a href="http://th.dev/inline-svg-icons">Getting started with inline SVG icons</a>  
           
             We should all be using SVG icon sets
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/inspiring-web-people">Inspirational Web People</a>  
+          <li><a href="http://th.dev/inspiring-web-people">Inspirational Web People</a>  
           
             The webby people that are shaping my career.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
+          <li><a href="http://th.dev/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
           
             Good advice on personal development.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
+          <li><a href="http://th.dev/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
           
             No need for browser extensions; Firefox can do it natively.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/futura-for-the-win">Futura for the win.</a>  
+          <li><a href="http://th.dev/futura-for-the-win">Futura for the win.</a>  
           
             Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/simple-is-hard">Simple is hard</a>  
+          <li><a href="http://th.dev/simple-is-hard">Simple is hard</a>  
           
             Focus on substance over style.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/bullet-journal-workflow">A bullet-journal workflow</a>  
+          <li><a href="http://th.dev/bullet-journal-workflow">A bullet-journal workflow</a>  
           
             An analogue "to-do list" system.
           </li>
@@ -546,7 +546,7 @@
 
 	<div class="scripts">
     <!-- Javascript -->
-    <script src="http://tomhazledine.com/assets/js/app.js" async></script>
+    <script src="http://th.dev/assets/js/app.js" async></script>
     
 
     <!-- Analytics -->

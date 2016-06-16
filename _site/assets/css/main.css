@@ -102,15 +102,17 @@ a::selection {
 .javascript .function {
   color: #8f9c6c; }
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .check:before, .checkWrapper:before,
+.clearfix:after,
+.check:after,
+.checkWrapper:after {
   content: ' ';
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .check:after, .checkWrapper:after {
   clear: both; }
 
-.clearfix {
+.clearfix, .check, .checkWrapper {
   zoom: 1; }
 
 .thumbnailImage, .fullscreenImage, .showcaseLogo {
@@ -546,6 +548,46 @@ img {
 
 .shadowImg img {
   box-shadow: rgba(77, 77, 77, 0.4) 0 0.2em 0.5em 0; }
+
+.check {
+  width: 2.3rem;
+  height: 2.3rem;
+  position: relative;
+  margin: 0 auto;
+  float: left; }
+  .check .symLabel {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    border: 0.11rem solid #dad8d2;
+    cursor: pointer; }
+    .check .symLabel:before {
+      content: '';
+      display: block;
+      position: absolute;
+      opacity: 0;
+      transition: opacity .5s ease-in-out;
+      width: .7rem;
+      height: 1.1rem;
+      -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
+      top: .4rem;
+      left: .7rem;
+      border-right: 0.3rem solid #00b7c6;
+      border-bottom: 0.3rem solid #00b7c6; }
+  .check input[type='checkbox'], .check input[type="radio"] {
+    display: none; }
+    .check input[type='checkbox']:checked + label:before, .check input[type='checkbox']:checked + label:after, .check input[type="radio"]:checked + label:before, .check input[type="radio"]:checked + label:after {
+      opacity: 1; }
+
+.checkWrapper .visibleLabel {
+  margin: 0;
+  line-height: 1.5;
+  float: left;
+  padding: .1em .3em;
+  cursor: pointer; }
 
 .navicon {
   display: block;

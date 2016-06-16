@@ -23,7 +23,7 @@
         <!--<script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
-              l.href = 'http://tomhazledine.com/assets/css/main.min.css';
+              l.href = 'http://th.dev/assets/css/main.min.css';
               var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
             };
             var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -31,17 +31,17 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
         </script>-->
-        <link rel="stylesheet" href="http://tomhazledine.com/assets/css/main.min.css">
+        <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css">
         
     
 
     <!-- Modernizr -->
-    <!--<script src="http://tomhazledine.com/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="http://th.dev/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
     <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
     <!--[if lt IE 9]>
-        <script src="http://tomhazledine.com/assets/js/static/respond.min.js" type="text/javascript"></script>
-        <script src="http://tomhazledine.com/assets/js/static/html5.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/html5.js" type="text/javascript"></script>
     <![endif]-->
 
     <!-- TYPEKIT: ‘TH Portfolio’ -->
@@ -76,7 +76,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="http://tomhazledine.com/" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="http://th.dev/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
@@ -92,17 +92,17 @@
             
             
                 <li class="active">
-                    <a href="http://tomhazledine.com/">Home</a>
+                    <a href="http://th.dev/">Home</a>
                     <p class="mainMenuDescription">A little introduction to who I am and what I do.</p>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/portfolio/">Portfolio</a>
+                    <a href="http://th.dev/portfolio/">Portfolio</a>
                     <p class="mainMenuDescription">Some examples of my work.</p>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/blog/">Articles</a>
+                    <a href="http://th.dev/blog/">Articles</a>
                     <p class="mainMenuDescription">Selected ramblings about the web and technology.</p>
                 </li>
             
@@ -114,7 +114,49 @@
   <section class="mainContent clearfix">
 
     <article class="mainContentInner textContent">
-        <div class="homeGraph"></div>
+        
+        <div class="homeGraphWrapper">
+            <h2>My career aspirations over time&hellip;</h2>
+            <div class="homeGraphSelectors">
+                <div class="homeGraphSelector checkWrapper">
+                    <label for="developer" class="visibleLabel selectorTitle">Developer</label>
+                    <div class="check">
+                        <input type="checkbox" class="homegraphcheckbox" value="dev" id="developer" name="developer" checked/>
+                        <label for="developer" class="symLabel"></label>
+                    </div>
+                </div>
+                <div class="homeGraphSelector checkWrapper">
+                    <label for="designer" class="visibleLabel selectorTitle">Designer</label>
+                    <div class="check">
+                        <input type="checkbox" class="homegraphcheckbox" value="des" id="designer" name="designer"/>
+                        <label for="designer" class="symLabel"></label>
+                    </div>
+                </div>
+                <div class="homeGraphSelector checkWrapper">
+                    <label for="musician" class="visibleLabel selectorTitle">Musician</label>
+                    <div class="check">
+                        <input type="checkbox" class="homegraphcheckbox" value="mus" id="musician" name="musician"/>
+                        <label for="musician" class="symLabel"></label>
+                    </div>
+                </div>
+                <div class="homeGraphSelector checkWrapper">
+                    <label for="artist" class="visibleLabel selectorTitle">Artist</label>
+                    <div class="check">
+                        <input type="checkbox" class="homegraphcheckbox" value="art" id="artist" name="artist"/>
+                        <label for="artist" class="symLabel"></label>
+                    </div>
+                </div>
+                <div class="homeGraphSelector checkWrapper">
+                    <label for="pilot" class="visibleLabel selectorTitle">Pilot</label>
+                    <div class="check">
+                        <input type="checkbox" class="homegraphcheckbox" value="pilot" id="pilot" name="pilot"/>
+                        <label for="pilot" class="symLabel"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="homeGraph"></div>
+        </div>
+        
         <h1>Hello. I'm a front-end developer and data-visualization geek from Cornwall.</h1>
         <h3 class="big-drop-cap">Data without context is not information. In the burgeoning “Internet of Things” industry, we generate a lot of data. The big challenge now is making that data useful.</h3>
         
@@ -134,7 +176,7 @@
       
         
         <li class="popularPost">
-          <a class="archiveItemTitle" href="http://tomhazledine.com/web-apps">Which do you choose: native app or web app?</a>
+          <a class="archiveItemTitle" href="http://th.dev/web-apps">Which do you choose: native app or web app?</a>
           
             <span class="archiveItemExcerpt">Are web apps even a real thing? I think they are. And they're by far the best option for small teams searching for product/market fit.</span>
           
@@ -159,7 +201,7 @@
       
         
         <li class="popularPost">
-          <a class="archiveItemTitle" href="http://tomhazledine.com/inline-svg-icons">Getting started with inline SVG icons</a>
+          <a class="archiveItemTitle" href="http://th.dev/inline-svg-icons">Getting started with inline SVG icons</a>
           
             <span class="archiveItemExcerpt">As a typography nerd, using a custom font to serve icons felt really good. However, it turns out inline SVG icons are better in almost every way.</span>
           
@@ -230,7 +272,7 @@
 
 	<div class="scripts">
     <!-- Javascript -->
-    <script src="http://tomhazledine.com/assets/js/app.js" async></script>
+    <script src="http://th.dev/assets/js/app.js" async></script>
     
 
     <!-- Analytics -->

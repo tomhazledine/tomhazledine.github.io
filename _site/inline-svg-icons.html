@@ -11,9 +11,9 @@
     <!--<style type="text/css">::-moz-selection{color:#efeeeb;background:rgba(0,183,198,.5)}::selection{color:#efeeeb;background:rgba(0,183,198,.5)}a::-moz-selection{color:#00b7c6;background:rgba(77,77,77,.5)}a::selection{color:#00b7c6;background:rgba(77,77,77,.5)}.cp-css html{font-size:62.5%}@media (min-width:1200px){.cp-css html{font-size:100%}}.cp-css body{color:#4d4d4d}.cp-css .hidden{display:none!important}.cp-css h1{font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;margin:0 0 6rem}.cp-css a{text-decoration:none;background:#dad8d2;color:#4d4d4d}.cp-css .bodyWrapper{background:#efeeeb;width:80%;margin:5em auto 3em;padding-top:6em}.cp-css .mainContent{width:90%;max-width:28em;margin:0 auto}.cp-css .header{font-size:1em;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3;min-width:300px}.cp-css .siteName{display:block;float:left;background:#4d4d4d;margin:.5em;line-height:1em;padding:.1em 1em;-webkit-box-shadow:inset #00b7c6 .5em 0 0 0;box-shadow:inset #00b7c6 .5em 0 0 0}.cp-css .logo{font-size:.8em;display:block;padding:0;line-height:1;margin:0;color:#fff;text-transform:uppercase;letter-spacing:.2em}.cp-css .mainMenuToggle{display:none}.cp-css .mainMenuWrapper{position:fixed;bottom:0;left:100%}.cp-css .icon{width:1em;height:1em}</style>-->
 
     <title>
-         Inspirational Web People – Tom Hazledine Web Design
+         Getting started with inline SVG icons – Tom Hazledine Web Design
     </title>
-    <meta name="description" content="Taking time to credit the members of the digital-community that have shaped my career is something I should do more often. Here's a few people I've found personally inspiring.">
+    <meta name="description" content="I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Tom Hazledine" href="/feed.xml">
@@ -23,7 +23,7 @@
         <!--<script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
-              l.href = 'http://tomhazledine.com/assets/css/main.min.css';
+              l.href = 'http://th.dev/assets/css/main.min.css';
               var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
             };
             var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -31,17 +31,17 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
         </script>-->
-        <link rel="stylesheet" href="http://tomhazledine.com/assets/css/main.min.css">
+        <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css">
         
     
 
     <!-- Modernizr -->
-    <!--<script src="http://tomhazledine.com/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="http://th.dev/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
     <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
     <!--[if lt IE 9]>
-        <script src="http://tomhazledine.com/assets/js/static/respond.min.js" type="text/javascript"></script>
-        <script src="http://tomhazledine.com/assets/js/static/html5.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/html5.js" type="text/javascript"></script>
     <![endif]-->
 
     <!-- TYPEKIT: ‘TH Portfolio’ -->
@@ -76,7 +76,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="http://tomhazledine.com/" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="http://th.dev/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
@@ -92,17 +92,17 @@
             
             
                 <li >
-                    <a href="http://tomhazledine.com/">Home</a>
+                    <a href="http://th.dev/">Home</a>
                     <p class="mainMenuDescription">A little introduction to who I am and what I do.</p>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/portfolio/">Portfolio</a>
+                    <a href="http://th.dev/portfolio/">Portfolio</a>
                     <p class="mainMenuDescription">Some examples of my work.</p>
                 </li>
             
                 <li class="active">
-                    <a href="http://tomhazledine.com/blog/">Articles</a>
+                    <a href="http://th.dev/blog/">Articles</a>
                     <p class="mainMenuDescription">Selected ramblings about the web and technology.</p>
                 </li>
             
@@ -115,104 +115,140 @@
 
             <article class="mainContentInner textContent">
 
-                <!-- <h1>Inspirational Web People</h1> -->
+                <!-- <h1>Getting started with inline SVG icons</h1> -->
                 
-                    <h1>Inspirational Web People</h1>
+                    <h1>Getting started with inline SVG icons</h1>
                 
 
-          <h3 class="big-drop-cap">Taking time to credit the members of the digital-community that have shaped my career is something I should do more often. Here's a few people I've found personally inspiring.</h3>
+          <h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
 
-          <p>There’s an <a href="http://boagworld.com/season/10/episode/1007/">episode of the Boagworld podcast</a> where Marcus and Paul list the ten ‘web people’ they’ve found most <em>inspiring</em>. This has in turn inspired <em>me</em> to publish my own list.</p>
+          <!--![png – font character – svg](/)
+with scale-slider?-->
 
-<p>The web-creators community is packed with generous people willing to share their insights and experiences. Through blog posts and podcasts, conference talks and tutorials, these people have had a direct impact on my outlook and my career choices.</p>
+<p>We should all know by now that using raster images for icons is a bad idea. Limiting ourselves to one set resolution is not how we work in a multi-device ecosystem. It’s not responsive, it’s not performant, it’s not nice.</p>
 
-<h2>01: <a href="http://stevenlovegrove.com/">Steve Lovegrove</a></h2>
+<p>For a while it seemed that Icon Fonts were the answer. They’re vector based and therefore resolution-independent. You can style them with CSS. They have smaller filesizes than .JPGs or .PNGs, so they improve a site’s performance. A fontfile is one asset to download (more http requests = poorer site performance), so we don’t need to mess around with image sprites any more. And on top of all that, iconfont creation can be easily automated with your task-runner of choice: simply drop your icon .SVGs into a folder and you’re good to go.</p>
 
-<p>In my experience everyone has that one person that inspired them when they were just starting out. For some it’s a teacher, or someone who gave them their first break, or a professional who mentored them. For me, it was my friend Steve.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>/* Calling an iconfont icon as a pseudo element within CSS. */
+.elementName:before {
+    font-family:'iconfont';
+	content: "\e001"; // The unicode value of the font character you want.
+	color: #000; // The icon is text, so you can style it using regular CSS
+}
+</code></pre>
+</div>
 
-<p>Steve’s always been miles ahead of me in intellect and ability, and most of what he tried to teach me went straight over my head. But even so, he was willing to let me spend hours peering over his shoulder while he coded. And because we would also talk through what he was working on, some of it rubbed off.</p>
+<h2>If it ain’t broke, why fix it?</h2>
 
-<p>Steve taught me just enough to be dangerous; just enough to get something on the web and see how good it felt. He’s long since left the web behind to do ‘real’ science, but having a patient and generous friend like Steve was probably the single biggest factor in shaping the direction my career has taken.</p>
+<p>Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: “that problem’s already been solved”, I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?</p>
 
-<h2>02: <a href="http://twitter.com/chriscoyier">Chris Coyier</a> and <a href="http://twitter.com/davatron5000">Dave Rupert</a></h2>
+<ul>
+  <li>
+    <h3>When iconfonts fail, things get weird.</h3>
 
-<p>Anyone who’s ever Googled a CCS question has probably benefited from Chris’ sterling work on his website <em><a href="http://css-tricks.com/">CSS Tricks</a></em>, but it’s his video tutorials (on Lynda.com and the “Lodge” section of his own website) that have impacted my world the most.</p>
+    <p>Sometimes there’s no telling what crazy character a browser will display in place of an icon that hasn’t loaded.</p>
+  </li>
+  <li>
+    <h3>There are inexplicable rendering inconsistencies.</h3>
 
-<p>His approach of <em>getting-it-wrong-on-camera-and-then-fixing-it-(probably)</em> was a welcome break from other more sanitised tutorials. Not everything installs perfectly the first time, and <em>no one</em> is immune from typos.  Seeing how professionals deal with these problems is almost as useful as the main focus of the lessons.</p>
+    <p>Firefox in particular seemed, like an overly generous grandparent, determined to fatten my icons up. Faux-bold on regular fonts is ugly and annoying, but when it happens to brand assets like icons it’s excruciating (and something clients <em>always</em> pick up on).</p>
+  </li>
+  <li>
+    <h3>Automation isn’t so seamless after all.</h3>
 
-<p>Chris also does sterling work in the podcast field with his partner in crime Dave Rupert. If you’re not entertained by the combination of in-depth Q-and-A, stupid sound effects, and friendly banter that they put out in the <em><a href="http://shoptalkshow.com/">Shop Talk Show</a></em>, then you’re probably not interested in front-end development.</p>
+    <p>Oh hey, my <code class="highlighter-rouge">npm install</code> keeps failing. I wonder what the problem is: oh yeah, my <code class="highlighter-rouge">gulp-iconfont</code> is throwing errors all up in my grill. Again. #facepalm</p>
+  </li>
+</ul>
 
-<p>As an added bonus, their mantra is probably the single most useful bit of advice any web professional can give:</p>
+<p>By contrast, pure SVG is a much more consistent format. I’ve been using SVGs within <code class="highlighter-rouge">&lt;img&gt;</code> tags since 2006, and I’ve never had any trouble with setting SVGs as CSS background images.</p>
 
-<blockquote>
-  <p>Just. Build. Websites.</p>
-</blockquote>
+<div class="highlighter-rouge"><pre class="highlight"><code>/* SVG CSS background-image. */
+.elementName {
+    height:1em;
+    width:1em;
+    background-image: url(path/to/icon.png); // Fallback for browsers that don't like SVG.
+    background-image: url(path/to/icon.svg);
+}
+</code></pre>
+</div>
 
-<h2>03: <a href="http://twitter.com/brad_frost">Brad Frost</a></h2>
+<p>The obvious <em>simple</em> solution is to just use SVGs like that: set them with CSS or use <code class="highlighter-rouge">&lt;img&gt;</code> elements. That gives you scaleable vector graphics that work well in most environments. The trouble is, you’re loading in a new file for every icon. Every icon would represent another HTTP request to the server, and would be a performance nightmare. No matter how “squishy” your design, if your site is slow to load it is <em>not</em> “Responsive”.</p>
 
-<p>I’m never more aware of (or excited by) the unique nature of designing for the web than when I listen to Brad Frost. If every colleague and every client could take the time to <a href="http://bradfrostweb.com/blog/">read his blog</a> and <a href="https://www.youtube.com/watch?v=nE0CRMm59BY">watch his talks</a>, the standard of our work and the quality of our work-lives would raise ten-fold across the board.</p>
+<p>So we’re back to the same multiple-requests problem we had in the bad old days of raster iconography. The answer back then was to use image sprites. Concatenate all the icons into one file, load them all with just one HTTP request, and use CSS to crop the image when you want to display a particular icon. It turns out we can do that with SVG too, except now we can do it better!</p>
 
-<p>The idea of designing ‘paintings of websites’ (a.k.a. PSD mockups) is completely outdated; we can’t just design for one ideal viewport size, or two, or ten, or a hundred. “Atomic Design” might sound like a buzz word, but the principles are applicable to all web work. The basic concept of designing components first and pages last is quite simply How It Should Be Done Now.</p>
+<h2>Inline SVG Sprites</h2>
 
-<h2>04: <a href="http://twitter.com/markbrickey">Mark Brickey</a>, <a href="http://twitter.com/thejamesflames">James Flames</a>, <a href="http://twitter.com/DeliciousDL">Billy Bauman</a></h2>
+<p>SVGs are made of paths – collections of co-ordinates that describe the individual vectors of the image. Open an SVG in your favourite text editor and you can see those paths. What’s more, you can add classes and IDs to them. Even more mindblowing: if you wrap the individual paths in a <code class="highlighter-rouge">symbol</code> tag you can combine multiple images into a single SVG file, and selectively pull them out using their IDs.</p>
 
-<p>I love to hear people talking candidly and in-depth about fields they are experts in. It almost doesn’t matter what the topic is (which is one of the reasons I love Radio 4’s <em>In Our Time</em> so much), but when the topic is illustration I love it even more. The <em><a href="http://www.aidpodcast.com/">Adventures In Design</a></em> podcast is irreverent and unhinged, but always honest and informative.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- Load the SVG file into your document... --&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+	&lt;symbol viewBox="0 0 10 10" id="iconID"&gt;
+		&lt;path d="{ vector data }"/&gt;
+	&lt;/symbol&gt;
+&lt;/svg&gt;
 
-<p>They always have good guests, but more importantly Mark, Billy and James know what to do with them. They trigger interesting and inspirational discussion, no matter who the guest is. The resulting interviews are often challenging, often controversial, and always riveting listening.</p>
+&lt;!-- ...and then 'use' a specific icon --&gt;
+&lt;svg class="icon"&gt;
+    &lt;use xlink:href="#iconID"/&gt;
+&lt;/svg&gt;
+</code></pre>
+</div>
 
-<p>Another reason I like AID so much is that team aren’t ashamed of making a living: this is a podcast about the <strong>business</strong> of design. It just so happens that the design field they work in is the super-cool one of gig posters and illustration.</p>
+<p>Now you might be thinking that this all looks like a whole lot of work, and you’d be right. Making sprites by hand sucks. Thankfully the arrow of progress is on our side. We may not have jetpacks and flying cars yet, but we <em>do</em> have task runners. I used to use Grunt, but now I use Gulp (being a JS nerd, I find the syntax easier to follow) and there are SVG spriting plugins for both of them. I use <code class="highlighter-rouge">gulp-svg-sprite</code>, and so far it’s worked like a charm (so far I’ve put it to work on a half-dozen private projects and a couple of client sites). In fact, it’s proving to be much more reliable than any of the Gulp plugins for iconfonts ever were.</p>
 
-<h2> 05: <a href="http://twitter.com/monteiro">Mike Monteiro</a></h2>
+<p>It takes a bit of configuring to get the drop-an-icon-into-a-folder-and-let-Gulp-do-the-rest workflow I’d maintained with iconfonts, but as long as you remember to specify that you want a <code class="highlighter-rouge">symbol</code> based sprite, you can’t go too wrong.</p>
 
-<p>Anyone working in the world of design who deals with clients should watch Mike’s <em><a href="http://vimeo.com/22053820">F*ck You. Pay Me.</a></em> talk. He explains why it’s important to take yourself and your business seriously, and even brings his lawyer on stage.</p>
-
-<p>His book, <em><a href="http://www.abookapart.com/products/design-is-a-job">Design Is a Job</a></em>, is less caustic, but just as inspiring. His book, Design Is a Job, is less caustic, but just as inspiring. Neither the book nor the talk are rants against stupid clients (well, maybe a little…). They focus instead on building <strong>productive</strong> client relationships where no-one is taken advantage of.</p>
-
-<p>It’s hard to admit that sometimes a problem doesn’t stem from the client but from yourself. Even so, having that in the back of my mind has often saved my freelancing-bacon. Following Mike’s advice has often turned tricky clients into excellent ones. For all his acetic bluster, Mike’s core message is simple; be friendly and use common sense.</p>
-
-<h2>06: <a href="http://twitter.com/jessicahische">Jessica Hische</a></h2>
-
-<p>Jessica is a letterer, and all her work is stunning. Before I was aware of her, I didn’t even know ‘lettering’ was an actual job that you could do. Back in the day, Jessica was a jack-of-all-trades (like many of us), but she realised that You Get The Work You Show. She filled her portfolio with self-initiated lettering work, and was soon able to specialise professionally.</p>
-
-<p>Art directors (and all clients, in fact) aren’t blinkered and lacking in imagination. With so much talent out there, they can find someone with <em>exactly</em> the right experience and demonstrable expertise. If you think lettering is your strongest skill but stack your portfolio with e-commerce websites, guess what kind of work you’re more likely to be hired for?</p>
-
-<p>If you want to specialise in something, you have to get off the mat and <strong>do</strong> it. Don’t wait for the “dream commission” to come walking through the door; get out there and chase it down. Jessica makes her own luck, and makes me think I might be able to make my own, too.</p>
-
-<h2>07: <a href="http://twitter.com/TrentWalton">Trent Walton</a></h2>
-
-<p>There are only so many ways to present seriffed text on a light background, but somehow Trent manages to make <a href="http://trentwalton.com/">his blog</a> look nicer than everyone else’s. His art-directed posts (each with their own custom styling) are a benchmark for bloggers everywhere.</p>
-
-<p>Somewhat annoyingly, what he writes about is <em>also</em> several orders of magnitude better than anything I could manage. I don’t know if he became so respected by writing well about “big picture” subjects or whether he writes well <em>because</em> he’s so respected, but either way, respected he is.</p>
-
-<p>His posts come fairly infrequently, but when they do they’re invariably beautiful <em>and</em> interesting.</p>
-
-<h2>08: <a href="http://twitter.com/benschwarz">Ben Schwarz</a></h2>
-
-<p>Task runners (like Grunt and Gulp) have revolutionised my workflow over the past year. Grunt trickled into my sphere of awareness over a period of months, much like SASS. SASS I adopted more by osmosis than through any deliberate choice, but I can pin-point my adoption of Grunt to one specific incident.</p>
-
-<p>Ben has made a <a href="http://benschwarz.github.io/gallery-css/">fantastic CSS-only Slider</a>, and I bought his accompanying screecast tutorial. It might be the best £10 I’ve ever spent. The video explains his intricate SASS, but also walks through a Grunt installation and shows how useful it is.</p>
-
-<p>Up to that point, I was aware of Grunt but didn’t understand it or see the point of it. To see someone as consummately professional as Ben using it and extolling its virtues sealed the deal. I’ve since switched from Grunt to Gulp, but using <em>any</em> task runner at all has been the real quantum leap for my workflow.</p>
-
-<h2>09: <a href="http://twitter.com/seanuk">Sean Johnson</a> &amp; <a href="http://twitter.com/liz_e">Liz Elcoate</a></h2>
-
-<p>Quitting a job to go freelance is a daunting proposition. Making the leap myself, I found comfort in the curious trend for freelance-web-folk-focused podcasts. There are plenty of great offerings out there, but by far the most relevant to my past situation was <em><a href="http://www.thefreelanceweb.com/">The Freelance Web</a></em>.</p>
-
-<p>Liz and Sean aren’t afraid to deep-dive into the details of running a web business; both the good parts and the bad. Their advice is useful <em>and</em> reassuring, and the fact that they talk about specifics makes it all the more valuable.</p>
-
-<p>I’ve since moved from freelancing to an agency position, but I still enjoy <em>The Freelance Web</em>. The willingness to share experiences and knowledge is one of the best characteristics of the web community. It’s one I find it hard to believe any other industry could match, and Liz and Sean are true embodiments of that generous spirit.</p>
-
-<h2>10: <a href="http://twitter.com/enshrined">Daryll Doyle</a></h2>
-
-<p>On a day-to-day basis, by far my biggest inspiration is my team mate, Daryll. He’s very much from the school of thought that says “if you’re not moving forwards, you’re moving backwards”.</p>
-
-<p>Pretty much constantly, Daryll is showing me some new tool he’s discovered, technique he’s mastered, or framework he’s learnt. His dedication to self-improvement is nothing short of inspiring.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>// My Gulp config
+var svgConfig = {
+    shape : {
+        dimension : { // Set maximum dimensions
+            maxWidth : 32,
+            maxHeight : 32
+        }
+    },
+    mode : {
+        symbol : true // Activate the «symbol» mode
+    }
+};
+// The task itself
+gulp.task('svg',function(){
+    return gulp.src('_uncompressed/icons/**/*.svg')
+        .pipe(svgSprite(svgConfig))
+        .pipe(gulp.dest('_includes'));
+});
+</code></pre>
+</div>
 
 <hr />
 
-<p>I know a couple of the people on this list IRL, and a couple more I’d class as ‘digital acquaintances’, but most are just web personalities who’s work, public speaking, or blogging has taught me something new, steered me when my course has wandered, opened my eyes to new ways of thinking, or just been inspiring in some more ineffable manner.</p>
+<h2>Inline SVG in Jekyll</h2>
 
-<p>People like this are what makes the web such a fantastic industry to be a part of, and I owe them all a debt of gratitude.</p>
+<p>This site is built using the static-site generator Jekyll. Transferring this site’s (admittedly meagre) icon set from an iconfont to an inline SVG sprite couldn’t have been easier. Make sure your task-runner outputs your sprite into Jekyll’s <code class="highlighter-rouge">_includes</code> directory and you can pull in your sprite with a simple <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">/symbol/svg/sprite.symbol.svg</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>. And because Jekyll compiles <em>before</em> deployment, you don’t even have to make a single HTTP request to get your icons: it’s all truly inline.</p>
+
+<h2>Inline SVG in Wordpress</h2>
+
+<p>Jekyll’s all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things <em>that</em> easy for us. Wordpress sites don’t have the advantage of being compiled before deployment, which means we need to use PHP to include the sprite.</p>
+
+<p>Including an automatically generated SVG sprite using PHP is a little trickier than it first appears. <code class="highlighter-rouge">&lt;?php include_once("path/to/svg/sprite.svg"); ?&gt;</code> would seem like the obvious solution, but all that will give you is a face full of errors (if you’ve got <code class="highlighter-rouge">WP_DEBUG</code> set to <code class="highlighter-rouge">true</code>). It turns out the issue is with the XML and <code class="highlighter-rouge">DOCTYPE</code> added to the sprite by the gulp task, and the trick is to use <code class="highlighter-rouge">file_get_contents()</code> instead of <code class="highlighter-rouge">include_once()</code>.</p>
+
+<h3>SVG &amp; CSS</h3>
+
+<p>Styling the icons had a couple of little hurdles that I wasn’t expecting. One of the joys of iconfonts was how easy they were to manipulate with CSS, and that’s a feature that SVG sprites were promising too. Instead of <code class="highlighter-rouge">color: #000;</code> we use <code class="highlighter-rouge">fill: #000;</code> but, as with all CSS, watch out for specificity! If the paths themselves have explicit fills and strokes defined, then you won’t be able to override them with external CSS.</p>
+
+<p>Some of my legacy icons have in-built colours, and going through and stripping them out would be a real pain. Thankfully my colleague <a href="http://twitter.com/enshrined">Daryll</a> was on hand to build me a tidy RegEx to programatically strip out any rogue fills:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;?php
+// Save the SVG file in a variable...
+$rawSVG = file_get_contents(get_template_directory_uri() . "/path/to/svg/sprite.svg");
+// ...then filter out any fills.
+echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
+?&gt;
+</code></pre>
+</div>
+
+<p>When I’m using Jekyll I still have to manually manage explicit in-file styling, but Jekyll projects tend to require a more fine-grained approach anyway. Another Big Win for CSS styling and SVGs comes from being able to add classes and IDs to specific paths <em>within</em> individual icons. This provides us with the hooks we need to style (and animate and manipulate) almost every aspect of an icon discretely. Iconfonts were limited to one flat colour, but with SVG sprites we can colour every shape in an icon differently (should we need to).</p>
+
+<p>For a long time I was very skeptical of using inline SVG for icon sets, primarily because of the perceived effort it would take to set up such a system. I’m happy to report that SVG sprites are considerably easier to get started with than I’d ever thought. I can’t imagine ever using an iconfont again.</p>
 
 
       </article>
@@ -256,6 +292,8 @@
         postsList[3]["title"] = "Getting started with inline SVG icons";
 
         
+            var currentPost = 3;
+        
 
     
 
@@ -264,8 +302,6 @@
         postsList[4]["url"] = "/inspiring-web-people";
         postsList[4]["title"] = "Inspirational Web People";
 
-        
-            var currentPost = 4;
         
 
     
@@ -345,65 +381,65 @@
     
       
         
-          <li><a href="http://tomhazledine.com/web-apps">Which do you choose: native app or web app?</a>  
+          <li><a href="http://th.dev/web-apps">Which do you choose: native app or web app?</a>  
           
             Are web apps even a real thing? I think they are.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/thingmonk-day-two">Notes from ThinkMonk: Day Two</a>  
+          <li><a href="http://th.dev/thingmonk-day-two">Notes from ThinkMonk: Day Two</a>  
           
             My thoughts on the IoT conference (Pt. II).
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/thingmonk-day-one">Notes from ThinkMonk: Day One</a>  
+          <li><a href="http://th.dev/thingmonk-day-one">Notes from ThinkMonk: Day One</a>  
           
             My thoughts on the IoT conference.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/inline-svg-icons">Getting started with inline SVG icons</a>  
+      
+        
+          <li><a href="http://th.dev/inspiring-web-people">Inspirational Web People</a>  
           
-            We should all be using SVG icon sets
+            The webby people that are shaping my career.
           </li>
         
       
         
-      
-        
-          <li><a href="http://tomhazledine.com/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
+          <li><a href="http://th.dev/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
           
             Good advice on personal development.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
+          <li><a href="http://th.dev/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
           
             No need for browser extensions; Firefox can do it natively.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/futura-for-the-win">Futura for the win.</a>  
+          <li><a href="http://th.dev/futura-for-the-win">Futura for the win.</a>  
           
             Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/simple-is-hard">Simple is hard</a>  
+          <li><a href="http://th.dev/simple-is-hard">Simple is hard</a>  
           
             Focus on substance over style.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/bullet-journal-workflow">A bullet-journal workflow</a>  
+          <li><a href="http://th.dev/bullet-journal-workflow">A bullet-journal workflow</a>  
           
             An analogue "to-do list" system.
           </li>
@@ -444,7 +480,7 @@
 
 	<div class="scripts">
     <!-- Javascript -->
-    <script src="http://tomhazledine.com/assets/js/app.js" async></script>
+    <script src="http://th.dev/assets/js/app.js" async></script>
     
 
     <!-- Analytics -->

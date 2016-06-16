@@ -11,9 +11,9 @@
     <!--<style type="text/css">::-moz-selection{color:#efeeeb;background:rgba(0,183,198,.5)}::selection{color:#efeeeb;background:rgba(0,183,198,.5)}a::-moz-selection{color:#00b7c6;background:rgba(77,77,77,.5)}a::selection{color:#00b7c6;background:rgba(77,77,77,.5)}.cp-css html{font-size:62.5%}@media (min-width:1200px){.cp-css html{font-size:100%}}.cp-css body{color:#4d4d4d}.cp-css .hidden{display:none!important}.cp-css h1{font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;margin:0 0 6rem}.cp-css a{text-decoration:none;background:#dad8d2;color:#4d4d4d}.cp-css .bodyWrapper{background:#efeeeb;width:80%;margin:5em auto 3em;padding-top:6em}.cp-css .mainContent{width:90%;max-width:28em;margin:0 auto}.cp-css .header{font-size:1em;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3;min-width:300px}.cp-css .siteName{display:block;float:left;background:#4d4d4d;margin:.5em;line-height:1em;padding:.1em 1em;-webkit-box-shadow:inset #00b7c6 .5em 0 0 0;box-shadow:inset #00b7c6 .5em 0 0 0}.cp-css .logo{font-size:.8em;display:block;padding:0;line-height:1;margin:0;color:#fff;text-transform:uppercase;letter-spacing:.2em}.cp-css .mainMenuToggle{display:none}.cp-css .mainMenuWrapper{position:fixed;bottom:0;left:100%}.cp-css .icon{width:1em;height:1em}</style>-->
 
     <title>
-         Getting started with inline SVG icons – Tom Hazledine Web Design
+         Simple is hard – Tom Hazledine Web Design
     </title>
-    <meta name="description" content="I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.">
+    <meta name="description" content="How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Tom Hazledine" href="/feed.xml">
@@ -23,7 +23,7 @@
         <!--<script>
             var cb = function() {
               var l = document.createElement('link'); l.rel = 'stylesheet';
-              l.href = 'http://tomhazledine.com/assets/css/main.min.css';
+              l.href = 'http://th.dev/assets/css/main.min.css';
               var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
             };
             var raf = requestAnimationFrame || mozRequestAnimationFrame ||
@@ -31,17 +31,17 @@
             if (raf) raf(cb);
             else window.addEventListener('load', cb);
         </script>-->
-        <link rel="stylesheet" href="http://tomhazledine.com/assets/css/main.min.css">
+        <link rel="stylesheet" href="http://th.dev/assets/css/main.min.css">
         
     
 
     <!-- Modernizr -->
-    <!--<script src="http://tomhazledine.com/assets/js/static/modernizr-2.6.2.min.js"></script>-->
+    <!--<script src="http://th.dev/assets/js/static/modernizr-2.6.2.min.js"></script>-->
 
     <!-- Polyfills: Media Queries support for older versions of IE etc., HTML5 shiv -->
     <!--[if lt IE 9]>
-        <script src="http://tomhazledine.com/assets/js/static/respond.min.js" type="text/javascript"></script>
-        <script src="http://tomhazledine.com/assets/js/static/html5.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/respond.min.js" type="text/javascript"></script>
+        <script src="http://th.dev/assets/js/static/html5.js" type="text/javascript"></script>
     <![endif]-->
 
     <!-- TYPEKIT: ‘TH Portfolio’ -->
@@ -76,7 +76,7 @@
 
     <header id="mainHeader" class="header clearfix">
         
-        <a class="siteName" href="http://tomhazledine.com/" title="Tom Hazledine homepage" rel="home">
+        <a class="siteName" href="http://th.dev/" title="Tom Hazledine homepage" rel="home">
             <h2 class="logo">Tom Hazledine</h2>
         </a>
         
@@ -92,17 +92,17 @@
             
             
                 <li >
-                    <a href="http://tomhazledine.com/">Home</a>
+                    <a href="http://th.dev/">Home</a>
                     <p class="mainMenuDescription">A little introduction to who I am and what I do.</p>
                 </li>
             
                 <li >
-                    <a href="http://tomhazledine.com/portfolio/">Portfolio</a>
+                    <a href="http://th.dev/portfolio/">Portfolio</a>
                     <p class="mainMenuDescription">Some examples of my work.</p>
                 </li>
             
                 <li class="active">
-                    <a href="http://tomhazledine.com/blog/">Articles</a>
+                    <a href="http://th.dev/blog/">Articles</a>
                     <p class="mainMenuDescription">Selected ramblings about the web and technology.</p>
                 </li>
             
@@ -115,135 +115,42 @@
 
             <article class="mainContentInner textContent">
 
-                <!-- <h1>Getting started with inline SVG icons</h1> -->
+                <!-- <h1>Simple is hard</h1> -->
                 
-                    <h1>Getting started with inline SVG icons</h1>
+                    <h1>Simple is hard</h1>
                 
 
-          <h3 class="big-drop-cap">I've long been an advocate of using icon fonts. They're resolution-independent, light-weight, and stylable with CSS. It turns out they're not the best option: inline SVG icons are better in almost every way.</h3>
+          <h3 class="big-drop-cap">How I learnt to focus on substance over style, and began to rethink my relationship with ‘good design’.</h3>
 
-          <!--![png – font character – svg](/)
-with scale-slider?-->
+          <p>“Simplify, simplfy!” we’re often told. Your service isn’t appealing to your customers? The answer’s simple: simplify! Your song isn’t connecting with your fanbase? Simplify! You aren’t shifting as many units as Apple? Simplify! It’s an easy mantra to mock, and even easier to swallow hook, line, and sinker.</p>
 
-<p>We should all know by now that using raster images for icons is a bad idea. Limiting ourselves to one set resolution is not how we work in a multi-device ecosystem. It’s not responsive, it’s not performant, it’s not nice.</p>
+<p>What we need to do is distinguish between ‘simple’ and ‘simplistic’. It’s fairly obvious that content suffers when overrun by crowded, cluttered, un-navigable interfaces. If what you’re saying has value, you don’t need the kitchen sink to help you say it. But what do you need? And how much can you afford to throw out?</p>
 
-<p>For a while it seemed that Icon Fonts were the answer. They’re vector based and therefore resolution-independent. You can style them with CSS. They have smaller filesizes than .JPGs or .PNGs, so they improve a site’s performance. A fontfile is one asset to download (more http requests = poorer site performance), so we don’t need to mess around with image sprites any more. And on top of all that, iconfont creation can be easily automated with your task-runner of choice: simply drop your icon .SVGs into a folder and you’re good to go.</p>
+<h2>Only keep what you need.</h2>
 
-<pre><code>/* Calling an iconfont icon as a pseudo element within CSS. */
-.elementName:before {
-    font-family:'iconfont';
-	content: "\e001"; // The unicode value of the font character you want.
-	color: #000; // The icon is text, so you can style it using regular CSS
-}
-</code></pre>
+<p>Deleting everything that you <em>don’t</em> need only works when you know for sure what you <em>do</em> need. It’s tempting to think of simplifying a design as merely stripping away layers of visual ornamentation, but true simplicity comes more from the <em>user experience</em> than the look of the thing. Hiding an unsightly menu behind a <a href="http://mobile.smashingmagazine.com/2012/10/08/the-semantic-responsive-design-navicon/">hamburger icon</a> is an easy way to de-clutter an app’s interface, for example, but does that count as simplification? All that achieves is forcing the user to make an extra click when they want to navigate somewhere. Even the <a href="http://100archive.com/now/doing-the-hard-work-to-make-it-simple">Government’s Digital team agree</a> that this is both important <em>and</em> hard (and the new <a href="http://www.gov.uk">gov.uk</a> design is really impressive from a usability perspective).</p>
 
-<h2>If it ain’t broke, why fix it?</h2>
+<p>Clearing away useless clutter is generally a good tactic, but there’s a distinct difference between <em>simplifying</em> a product and merely making it’s function more obtuse. Is one button with five functions really better than five buttons that each do one task? Is an aesthetically-pure minimalist interface really ideal if you then need to teach every new user how it works?</p>
 
-<p>Lately the winds of change have been blowing. Fewer and fewer big-name sites are using iconfonts, and more and more are publicly coming out in favour of inline SVGs. At first I was sceptical: “that problem’s already been solved”, I thought. Actually inlining raw SVG code into a site seemed overly complicated, and harder to maintain and automate than an iconfont setup. But was it? And were iconfonts as great as they first appeared?</p>
+<p>As with any task worth doing, there are many levels of nuance to simplification. It takes judgement; an assessment of what functions are important to your product, your app, your idea. Strip away anything extraneous and put anything the user needs front-and-centre, but don’t confuse the two or you’ll live to regret it.</p>
 
-<ul>
-  <li>
-    <h3>When iconfonts fail, things get weird.</h3>
+<h2>This website is all about words.</h2>
 
-    <p>Sometimes there’s no telling what crazy character a browser will display in place of an icon that hasn’t loaded.</p>
-  </li>
-  <li>
-    <h3>There are inexplicable rendering inconsistencies.</h3>
+<p>The page you’re reading now went through many iterations before settling on the look you see today. Early drafts were swamped with full-page background images and clever CSS3 animation effects, but no matter how fancy I got with the coding these early designs never felt quite right. Then I stumbled upon <a href="http://justinjackson.ca/words.html">Justin Jackson’s inspired ‘This Is A Web Page’ article</a> and was reminded that what was important for this site was the words themselves. It goes deeper than that, even: what’s important to this site is the <em>content</em>. It could be read aloud by a screen-reader, translated into sign-language, even transmitted telepathically for all I care. As long as the message can be absorbed, this page will have done its job.</p>
 
-    <p>Firefox in particular seemed, like an overly generous grandparent, determined to fatten my icons up. Faux-bold on regular fonts is ugly and annoying, but when it happens to brand assets like icons it’s excruciating (and something clients <em>always</em> pick up on).</p>
-  </li>
-  <li>
-    <h3>Automation isn’t so seamless after all.</h3>
+<p>What I was doing with my early designs was trying to build a ‘great website’, when what I should really have been focusing on was building a great content delivery system. It seems video is the <em>de rigueur</em> medium for getting messages across quickly, and for a while I did toy with the idea of making this page into a vlog, but ultimately words are purer. Video is harder to create than written content, and would skew the message with all the baggage brought along by seeing my face (beautiful) or hearing my accent (perfectly inflected Queen’s English). With the written word I have more chance of capturing the ‘white heat of inspiration’ and of being able to communicate my thoughts clearly.</p>
 
-    <p>Oh hey, my <code>npm install</code> keeps failing. I wonder what the problem is: oh yeah, my <code>gulp-iconfont</code> is throwing errors all up in my grill. Again. #facepalm</p>
-  </li>
-</ul>
+<h2>Why use any styling at all?</h2>
 
-<p>By contrast, pure SVG is a much more consistent format. I’ve been using SVGs within <code>&lt;img&gt;</code> tags since 2006, and I’ve never had any trouble with setting SVGs as CSS background images.</p>
+<p>So why not go all-out and strip out all the styling from this page completely? Properly written semantic HTML is nothing <em>but</em> content, so surely stripping away everything else would be the most efficient way to get the message across? Well, quite frankly, the default styling applied by web browsers is <em>ugly</em>, and that’s not as shallow a complaint as you might think. Concepts like line-height, line-length, leading &amp; kerning each have a huge impact on the readability of text. To trust all those to the random whims of a browser is madness.</p>
 
-<pre><code>/* SVG CSS background-image. */
-.elementName {
-    height:1em;
-    width:1em;
-    background-image: url(path/to/icon.png); // Fallback for browsers that don't like SVG.
-    background-image: url(path/to/icon.svg);
-}
-</code></pre>
+<p>It’s often said that <a href="http://alistapart.com/article/on-web-typography#section3">we read best what we read most</a>, and my what my friends and I read most are <em>books</em>. Books are fantastically efficient, and the best ones are things of beauty that wrap their content in a nourishing blanket of aesthetic proportions and finely-wrought typefaces. Given how many books I own solely on the topic of type design and typography, I can’t stand idly by and leave my content at the mercy of the ‘web-safe’ default fonts. I have to believe that good typography and good design makes the reading experience better.</p>
 
-<p>The obvious <em>simple</em> solution is to just use SVGs like that: set them with CSS or use <code>&lt;img&gt;</code> elements. That gives you scaleable vector graphics that work well in most environments. The trouble is, you’re loading in a new file for every icon. Every icon would represent another HTTP request to the server, and would be a performance nightmare. No matter how “squishy” your design, if your site is slow to load it is <em>not</em> “Responsive”.</p>
+<h2>Simple doesn’t have to be ugly.</h2>
 
-<p>So we’re back to the same multiple-requests problem we had in the bad old days of raster iconography. The answer back then was to use image sprites. Concatenate all the icons into one file, load them all with just one HTTP request, and use CSS to crop the image when you want to display a particular icon. It turns out we can do that with SVG too, except now we can do it better!</p>
+<p>It seems obvious, but websites <strong>still</strong> have a lot to learn from books. Just because we <em>can</em> swamp everything in technical wizardry doesn’t mean we <em>should</em>, but it equally doesn’t mean we should abandon design altogether. ‘Simple’ doesn’t (and <em>shouldn’t</em>) mean ‘ugly’, and the simple act of thinking about line-lengths and visual hierarchies can turn an indigestible splurge of HTML into something readable, and in the right hands even something beautiful.</p>
 
-<h2>Inline SVG Sprites</h2>
-
-<p>SVGs are made of paths – collections of co-ordinates that describe the individual vectors of the image. Open an SVG in your favourite text editor and you can see those paths. What’s more, you can add classes and IDs to them. Even more mindblowing: if you wrap the individual paths in a <code>symbol</code> tag you can combine multiple images into a single SVG file, and selectively pull them out using their IDs.</p>
-
-<pre><code>&lt;!-- Load the SVG file into your document... --&gt;
-&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-	&lt;symbol viewBox="0 0 10 10" id="iconID"&gt;
-		&lt;path d="{ vector data }"/&gt;
-	&lt;/symbol&gt;
-&lt;/svg&gt;
-
-&lt;!-- ...and then 'use' a specific icon --&gt;
-&lt;svg class="icon"&gt;
-    &lt;use xlink:href="#iconID"/&gt;
-&lt;/svg&gt;
-</code></pre>
-
-<p>Now you might be thinking that this all looks like a whole lot of work, and you’d be right. Making sprites by hand sucks. Thankfully the arrow of progress is on our side. We may not have jetpacks and flying cars yet, but we <em>do</em> have task runners. I used to use Grunt, but now I use Gulp (being a JS nerd, I find the syntax easier to follow) and there are SVG spriting plugins for both of them. I use <code>gulp-svg-sprite</code>, and so far it’s worked like a charm (so far I’ve put it to work on a half-dozen private projects and a couple of client sites). In fact, it’s proving to be much more reliable than any of the Gulp plugins for iconfonts ever were.</p>
-
-<p>It takes a bit of configuring to get the drop-an-icon-into-a-folder-and-let-Gulp-do-the-rest workflow I’d maintained with iconfonts, but as long as you remember to specify that you want a <code>symbol</code> based sprite, you can’t go too wrong.</p>
-
-<pre><code>// My Gulp config
-var svgConfig = {
-    shape : {
-        dimension : { // Set maximum dimensions
-            maxWidth : 32,
-            maxHeight : 32
-        }
-    },
-    mode : {
-        symbol : true // Activate the «symbol» mode
-    }
-};
-// The task itself
-gulp.task('svg',function(){
-    return gulp.src('_uncompressed/icons/**/*.svg')
-        .pipe(svgSprite(svgConfig))
-        .pipe(gulp.dest('_includes'));
-});
-</code></pre>
-
-<hr />
-
-<h2>Inline SVG in Jekyll</h2>
-
-<p>This site is built using the static-site generator Jekyll. Transferring this site’s (admittedly meagre) icon set from an iconfont to an inline SVG sprite couldn’t have been easier. Make sure your task-runner outputs your sprite into Jekyll’s <code>_includes</code> directory and you can pull in your sprite with a simple <code>{% include /symbol/svg/sprite.symbol.svg %}</code>. And because Jekyll compiles <em>before</em> deployment, you don’t even have to make a single HTTP request to get your icons: it’s all truly inline.</p>
-
-<h2>Inline SVG in Wordpress</h2>
-
-<p>Jekyll’s all well and good if your clients are happy with working in code and using the command line to update their site. Sadly the world hardly ever makes things <em>that</em> easy for us. Wordpress sites don’t have the advantage of being compiled before deployment, which means we need to use PHP to include the sprite.</p>
-
-<p>Including an automatically generated SVG sprite using PHP is a little trickier than it first appears. <code>&lt;?php include_once("path/to/svg/sprite.svg"); ?&gt;</code> would seem like the obvious solution, but all that will give you is a face full of errors (if you’ve got <code>WP_DEBUG</code> set to <code>true</code>). It turns out the issue is with the XML and <code>DOCTYPE</code> added to the sprite by the gulp task, and the trick is to use <code>file_get_contents()</code> instead of <code>include_once()</code>.</p>
-
-<h3>SVG &amp; CSS</h3>
-
-<p>Styling the icons had a couple of little hurdles that I wasn’t expecting. One of the joys of iconfonts was how easy they were to manipulate with CSS, and that’s a feature that SVG sprites were promising too. Instead of <code>color: #000;</code> we use <code>fill: #000;</code> but, as with all CSS, watch out for specificity! If the paths themselves have explicit fills and strokes defined, then you won’t be able to override them with external CSS.</p>
-
-<p>Some of my legacy icons have in-built colours, and going through and stripping them out would be a real pain. Thankfully my colleague <a href="http://twitter.com/enshrined">Daryll</a> was on hand to build me a tidy RegEx to programatically strip out any rogue fills:</p>
-
-<pre><code>&lt;?php
-// Save the SVG file in a variable...
-$rawSVG = file_get_contents(get_template_directory_uri() . "/path/to/svg/sprite.svg");
-// ...then filter out any fills.
-echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
-?&gt;
-</code></pre>
-
-<p>When I’m using Jekyll I still have to manually manage explicit in-file styling, but Jekyll projects tend to require a more fine-grained approach anyway. Another Big Win for CSS styling and SVGs comes from being able to add classes and IDs to specific paths <em>within</em> individual icons. This provides us with the hooks we need to style (and animate and manipulate) almost every aspect of an icon discretely. Iconfonts were limited to one flat colour, but with SVG sprites we can colour every shape in an icon differently (should we need to).</p>
-
-<p>For a long time I was very skeptical of using inline SVG for icon sets, primarily because of the perceived effort it would take to set up such a system. I’m happy to report that SVG sprites are considerably easier to get started with than I’d ever thought. I can’t imagine ever using an iconfont again.</p>
+<p>Finding the right balance between visual simplicity, simplicity of interaction and a pleasing aesthetic is a real challenge, and I’ll be the first to admit I’ve still a long way to go. But at least now I’m pointing in the right direction; simple is important, simple is necessary, and simple is really hard.</p>
 
 
       </article>
@@ -286,8 +193,6 @@ echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
         postsList[3]["url"] = "/inline-svg-icons";
         postsList[3]["title"] = "Getting started with inline SVG icons";
 
-        
-            var currentPost = 3;
         
 
     
@@ -334,6 +239,8 @@ echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
         postsList[8]["title"] = "Simple is hard";
 
         
+            var currentPost = 8;
+        
 
     
 
@@ -376,65 +283,65 @@ echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
     
       
         
-          <li><a href="http://tomhazledine.com/web-apps">Which do you choose: native app or web app?</a>  
+          <li><a href="http://th.dev/web-apps">Which do you choose: native app or web app?</a>  
           
             Are web apps even a real thing? I think they are.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/thingmonk-day-two">Notes from ThinkMonk: Day Two</a>  
+          <li><a href="http://th.dev/thingmonk-day-two">Notes from ThinkMonk: Day Two</a>  
           
             My thoughts on the IoT conference (Pt. II).
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/thingmonk-day-one">Notes from ThinkMonk: Day One</a>  
+          <li><a href="http://th.dev/thingmonk-day-one">Notes from ThinkMonk: Day One</a>  
           
             My thoughts on the IoT conference.
           </li>
         
       
         
+          <li><a href="http://th.dev/inline-svg-icons">Getting started with inline SVG icons</a>  
+          
+            We should all be using SVG icon sets
+          </li>
+        
       
         
-          <li><a href="http://tomhazledine.com/inspiring-web-people">Inspirational Web People</a>  
+          <li><a href="http://th.dev/inspiring-web-people">Inspirational Web People</a>  
           
             The webby people that are shaping my career.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
+          <li><a href="http://th.dev/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
           
             Good advice on personal development.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
+          <li><a href="http://th.dev/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
           
             No need for browser extensions; Firefox can do it natively.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/futura-for-the-win">Futura for the win.</a>  
+          <li><a href="http://th.dev/futura-for-the-win">Futura for the win.</a>  
           
             Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.
           </li>
         
       
         
-          <li><a href="http://tomhazledine.com/simple-is-hard">Simple is hard</a>  
-          
-            Focus on substance over style.
-          </li>
-        
       
         
-          <li><a href="http://tomhazledine.com/bullet-journal-workflow">A bullet-journal workflow</a>  
+          <li><a href="http://th.dev/bullet-journal-workflow">A bullet-journal workflow</a>  
           
             An analogue "to-do list" system.
           </li>
@@ -475,7 +382,7 @@ echo preg_replace( '/fill=("|\')(#)?([a-fA-F0-9]*)("|\')/i', '', $rawSVG )
 
 	<div class="scripts">
     <!-- Javascript -->
-    <script src="http://tomhazledine.com/assets/js/app.js" async></script>
+    <script src="http://th.dev/assets/js/app.js" async></script>
     
 
     <!-- Analytics -->
