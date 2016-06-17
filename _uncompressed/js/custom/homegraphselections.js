@@ -6,13 +6,19 @@ homegraphcheckboxes.on('change',function(){
     
 
     var lineClass = 'path.line_' + value;
-    var line = $(lineClass);
+    var circleClass = 'circle.y_' + value;
+    var areaClass = 'path.area_' + value;
+    var line = d3.selectAll(lineClass);
+    var circle = d3.selectAll(circleClass);
+    var area = d3.selectAll(areaClass);
 
     if (checked) {
-        console.log(line);
-        line.addClass('selected');
-        line.attr('fill', 'black');
+        line.classed('selected',true);
+        circle.classed('selected',true);
+        area.classed('selected',true);
     } else {
-        line.removeClass('selected');
+        line.classed('selected',false);
+        circle.classed('selected',false);
+        area.classed('selected',false);
     }
 });

@@ -10,15 +10,19 @@
     cursor:pointer;
     color:$grey;
     path { 
-        stroke:$primary;
-        stroke:rgba($black,.4);
+        stroke:$grey;
+        // stroke:rgba($black,.4);
         stroke-width:.2rem;
         fill:none;
-        // &.line_pilot{stroke:$white;}
-        // &.line_mus{stroke:$green;}
-        // &.line_art{stroke:$grey;}
-        // &.line_des{stroke:$black;}
-        &.line_dev{stroke:$primary;}
+        &.line_pilot.selected{stroke:$blue;}
+        &.line_mus.selected{stroke:$green;}
+        &.line_art.selected{stroke:$red;}
+        &.line_des.selected{stroke:$black;}
+        &.line_dev.selected{stroke:$primary;}
+    }
+    .axis text{
+        color:$black;
+        fill:$black;
     }
     .axis path,
     .axis line {
@@ -28,11 +32,11 @@
         shape-rendering:crispEdges;
     }
     .hover{
-        stroke:$primary;
-        stroke:rgba($black,.4);
-        fill:$cream;
+        stroke:none;//$grey;
+        // stroke:rgba($black,.4);
+        fill:none;//$grey;
         stroke-width:.2rem;
-        r:.3em;
+        r:.4rem;
         display:none;
         &.active{
             display:block;
@@ -41,10 +45,55 @@
         // &.y_mus{stroke:$green;}
         // &.y_art{stroke:$grey;}
         // &.y_des{stroke:$black;}
-        &.y_dev{stroke:$primary;}
+        // &.y_dev{stroke:$primary;}
+        &.y_pilot.selected{
+            stroke:$blue;
+            fill:$cream;//$blue;
+        }
+        &.y_mus.selected{
+            stroke:$green;
+            fill:$cream;//$green;
+        }
+        &.y_art.selected{
+            stroke:$red;
+            fill:$cream;//$red;
+        }
+        &.y_des.selected{
+            stroke:$black;
+            fill:$cream;//$black;
+        }
+        &.y_dev.selected{
+            stroke:$primary;
+            fill:$cream;//$primary;
+        }
     }
     .chartarea{
         stroke:none;
-        fill:rgba($primary,.2);
+        fill:none;//rgba($primary,.2);
+        &.area_pilot.selected{fill:rgba($blue,.3);}
+        &.area_mus.selected{fill:rgba($green,.3);}
+        &.area_art.selected{fill:rgba($red,.3);}
+        &.area_des.selected{fill:rgba($black,.3);}
+        &.area_dev.selected{fill:rgba($primary,.3);}
+
+    }
+}
+
+.homeGraphTitle{
+    text-align:center;
+}
+
+.homeGraphSelectors{
+    text-align:center;
+    .homeGraphSelector{
+        font-size:.8em;
+        display:inline-block;
+        padding-right:1em;
+        text-transform:uppercase;
+        letter-spacing:.1em;
+        font-family:$display;
+        .visibleLabel{
+            user-select:none;
+        }
     }
 }

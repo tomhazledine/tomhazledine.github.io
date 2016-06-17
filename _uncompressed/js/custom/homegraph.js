@@ -98,7 +98,7 @@ if (homeGraphCheck.length) {
         
         // Scale the range of the data
         x.domain(d3.extent(data, function(d) { return d.date; }));
-        y.domain([0, 150]);//d3.max(data, function(d) { return d.happiness; })]);
+        y.domain([0, 110]);//d3.max(data, function(d) { return d.happiness; })]);
         // y_mus.domain([0, d3.max(data, function(d) { return d.musician; })]);
         // y_pilot.domain([0, d3.max(data, function(d) { return d.pilot; })]);
         // y_art.domain([0, d3.max(data, function(d) { return d.artist; })]);
@@ -110,85 +110,115 @@ if (homeGraphCheck.length) {
 
         // Add the valueline path.
         lineSvg.append("path")
+            .attr("id", "line_mus")
             .attr("class", "line line_mus")
             .attr("d", valueline_mus(data));
 
         // Add the valueline path.
         lineSvg.append("path")
+            .attr("id", "line_pilot")
             .attr("class", "line line_pilot")
             .attr("d", valueline_pilot(data));
 
         // Add the valueline path.
         lineSvg.append("path")
+            .attr("id", "line_art")
             .attr("class", "line line_art")
             .attr("d", valueline_art(data));
 
         // Add the valueline path.
         lineSvg.append("path")
+            .attr("id", "line_des")
             .attr("class", "line line_des")
             .attr("d", valueline_des(data));
 
         // Add the valueline path.
         lineSvg.append("path")
-            .attr("class", "line line_dev")
+            .attr("id", "line_dev")
+            .attr("class", "line line_dev selected")
             .attr("d", valueline_dev(data));
 
         /**
          * AREAS
          */
         
-        // areas = lineSvg.append('path');
-        // areas_mus = lineSvg.append('path');
-        // areas_pilot = lineSvg.append('path');
-        // areas_art = lineSvg.append('path');
+        areas = lineSvg.append('path');
+        areas_mus = lineSvg.append('path');
+        areas_pilot = lineSvg.append('path');
+        areas_art = lineSvg.append('path');
+        areas_des = lineSvg.append('path');
+        areas_dev = lineSvg.append('path');
 
         // areaShape = d3.svg.area()
-        //     // .defined(function(d) { return !isNaN(d[]); })
         //     .x(function(d){ return x(d.date); })
         //     .y0(function(d){ return y(0); })
         //     .y1(function(d){ return y(d.happiness); })
-        //     .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
+        //     .interpolate('monotone');
 
-        // areaShape_mus = d3.svg.area()
-        //     // .defined(function(d) { return !isNaN(d[]); })
-        //     .x(function(d){ return x(d.date); })
-        //     .y0(function(d){ return y_mus(0); })
-        //     .y1(function(d){ return y_mus(d.musician); })
-        //     .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
+        areaShape_mus = d3.svg.area()
+            .defined(function(d) { return !isNaN(d.musician); })
+            .x(function(d){ return x(d.date); })
+            .y0(function(d){ return y(0); })
+            .y1(function(d){ return y(d.musician); })
+            .interpolate('monotone');
 
-        // areaShape_pilot = d3.svg.area()
-        //     // .defined(function(d) { return !isNaN(d[]); })
-        //     .x(function(d){ return x(d.date); })
-        //     .y0(function(d){ return y_pilot(0); })
-        //     .y1(function(d){ return y_pilot(d.pilot); })
-        //     .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
+        areaShape_pilot = d3.svg.area()
+            .defined(function(d) { return !isNaN(d.pilot); })
+            .x(function(d){ return x(d.date); })
+            .y0(function(d){ return y(0); })
+            .y1(function(d){ return y(d.pilot); })
+            .interpolate('monotone');
 
-        // areaShape_art = d3.svg.area()
-        //     // .defined(function(d) { return !isNaN(d[]); })
-        //     .x(function(d){ return x(d.date); })
-        //     .y0(function(d){ return y_art(0); })
-        //     .y1(function(d){ return y_art(d.artist); })
-        //     .interpolate('monotone');// monotone | basis | linear | cardinal | bundle
+        areaShape_art = d3.svg.area()
+            .defined(function(d) { return !isNaN(d.artist); })
+            .x(function(d){ return x(d.date); })
+            .y0(function(d){ return y(0); })
+            .y1(function(d){ return y(d.artist); })
+            .interpolate('monotone');
+
+        areaShape_des = d3.svg.area()
+            .defined(function(d) { return !isNaN(d.designer); })
+            .x(function(d){ return x(d.date); })
+            .y0(function(d){ return y(0); })
+            .y1(function(d){ return y(d.designer); })
+            .interpolate('monotone');
+
+        areaShape_dev = d3.svg.area()
+            .defined(function(d) { return !isNaN(d.developer); })
+            .x(function(d){ return x(d.date); })
+            .y0(function(d){ return y(0); })
+            .y1(function(d){ return y(d.developer); })
+            .interpolate('monotone');
 
         // areas
         //     .attr('d',areaShape(data))
         //     .attr('fill','none')
-        //     .classed('chartarea', true);
+        //     .classed('chartarea area', true);
 
-        // areas_mus
-        //     .attr('d',areaShape_mus(data))
-        //     .attr('fill','none')
-        //     .classed('chartarea', true);
+        areas_mus
+            .attr('d',areaShape_mus(data))
+            .attr('fill','none')
+            .classed('chartarea area_mus', true);
 
-        // areas_pilot
-        //     .attr('d',areaShape_pilot(data))
-        //     .attr('fill','none')
-        //     .classed('chartarea', true);
+        areas_pilot
+            .attr('d',areaShape_pilot(data))
+            .attr('fill','none')
+            .classed('chartarea area_pilot', true);
 
-        // areas_art
-        //     .attr('d',areaShape_art(data))
-        //     .attr('fill','none')
-        //     .classed('chartarea', true);
+        areas_art
+            .attr('d',areaShape_art(data))
+            .attr('fill','none')
+            .classed('chartarea area_art', true);
+
+        areas_des
+            .attr('d',areaShape_des(data))
+            .attr('fill','none')
+            .classed('chartarea area_des', true);
+
+        areas_dev
+            .attr('d',areaShape_dev(data))
+            .attr('fill','none')
+            .classed('chartarea area_dev selected', true);
         
         // Add the X Axis
         svg.append("g")
@@ -236,7 +266,7 @@ if (homeGraphCheck.length) {
 
         // append the circle at the intersection 
         focus.append("circle")
-            .classed("y_dev",true)
+            .classed("y_dev selected",true)
             .classed("hover",true)
             .attr("r", 4);
         

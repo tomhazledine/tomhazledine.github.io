@@ -1342,12 +1342,22 @@ blockquote {
   cursor: pointer;
   color: #dad8d2; }
   .homeGraph path {
-    stroke: #00b7c6;
-    stroke: rgba(77, 77, 77, 0.4);
+    stroke: #dad8d2;
     stroke-width: .2rem;
     fill: none; }
-    .homeGraph path.line_dev {
+    .homeGraph path.line_pilot.selected {
+      stroke: #0074d9; }
+    .homeGraph path.line_mus.selected {
+      stroke: #2ecc40; }
+    .homeGraph path.line_art.selected {
+      stroke: #ff4136; }
+    .homeGraph path.line_des.selected {
+      stroke: #4d4d4d; }
+    .homeGraph path.line_dev.selected {
       stroke: #00b7c6; }
+  .homeGraph .axis text {
+    color: #4d4d4d;
+    fill: #4d4d4d; }
   .homeGraph .axis path,
   .homeGraph .axis line {
     fill: none;
@@ -1355,19 +1365,59 @@ blockquote {
     stroke-width: .2rem;
     shape-rendering: crispEdges; }
   .homeGraph .hover {
-    stroke: #00b7c6;
-    stroke: rgba(77, 77, 77, 0.4);
-    fill: #efeeeb;
+    stroke: none;
+    fill: none;
     stroke-width: .2rem;
-    r: .3em;
+    r: .4rem;
     display: none; }
     .homeGraph .hover.active {
       display: block; }
-    .homeGraph .hover.y_dev {
-      stroke: #00b7c6; }
+    .homeGraph .hover.y_pilot.selected {
+      stroke: #0074d9;
+      fill: #efeeeb; }
+    .homeGraph .hover.y_mus.selected {
+      stroke: #2ecc40;
+      fill: #efeeeb; }
+    .homeGraph .hover.y_art.selected {
+      stroke: #ff4136;
+      fill: #efeeeb; }
+    .homeGraph .hover.y_des.selected {
+      stroke: #4d4d4d;
+      fill: #efeeeb; }
+    .homeGraph .hover.y_dev.selected {
+      stroke: #00b7c6;
+      fill: #efeeeb; }
   .homeGraph .chartarea {
     stroke: none;
-    fill: rgba(0, 183, 198, 0.2); }
+    fill: none; }
+    .homeGraph .chartarea.area_pilot.selected {
+      fill: rgba(0, 116, 217, 0.3); }
+    .homeGraph .chartarea.area_mus.selected {
+      fill: rgba(46, 204, 64, 0.3); }
+    .homeGraph .chartarea.area_art.selected {
+      fill: rgba(255, 65, 54, 0.3); }
+    .homeGraph .chartarea.area_des.selected {
+      fill: rgba(77, 77, 77, 0.3); }
+    .homeGraph .chartarea.area_dev.selected {
+      fill: rgba(0, 183, 198, 0.3); }
+
+.homeGraphTitle {
+  text-align: center; }
+
+.homeGraphSelectors {
+  text-align: center; }
+  .homeGraphSelectors .homeGraphSelector {
+    font-size: .8em;
+    display: inline-block;
+    padding-right: 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-family: "brandon-grotesque", "futura", "gil sans", sans-serif; }
+    .homeGraphSelectors .homeGraphSelector .visibleLabel {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
 
 .portfolioEntry {
   padding-bottom: 3em; }
