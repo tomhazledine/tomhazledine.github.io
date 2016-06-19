@@ -22697,7 +22697,7 @@ var homeGraphCheck = $('.homeGraph');
 if (homeGraphCheck.length) {
 
     // Set the dimensions of the canvas / graph
-    var margin = {top: 30, right: 20, bottom: 30, left: 50},
+    var margin = {top: 0, right: 20, bottom: 30, left: 20},
         width = 600 - margin.left - margin.right,
         height = 270 - margin.top - margin.bottom;
 
@@ -22792,7 +22792,7 @@ if (homeGraphCheck.length) {
         
         // Scale the range of the data
         x.domain(d3.extent(data, function(d) { return d.date; }));
-        y.domain([0, 110]);//d3.max(data, function(d) { return d.happiness; })]);
+        y.domain([0, 100]);//d3.max(data, function(d) { return d.happiness; })]);
         // y_mus.domain([0, d3.max(data, function(d) { return d.musician; })]);
         // y_pilot.domain([0, d3.max(data, function(d) { return d.pilot; })]);
         // y_art.domain([0, d3.max(data, function(d) { return d.artist; })]);

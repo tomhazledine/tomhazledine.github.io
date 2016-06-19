@@ -550,8 +550,8 @@ img {
   box-shadow: rgba(77, 77, 77, 0.4) 0 0.2em 0.5em 0; }
 
 .check {
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   position: relative;
   margin: 0 auto;
   float: left; }
@@ -561,7 +561,7 @@ img {
     height: 100%;
     display: block;
     position: absolute;
-    border: 0.11rem solid #dad8d2;
+    border: 0.1rem solid #dad8d2;
     cursor: pointer; }
     .check .symLabel:before {
       content: '';
@@ -569,14 +569,14 @@ img {
       position: absolute;
       opacity: 0;
       transition: opacity .5s ease-in-out;
-      width: .7rem;
-      height: 1.1rem;
+      width: .5rem;
+      height: .9rem;
       -webkit-transform: rotate(40deg);
               transform: rotate(40deg);
-      top: .4rem;
-      left: .7rem;
-      border-right: 0.3rem solid #00b7c6;
-      border-bottom: 0.3rem solid #00b7c6; }
+      top: .2rem;
+      left: .4rem;
+      border-right: 0.2rem solid #00b7c6;
+      border-bottom: 0.2rem solid #00b7c6; }
   .check input[type='checkbox'], .check input[type="radio"] {
     display: none; }
     .check input[type='checkbox']:checked + label:before, .check input[type='checkbox']:checked + label:after, .check input[type="radio"]:checked + label:before, .check input[type="radio"]:checked + label:after {
@@ -1334,17 +1334,23 @@ blockquote {
 
 .homeGraph {
   width: 100%;
-  height: 15em;
+  padding-bottom: 50%;
   margin: 0 auto 4em; }
 
 .homeGraph {
   font-family: "brandon-grotesque", "futura", "gil sans", sans-serif;
   cursor: pointer;
-  color: #dad8d2; }
+  color: #dad8d2;
+  position: relative; }
+  .homeGraph > svg {
+    position: absolute;
+    top: 0;
+    left: 0; }
   .homeGraph path {
     stroke: #dad8d2;
     stroke-width: .2rem;
-    fill: none; }
+    fill: none;
+    transition: stroke .2s; }
     .homeGraph path.line_pilot.selected {
       stroke: #0074d9; }
     .homeGraph path.line_mus.selected {
@@ -1358,6 +1364,9 @@ blockquote {
   .homeGraph .axis text {
     color: #4d4d4d;
     fill: #4d4d4d; }
+    @media (max-width: 570px) {
+      .homeGraph .axis text {
+        font-size: .5em; } }
   .homeGraph .axis path,
   .homeGraph .axis line {
     fill: none;
@@ -1389,7 +1398,8 @@ blockquote {
       fill: #efeeeb; }
   .homeGraph .chartarea {
     stroke: none;
-    fill: none; }
+    fill: rgba(0, 183, 198, 0);
+    transition: fill .2s; }
     .homeGraph .chartarea.area_pilot.selected {
       fill: rgba(0, 116, 217, 0.3); }
     .homeGraph .chartarea.area_mus.selected {
@@ -1417,7 +1427,12 @@ blockquote {
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
-              user-select: none; }
+              user-select: none;
+      line-height: 1;
+      padding: 0 .4em 0 0; }
+    .homeGraphSelectors .homeGraphSelector .check {
+      position: relative;
+      top: -.2em; }
 
 .portfolioEntry {
   padding-bottom: 3em; }
