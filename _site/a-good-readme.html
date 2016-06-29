@@ -11,9 +11,9 @@
     <!--<style type="text/css">::-moz-selection{color:#efeeeb;background:rgba(0,183,198,.5)}::selection{color:#efeeeb;background:rgba(0,183,198,.5)}a::-moz-selection{color:#00b7c6;background:rgba(77,77,77,.5)}a::selection{color:#00b7c6;background:rgba(77,77,77,.5)}.cp-css html{font-size:62.5%}@media (min-width:1200px){.cp-css html{font-size:100%}}.cp-css body{color:#4d4d4d}.cp-css .hidden{display:none!important}.cp-css h1{font-size:1.8em;line-height:1.2;text-align:center;font-weight:700;color:#4d4d4d;margin:0 0 6rem}.cp-css a{text-decoration:none;background:#dad8d2;color:#4d4d4d}.cp-css .bodyWrapper{background:#efeeeb;width:80%;margin:5em auto 3em;padding-top:6em}.cp-css .mainContent{width:90%;max-width:28em;margin:0 auto}.cp-css .header{font-size:1em;position:fixed;top:0;left:0;background:#4d4d4d;color:#efeeeb;width:100%;line-height:1;z-index:3;min-width:300px}.cp-css .siteName{display:block;float:left;background:#4d4d4d;margin:.5em;line-height:1em;padding:.1em 1em;-webkit-box-shadow:inset #00b7c6 .5em 0 0 0;box-shadow:inset #00b7c6 .5em 0 0 0}.cp-css .logo{font-size:.8em;display:block;padding:0;line-height:1;margin:0;color:#fff;text-transform:uppercase;letter-spacing:.2em}.cp-css .mainMenuToggle{display:none}.cp-css .mainMenuWrapper{position:fixed;bottom:0;left:100%}.cp-css .icon{width:1em;height:1em}</style>-->
 
     <title>
-         about – Tom Hazledine Web Design
+         You are only as good as your README – Tom Hazledine Web Design
     </title>
-    <meta name="description" content="The personal web-hub for Tom Hazledine">
+    <meta name="description" content="All code is an abstraction. If we were writing explicitly for computers we would write in machine code or assembly-language. We don't, because "hello world" would take months to write. So instead of typing in binary, we use languages that hide the mess out of sight.">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Tom Hazledine" href="/feed.xml">
@@ -91,7 +91,7 @@
         <ul class="mainMenu clearfix" role="navigation">
             
             
-                <li class="active">
+                <li >
                     <a href="http://tomhazledine.com/">Home</a>
                     <p class="mainMenuDescription">A little introduction to who I am and what I do.</p>
                 </li>
@@ -101,7 +101,7 @@
                     <p class="mainMenuDescription">Some examples of my work.</p>
                 </li>
             
-                <li >
+                <li class="active">
                     <a href="http://tomhazledine.com/blog/">Articles</a>
                     <p class="mainMenuDescription">Selected ramblings about the web and technology.</p>
                 </li>
@@ -110,152 +110,251 @@
     </nav>
 
 
-<div class="bodyWrapper clearfix">
-  <section class="mainContent clearfix">
+    <div class="bodyWrapper clearfix">
+        <section class="mainContent clearfix">
 
-    <article class="mainContentInner textContent">
+            <article class="mainContentInner textContent">
+
+                <!-- <h1>You are only as good as your README</h1> -->
+                
+                    <h1>You are only as good as your README</h1>
+                
+
+          <h3 class="big-drop-cap">All code is an abstraction. If we were writing explicitly for computers we would write in machine code or assembly-language. We don't, because "hello world" would take months to write. So instead of typing in binary, we use languages that hide the mess out of sight.</h3>
+
+          <p>Our programming languages substitute the complex logical underpinnings with easy-to-remember words. Typing <code class="highlighter-rouge">for</code> or <code class="highlighter-rouge">while</code> is an abstraction that suits our brains better than a string of ones and zeros. We program using languages <em>we</em> understand. Code is not for computers, it’s for us.</p>
+
+<p>And our code is not just written for ourselves. Other developers will need to read our code and understand it. If we are writing something useful, other people will want to incorporate it in their own work. If we are writing code for a client, somewhere down the line someone else will have to support that code. If you want your code to have a life beyond your own computer, other people will need to be able to read and understand it.</p>
+
+<h2>We write code for other developers.</h2>
+
+<p>This is why we comment our code. This is why we use human-readable names for our variables (and let our compilation scripts reduce them to memory-efficient abstractions for us). This is why we respect coding standards and make damned-sure all our indentation is consistent and accurate.</p>
+
+<p>This is also why the most important file in any project is not your <code class="highlighter-rouge">index.html</code> or your <code class="highlighter-rouge">package.json</code> or your <code class="highlighter-rouge">composer.lock</code>. The most important file in your project is your <code class="highlighter-rouge">README.md</code>.</p>
+
+<p>The README file is the simplest file in your project. It doesn’t control your routing or manage dependencies or run any code at all. It’s nothing more than a simple text file. Your README is where you tell people what you were doing, what tools you used for what you were doing, and how you did what you were doing. And if you’re feeling really generous you can tell people how they can add to what you were doing.</p>
+
+<p>For a new set of eyes looking at your project, the README is their orientation. It’s the first place they look, and it tells them where they should look next. When we write code we are writing for other developers, and if our READMEs aren’t useful we may as well not be writing at all.</p>
+
+
+      </article>
+
+      <script>
+    var postsList = [];
+    var currentPost = 0;
+
+    
+
+        postsList[0] = [];
         
-        <div class="homeGraphWrapper">
-    <h2 class="homeGraphTitle">My career aspirations over time&hellip;</h2>
-    <div class="homeGraphSelectors">
-        <div class="homeGraphSelector checkWrapper">
-            <label for="developer" class="visibleLabel selectorTitle">Developer</label>
-            <div class="check">
-                <input type="checkbox" class="homegraphcheckbox" value="dev" id="developer" name="developer" checked/>
-                <label for="developer" class="symLabel"></label>
-            </div>
-        </div>
-        <div class="homeGraphSelector checkWrapper">
-            <label for="designer" class="visibleLabel selectorTitle">Designer</label>
-            <div class="check">
-                <input type="checkbox" class="homegraphcheckbox" value="des" id="designer" name="designer"/>
-                <label for="designer" class="symLabel"></label>
-            </div>
-        </div>
-        <div class="homeGraphSelector checkWrapper">
-            <label for="musician" class="visibleLabel selectorTitle">Musician</label>
-            <div class="check">
-                <input type="checkbox" class="homegraphcheckbox" value="mus" id="musician" name="musician"/>
-                <label for="musician" class="symLabel"></label>
-            </div>
-        </div>
-        <div class="homeGraphSelector checkWrapper">
-            <label for="artist" class="visibleLabel selectorTitle">Artist</label>
-            <div class="check">
-                <input type="checkbox" class="homegraphcheckbox" value="art" id="artist" name="artist"/>
-                <label for="artist" class="symLabel"></label>
-            </div>
-        </div>
-        <div class="homeGraphSelector checkWrapper">
-            <label for="pilot" class="visibleLabel selectorTitle">Lego Master Builder</label>
-            <div class="check">
-                <input type="checkbox" class="homegraphcheckbox" value="pilot" id="pilot" name="pilot"/>
-                <label for="pilot" class="symLabel"></label>
-            </div>
-        </div>
-    </div>
-    <div class="homeGraph"></div>
-</div>
+        postsList[0]["url"] = "/a-good-readme";
+        postsList[0]["title"] = "You are only as good as your README";
+
         
-        <h1>Hello. I'm a front-end developer and data-visualization geek from Cornwall.</h1>
-        <h3 class="big-drop-cap">Data without context is not information. In the burgeoning “Internet of Things” industry, we generate a lot of data. The big challenge now is making that data useful.</h3>
+            var currentPost = 0;
         
-        <p>To get real insight from our data it must be presented in a useful way. I’m a web-specialist at heart, and I believe that web-technologies make the best interfaces for our IoT projects.</p>
 
-<p>If you also think the web (and the burgeoning IoT industry) is a force for good, follow me on Twitter <a href="//twitter.com/thomashazledine">@thomashazledine</a>, or if 140 characters isn’t enough you can always reach me by email at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#116;&#111;&#109;&#064;&#116;&#111;&#109;&#104;&#097;&#122;&#108;&#101;&#100;&#105;&#110;&#101;&#046;&#099;&#111;&#109;">&#116;&#111;&#109;&#064;&#116;&#111;&#109;&#104;&#097;&#122;&#108;&#101;&#100;&#105;&#110;&#101;&#046;&#099;&#111;&#109;</a>.</p>
+    
 
-<p>When I’m not tinkering with sensors and Raspberry Pis or making websites, I muck about with <a href="http://codepen.io/tomhazledine/pen/IwEDu">CSS illustration</a> and build interfaces for the web audio API, including a <a href="http://tomhazledine.com/keyboard/">fully-functional synthesizer built using JS, HTML and CSS</a>.</p>
+        postsList[1] = [];
+        
+        postsList[1]["url"] = "/web-apps";
+        postsList[1]["title"] = "Which do you choose: native app or web app?";
+
+        
+
+    
+
+        postsList[2] = [];
+        
+        postsList[2]["url"] = "/thingmonk-day-two";
+        postsList[2]["title"] = "Notes from ThinkMonk: Day Two";
+
+        
+
+    
+
+        postsList[3] = [];
+        
+        postsList[3]["url"] = "/thingmonk-day-one";
+        postsList[3]["title"] = "Notes from ThinkMonk: Day One";
+
+        
+
+    
+
+        postsList[4] = [];
+        
+        postsList[4]["url"] = "/inline-svg-icons";
+        postsList[4]["title"] = "Getting started with inline SVG icons";
+
+        
+
+    
+
+        postsList[5] = [];
+        
+        postsList[5]["url"] = "/inspiring-web-people";
+        postsList[5]["title"] = "Inspirational Web People";
+
+        
+
+    
+
+        postsList[6] = [];
+        
+        postsList[6]["url"] = "/top-ten-ways-to-get-better-at-something";
+        postsList[6]["title"] = "Top ten ways to progress.";
+
+        
+
+    
+
+        postsList[7] = [];
+        
+        postsList[7]["url"] = "/fullpage-screenshots-in-firefox";
+        postsList[7]["title"] = "Fullpage screenshots in Firefox.";
+
+        
+
+    
+
+        postsList[8] = [];
+        
+        postsList[8]["url"] = "/futura-for-the-win";
+        postsList[8]["title"] = "Futura for the win.";
+
+        
+
+    
+
+        postsList[9] = [];
+        
+        postsList[9]["url"] = "/simple-is-hard";
+        postsList[9]["title"] = "Simple is hard";
+
+        
+
+    
+
+        postsList[10] = [];
+        
+        postsList[10]["url"] = "/bullet-journal-workflow";
+        postsList[10]["title"] = "A bullet-journal workflow";
+
+        
+
+    
+</script>
 
 
-    </article>
+<nav id="nextPrevWrapper" class="nav-outer clearfix">
+    <div id="nextBox"></div>
+    <div id="prevBox"></div>
+</nav>
 
-    <section class="featured">
-  <h3>Featured articles:</h3>
+      
+          <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'hazledine'; // required: replace example with your forum shortname
+
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+
+      <section class="archive">
+  <h3>More articles:</h3>
   <ul>
     
       
         
-        <li class="popularPost">
-          <a class="archiveItemTitle" href="http://tomhazledine.com/a-good-readme">You are only as good as your README</a>
+      
+        
+          <li><a href="http://tomhazledine.com/web-apps">Which do you choose: native app or web app?</a>  
           
-            <span class="archiveItemExcerpt">Code is not for computers, it's for us. We write code for other developers. We program using languages we understand, and the most important file in your project is your README.</span>
+            Are web apps even a real thing? I think they are.
+          </li>
+        
+      
+        
+          <li><a href="http://tomhazledine.com/thingmonk-day-two">Notes from ThinkMonk: Day Two</a>  
           
-        </li>
+            My thoughts on the IoT conference (Pt. II).
+          </li>
         
       
-    
-      
         
-        <li class="popularPost">
-          <a class="archiveItemTitle" href="http://tomhazledine.com/web-apps">Which do you choose: native app or web app?</a>
+          <li><a href="http://tomhazledine.com/thingmonk-day-one">Notes from ThinkMonk: Day One</a>  
           
-            <span class="archiveItemExcerpt">Are web apps even a real thing? I think they are. And they're by far the best option for small teams searching for product/market fit.</span>
+            My thoughts on the IoT conference.
+          </li>
+        
+      
+        
+          <li><a href="http://tomhazledine.com/inline-svg-icons">Getting started with inline SVG icons</a>  
           
-        </li>
+            We should all be using SVG icon sets
+          </li>
         
       
-    
-      
-    
-      
-    
-      
         
-      
-    
-      
-    
-      
-        
-      
-    
-      
-        
-        <li class="popularPost">
-          <a class="archiveItemTitle" href="http://tomhazledine.com/inline-svg-icons">Getting started with inline SVG icons</a>
+          <li><a href="http://tomhazledine.com/inspiring-web-people">Inspirational Web People</a>  
           
-            <span class="archiveItemExcerpt">As a typography nerd, using a custom font to serve icons felt really good. However, it turns out inline SVG icons are better in almost every way.</span>
+            The webby people that are shaping my career.
+          </li>
+        
+      
+        
+          <li><a href="http://tomhazledine.com/top-ten-ways-to-get-better-at-something">Top ten ways to progress.</a>  
           
-        </li>
+            Good advice on personal development.
+          </li>
         
       
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
+        
+          <li><a href="http://tomhazledine.com/fullpage-screenshots-in-firefox">Fullpage screenshots in Firefox.</a>  
+          
+            No need for browser extensions; Firefox can do it natively.
+          </li>
         
       
-    
+        
+          <li><a href="http://tomhazledine.com/futura-for-the-win">Futura for the win.</a>  
+          
+            Ask 3-months-ago-me if I'd set a website entirely in Futura and I'd have laughed at you.
+          </li>
+        
       
-    
+        
+          <li><a href="http://tomhazledine.com/simple-is-hard">Simple is hard</a>  
+          
+            Focus on substance over style.
+          </li>
+        
       
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+        
+          <li><a href="http://tomhazledine.com/bullet-journal-workflow">A bullet-journal workflow</a>  
+          
+            An analogue "to-do list" system.
+          </li>
+        
       
     
   </ul>
-  <div class="extraSpaceOnMobile">
-    <a href="/blog">See all articles.</a>
-  </div>
 </section><!-- .archive -->
 
 
-    <section class="socialLinks clearfix">
+      <span class="top-link"><a href="#top">Back to top</a></span>
+
+      <section class="socialLinks clearfix">
     <span class="socialContainer">
         <a href="https://twitter.com/thomashazledine" class="twitter">
             <svg class="icon twitter">
@@ -275,8 +374,8 @@
 </section>
 
 
-  </div><!-- .mainContent -->
-</div><!-- .bodyWrapper -->
+      </div><!-- .mainContent -->
+  </div><!-- .bodyWrapper -->
 
 <footer class="footer">
 	<a href="mailto:tom@tomhazledine.com">Let's get to work&hellip;</a>
