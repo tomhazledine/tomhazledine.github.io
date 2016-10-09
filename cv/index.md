@@ -28,18 +28,18 @@ customCss: cv.min.css
 ---
 
 {:.intro#intro}
-I am a front-end developer and UX/UI designer currently working for DWM, a web agency based in Newquay.
+I am the Senior Developer a Gendall Design, a design and development agency based in Falmouth, Cornwall. At Gendall I work alongside a team of developers and designers on a wide variety of web projects, with a general focus on "destination" clients (holiday booking agencies, tourist attractions, and the like).
 
-I am inspired by the work coming out of organizations like GDS and The Guardian, and also by the processes behind the work. The idea of using iteration and "marginal improvements" to solve design problems feels like a natural approach. I am eager to join a team that is product-led.
+I am inspired by the work coming out of organizations like GDS and The Guardian, and also by the processes behind the work. The idea of using iteration and "marginal improvements" to solve design problems feels like a natural approach, and as such I am eager to join a team that is product-led.
 
 > I try to build things that are "of the web" not just "on the web".
 
 {:#skills}
 ## Current Responsibilities and Interests
 
-### 1. Front-end Templating
+### 1. Frontend Templating
 
-I spend most of my working-day with SCSS and javascript. I try to be judicial with my inclusion of jQuery, and wherever possible stick to raw JS.
+I spend most of my working-day with SCSS, javascript and PHP. I work hard to keep my development workflow as efficient as possible, and have invested a lot of time into mastering my tools. I take a pragmatic approach to the inclusion of jQuery (for so long the closest thing JS had to a "standard library"), but the evolution of the language means there are now often more efficient and modern options available.
 
 * “View” development for MVC projects (Laravel / Vue.js / etc.)
 * Interaction with JSON APIs (most recently the Wordpress REST API).
@@ -49,17 +49,15 @@ I spend most of my working-day with SCSS and javascript. I try to be judicial wi
 
 ### 2. Performance
 
-Performance budgets are important, and "speed" should be a consideration for any web project. My blog scores 97/100 on Google’s PageSpeed Insights tester.
+Performance budgets are important, and "speed" should be a consideration for any web project. Recent client work has placed a heavy emphasis on load-times, and we've become experts at optimising for speed even with feature-rich and image-heavy sites.
 
-* Static HTML compiled by Jekyll.
-* Inline “above the fold” CSS in the first 14.5kb.
 * Asynchronous loading of javascript and main css.
 * Concatenation and minification of all resources.
 * Inline SVG icon set.
 
 ### 3. HTML Audio
 
-My background is in music, so I have always been interested in audio on the web. I have built an open-source javascript tool for styling audio players with CSS ([github.com/tomhazledine/stylefreeaudio](//github.com/tomhazledine/stylefreeaudio)) and have used the Web Audio API to build a working synthesizer ([tomhazledine.com/keyboard](//tomhazledine.com/keyboard)).
+My background is in music, so I have always been interested in audio on the web. I have built an open-source javascript tool for styling audio players with CSS ([github.com/tomhazledine/stylefreeaudio](//github.com/tomhazledine/stylefreeaudio)) and have used the Web Audio API to build a working synthesizer ([tomhazledine.com/keyboard](//tomhazledine.com/keyboard)) and some more fun [tools for tone generation](//codepen.io/tomhazledine/pen/wWQOBN).
 
 ### 4. CSS Illustration
 
@@ -76,11 +74,19 @@ My experiments with type design have given me a fantastic insight into the world
 {:#experience}
 ## Experience
 
-### Lead UX Designer and Front-End Developer
+### Senior Developer
+
+{:.cvSubMeta}
+* Gendall Design
+* 2015–
+
+Primarily dev. & design. Help with strategy & dabble with public speaking.
+
+### Lead UX Designer and FrontEnd Developer
 
 {:.cvSubMeta}
 * DWM
-* 2014–
+* 2014–2015
 
 Primarily dev. & design. Help with strategy & dabble with public speaking.
 
@@ -100,29 +106,6 @@ One-man-band e-commerce sites for local businesses like Atlantic Brewery.
 * 2004–2007
 
 Engineered podcasts & radio-features for Hewlett Packard, Unilever, Radio Exe.
-
----
-
-{:#side}
-## Side Projects
-
-## Burndown App
-
-[burndown.co.uk](//burndown.co.uk)
-
-Web-app for tracking project-management Sprints. UI design, & front-end dev.
-
-##Eaten by Monsters
-
-[eatenbymonsters.com](//eatenbymonsters.com)
-
-Music blog, running since 2008. Content creation & full-stack development.
-
-## sfap.js
-
-[tomhazledine.com/audio](//tomhazledine.com/audio)
-
-Open Source javascript component for creating custom audio players.
 
 ---
 
